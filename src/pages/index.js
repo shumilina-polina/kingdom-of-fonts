@@ -58,8 +58,10 @@ const IndexPage = () => {
     categories[0].subCategories[0]
   );
 
-  if (!localStorage.getItem("kingdomOfFontsAccess")) {
-    return <>cannot give you access</>;
+  if (typeof window !== "undefined") {
+    if (!localStorage.getItem("kingdomOfFontsAccess")) {
+      return <>cannot give you access</>;
+    }
   }
 
   const filters = {
