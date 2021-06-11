@@ -57,10 +57,14 @@ const IndexPage = () => {
   const [selectedSubcategory, setSelectedSubcategory] = useState(
     categories[0].subCategories[0]
   );
+  const [loading, setLoading] = useState(true);
 
   if (typeof window !== "undefined") {
     if (!localStorage.getItem("kingdomOfFontsAccess")) {
+      setLoading(false);
       return <>cannot give you access</>;
+    } else {
+      setLoading(false);
     }
   }
 
@@ -94,6 +98,10 @@ const IndexPage = () => {
 
   const filteredCards = multiPropsFilter(cards, filters);
   console.log("filteredCards", filteredCards);
+
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
   return (
     <Layout>
