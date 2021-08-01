@@ -2,24 +2,37 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--color-background);
+  padding: 20px 0 10px;
 `;
 
-export const SubCategoryItem = styled.div`
-  color: var(--color-blue);
-  text-decoration: underline;
-  font-size: 18px;
-  margin-right: 32px;
-  :last-child {
-    margin-right: 0;
-  }
+export const SubCategory = styled.div`
+  margin: 0 15px;
+  margin-bottom: 10px;
   :hover {
-    color: var(--color-grey);
     cursor: pointer;
+    span {
+      color: var(--color-orange);
+      border-bottom: 1px solid rgba(235, 91, 11, 0.4);
+    }
   }
+`
+
+export const SubCategoryItem = styled.span`
+    font-size: 14px;
+    color: var(--color-green);
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(69, 231, 134, 0.4);
   ${(props) =>
     props.selected &&
     `
         color: var(--color-grey);
+        border: none;
+
     `}
 `;

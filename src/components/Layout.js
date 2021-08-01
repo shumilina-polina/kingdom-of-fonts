@@ -1,16 +1,15 @@
 import React from "react";
 import { Container, GlobalStyle } from "../global";
 import Footer from "./footer/Footer";
+import "../fonts.css";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div >
       <GlobalStyle />
-      <Container>
-        <main>{children}</main>
-      </Container>
+        <main style={{position: "relative"}}>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

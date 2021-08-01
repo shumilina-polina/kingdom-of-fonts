@@ -40,14 +40,14 @@ const BuyPage = () => {
           name="successURL"
           value="https://granich.design/"
         />
-        {/* <label>
+        <label>
           <input type="radio" name="paymentType" value="PC" />
           ЮMoney
         </label>
         <label>
           <input type="radio" name="paymentType" value="AC" />
           Банковской картой
-        </label> */}
+        </label>
         <input type="submit" value="Перевести" />
       </form>
     </Layout>

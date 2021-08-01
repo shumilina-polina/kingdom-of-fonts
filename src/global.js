@@ -2,9 +2,24 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: "Gorod";
+        src: url("./assets/fonts/Gorod/Gorod.woff2") format("woff2"),
+             url("./assets/fonts/Gorod/Gorod.woff") format("woff");
+        font-display: fallback;
+    }
+
+
+
+
+
+
+
     * {
         --color-grey: rgb(130, 130, 130);
         --color-blue: rgb(17, 104, 205);
+        --color-green: #45E786;
+        --color-orange: #EB5B0B;
         --color-background: rgb(21, 21, 21);
         --color-white-transparent: rgba(256,256,256,0.1);
         /* letter-spacing: 0vw; */
@@ -110,10 +125,21 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  width: 1200px;
+  width: 1170px;
   margin: 0 auto;
   height: 100%;
   min-height: 100%;
+  @media (max-width: 1200px) {
+    width: 900px;
+    padding: 0 30px;
+  }
+  @media (max-width: 900px) {
+    width: 600px;
+  }
+  @media (max-width: 480px) {
+    padding: 0 15px;
+    width: 100%;
+  }
 `;
 
 export const CustomLink = styled(Link)``;

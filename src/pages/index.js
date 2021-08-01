@@ -1,77 +1,71 @@
-import React, { useContext, useState, useEffect } from "react";
-import CardList from "../components/index-page/cards/CardList";
-import { cards } from "../components/index-page/cards/data";
-import Filters from "../components/index-page/filters/Filters";
+import React, { useState, useEffect } from "react";
+// import { cards } from "../components/index-page/cards/data";
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
+import { navigate } from "gatsby";
+import { useQuery } from "../hooks/useQuery";
+import IndexPageNoFiltersView from "../views/IndexPageNoFiltersView";
+import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
+import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
+import useCards from "../hooks/useCards";
+import { categories } from "../categories";
 
-const categories = [
-  {
-    name: "С придурью",
-    subCategories: [
-      "Широкие",
-      "Вытянутые",
-      "Гиперконтрастные",
-      "Трафаретные",
-      "Скруглённые",
-      "С обратным контрастом",
-      "С росчерками",
-      "Инк Трапы",
-    ],
-  },
-  {
-    name: "Гротески",
-    subCategories: [
-      "Нейтральные",
-      "Геометрические",
-      "Брусковые",
-      "Моноширинные",
-    ],
-  },
-  {
-    name: "Антиквы",
-    subCategories: [
-      "Старостильные",
-      "Переходные",
-      "Новостильные",
-      "Брусковые",
-      "Латинские",
-    ],
-  },
-  {
-    name: "Стилизованные",
-    subCategories: [
-      "Аниме",
-      "Славянский стиль",
-      "Советские",
-      "Готические",
-      "Восточные",
-    ],
-  },
-  { name: "Рукописные", subCategories: ["Каллиграфия", "Почерк"] },
-];
 
 // markup
 const IndexPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [selectedSubcategory, setSelectedSubcategory] = useState(
-    categories[0].subCategories[0]
-  );
-  const [loading, setLoading] = useState(true);
+  // включить эти две вещи когда будешь тестировать доступность
+  // const [loading, setLoading] = useState(true);
+  // const [access, setAccess] = useState(false);
 
-  if (typeof window !== "undefined") {
-    if (!localStorage.getItem("kingdomOfFontsAccess")) {
-      setLoading(false);
-      return <>cannot give you access</>;
-    } else {
-      setLoading(false);
+  //вот эти две убрать
+  const [loading, setLoading] = useState(false);
+  const [access, setAccess] = useState(true);
+
+  const query = useQuery()
+
+  const getCategoryName = () => {
+    const selectedCat = categories.find((el) => el.url === query.get("category"))
+    if (selectedCat) {
+      return selectedCat.name
     }
+    return ""
   }
 
-  const filters = {
-    category: selectedCategory.name,
-    subCategory: selectedSubcategory,
-  };
+  const getSubCategoryName = () => {
+    const selectedCat = categories.find((el) => el.url === query.get("category"))
+    if (selectedCat) {
+      const selectedSubCat = selectedCat?.subCategories.find((el) => el.url === query.get("subcategory"))
+      if (selectedSubCat) {
+        return selectedSubCat.name
+      }
+    }
+    return ""
+  }
+  
+
+  const [filters, setFilters] = useState({
+    category: getCategoryName(),
+    subCategory: getSubCategoryName(),
+  });
+
+  console.log("query", filters)
+
+  const cards = useCards();
+
+
+  //включить когда будешь тестировать доступность
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     if (localStorage.getItem("kingdomOfFontsAccess")) {
+  //       setLoading(false);
+
+  //       setAccess(true);
+  //     } else {
+  //       // setLoading(false);
+  //       navigate("/buy");
+  //     }
+  //   }
+  // }, []);
 
   const multiPropsFilter = (cards, filters) => {
     const filterKeys = Object.keys(filters);
@@ -92,34 +86,34 @@ const IndexPage = () => {
     });
   };
 
-  // useEffect(() => {
-
-  // }, [selectedCategory, selectedSubcategory])
-
   const filteredCards = multiPropsFilter(cards, filters);
+  console.log("cards", cards);
+  console.log("filters", filters);
   console.log("filteredCards", filteredCards);
 
   if (loading) {
-    return <div>loading...</div>;
+    return <Layout></Layout>;
   }
+
+  if (!access) {
+    return <Layout>no access</Layout>;
+  }
+
+  console.log("filters", filters)
 
   return (
     <Layout>
       <Logo />
-      <Filters
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        selectedSubcategory={selectedSubcategory}
-        setSelectedSubcategory={setSelectedSubcategory}
-        categories={categories}
-        multiPropsFilter={multiPropsFilter}
-      />
-      <CardList
-        selectedCategory={selectedCategory}
-        selectedSubcategory={selectedSubcategory}
-        // cards={cards}
-        filteredCards={filteredCards}
-      />
+      {query.get("category") && !query.get("subcategory") ? (
+        <IndexPageCategoryFilterView
+          cards={filteredCards}
+          setFilters={setFilters}
+        />
+      ) : query.get("category") && query.get("subcategory") ? (
+        <IndexPageSubcategoryFilterView setFilters={setFilters} cards={filteredCards} />
+      ) : (
+        <IndexPageNoFiltersView cards={cards} setFilters={setFilters} />
+      )}
     </Layout>
   );
 };
