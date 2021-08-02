@@ -39,7 +39,7 @@ const Card = ({ data }) => {
       </CardInfo>
       <StretchWrapper>
         <TestFontField
-          // rows={5}
+          // minRows={2}
           font={data.name}
           letterSpacing={data.letterSpacing}
           lineHeight={data.lineHeight}

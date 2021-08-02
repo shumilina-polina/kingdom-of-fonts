@@ -4,6 +4,7 @@ import { useQuery } from '../../../hooks/useQuery';
 import { Wrapper, SubcategoryTitle, SubcategoryItems, SubcategorySectionItem } from './styles';
 import Card from './card/Card';
 // import { useInView } from 'react-intersection-observer';
+import SubcategorySection from './SubcategorySection'
 
 const CardListBySubcat = ({cards, setSubCatInView}) => {
 
@@ -26,41 +27,3 @@ const CardListBySubcat = ({cards, setSubCatInView}) => {
 
 export default CardListBySubcat
 
-const SubcategorySection = ({subCat, sortedCards, setSubCatInView}) => {
-    // const { ref, inView, entry } = useInView({
-    //     /* Optional options */
-    //     threshold: 0,
-    //   });
-
-    // useEffect(() => {
-    //     if (inView) {
-    //         console.log("in view", subCat.name)
-    //         setSubCatInView((prevState) => {
-    //             return {
-    //                 ...prevState,
-    //                 [subCat.name]: true
-    //             }
-    //         })
-    //     }
-        
-    // }, [])
-
-    console.log("ddf", sortedCards)
-    return (
-        // <InView onChange={() => console.log("in view", subCat.name)}>
-        <SubcategoryItems >
-            <SubcategorySectionItem>
-                <SubcategoryTitle>{subCat.name}</SubcategoryTitle>
-            </SubcategorySectionItem>
-            <Wrapper>
-                {sortedCards.map((card, idx) => {
-                    return (
-                        <Card key={idx} data={card}/>
-                    )
-                })}
-            </Wrapper>
-        </SubcategoryItems>
-        // </InView>
-
-    )
-}

@@ -58,7 +58,7 @@ export const InfoItem = styled.div`
   }
 `;
 
-export const TestFontField = styled(TextareaAutosize)`
+export const TestFontField = styled.textarea`
   background: none;
   border: 1px solid var(--color-white-transparent);
   border-radius: 5px;
@@ -73,7 +73,8 @@ export const TestFontField = styled(TextareaAutosize)`
   min-height: 110px;
   /* height: 100%; */
   /* height: auto; */
-  /* overflow: hidden; */
+  overflow: hidden;
+  
   flex-grow: 1;
   ::placeholder {
     color: white;
