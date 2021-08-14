@@ -1556,6 +1556,7 @@ const useCards = () => {
     letterSpacing: null,
     lineHeight: null,
 },
+
 {
     fontFormats: ["TTF", "EOT", "WOFF", "WOFF2"],
     image: images.pressStart2P,
