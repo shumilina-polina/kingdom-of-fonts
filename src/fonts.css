@@ -552,13 +552,13 @@ html {
     font-display: block;
 }
 
-@font-face {
+/* @font-face {
     font-family: "MonoBiletik";
     src: url("./assets/fonts/MonoBiletik/MonoBiletik.woff2") format("woff2"),
          url("./assets/fonts/MonoBiletik/MonoBiletik.woff") format("woff");
     font-weight: normal;
     font-display: block;
-}
+} */
 
 @font-face {
     font-family: "PressStart2P";
