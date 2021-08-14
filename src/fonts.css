@@ -553,9 +553,9 @@ html {
 }
 
 @font-face {
-    font-family: "Monobiletik";
-    src: url("./assets/fonts/Monobiletik/Monobiletik.woff2") format("woff2"),
-         url("./assets/fonts/Monobiletik/Monobiletik.woff") format("woff");
+    font-family: "MonoBiletik";
+    src: url("./assets/fonts/MonoBiletik/MonoBiletik.woff2") format("woff2"),
+         url("./assets/fonts/MonoBiletik/MonoBiletik.woff") format("woff");
     font-weight: normal;
     font-display: block;
 }
