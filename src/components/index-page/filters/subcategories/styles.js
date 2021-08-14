@@ -3,31 +3,34 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 48px;
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  background: var(--color-background);
-  padding: 20px 0 10px;
+  padding-top: 5px;
 `;
 
 export const SubCategory = styled.div`
-  margin: 0 15px;
+  margin: 0 12px;
   margin-bottom: 10px;
   :hover {
     cursor: pointer;
-    span {
+    a {
       color: var(--color-orange);
       border-bottom: 1px solid rgba(235, 91, 11, 0.4);
+      font-size: 14px;
     }
   }
 `
 
-export const SubCategoryItem = styled.span`
+export const SubCategoryItem = styled.a`
     font-size: 14px;
     color: var(--color-green);
     padding-bottom: 1px;
     border-bottom: 1px solid rgba(69, 231, 134, 0.4);
+    white-space: nowrap;
+    text-decoration: none;
+    /* :hover {
+      font-size: 14px;
+      color: var(--color-green);
+      text-decoration: none;
+    } */
   ${(props) =>
     props.selected &&
     `

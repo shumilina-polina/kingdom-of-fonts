@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './card/Card'
-import { SubcategoryItems, SubcategorySectionItem, SubcategoryTitle, Wrapper } from './styles'
+import { SubcategoryItems, SubcategorySectionItem, SubcategoryTitle, Wrapper, SubcategoryItemsId } from './styles'
 
 const SubcategorySection = ({subCat, sortedCards, setSubCatInView}) => {
     // const { ref, inView, entry } = useInView({
@@ -25,6 +25,7 @@ const SubcategorySection = ({subCat, sortedCards, setSubCatInView}) => {
     return (
         // <InView onChange={() => console.log("in view", subCat.name)}>
         <SubcategoryItems >
+            <SubcategoryItemsId id={subCat.url}/>
             <SubcategorySectionItem>
                 <SubcategoryTitle>{subCat.name}</SubcategoryTitle>
             </SubcategorySectionItem>

@@ -10,11 +10,11 @@ const CategoriesFilter = ({ setFilters }) => {
   const selectCategory = (cat) => {
     setFilters((prevState) => {
       return {
-        subCategory: "",
+        // subCategory: "",
         category: cat.name,
       };
     });
-    navigate(`?category=${cat.url}`);
+    navigate(`/?category=${cat.url}`);
   };
   const selectedCategory = categories.find(
     (el) => el.url === query.get("category")

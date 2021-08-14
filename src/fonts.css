@@ -8,6 +8,10 @@
     font-display: block;
 } */
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Roboto";
     src: url("./assets/fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
@@ -304,6 +308,270 @@
     font-family: "Tablon";
     src: url("./assets/fonts/Tablon/Tablon.woff2") format("woff2"),
          url("./assets/fonts/Tablon/Tablon.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "DisketMono";
+    src: url("./assets/fonts/DisketMono/DisketMono.woff2") format("woff2"),
+         url("./assets/fonts/DisketMono/DisketMono.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "RubikMonoOne";
+    src: url("./assets/fonts/RubikMonoOne/RubikMonoOne.woff2") format("woff2"),
+         url("./assets/fonts/RubikMonoOne/RubikMonoOne.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/Inter/Inter.woff2") format("woff2"),
+         url("./assets/fonts/Inter/Inter.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "NeutralFace";
+    src: url("./assets/fonts/NeutralFace/NeutralFace.woff2") format("woff2"),
+         url("./assets/fonts/NeutralFace/NeutralFace.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PTRootUI";
+    src: url("./assets/fonts/PTRootUI/PTRootUI.woff2") format("woff2"),
+         url("./assets/fonts/PTRootUI/PTRootUI.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Airfool";
+    src: url("./assets/fonts/Airfool/Airfool.woff2") format("woff2"),
+         url("./assets/fonts/Airfool/Airfool.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "ComicCat";
+    src: url("./assets/fonts/ComicCat/ComicCat.woff2") format("woff2"),
+         url("./assets/fonts/ComicCat/ComicCat.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Pomidor";
+    src: url("./assets/fonts/Pomidor/Pomidor.woff2") format("woff2"),
+         url("./assets/fonts/Pomidor/Pomidor.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Shirota";
+    src: url("./assets/fonts/Shirota/Shirota.woff2") format("woff2"),
+         url("./assets/fonts/Shirota/Shirota.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Abraxas";
+    src: url("./assets/fonts/Abraxas/Abraxas.woff2") format("woff2"),
+         url("./assets/fonts/Abraxas/Abraxas.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Misto";
+    src: url("./assets/fonts/Misto/Misto.woff2") format("woff2"),
+         url("./assets/fonts/Misto/Misto.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "MutaborGrotesque";
+    src: url("./assets/fonts/MutaborGrotesque/MutaborGrotesque.woff2") format("woff2"),
+         url("./assets/fonts/MutaborGrotesque/MutaborGrotesque.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Practice";
+    src: url("./assets/fonts/Practice/Practice.woff2") format("woff2"),
+         url("./assets/fonts/Practice/Practice.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "SoyuzGrotesk";
+    src: url("./assets/fonts/SoyuzGrotesk/SoyuzGrotesk.woff2") format("woff2"),
+         url("./assets/fonts/SoyuzGrotesk/SoyuzGrotesk.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "SportingGrotesque";
+    src: url("./assets/fonts/SportingGrotesque/SportingGrotesque.woff2") format("woff2"),
+         url("./assets/fonts/SportingGrotesque/SportingGrotesque.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "StalinistOne";
+    src: url("./assets/fonts/StalinistOne/StalinistOne.woff2") format("woff2"),
+         url("./assets/fonts/StalinistOne/StalinistOne.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Parabola";
+    src: url("./assets/fonts/Parabola/Parabola.woff2") format("woff2"),
+         url("./assets/fonts/Parabola/Parabola.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Pomidorko";
+    src: url("./assets/fonts/Pomidorko/Pomidorko.woff2") format("woff2"),
+         url("./assets/fonts/Pomidorko/Pomidorko.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Riverhack";
+    src: url("./assets/fonts/Riverhack/Riverhack.woff2") format("woff2"),
+         url("./assets/fonts/Riverhack/Riverhack.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "AllegroScript";
+    src: url("./assets/fonts/AllegroScript/AllegroScript.woff2") format("woff2"),
+         url("./assets/fonts/AllegroScript/AllegroScript.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Dobroshrift2";
+    src: url("./assets/fonts/Dobroshrift2/Dobroshrift2.woff2") format("woff2"),
+         url("./assets/fonts/Dobroshrift2/Dobroshrift2.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "GangofThree";
+    src: url("./assets/fonts/GangofThree/GangofThree.woff2") format("woff2"),
+         url("./assets/fonts/GangofThree/GangofThree.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Juan";
+    src: url("./assets/fonts/Juan/Juan.woff2") format("woff2"),
+         url("./assets/fonts/Juan/Juan.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Tangak";
+    src: url("./assets/fonts/Tangak/Tangak.woff2") format("woff2"),
+         url("./assets/fonts/Tangak/Tangak.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Belozersk";
+    src: url("./assets/fonts/Belozersk/Belozersk.woff2") format("woff2"),
+         url("./assets/fonts/Belozersk/Belozersk.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Lavka";
+    src: url("./assets/fonts/Lavka/Lavka.woff2") format("woff2"),
+         url("./assets/fonts/Lavka/Lavka.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Lutsk";
+    src: url("./assets/fonts/Lutsk/Lutsk.woff2") format("woff2"),
+         url("./assets/fonts/Lutsk/Lutsk.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PertsovType";
+    src: url("./assets/fonts/PertsovType/PertsovType.woff2") format("woff2"),
+         url("./assets/fonts/PertsovType/PertsovType.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Tsarevich";
+    src: url("./assets/fonts/Tsarevich/Tsarevich.woff2") format("woff2"),
+         url("./assets/fonts/Tsarevich/Tsarevich.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Keleti";
+    src: url("./assets/fonts/Keleti/Keleti.woff2") format("woff2"),
+         url("./assets/fonts/Keleti/Keleti.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Monobiletik";
+    src: url("./assets/fonts/Monobiletik/Monobiletik.woff2") format("woff2"),
+         url("./assets/fonts/Monobiletik/Monobiletik.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PressStart2P";
+    src: url("./assets/fonts/PressStart2P/PressStart2P.woff2") format("woff2"),
+         url("./assets/fonts/PressStart2P/PressStart2P.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "UpheavalPro";
+    src: url("./assets/fonts/UpheavalPro/UpheavalPro.woff2") format("woff2"),
+         url("./assets/fonts/UpheavalPro/UpheavalPro.woff") format("woff");
     font-weight: normal;
     font-display: block;
 }

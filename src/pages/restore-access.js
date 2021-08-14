@@ -5,19 +5,28 @@ import Filters from "../components/index-page/filters/Filters";
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 import { Link } from "gatsby";
+import RestoreAccessPageView from "../views/RestoreAccessPageView";
+import { StickyWrapper } from "../components/index-page/filters/styles";
+import CategoriesFilter from "../components/index-page/filters/categories/CategoriesFilter";
 
 // markup
-const ReminderPage = () => {
+const RestoreAccessPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("kingdomOfFontsAccess", "true");
     }
   }, []);
   return (
-    <Layout>
-      Reminder<Link to={"/"}>go there</Link>
+    <Layout footerReduced>
+      <Logo />
+      <StickyWrapper>
+        <CategoriesFilter setFilters={() => {}} />
+      </StickyWrapper>
+
+      <RestoreAccessPageView/>
     </Layout>
+
   );
 };
 
-export default ReminderPage;
+export default RestoreAccessPage;

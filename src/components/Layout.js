@@ -3,13 +3,13 @@ import { Container, GlobalStyle } from "../global";
 import Footer from "./footer/Footer";
 import "../fonts.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footerReduced }) => {
   return (
-    <div >
+    <>
       <GlobalStyle />
         <main style={{position: "relative"}}>{children}</main>
-      <Footer />
-    </div>
+      <Footer footerReduced={footerReduced}/>
+    </>
   );
 };
 

@@ -60,6 +60,9 @@ export const GlobalStyle = createGlobalStyle`
 
     main {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     input, input:hover, input:active, input:focus {

@@ -37,6 +37,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-google-fonts`,
     //   options: {

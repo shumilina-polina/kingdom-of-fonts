@@ -35,7 +35,7 @@ const Card = ({ data }) => {
       <FontImage fluid={data.image} />
       <CardInfo>
         <InfoItem>{data.variationsCount}</InfoItem>
-        <InfoItem>{data.currency}</InfoItem>
+        <InfoItem noCurrency={data.currency === "Валют нет :("}>{data.currency}</InfoItem>
       </CardInfo>
       <StretchWrapper>
         <TestFontField
@@ -43,6 +43,7 @@ const Card = ({ data }) => {
           font={data.name}
           letterSpacing={data.letterSpacing}
           lineHeight={data.lineHeight}
+          textTransform={data.textTransform}
           fontSize={data.fontSize}
           placeholder="Здесь можно примерить свой текст, если нужно."
         />

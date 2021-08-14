@@ -1,9 +1,10 @@
 import React from "react";
 import { SubCategory, SubCategoryItem, Wrapper } from "./styles";
 import { v4 as uuidv4 } from "uuid";
-import { navigate } from "gatsby";
+// import { navigate } from "gatsby";
 import { categories } from "../../../../categories";
 import { useQuery } from "../../../../hooks/useQuery";
+// import scrollTo from "gatsby-plugin-smoothscroll"
 
 const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
   const query = useQuery();
@@ -17,15 +18,16 @@ const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
   );
 
   const selectSubcategory = (subcategory) => {
-    setFilters((prevState) => {
-      return {
-        ...prevState,
-        subCategory: subcategory.name,
-      };
-    });
-    navigate(
-      `?category=${selectedCategory.url}&subcategory=${subcategory.url}`
-    );
+    // setFilters((prevState) => {
+    //   return {
+    //     ...prevState,
+    //     subCategory: subcategory.name,
+    //   };
+    // });
+    // scrollTo(`#${subcategory.url}`)
+    // navigate(
+    //   `?category=${selectedCategory.url}&subcategory=${subcategory.url}`
+    // );
   };
 
   console.log("subCatInView", subCatInView)
@@ -38,7 +40,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
             key={uuidv4()}
             onClick={selectSubcategory.bind(null, subCat)}
           >
-            <SubCategoryItem selected={selectedSubcategory?.name === subCat.name}>
+            <SubCategoryItem href={`#${subCat.url}`} selected={selectedSubcategory?.name === subCat.name}>
               {subCat.name}
             </SubCategoryItem>
             

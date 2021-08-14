@@ -22,10 +22,12 @@ export const SubcategoryTitle = styled.div`
   position: relative;
   z-index: 2;
   margin-bottom: 28px;
+  color: rgba(256,256,256,0.15);
 `
 
 export const SubcategoryItems = styled.div`
   padding-bottom: 48px;
+  position: relative;
 `
 
 export const SubcategorySectionItem = styled.div`
@@ -39,7 +41,7 @@ export const SubcategorySectionItem = styled.div`
     content: '';
     width: 100%;
     height: 10px;
-    border-bottom: 1px solid rgba(256, 256, 256, 0.15);
+    border-bottom: 1px solid rgba(256, 256, 256, 0.1);
     position: absolute;
     top: 0;
     left: 0;
@@ -47,4 +49,9 @@ export const SubcategorySectionItem = styled.div`
 
   }
 
+`
+
+export const SubcategoryItemsId = styled.div`
+  position: absolute;
+  top: -120px;
 `

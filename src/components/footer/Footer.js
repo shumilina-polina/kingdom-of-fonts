@@ -11,31 +11,37 @@ import { Wrapper, FooterWrapper, Title,
   Telegram,
   Email,
   InfoYear,
-  FooterLink
+  FooterLink,
+  LogoWrapper
 } from "./styles";
 import Logo from '../../assets/svgs/pavlushin.svg';
 
 
-const Footer = () => {
+const Footer = ({footerReduced}) => {
   return (
     <Wrapper>
       <Container>
         <FooterWrapper>
-          <Title>В главных ролях</Title>
-          <Authors>
-            <Author>
-              Автор и дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a>
-            </Author>
-            <Author>
-              Автор и редактор <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a>
-            </Author>
-            <Author>
-              Дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Савченко</a>
-            </Author>
-            <Author>
-              Программист <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a>
-            </Author>
-          </Authors>
+          {!footerReduced && (
+            <>
+              <Title>В главных ролях</Title>
+              <Authors>
+                <Author>
+                  Автор и дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a>
+                </Author>
+                <Author>
+                  Автор и редактор <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a>
+                </Author>
+                <Author>
+                  Дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Савченко</a>
+                </Author>
+                <Author>
+                  Программист <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a>
+                </Author>
+              </Authors>
+            </>
+          )}
+          
           <Info>
             <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
             <InfoWrapper>
@@ -44,9 +50,11 @@ const Footer = () => {
                 <FooterLink href="https://t.me/andrepavlushin" target="_blank">Отправить@голубей</FooterLink>
               </Links>
               <InfoYear>2020 → {new Date().getFullYear()}©</InfoYear>
-              <Logo/>
+              <LogoWrapper>
+                <Logo/>
+              </LogoWrapper>
             </InfoWrapper>
-            <Announce/>
+            {!footerReduced && <Announce/>}
           </Info>
         </FooterWrapper>
       </Container>

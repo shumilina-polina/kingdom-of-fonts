@@ -31,21 +31,21 @@ const IndexPage = () => {
     return ""
   }
 
-  const getSubCategoryName = () => {
-    const selectedCat = categories.find((el) => el.url === query.get("category"))
-    if (selectedCat) {
-      const selectedSubCat = selectedCat?.subCategories.find((el) => el.url === query.get("subcategory"))
-      if (selectedSubCat) {
-        return selectedSubCat.name
-      }
-    }
-    return ""
-  }
+  // const getSubCategoryName = () => {
+  //   const selectedCat = categories.find((el) => el.url === query.get("category"))
+  //   if (selectedCat) {
+  //     const selectedSubCat = selectedCat?.subCategories.find((el) => el.url === query.get("subcategory"))
+  //     if (selectedSubCat) {
+  //       return selectedSubCat.name
+  //     }
+  //   }
+  //   return ""
+  // }
   
 
   const [filters, setFilters] = useState({
     category: getCategoryName(),
-    subCategory: getSubCategoryName(),
+    // subCategory: getSubCategoryName(),
   });
 
   console.log("query", filters)
@@ -104,13 +104,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <Logo />
-      {query.get("category") && !query.get("subcategory") ? (
+      {query.get("category") ? (
         <IndexPageCategoryFilterView
           cards={filteredCards}
           setFilters={setFilters}
         />
-      ) : query.get("category") && query.get("subcategory") ? (
-        <IndexPageSubcategoryFilterView setFilters={setFilters} cards={filteredCards} />
       ) : (
         <IndexPageNoFiltersView cards={cards} setFilters={setFilters} />
       )}

@@ -4,7 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+
 `;
 
 export const CategoryItem = styled.div`

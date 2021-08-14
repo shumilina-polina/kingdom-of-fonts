@@ -3,31 +3,32 @@ import styled from "styled-components";
 export const Wrapper = styled.footer``;
 
 export const FooterWrapper = styled.div`
-  padding: 66px 0 36px;
+  padding: 66px 0 60px;
   position: relative;
 `;
 
 export const Title = styled.div`
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 `
 
 export const Authors = styled.div`
   display: flex;
   flex-wrap: wrap;
   max-width: 660px;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 `
 
 export const Author = styled.div`
-  margin-right: 25px;
-  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-bottom: 15px;
   a {
     color: white;
-    margin-left: 7px;
+    margin-left: 3px;
     text-decoration: none;
+    padding: 4px 8px;
     :hover {
-      color: var(--color-grey);
+      background: rgba(256,256,256,0.05);
     }
   }
 `
@@ -35,13 +36,14 @@ export const Author = styled.div`
 export const Info = styled.div``
 
 export const InfoTitle = styled.div`
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 `
 
 export const InfoWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-end;
+  width: 100%;
   svg {
     width: 50px;
     height: 28px;
@@ -50,6 +52,10 @@ export const InfoWrapper = styled.div`
 
 export const Links = styled.div`
   display: flex;
+  /* flex-grow: 1;
+  flex-basis: 0; */
+  flex: 1;
+  margin-right: auto;
 
 `
 
@@ -68,7 +74,20 @@ export const FooterLink = styled.a`
 
 
 
-export const InfoYear = styled.div``
+export const InfoYear = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+`
+
+export const LogoWrapper = styled.div`
+  /* flex-grow: 1;
+  flex-basis: 0; */
+  flex: 1;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+`
 
 export const AnnounceWrapper = styled.div`
   ${props => props.image1 && `
@@ -80,8 +99,8 @@ export const AnnounceWrapper = styled.div`
   width: 158px;
   height: 160px;
   position: absolute;
-  top: 70px;
-  right: 50px;
+  top: 90px;
+  right: 55px;
   :hover {
     cursor: pointer;
     ${props => props.image2 && `
@@ -105,7 +124,7 @@ export const AnnouncementContent = styled.div`
 export const AnnouncementTitle = styled.div`
   text-align: center;
   color: rgba(0,0,0,0.5);
-  font-weight: bold;
+  font-weight: normal;
   font-size: 24px;
   text-transform: uppercase;
 `

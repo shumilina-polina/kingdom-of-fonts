@@ -17,6 +17,7 @@ const CardListBySubcat = ({cards, setSubCatInView}) => {
             {selectedCategory.subCategories.map((subCat, idx) => {
                 const sortedCards = cards.filter((card) => card.subCategory === subCat.name)
                 console.log("sub", sortedCards)
+                console.log("subCat", subCat)
                 return (
                     <SubcategorySection key={idx} subCat={subCat} sortedCards={sortedCards} setSubCatInView={setSubCatInView}/>
                 )
