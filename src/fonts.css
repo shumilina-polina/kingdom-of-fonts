@@ -553,7 +553,7 @@ html {
 }
 
 @font-face {
-    font-family: "Keleti";
+    font-family: "MonoBiletik";
     src: url("./assets/fonts/Monobiletik/Monobiletik.woff2") format("woff2"),
          url("./assets/fonts/Monobiletik/Monobiletik.woff") format("woff");
     font-weight: normal;
