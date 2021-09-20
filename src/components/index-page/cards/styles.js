@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
+
   @media (max-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -26,8 +27,12 @@ export const SubcategoryTitle = styled.div`
 `
 
 export const SubcategoryItems = styled.div`
-  padding-bottom: 48px;
+  /* padding-bottom: 48px; */
   position: relative;
+  padding-top: 48px;
+  /* :first-child {
+    padding-top: 0;
+  } */
 `
 
 export const SubcategorySectionItem = styled.div`
@@ -53,5 +58,5 @@ export const SubcategorySectionItem = styled.div`
 
 export const SubcategoryItemsId = styled.div`
   position: absolute;
-  top: -120px;
+  top: -23px;
 `

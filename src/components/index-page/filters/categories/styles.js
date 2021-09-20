@@ -18,6 +18,7 @@ export const CategoryItem = styled.div`
     color: white;
     cursor: pointer;
     background: rgba(256,256,256,0.05);
+    border-radius: 3px;
   }
   ${(props) =>
     props.selected &&

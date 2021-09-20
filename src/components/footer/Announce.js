@@ -5,10 +5,10 @@ import image2 from '../../assets/announce-star-2.png';
 
 const Announce = () => {
     return (
-        <AnnounceWrapper image1={image1} image2={image2}>
+        <AnnounceWrapper href="https://t.me/andrepavlushin" target="_blank" image1={image1} image2={image2}>
             <AnnouncementContent>
                 <AnnouncementTitle>Нью</AnnouncementTitle>
-                <AnnouncementText>Анонсы новых крутых шрифтов будут в блоге <a href="https://t.me/andrepavlushin" target="_blank">подпишись</a></AnnouncementText>
+                <AnnouncementText>Анонсы новых крутых шрифтов будут в блоге <span>подпишись</span></AnnouncementText>
             </AnnouncementContent>
         </AnnounceWrapper>
     )

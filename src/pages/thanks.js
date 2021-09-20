@@ -10,7 +10,7 @@ import { Link } from "gatsby";
 const ThanksPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("kingdomOfFontsAccess", "true");
+      // localStorage.setItem("kingdomOfFontsAccess", "true");
     }
   }, []);
   return (

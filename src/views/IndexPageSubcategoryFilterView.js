@@ -10,7 +10,7 @@ const IndexPageSubcategoryFilterView = ({
   setFilters,
 }) => {
 
-  console.log("FFF", cards)
+  // console.log("FFF", cards)
   return (
     <>
       <CategoriesFilter setFilters={setFilters} />

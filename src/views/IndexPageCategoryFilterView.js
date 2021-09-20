@@ -1,10 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import CardList from "../components/index-page/cards/CardList";
 import CardListBySubcat from "../components/index-page/cards/CardListBySubCat";
 import CategoriesFilter from "../components/index-page/filters/categories/CategoriesFilter";
 import { StickyWrapper } from "../components/index-page/filters/styles";
 import SubcategoriesFilter from "../components/index-page/filters/subcategories/SubcategoriesFilter";
 import { Container } from "../global";
+import { useQuery } from "../hooks/useQuery";
 
 
 const IndexPageCategoryFilterView = ({
@@ -12,16 +13,24 @@ const IndexPageCategoryFilterView = ({
   setFilters,
 }) => {
 
-  const [subCatInView, setSubCatInView] = useState({})
+  const [subCatInView, setSubCatInView] = useState([])
+
+  const query = useQuery();
+
+  useEffect(() => {
+    setSubCatInView([])
+  }, [query.get("category")])
+
+  console.log("subCatInView", subCatInView)
 
   return (
     <>
       <StickyWrapper>
         <CategoriesFilter setFilters={setFilters} />
-        <SubcategoriesFilter setFilters={setFilters} subCatInView={subCatInView} />
+        <SubcategoriesFilter subCatInView={subCatInView} setFilters={setFilters} subCatInView={subCatInView} />
       </StickyWrapper>
       <Container>
-        <CardListBySubcat cards={cards.reverse()} setSubCatInView={setSubCatInView}/>
+        <CardListBySubcat cards={cards} setSubCatInView={setSubCatInView}/>
       </Container>
     </>
   );

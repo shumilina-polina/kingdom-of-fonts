@@ -17,7 +17,7 @@ import {
 const Card = ({ data }) => {
 
   const truncate = (link) => {
-    console.log("length", link.length)
+    // console.log("length", link.length)
     if (link.length > 30) {
       return link.slice(0, 30) + "..."
     }

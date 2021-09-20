@@ -33,7 +33,7 @@ const Footer = ({footerReduced}) => {
                   Автор и редактор <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a>
                 </Author>
                 <Author>
-                  Дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Савченко</a>
+                  Дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Исаченко</a>
                 </Author>
                 <Author>
                   Программист <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a>

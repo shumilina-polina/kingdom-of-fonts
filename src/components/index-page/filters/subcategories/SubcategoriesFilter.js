@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 // import { navigate } from "gatsby";
 import { categories } from "../../../../categories";
 import { useQuery } from "../../../../hooks/useQuery";
+import scrollTo from "gatsby-plugin-smoothscroll"
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
 const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
@@ -30,7 +31,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
     // );
   };
 
-  console.log("subCatInView", subCatInView)
+  // console.log("subCatInView", subCatInView)
   
   return (
     <Wrapper>
@@ -40,7 +41,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
             key={uuidv4()}
             onClick={selectSubcategory.bind(null, subCat)}
           >
-            <SubCategoryItem href={`#${subCat.url}`} selected={selectedSubcategory?.name === subCat.name}>
+            <SubCategoryItem onClick={() => scrollTo(`#${subCat.url}`)} selected={subCatInView[0]?.name === subCat.name}>
               {subCat.name}
             </SubCategoryItem>
             

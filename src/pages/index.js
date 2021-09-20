@@ -9,6 +9,7 @@ import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
 import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
 import useCards from "../hooks/useCards";
 import { categories } from "../categories";
+import SEO from "../seo";
 
 
 // markup
@@ -48,7 +49,7 @@ const IndexPage = () => {
     // subCategory: getSubCategoryName(),
   });
 
-  console.log("query", filters)
+  // console.log("query", filters)
 
   const cards = useCards();
 
@@ -87,9 +88,9 @@ const IndexPage = () => {
   };
 
   const filteredCards = multiPropsFilter(cards, filters);
-  console.log("cards", cards);
-  console.log("filters", filters);
-  console.log("filteredCards", filteredCards);
+  // console.log("cards", cards);
+  // console.log("filters", filters);
+  // console.log("filteredCards", filteredCards);
 
   if (loading) {
     return <Layout></Layout>;
@@ -99,10 +100,20 @@ const IndexPage = () => {
     return <Layout>no access</Layout>;
   }
 
-  console.log("filters", filters)
+  // console.log("filters", filters)
 
   return (
     <Layout>
+      <SEO
+        title="Царство шрифтов"
+        description="Царство шрифтов"
+        keywords={[
+          "подборка",
+          "шрифты",
+          "fonts",
+        ]}
+        // url="https://granich.design/"
+      />
       <Logo />
       {query.get("category") ? (
         <IndexPageCategoryFilterView

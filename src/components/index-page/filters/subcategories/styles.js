@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
 export const SubCategory = styled.div`
   margin: 0 12px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   :hover {
     cursor: pointer;
     a {

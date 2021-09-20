@@ -13,7 +13,7 @@ import CategoriesFilter from "../components/index-page/filters/categories/Catego
 const RestoreAccessPage = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      localStorage.setItem("kingdomOfFontsAccess", "true");
+      // localStorage.setItem("kingdomOfFontsAccess", "true");
     }
   }, []);
   return (

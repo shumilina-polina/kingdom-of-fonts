@@ -130,6 +130,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   width: 1170px;
   margin: 0 auto;
+  margin-top: -48px;
   height: 100%;
   min-height: 100%;
   @media (max-width: 1200px) {

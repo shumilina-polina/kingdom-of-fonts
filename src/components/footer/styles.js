@@ -29,6 +29,7 @@ export const Author = styled.div`
     padding: 4px 8px;
     :hover {
       background: rgba(256,256,256,0.05);
+      border-radius: 3px;
     }
   }
 `
@@ -45,7 +46,7 @@ export const InfoWrapper = styled.div`
   align-items: flex-end;
   width: 100%;
   svg {
-    width: 50px;
+    width: 45px;
     height: 28px;
   }
 `
@@ -89,7 +90,7 @@ export const LogoWrapper = styled.div`
   justify-content: flex-end;
 `
 
-export const AnnounceWrapper = styled.div`
+export const AnnounceWrapper = styled.a`
   ${props => props.image1 && `
     background-image: url(${props.image2});
   `}
@@ -99,8 +100,12 @@ export const AnnounceWrapper = styled.div`
   width: 158px;
   height: 160px;
   position: absolute;
-  top: 90px;
+  top: 70px;
   right: 55px;
+  transform: scale(1.2);
+  text-decoration: none;
+  outline: none;
+  border: none;
   :hover {
     cursor: pointer;
     ${props => props.image2 && `
@@ -135,9 +140,14 @@ export const AnnouncementText = styled.div`
   font-size: 12px;
   color: white;
   padding: 0 20px;
-  a {
+  span {
+    font-size: 12px;
     color: white;
     display: inline-block;
+    text-decoration: underline;
+    :hover {
+      text-decoration: none;
+    }
     /* text-decoration: none;
     border-bottom: 1px solid white;
     padding: 0;

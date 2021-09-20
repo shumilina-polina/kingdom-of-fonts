@@ -544,7 +544,7 @@ const useCards = () => {
         upheavalPro: data?.upheavalPro?.childImageSharp?.fluid,
     }
 
-    console.log("data", data)
+    // console.log("data", data)
 
     const cards = [
         {
