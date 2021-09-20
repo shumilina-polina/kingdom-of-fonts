@@ -29,7 +29,7 @@ const IndexPageCategoryFilterView = ({
         <CategoriesFilter setFilters={setFilters} />
         <SubcategoriesFilter subCatInView={subCatInView} setFilters={setFilters} subCatInView={subCatInView} />
       </StickyWrapper>
-      <Container>
+      <Container withMargin>
         <CardListBySubcat cards={cards} setSubCatInView={setSubCatInView}/>
       </Container>
     </>
