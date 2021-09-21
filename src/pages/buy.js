@@ -38,7 +38,7 @@ const BuyPage = () => {
         <input
           type="hidden"
           name="successURL"
-          value="https://granich.design/"
+          value="https://pavlushin.design/"
         />
         <label>
           <input type="radio" name="paymentType" value="PC" />

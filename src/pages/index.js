@@ -17,6 +17,7 @@ const IndexPage = () => {
   // включить эти две вещи когда будешь тестировать доступность
   // const [loading, setLoading] = useState(true);
   // const [access, setAccess] = useState(false);
+  
 
   //вот эти две убрать
   const [loading, setLoading] = useState(false);
@@ -112,7 +113,7 @@ const IndexPage = () => {
           "шрифты",
           "fonts",
         ]}
-        // url="https://granich.design/"
+        url="https://pavlushin.design/"
       />
       <Logo />
       {query.get("category") ? (

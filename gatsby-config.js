@@ -6,7 +6,7 @@ module.exports = {
     keywords: `подборка, шрифты`,
     ogImage: `images/index.jpg`,
     ogImageVk: `images/index-vk.jpg`,
-    siteUrl: `https://granich.design`
+    siteUrl: `https://pavlushin.design`
   },
   plugins: [
     "gatsby-plugin-styled-components",

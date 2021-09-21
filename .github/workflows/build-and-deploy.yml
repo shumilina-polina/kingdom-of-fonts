@@ -42,8 +42,8 @@ jobs:
                   cd ${{secrets.PAVLUSHIN_DESIGN_PATH}} && git reset --hard HEAD^
                   git pull https://github.com/antonlavrinov/kingdom-of-fonts.git gatsby-build
 # PRIVATE
-# git clone https://github.com/antonlavrinov/granich.git gatsby-build
-#           script: cd ${{secrets.GRANICH_SITE_PATH}} && git pull https://antonlavrinov:${{ secrets.GRANICH_GIT_TOKEN }}@github.com/antonlavrinov/granich.git gatsby-build
+# git clone https://github.com/antonlavrinov/kingdom-of-fonts.git gatsby-build
+#           script: cd ${{secrets.PAVLUSHIN_SITE_PATH}} && git pull https://antonlavrinov:${{ secrets.PAVLUSHIN_GIT_TOKEN }}@github.com/antonlavrinov/kingdom-of-fonts.git gatsby-build
  
 # NOT PRIVATE
-# git pull https://github.com/antonlavrinov/granich.git gatsby-build
+# git pull https://github.com/antonlavrinov/kingdom-of-fonts.git gatsby-build
