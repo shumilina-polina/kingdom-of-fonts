@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.footer``;
 
 export const FooterWrapper = styled.div`
+  /* margin-top: 48px; */
   padding: 66px 0 60px;
   position: relative;
 `;

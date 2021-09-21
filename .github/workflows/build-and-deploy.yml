@@ -1,0 +1,49 @@
+name: Build and Deploy
+ 
+on:
+  push:
+    branches: [ master ]
+    
+  repository_dispatch:
+    types: [publish-event]
+
+
+jobs:
+  update:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with: 
+          node-version: 12.x
+              
+      - name: Install dependencies
+        run: npm install 
+      - name: Build
+        run: npm run build
+          
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.PAVLUSHIN_GIT_TOKEN }}
+          BRANCH: gatsby-build # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
+          CLEAN: true  
+        
+        
+      - name: Push to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.PAVLUSHIN_DESIGN_IP }}
+          username: ${{ secrets.PAVLUSHIN_DESIGN_LOGIN }}
+          password: ${{ secrets.PAVLUSHIN_DESIGN_PASSWORD }}
+          script: |
+                  cd ${{secrets.PAVLUSHIN_DESIGN_PATH}} && git reset --hard HEAD^
+                  git pull https://github.com/antonlavrinov/kingdom-of-fonts.git gatsby-build
+# PRIVATE
+# git clone https://github.com/antonlavrinov/granich.git gatsby-build
+#           script: cd ${{secrets.GRANICH_SITE_PATH}} && git pull https://antonlavrinov:${{ secrets.GRANICH_GIT_TOKEN }}@github.com/antonlavrinov/granich.git gatsby-build
+ 
+# NOT PRIVATE
+# git pull https://github.com/antonlavrinov/granich.git gatsby-build
