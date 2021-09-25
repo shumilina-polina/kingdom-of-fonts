@@ -78,23 +78,23 @@
        property: `og:description`,
        content: metaDescription,
      },
-     {
-       property: `vk:image`,
-       content: metaOgImageVk,
-     },
-     {
-       property: `og:image`,
-       content: metaOgImage,
-     },
+    //  {
+    //    property: `vk:image`,
+    //    content: metaOgImageVk,
+    //  },
+    //  {
+    //    property: `og:image`,
+    //    content: metaOgImage,
+    //  },
  
-     {
-       property: `og:image:width`,
-       content: "1200",
-     },
-     {
-       property: `og:image:height`,
-       content: "630",
-     },
+    //  {
+    //    property: `og:image:width`,
+    //    content: "1200",
+    //  },
+    //  {
+    //    property: `og:image:height`,
+    //    content: "630",
+    //  },
      {
        property: `og:type`,
        content: `website`,
@@ -107,18 +107,18 @@
        name: `twitter:title`,
        content: metaTitle,
      },
-     {
-       name: `twitter:image`,
-       content: metaOgImage,
-     },
+    //  {
+    //    name: `twitter:image`,
+    //    content: metaOgImage,
+    //  },
      {
        name: `twitter:description`,
        content: metaSocialDescription,
      },
-     {
-       name: `twitter:card`,
-       content: `summary_large_image`,
-     },
+    //  {
+    //    name: `twitter:card`,
+    //    content: `summary_large_image`,
+    //  },
      {
        name: `keywords`,
        content: metaKeywords,

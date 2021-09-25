@@ -106,14 +106,16 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title="Царство шрифтов"
-        description="Царство шрифтов"
-        keywords={[
-          "подборка",
-          "шрифты",
-          "fonts",
-        ]}
-        url="https://pavlushin.design/"
+        // title="Бесплатная кириллица"
+        // description="Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов."
+        // keywords={[
+        //   "подборка",
+        //   "шрифты",
+        //   "fonts",
+        //   "кириллица",
+        //   "бесплатно"
+        // ]}
+        // url="https://pavlushin.design/"
       />
       <Logo />
       {query.get("category") ? (

@@ -12,7 +12,8 @@ import { Wrapper, FooterWrapper, Title,
   Email,
   InfoYear,
   FooterLink,
-  LogoWrapper
+  LogoWrapper,
+  FooterColumn,
 } from "./styles";
 import Logo from '../../assets/svgs/pavlushin.svg';
 
@@ -24,38 +25,45 @@ const Footer = ({footerReduced}) => {
         <FooterWrapper>
           {!footerReduced && (
             <>
-              <Title>В главных ролях</Title>
-              <Authors>
-                <Author>
-                  Автор и дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a>
-                </Author>
-                <Author>
-                  Автор и редактор <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a>
-                </Author>
-                <Author>
-                  Дизайнер <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Исаченко</a>
-                </Author>
-                <Author>
-                  Программист <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a>
-                </Author>
-              </Authors>
+              <FooterColumn>
+                <LogoWrapper>
+                  <Logo/>
+                </LogoWrapper>
+                <InfoYear><span>Мир, труд, дизайн!</span>2020 → {new Date().getFullYear()}©</InfoYear>
+              </FooterColumn>
+              <FooterColumn>
+                <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
+                <Links>
+                  <FooterLink href="https://t.me/andrepavlushin" target="_blank">→ Телеграмировать</FooterLink>
+                  <br/>
+                  <FooterLink href="https://t.me/andrepavlushin" target="_blank">→ Отправить@голубей</FooterLink>
+                </Links>
+              </FooterColumn>
+              <FooterColumn>
+                <Title>В главных ролях</Title>
+                <Authors>
+                  <Author>
+                    <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a> Автор и дизайнер
+                  </Author>
+                  <Author>
+                    <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a> Автор и редактор
+                  </Author>
+                  <Author>
+                    <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Исаченко</a> Дизайнер 
+                  </Author>
+                  <Author>
+                    <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a> Программист 
+                  </Author>
+                  <Author>
+                    <a href="https://t.me/andrepavlushin" target="_blank">Вадим Гранич</a> Вдохновитель
+                  </Author>
+                </Authors>
+              </FooterColumn>
+              <FooterColumn>
+                <Announce/>
+              </FooterColumn>
             </>
           )}
-          
-          <Info>
-            <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
-            <InfoWrapper>
-              <Links>
-                <FooterLink href="https://t.me/andrepavlushin" target="_blank">Телеграмировать</FooterLink>
-                <FooterLink href="https://t.me/andrepavlushin" target="_blank">Отправить@голубей</FooterLink>
-              </Links>
-              <InfoYear>2020 → {new Date().getFullYear()}©</InfoYear>
-              <LogoWrapper>
-                <Logo/>
-              </LogoWrapper>
-            </InfoWrapper>
-            {!footerReduced && <Announce/>}
-          </Info>
         </FooterWrapper>
       </Container>
     </Wrapper>
