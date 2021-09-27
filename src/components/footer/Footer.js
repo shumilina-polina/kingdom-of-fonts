@@ -43,22 +43,22 @@ const Footer = ({footerReduced}) => {
                 <Title>В главных ролях</Title>
                 <Authors>
                   <Author>
-                    <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a> Автор и дизайнер
+                    <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a> <br/><span>Автор и дизайнер</span>
                   </Author>
                   <Author>
-                    <a href="https://t.me/katerinazuryan" target="_blank">Катерина Зырянова</a> Автор и редактор
+                    <a href="https://t.me/katerinazuryan" target="_blank">Катерина Зырянова</a> <br/><span>Автор и редактор</span>
                   </Author>
                   <Author>
-                    <a href="https://t.me/stacy_isa" target="_blank">Анастасия Исаченко</a> Дизайнер 
+                    <a href="https://t.me/stacy_isa" target="_blank">Анастасия Исаченко</a> <br/><span>Дизайнер</span> 
                   </Author>
                   <Author>
-                    <a href="https://t.me/tupto" target="_blank">Павел Лемба Дизайнер</a> Дизайнер 
+                    <a href="https://t.me/tupto" target="_blank">Павел Лемба Дизайнер</a> <br/><span>Дизайнер</span> 
                   </Author>
                   <Author>
-                    <a href="https://t.me/lav_anton" target="_blank">Антон Лавринов</a> Программист 
+                    <a href="https://t.me/lav_anton" target="_blank">Антон Лавринов</a> <br/><span>Программист</span> 
                   </Author>
                   <Author>
-                    <a href="https://t.me/vadim_granich" target="_blank">Вадим Гранич</a> Вдохновитель
+                    <a href="https://t.me/vadim_granich" target="_blank">Вадим Гранич</a> <br/><span>Вдохновитель</span>
                   </Author>
                 </Authors>
               </FooterColumn>

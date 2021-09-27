@@ -57,6 +57,13 @@ export const Author = styled.div`
   margin-right: 20px;
   margin-bottom: 9px;
   font-size: 14px;
+  span {
+    font-size: 14px;
+  }
+  br {
+    display: none;
+  }
+
   :last-child {
     margin-bottom: 0;
   }
@@ -70,6 +77,23 @@ export const Author = styled.div`
       border-radius: 3px;
     }
   }
+  @media (max-width: 1200px) {
+    br {
+      display: block;
+    }
+    span {
+      display: block;
+      padding: 0 8px;
+      margin-top: 3px;
+    }
+  }
+  /* @media (max-width: 900px) {
+    width: 600px;
+  }
+  @media (max-width: 480px) {
+    padding: 0 15px;
+    width: 100%;
+  } */
 `
 
 export const Info = styled.div``

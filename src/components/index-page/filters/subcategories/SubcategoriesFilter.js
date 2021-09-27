@@ -34,10 +34,10 @@ const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInVi
     // );
   };
 
-  const clickLink = (subCat) => {
-    scrollTo(`#${subCat.url}`)
-    // navigate(`?category=${selectedCategory.url}#${subCat.url}`)
-  }
+  // const clickLink = (subCat) => {
+  //   scrollTo(`#${subCat.url}`)
+  //   // navigate(`?category=${selectedCategory.url}#${subCat.url}`)
+  // }
 
   // console.log("subCatInView", subCatInView)
   
@@ -49,17 +49,17 @@ const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInVi
             key={uuidv4()}
             // onClick={selectSubcategory.bind(null, subCat)}
           >
-            <Link
+            <SubCategoryItem
               // href={`#${subCat.url}`}
-              // onClick={() => clickLink(subCat)}
-              to={`/?category=${selectedCategory.url}#${subCat.url}`}
+              onClick={() => scrollTo(`#${subCat.url}`)}
+              // to={`/?category=${selectedCategory.url}#${subCat.url}`}
               // offset={300}
               // duration={1000}
               // selected={subCatInView[0]?.name === subCat.name}
               selected={currentElementIndexInViewport === idx}
             >
               {subCat.name}
-            </Link>
+            </SubCategoryItem>
             
           </SubCategory>
         );

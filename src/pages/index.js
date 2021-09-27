@@ -130,7 +130,7 @@ const IndexPage = () => {
         // url="https://pavlushin.design/"
       />
       <Logo />
-      <Link to="/#footer">to footer</Link>
+      {/* <Link to="/#footer">to footer</Link> */}
       {query.get("category") ? (
         <IndexPageCategoryFilterView
           cards={filteredCards}
