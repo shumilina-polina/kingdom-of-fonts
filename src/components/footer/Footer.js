@@ -34,9 +34,9 @@ const Footer = ({footerReduced}) => {
               <FooterColumn>
                 <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
                 <Links>
-                  <FooterLink href="https://t.me/andrepavlushin" target="_blank">→ Телеграмировать</FooterLink>
+                  <FooterLink href="https://t.me/katerinazuryan" target="_blank">→ Телеграмировать</FooterLink>
                   <br/>
-                  <FooterLink href="https://t.me/andrepavlushin" target="_blank">→ Отправить@голубей</FooterLink>
+                  <FooterLink type="email" href="mailto:fonts@pavlushin.design">→ Отправить@голубей</FooterLink>
                 </Links>
               </FooterColumn>
               <FooterColumn>
@@ -46,16 +46,19 @@ const Footer = ({footerReduced}) => {
                     <a href="https://t.me/andrepavlushin" target="_blank">Андрей Павлушин</a> Автор и дизайнер
                   </Author>
                   <Author>
-                    <a href="https://t.me/andrepavlushin" target="_blank">Катерина Зырянова</a> Автор и редактор
+                    <a href="https://t.me/katerinazuryan" target="_blank">Катерина Зырянова</a> Автор и редактор
                   </Author>
                   <Author>
-                    <a href="https://t.me/andrepavlushin" target="_blank">Анастасия Исаченко</a> Дизайнер 
+                    <a href="https://t.me/stacy_isa" target="_blank">Анастасия Исаченко</a> Дизайнер 
                   </Author>
                   <Author>
-                    <a href="https://t.me/andrepavlushin" target="_blank">Антон Лавринов</a> Программист 
+                    <a href="https://t.me/tupto" target="_blank">Павел Лемба Дизайнер</a> Дизайнер 
                   </Author>
                   <Author>
-                    <a href="https://t.me/andrepavlushin" target="_blank">Вадим Гранич</a> Вдохновитель
+                    <a href="https://t.me/lav_anton" target="_blank">Антон Лавринов</a> Программист 
+                  </Author>
+                  <Author>
+                    <a href="https://t.me/vadim_granich" target="_blank">Вадим Гранич</a> Вдохновитель
                   </Author>
                 </Authors>
               </FooterColumn>

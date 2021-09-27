@@ -7,16 +7,16 @@ import { useQuery } from "../../../../hooks/useQuery";
 import scrollTo from "gatsby-plugin-smoothscroll"
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
-const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
+const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInViewport }) => {
   const query = useQuery();
 
   const selectedCategory = categories?.find(
     (el) => el.url === query.get("category")
   );
 
-  const selectedSubcategory = selectedCategory?.subCategories?.find(
-    (el) => el.url === query.get("subcategory")
-  );
+  // const selectedSubcategory = selectedCategory?.subCategories?.find(
+  //   (el) => el.url === query.get("subcategory")
+  // );
 
   const selectSubcategory = (subcategory) => {
     // setFilters((prevState) => {
@@ -35,13 +35,18 @@ const SubcategoriesFilter = ({ setFilters, subCatInView }) => {
   
   return (
     <Wrapper>
-      {selectedCategory?.subCategories?.map((subCat) => {
+      {selectedCategory?.subCategories?.map((subCat, idx) => {
         return (
           <SubCategory
             key={uuidv4()}
             onClick={selectSubcategory.bind(null, subCat)}
           >
-            <SubCategoryItem onClick={() => scrollTo(`#${subCat.url}`)} selected={subCatInView[0]?.name === subCat.name}>
+            <SubCategoryItem
+              href={`#${subCat.url}`}
+              // onClick={() => scrollTo(`#${subCat.url}`)}
+              // selected={subCatInView[0]?.name === subCat.name}
+              selected={currentElementIndexInViewport === idx}
+            >
               {subCat.name}
             </SubCategoryItem>
             

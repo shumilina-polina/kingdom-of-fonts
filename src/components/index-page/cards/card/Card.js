@@ -48,7 +48,7 @@ const Card = ({ data }) => {
           placeholder="Здесь можно примерить свой текст, если нужно."
         />
         <CardFooter>
-          <DownloadButton download href={`/fonts/${data.name}.zip`}>
+          <DownloadButton target="_blank" href={data.fontUrl}>
             Скачать
           </DownloadButton>
           <FontAuthors>

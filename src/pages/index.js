@@ -6,7 +6,7 @@ import { navigate } from "gatsby";
 import { useQuery } from "../hooks/useQuery";
 import IndexPageNoFiltersView from "../views/IndexPageNoFiltersView";
 import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
-import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
+// import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
 import useCards from "../hooks/useCards";
 import { categories } from "../categories";
 import SEO from "../seo";

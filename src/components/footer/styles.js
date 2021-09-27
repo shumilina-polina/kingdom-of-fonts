@@ -21,17 +21,17 @@ export const FooterColumn = styled.div`
   :nth-child(1) {
     /* flex-grow: 2; */
     /* background: blue; */
-    width: 20%;
+    width: 17%;
   }
   :nth-child(2) {
     /* flex-grow: 2; */
     width: 25%;
   }
   :nth-child(3) {
-    width: 30%;
+    width: 28%;
   }
   :nth-child(4) {
-    width: 25%;
+    width: 29%;
     /* align-items: flex-end; */
   }
   /* align-items: space-between; */
@@ -40,7 +40,7 @@ export const FooterColumn = styled.div`
 
 export const Title = styled.div`
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-size: 14px;
   margin-left: 8px;
 `;
@@ -55,7 +55,7 @@ export const Authors = styled.div`
 
 export const Author = styled.div`
   margin-right: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   font-size: 14px;
   :last-child {
     margin-bottom: 0;
@@ -181,8 +181,9 @@ export const AnnounceWrapper = styled.a`
   right: 55px; */
   position: relative;
   right: 5px;
+  top: 10px;
   margin-left: auto;
-  transform: scale(1.12);
+  transform: scale(1.13);
   text-decoration: none;
   outline: none;
   border: none;
@@ -206,8 +207,8 @@ export const AnnouncementContent = styled.div`
   /* position: absolute; */
   position: relative;
   top: -3px;
-  left: -3px;
-  width: 80%;
+  left: 0px;
+  width: 90%;
   /* top: 50px;
   left: 0; */
 
@@ -224,11 +225,11 @@ export const AnnouncementTitle = styled.div`
 
 export const AnnouncementText = styled.div`
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: white;
   padding: 0 20px;
   span {
-    font-size: 14px;
+    font-size: 15px;
     color: white;
     display: inline-block;
     text-decoration: underline;
