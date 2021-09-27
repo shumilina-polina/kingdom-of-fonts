@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { cards } from "../components/index-page/cards/data";
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
-import { navigate } from "gatsby";
+import { Link, navigate } from "gatsby";
 import { useQuery } from "../hooks/useQuery";
 import IndexPageNoFiltersView from "../views/IndexPageNoFiltersView";
 import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
@@ -10,15 +10,18 @@ import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
 import useCards from "../hooks/useCards";
 import { categories } from "../categories";
 import SEO from "../seo";
-import smoothscroll from 'smoothscroll-polyfill';
+// import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;
 
+// if (typeof window !== 'undefined') {
+//   require('smooth-scroll')('a[href*="#"]');
+// }
 
-if (typeof window !== "undefined") {
-  // kick off the polyfill!
-  smoothscroll.polyfill();
-}
+// if (typeof window !== "undefined") {
+//   // kick off the polyfill!
+//   smoothscroll.polyfill();
+// }
 
 
 // markup
@@ -127,6 +130,7 @@ const IndexPage = () => {
         // url="https://pavlushin.design/"
       />
       <Logo />
+      <Link to="/#footer">to footer</Link>
       {query.get("category") ? (
         <IndexPageCategoryFilterView
           cards={filteredCards}

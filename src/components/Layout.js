@@ -3,11 +3,12 @@ import { Container, GlobalStyle } from "../global";
 import Footer from "./footer/Footer";
 import "../fonts.css";
 
-if (typeof window !== 'undefined') {
-  require('smooth-scroll')('a[href*="#"]');
-}
+
 
 const Layout = ({ children, footerReduced }) => {
+  // if (typeof window !== 'undefined') {
+  //   require('smooth-scroll')('a[href*="#"]');
+  // }
   return (
     <>
       <GlobalStyle />

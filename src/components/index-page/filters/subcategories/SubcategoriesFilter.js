@@ -52,7 +52,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInVi
             <Link
               // href={`#${subCat.url}`}
               // onClick={() => clickLink(subCat)}
-              to={`?category=${selectedCategory.url}#${subCat.url}`}
+              to={`/?category=${selectedCategory.url}#${subCat.url}`}
               // offset={300}
               // duration={1000}
               // selected={subCatInView[0]?.name === subCat.name}

@@ -20,7 +20,7 @@ import Logo from '../../assets/svgs/pavlushin.svg';
 
 const Footer = ({footerReduced}) => {
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <Container>
         <FooterWrapper>
           {!footerReduced && (

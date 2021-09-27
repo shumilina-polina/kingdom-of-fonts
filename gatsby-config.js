@@ -44,6 +44,7 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-smoothscroll",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -69,7 +70,7 @@ module.exports = {
     //     duration: 1000,
     //   }
     // },
-    // `gatsby-plugin-smoothscroll`,
+
     // {
     //   resolve: `gatsby-plugin-google-fonts`,
     //   options: {
