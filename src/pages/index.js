@@ -15,9 +15,10 @@ import smoothscroll from 'smoothscroll-polyfill';
 // window.__forceSmoothScrollPolyfill__ = true;
 
 
- 
-// kick off the polyfill!
-smoothscroll.polyfill();
+if (typeof window !== "undefined") {
+  // kick off the polyfill!
+  smoothscroll.polyfill();
+}
 
 
 // markup
