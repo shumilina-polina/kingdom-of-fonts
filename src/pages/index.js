@@ -10,6 +10,14 @@ import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
 import useCards from "../hooks/useCards";
 import { categories } from "../categories";
 import SEO from "../seo";
+import smoothscroll from 'smoothscroll-polyfill';
+
+// window.__forceSmoothScrollPolyfill__ = true;
+
+
+ 
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 
 // markup

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 export const Wrapper = styled.div`
   display: flex;

@@ -18,6 +18,7 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-react-helmet",
+
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
@@ -61,7 +62,14 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-smoothscroll`,
+    // {
+    //   resolve: "gatsby-plugin-anchor-links",
+    //   options: {
+    //     // offset: -100,
+    //     duration: 1000,
+    //   }
+    // },
+    // `gatsby-plugin-smoothscroll`,
     // {
     //   resolve: `gatsby-plugin-google-fonts`,
     //   options: {
