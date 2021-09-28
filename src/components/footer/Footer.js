@@ -34,7 +34,7 @@ const Footer = ({footerReduced}) => {
               <FooterColumn>
                 <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
                 <Links>
-                  <FooterLink href="https://t.me/katerinazuryan" target="_blank">→ Телеграмировать</FooterLink>
+                  <FooterLink href="https://t.me/katerinazuryan" target="_blank">→ Телеграммировать</FooterLink>
                   <br/>
                   <FooterLink type="email" href="mailto:fonts@pavlushin.design">→ Отправить@голубей</FooterLink>
                 </Links>
