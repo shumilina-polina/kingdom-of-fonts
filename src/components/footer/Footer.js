@@ -52,7 +52,7 @@ const Footer = ({footerReduced}) => {
                     <a href="https://t.me/stacy_isa" target="_blank">Анастасия Исаченко</a> <br/><span>Дизайнер</span> 
                   </Author>
                   <Author>
-                    <a href="https://t.me/tupto" target="_blank">Павел Лемба Дизайнер</a> <br/><span>Дизайнер</span> 
+                    <a href="https://t.me/tupto" target="_blank">Павел Лемба</a> <br/><span>Дизайнер</span> 
                   </Author>
                   <Author>
                     <a href="https://t.me/lav_anton" target="_blank">Антон Лавринов</a> <br/><span>Программист</span> 
