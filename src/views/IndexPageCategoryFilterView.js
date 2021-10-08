@@ -68,7 +68,6 @@ const IndexPageCategoryFilterView = ({
     <Scrollspy offset={-50} sectionRefs={sectionRefs}>
       {({ currentElementIndexInViewport }) => (
         <>
-          {/* {console.log("currentElementIndexInViewport", currentElementIndexInViewport)} */}
           <StickyWrapper>
             <CategoriesFilter category={category} />
             <SubcategoriesFilter
