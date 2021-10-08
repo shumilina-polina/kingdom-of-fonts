@@ -562,7 +562,7 @@ html {
 
 
 @font-face {
-    font-family: "Press Start 2P";
+    font-family: "Press Start2P";
     src: url("./assets/fonts/PressStart2P/PressStart2P.woff2") format("woff2"),
          url("./assets/fonts/PressStart2P/PressStart2P.woff") format("woff");
     font-weight: normal;

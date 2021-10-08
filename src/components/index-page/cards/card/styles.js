@@ -124,6 +124,12 @@ export const TestFontField = styled.textarea`
   ${props => props.fontCSS && `
     ${props.fontCSS}
   `}
+
+  :focus::placeholder {
+    color: transparent;
+  };
+
+  /* font-family: "Press Start 2P"; */
   
 `;
 
