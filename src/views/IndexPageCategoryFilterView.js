@@ -24,14 +24,14 @@ const IndexPageCategoryFilterView = ({
   // );
 
   const arrLength = category?.subCategories?.length;
-  const [sectionRefs, setSectionRefs] = React.useState([]);
+  const sectionRefs = Array(arrLength).fill().map((_, i) => createRef());
 
-  React.useEffect(() => {
-    // add or remove refs
-    setSectionRefs(elRefs => (
-      Array(arrLength).fill().map((_, i) => elRefs[i] || createRef())
-    ));
-  }, [arrLength]);
+  // React.useEffect(() => {
+  //   // add or remove refs
+  //   setSectionRefs(elRefs => (
+  //     Array(arrLength).fill().map((_, i) => elRefs[i] || createRef())
+  //   ));
+  // }, []);
 
   // if (selectedCategory?.subCategories?.length === 2) {
   //   sectionRefs = [
