@@ -13,23 +13,17 @@ import SubcategorySection from "../components/index-page/cards/SubcategorySectio
 
 const IndexPageCategoryFilterView = ({
   cards,
-  setFilters,
+  category
+  // setFilters,
 }) => {
 
-  const query = useQuery();
-  // const [subCatInView, setSubCatInView] = useState([])
-  
+  // const query = useQuery();
 
-  // let sectionRefs = [
-  //         useRef(null),
-  //     useRef(null),
-  // ];
+  // const selectedCategory = categories?.find(
+  //   (el) => el.url === query.get("category")
+  // );
 
-  const selectedCategory = categories?.find(
-    (el) => el.url === query.get("category")
-  );
-
-  const arrLength = selectedCategory?.subCategories?.length;
+  const arrLength = category?.subCategories?.length;
   const [sectionRefs, setSectionRefs] = React.useState([]);
 
   React.useEffect(() => {
@@ -74,20 +68,23 @@ const IndexPageCategoryFilterView = ({
     <Scrollspy offset={-50} sectionRefs={sectionRefs}>
       {({ currentElementIndexInViewport }) => (
         <>
-          {console.log("currentElementIndexInViewport", currentElementIndexInViewport)}
+          {/* {console.log("currentElementIndexInViewport", currentElementIndexInViewport)} */}
           <StickyWrapper>
-            <CategoriesFilter setFilters={setFilters} />
+            <CategoriesFilter category={category} />
             <SubcategoriesFilter
-              setFilters={setFilters}
+              category={category}
+              // setFilters={setFilters}
               currentElementIndexInViewport={currentElementIndexInViewport}
             />
           </StickyWrapper>
           <Container withMargin>
-            {selectedCategory?.subCategories?.map((subCat, idx) => {
-              const sortedCards = cards.filter((card) => card.subCategory === subCat.name)
+            {category?.subCategories?.map((subCat, idx) => {
+              console.log("subCat", subCat)
+              
+              const sortedCards = cards.filter((card) => card.node.fontSubcategory.includes(subCat.name))
               return (
                 <SubcategorySection 
-                  selectedCategory={selectedCategory}
+                  // category={category}
                   ref={sectionRefs[idx]}
                   key={"section-" + idx}
                   subCat={subCat}

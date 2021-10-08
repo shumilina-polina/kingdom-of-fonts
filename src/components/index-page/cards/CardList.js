@@ -6,8 +6,8 @@ import { Wrapper } from "./styles";
 const CardList = ({ cards }) => {
   return (
       <Wrapper>
-        {cards.map((card) => {
-          return <Card key={card._id} data={card} />;
+        {cards.map((card, idx) => {
+          return <Card key={idx} data={card.node} />;
         })}
       </Wrapper>
 

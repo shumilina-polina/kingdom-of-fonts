@@ -1436,7 +1436,7 @@ const useCards = () => {
 {
     fontFormats: ["OTF"],
     image: images.dobroshrift2,
-    name: "Dobroshrift2",
+    name: "Dobroshrift",
     variationsCount: "2 начертания",
     currency: "₽ $ €",
     category: "Рукописные",

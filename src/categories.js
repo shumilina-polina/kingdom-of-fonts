@@ -42,9 +42,8 @@ export const categories = [
     name: "Рукописные",
     url: "handwritten",
     subCategories: [
-      { name: "Пером", url: "calligraphy", id: 1  },
-      { name: "Ручкой/маркером", url: "script", id: 2  },
-      { name: "Кистью", url: "brush", id: 3  },
+      { name: "Каллиграфия", url: "calligraphy", id: 1  },
+      { name: "Пером", url: "brush", id: 2  },
     ],
   },
 ];

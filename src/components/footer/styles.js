@@ -74,6 +74,7 @@ export const Author = styled.div`
     padding: 4px 8px;
     :hover {
       background: rgba(256,256,256,0.05);
+      color: white;
       border-radius: 3px;
     }
   }

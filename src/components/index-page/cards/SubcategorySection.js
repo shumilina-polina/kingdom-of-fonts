@@ -6,7 +6,7 @@ import { useQuery } from '../../../hooks/useQuery';
 import { categories } from '../../../categories';
 import { useScrollDirection } from '../../../hooks/useScrollDirection';
 
-const SubcategorySection = React.forwardRef(({selectedCategory, subCat, sortedCards, setSubCatInView}, ref) => {
+const SubcategorySection = React.forwardRef(({ subCat, sortedCards, setSubCatInView}, ref) => {
     // const { ref, inView, entry } = useInView({
     //     /* Optional options */
     //     threshold: 0.06,
@@ -53,7 +53,7 @@ const SubcategorySection = React.forwardRef(({selectedCategory, subCat, sortedCa
             <Wrapper >
                 {sortedCards.map((card, idx) => {
                     return (
-                        <Card key={idx} data={card}/>
+                        <Card key={idx} data={card.node}/>
                     )
                 })}
             </Wrapper>

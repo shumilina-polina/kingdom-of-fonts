@@ -5,11 +5,11 @@ import CategoriesFilter from "../components/index-page/filters/categories/Catego
 import { StickyWrapper } from "../components/index-page/filters/styles";
 import { Container } from "../global";
 
-const IndexPageNoFiltersView = ({ cards, setFilters }) => {
+const IndexPageNoFiltersView = ({ cards }) => {
   return (
     <>
       <StickyWrapper>
-        <CategoriesFilter setFilters={setFilters} />
+        <CategoriesFilter />
       </StickyWrapper>
       {/* <div style={{height: "40px"}}></div> */}
       <Container>

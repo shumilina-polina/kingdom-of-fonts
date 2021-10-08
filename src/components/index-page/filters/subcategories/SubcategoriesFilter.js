@@ -10,18 +10,18 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 // import scrollTo from "gatsby-plugin-smoothscroll"
 
-const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInViewport }) => {
-  const query = useQuery();
+const SubcategoriesFilter = ({ currentElementIndexInViewport, category }) => {
+  // const query = useQuery();
 
-  const selectedCategory = categories?.find(
-    (el) => el.url === query.get("category")
-  );
+  // const selectedCategory = categories?.find(
+  //   (el) => el.url === query.get("category")
+  // );
 
   // const selectedSubcategory = selectedCategory?.subCategories?.find(
   //   (el) => el.url === query.get("subcategory")
   // );
 
-  const selectSubcategory = (subcategory) => {
+  // const selectSubcategory = (subcategory) => {
     // setFilters((prevState) => {
     //   return {
     //     ...prevState,
@@ -32,7 +32,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInVi
     // navigate(
     //   `?category=${selectedCategory.url}&subcategory=${subcategory.url}`
     // );
-  };
+  // };
 
   // const clickLink = (subCat) => {
   //   scrollTo(`#${subCat.url}`)
@@ -43,7 +43,7 @@ const SubcategoriesFilter = ({ setFilters, subCatInView, currentElementIndexInVi
   
   return (
     <Wrapper>
-      {selectedCategory?.subCategories?.map((subCat, idx) => {
+      {category?.subCategories?.map((subCat, idx) => {
         return (
           <SubCategory
             key={uuidv4()}

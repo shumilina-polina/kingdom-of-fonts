@@ -46,6 +46,13 @@ module.exports = {
     },
     "gatsby-plugin-smoothscroll",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: 'sdmnf6yujh6f',
+        accessToken: 'pYv88yKV35GwYHXsBBkHtJNTz2Qxnfff6KiDpnSWQ-4',
+      }
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

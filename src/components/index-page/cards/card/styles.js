@@ -33,7 +33,7 @@ export const Format = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const Image = styled(Img)`
   width: 100%;
   max-height: 100px;
   height: 100px;
@@ -42,6 +42,7 @@ export const Image = styled.img`
 export const CardInfo = styled.div`
   display: flex;
   margin-bottom: 10px;
+
 `;
 
 export const InfoItem = styled.div`
@@ -52,6 +53,12 @@ export const InfoItem = styled.div`
   padding: 4px;
   font-size: 12px;
   color: rgba(256, 256, 256, 0.5);
+  width: 50%;
+  span {
+    margin: 0 2px;
+    font-size: 12px;
+    color: rgba(256, 256, 256, 0.5);
+  }
   ${props => props.noCurrency && `
     color: rgba(256, 256, 256, 0.2);
   `}
@@ -84,11 +91,11 @@ export const TestFontField = styled.textarea`
     color: white;
   }
   ${(props) =>
-    props.font &&
+    props.fontName &&
     `
-    font-family: ${props.font};
+    font-family: ${props.fontName};
     ::placeholder {
-      font-family: ${props.font};
+      font-family: ${props.fontName};
     }
   `}
   ${(props) =>
@@ -113,6 +120,9 @@ export const TestFontField = styled.textarea`
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
+  `}
+  ${props => props.fontCSS && `
+    ${props.fontCSS}
   `}
   
 `;
@@ -143,16 +153,24 @@ export const DownloadButton = styled.a`
 
 export const FontAuthors = styled.div`
   text-align: center;
-  color: rgba(256, 256, 256, 0.5);
-  font-weight: 500;
-  i {
+  /* color: rgba(256, 256, 256, 0.5);
+  font-weight: 500; */
+  
+  p {
+    font-size: 12px;
+    color: rgba(256, 256, 256, 0.5);
+    font-weight: 500;
+    font-style: italic;
+  }
+  /* i {
     color: rgba(256, 256, 256, 0.5);
     font-size: 12px;
-  }
+  } */
   a {
     color: rgba(256, 256, 256, 0.5);
     font-size: 12px;
     text-decoration: none;
+    font-style: normal;
     :hover {
       cursor: pointer;
       text-decoration: underline;

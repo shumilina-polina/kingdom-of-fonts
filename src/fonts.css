@@ -65,7 +65,7 @@ html {
 }
 
 @font-face {
-    font-family: "PT-Serif";
+    font-family: "PT Serif";
     src: url("./assets/fonts/PT-Serif/PT-Serif.woff2") format("woff2"),
          url("./assets/fonts/PT-Serif/PT-Serif.woff") format("woff");
     font-weight: normal;
@@ -73,7 +73,7 @@ html {
 }
 
 @font-face {
-    font-family: "Playfair-Display";
+    font-family: "Playfair Display";
     src: url("./assets/fonts/Playfair-Display/Playfair-Display.woff2") format("woff2"),
          url("./assets/fonts/Playfair-Display/Playfair-Display.woff") format("woff");
     font-weight: normal;
@@ -97,7 +97,7 @@ html {
 }
 
 @font-face {
-    font-family: "GarciaMarquez";
+    font-family: "Garcia Marquez";
     src: url("./assets/fonts/GarciaMarquez/GarciaMarquez.woff2") format("woff2"),
          url("./assets/fonts/GarciaMarquez/GarciaMarquez.woff") format("woff");
     font-weight: normal;
@@ -121,7 +121,7 @@ html {
 }
 
 @font-face {
-    font-family: "EBGaramond";
+    font-family: "EB Garamond";
     src: url("./assets/fonts/EBGaramond/EBGaramond.woff2") format("woff2"),
          url("./assets/fonts/EBGaramond/EBGaramond.woff") format("woff");
     font-weight: normal;
@@ -137,7 +137,7 @@ html {
 }
 
 @font-face {
-    font-family: "ClutchSans";
+    font-family: "Clutch Sans";
     src: url("./assets/fonts/ClutchSans/ClutchSans.woff2") format("woff2"),
          url("./assets/fonts/ClutchSans/ClutchSans.woff") format("woff");
     font-weight: normal;
@@ -153,7 +153,7 @@ html {
 }
 
 @font-face {
-    font-family: "LeMurmure";
+    font-family: "Le Murmure";
     src: url("./assets/fonts/LeMurmure/LeMurmure.woff2") format("woff2"),
          url("./assets/fonts/LeMurmure/LeMurmure.woff") format("woff");
     font-weight: normal;
@@ -161,7 +161,7 @@ html {
 }
 
 @font-face {
-    font-family: "MovieLetters";
+    font-family: "Movie Letters";
     src: url("./assets/fonts/MovieLetters/MovieLetters.woff2") format("woff2"),
          url("./assets/fonts/MovieLetters/MovieLetters.woff") format("woff");
     font-weight: normal;
@@ -193,7 +193,7 @@ html {
 }
 
 @font-face {
-    font-family: "MonTrappist";
+    font-family: "Mon Trappist";
     src: url("./assets/fonts/MonTrappist/MonTrappist.woff2") format("woff2"),
          url("./assets/fonts/MonTrappist/MonTrappist.woff") format("woff");
     font-weight: normal;
@@ -217,7 +217,7 @@ html {
 }
 
 @font-face {
-    font-family: "RussoOne";
+    font-family: "Russo One";
     src: url("./assets/fonts/RussoOne/RussoOne.woff2") format("woff2"),
          url("./assets/fonts/RussoOne/RussoOne.woff") format("woff");
     font-weight: normal;
@@ -225,7 +225,7 @@ html {
 }
 
 @font-face {
-    font-family: "FiraSans";
+    font-family: "Fira Sans";
     src: url("./assets/fonts/FiraSans/FiraSans.woff2") format("woff2"),
          url("./assets/fonts/FiraSans/FiraSans.woff") format("woff");
     font-weight: normal;
@@ -241,7 +241,7 @@ html {
 }
 
 @font-face {
-    font-family: "PTSans";
+    font-family: "PT Sans";
     src: url("./assets/fonts/PTSans/PTSans.woff2") format("woff2"),
          url("./assets/fonts/PTSans/PTSans.woff") format("woff");
     font-weight: normal;
@@ -273,7 +273,7 @@ html {
 }
 
 @font-face {
-    font-family: "IncopinsClusters";
+    font-family: "Incopins Clusters";
     src: url("./assets/fonts/IncopinsClusters/IncopinsClusters.woff2") format("woff2"),
          url("./assets/fonts/IncopinsClusters/IncopinsClusters.woff") format("woff");
     font-weight: normal;
@@ -281,7 +281,7 @@ html {
 }
 
 @font-face {
-    font-family: "LozungCaps";
+    font-family: "Lozung Caps";
     src: url("./assets/fonts/LozungCaps/LozungCaps.woff2") format("woff2"),
          url("./assets/fonts/LozungCaps/LozungCaps.woff") format("woff");
     font-weight: normal;
@@ -289,7 +289,7 @@ html {
 }
 
 @font-face {
-    font-family: "MoscowMetro";
+    font-family: "Moscow Metro";
     src: url("./assets/fonts/MoscowMetro/MoscowMetro.woff2") format("woff2"),
          url("./assets/fonts/MoscowMetro/MoscowMetro.woff") format("woff");
     font-weight: normal;
@@ -313,7 +313,7 @@ html {
 }
 
 @font-face {
-    font-family: "DisketMono";
+    font-family: "Disket Mono";
     src: url("./assets/fonts/DisketMono/DisketMono.woff2") format("woff2"),
          url("./assets/fonts/DisketMono/DisketMono.woff") format("woff");
     font-weight: normal;
@@ -321,7 +321,7 @@ html {
 }
 
 @font-face {
-    font-family: "RubikMonoOne";
+    font-family: "Rubik Mono One";
     src: url("./assets/fonts/RubikMonoOne/RubikMonoOne.woff2") format("woff2"),
          url("./assets/fonts/RubikMonoOne/RubikMonoOne.woff") format("woff");
     font-weight: normal;
@@ -337,7 +337,7 @@ html {
 }
 
 @font-face {
-    font-family: "NeutralFace";
+    font-family: "Neutral Face";
     src: url("./assets/fonts/NeutralFace/NeutralFace.woff2") format("woff2"),
          url("./assets/fonts/NeutralFace/NeutralFace.woff") format("woff");
     font-weight: normal;
@@ -345,7 +345,7 @@ html {
 }
 
 @font-face {
-    font-family: "PTRootUI";
+    font-family: "PT Root UI";
     src: url("./assets/fonts/PTRootUI/PTRootUI.woff2") format("woff2"),
          url("./assets/fonts/PTRootUI/PTRootUI.woff") format("woff");
     font-weight: normal;
@@ -361,7 +361,7 @@ html {
 }
 
 @font-face {
-    font-family: "ComicCat";
+    font-family: "Comic Cat";
     src: url("./assets/fonts/ComicCat/ComicCat.woff2") format("woff2"),
          url("./assets/fonts/ComicCat/ComicCat.woff") format("woff");
     font-weight: normal;
@@ -401,7 +401,7 @@ html {
 }
 
 @font-face {
-    font-family: "MutaborGrotesque";
+    font-family: "Mutabor Grotesque";
     src: url("./assets/fonts/MutaborGrotesque/MutaborGrotesque.woff2") format("woff2"),
          url("./assets/fonts/MutaborGrotesque/MutaborGrotesque.woff") format("woff");
     font-weight: normal;
@@ -417,7 +417,7 @@ html {
 }
 
 @font-face {
-    font-family: "SoyuzGrotesk";
+    font-family: "Soyuz Grotesk";
     src: url("./assets/fonts/SoyuzGrotesk/SoyuzGrotesk.woff2") format("woff2"),
          url("./assets/fonts/SoyuzGrotesk/SoyuzGrotesk.woff") format("woff");
     font-weight: normal;
@@ -425,7 +425,7 @@ html {
 }
 
 @font-face {
-    font-family: "SportingGrotesque";
+    font-family: "Sporting Grotesque";
     src: url("./assets/fonts/SportingGrotesque/SportingGrotesque.woff2") format("woff2"),
          url("./assets/fonts/SportingGrotesque/SportingGrotesque.woff") format("woff");
     font-weight: normal;
@@ -433,7 +433,7 @@ html {
 }
 
 @font-face {
-    font-family: "StalinistOne";
+    font-family: "Stalinist One";
     src: url("./assets/fonts/StalinistOne/StalinistOne.woff2") format("woff2"),
          url("./assets/fonts/StalinistOne/StalinistOne.woff") format("woff");
     font-weight: normal;
@@ -465,7 +465,7 @@ html {
 }
 
 @font-face {
-    font-family: "AllegroScript";
+    font-family: "Allegro Script";
     src: url("./assets/fonts/AllegroScript/AllegroScript.woff2") format("woff2"),
          url("./assets/fonts/AllegroScript/AllegroScript.woff") format("woff");
     font-weight: normal;
@@ -473,7 +473,7 @@ html {
 }
 
 @font-face {
-    font-family: "Dobroshrift2";
+    font-family: "Dobroshrift";
     src: url("./assets/fonts/Dobroshrift2/Dobroshrift2.woff2") format("woff2"),
          url("./assets/fonts/Dobroshrift2/Dobroshrift2.woff") format("woff");
     font-weight: normal;
@@ -481,7 +481,7 @@ html {
 }
 
 @font-face {
-    font-family: "GangofThree";
+    font-family: "Gang of Three";
     src: url("./assets/fonts/GangofThree/GangofThree.woff2") format("woff2"),
          url("./assets/fonts/GangofThree/GangofThree.woff") format("woff");
     font-weight: normal;
@@ -529,7 +529,7 @@ html {
 }
 
 @font-face {
-    font-family: "PertsovType";
+    font-family: "Pertsov Type";
     src: url("./assets/fonts/PertsovType/PertsovType.woff2") format("woff2"),
          url("./assets/fonts/PertsovType/PertsovType.woff") format("woff");
     font-weight: normal;
@@ -553,7 +553,7 @@ html {
 }
 
 @font-face {
-    font-family: "MonoBiletik";
+    font-family: "Mono Biletik";
     src: url("./assets/fonts/Monobiletik/MonoBiletik.woff2") format("woff2"),
          url("./assets/fonts/Monobiletik/MonoBiletik.woff") format("woff");
     font-weight: normal;
@@ -562,7 +562,7 @@ html {
 
 
 @font-face {
-    font-family: "PressStart2P";
+    font-family: "Press Start 2P";
     src: url("./assets/fonts/PressStart2P/PressStart2P.woff2") format("woff2"),
          url("./assets/fonts/PressStart2P/PressStart2P.woff") format("woff");
     font-weight: normal;
@@ -570,7 +570,7 @@ html {
 }
 
 @font-face {
-    font-family: "UpheavalPro";
+    font-family: "Upheaval Pro";
     src: url("./assets/fonts/UpheavalPro/UpheavalPro.woff2") format("woff2"),
          url("./assets/fonts/UpheavalPro/UpheavalPro.woff") format("woff");
     font-weight: normal;
