@@ -24,7 +24,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
-        name: `Царство шрифтоы`,
+        name: `Царство шрифтов`,
         short_name: `Fonts`,
         start_url: `/`,
         background_color: `#ffffff`,

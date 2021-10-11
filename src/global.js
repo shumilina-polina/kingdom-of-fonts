@@ -140,10 +140,11 @@ export const Container = styled.div`
   @media (max-width: 900px) {
     width: 600px;
   }
-  @media (max-width: 480px) {
-    padding: 0 15px;
+  @media (max-width: 575px) {
+    padding: 0 20px;
     width: 100%;
   }
+  
 
   ${props => props.withMargin && `
     margin-top: -48px;

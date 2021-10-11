@@ -9,6 +9,11 @@ export const FooterWrapper = styled.div`
   display: flex;
   border-top: 1px solid rgba(256, 256, 256, 0.1);
 
+  /* @media only screen and (max-width: 575px) {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  } */
+
 
 `;
 
@@ -33,6 +38,10 @@ export const FooterColumn = styled.div`
   :nth-child(4) {
     width: 29%;
     /* align-items: flex-end; */
+  }
+
+  @media (max-width: 575px) {
+    width: 100% !important;
   }
   /* align-items: space-between; */
   /* background: red; */
@@ -88,13 +97,12 @@ export const Author = styled.div`
       margin-top: 3px;
     }
   }
-  /* @media (max-width: 900px) {
-    width: 600px;
+
+  @media (max-width: 575px) {
+    display: flex;
+    margin-bottom: 4px;
   }
-  @media (max-width: 480px) {
-    padding: 0 15px;
-    width: 100%;
-  } */
+
 `
 
 export const Info = styled.div``
@@ -201,9 +209,6 @@ export const AnnounceWrapper = styled.a`
   background-repeat: no-repeat;
   width: 195px;
   height: 195px;
-  /* position: absolute; */
-  /* top: 70px;
-  right: 55px; */
   position: relative;
   right: 5px;
   top: 10px;
@@ -220,6 +225,12 @@ export const AnnounceWrapper = styled.a`
     ${props => props.image2 && `
       background-image: url(${props.image1});
     `}
+  }
+
+  @media (max-width: 575px) {
+    right: auto;
+    top: auto;
+    margin: 0 auto;
   }
 `
 
@@ -269,4 +280,18 @@ export const AnnouncementText = styled.div`
     } */
   }
 `
+export const DesktopFooter = styled.div`
+  display: block;
 
+  @media (max-width: 575px) {
+    display: none;
+  }
+`
+
+export const MobileFooter = styled.div`
+  display: none;
+
+  @media (max-width: 575px) {
+    display: block;
+  }
+`

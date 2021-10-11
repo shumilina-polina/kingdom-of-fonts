@@ -60,12 +60,12 @@ const BuyPage = () => {
                 /> */}
                 {/* <input type="hidden" name="label" value="$order_id" /> */}
                 <input type="hidden" name="quickpay-form" value="donate" />
-                <input type="hidden" name="targets" value="Доступ к подборке шрифтов" />
-                <input type="hidden" name="sum" value="2" data-type="number" />
+                <input type="hidden" name="targets" value="Бесплатная кириллица" />
+                <input type="hidden" name="sum" value="999" data-type="number" />
                 <input
                   type="hidden"
                   name="comment"
-                  value="Хочу получить доступ к подборке шрифтов."
+                  value="Хочу получить доступ к библиотеке шрифтов"
                 />
                 <input type="hidden" name="need-fio" value="false" />
                 <input type="hidden" name="need-email" value="true" />
