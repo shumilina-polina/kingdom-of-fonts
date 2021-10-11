@@ -61,7 +61,7 @@ const BuyPage = () => {
                 {/* <input type="hidden" name="label" value="$order_id" /> */}
                 <input type="hidden" name="quickpay-form" value="donate" />
                 <input type="hidden" name="targets" value="Бесплатная кириллица" />
-                <input type="hidden" name="sum" value="999" data-type="number" />
+                <input type="hidden" name="sum" value="990" data-type="number" />
                 <input
                   type="hidden"
                   name="comment"
