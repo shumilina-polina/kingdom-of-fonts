@@ -35,7 +35,7 @@ const Footer = ({footerReduced}) => {
                   <InfoYear><span>Мир, труд, дизайн!</span>2020 → {new Date().getFullYear()}©</InfoYear>
                 </FooterColumn>
                 <FooterColumn>
-                  <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
+                  <InfoTitle>Если есть вопросики или классный шрифт:</InfoTitle>
                   <Links>
                     <FooterLink href="https://t.me/katerinazuryan" target="_blank">→ Телеграммировать</FooterLink>
                     <br/>
@@ -97,11 +97,11 @@ const Footer = ({footerReduced}) => {
                   </Authors>
                 </FooterColumn>
                 <FooterColumn>
-                  <InfoTitle>Если есть вопросы или классный шрифт:</InfoTitle>
+                  <InfoTitle>Если есть вопросики или классный шрифт:</InfoTitle>
                   <Links>
-                    <FooterLink href="https://t.me/katerinazuryan" target="_blank">→ Телеграммировать</FooterLink>
+                    <FooterLink href="https://t.me/katerinazuryan" target="_blank">Телеграммировать</FooterLink>
                     <br/>
-                    <FooterLink type="email" href="mailto:fonts@pavlushin.design">→ Отправить@голубей</FooterLink>
+                    <FooterLink type="email" href="mailto:fonts@pavlushin.design">Отправить@голубей</FooterLink>
                   </Links>
                 </FooterColumn>
                 <FooterColumn> 

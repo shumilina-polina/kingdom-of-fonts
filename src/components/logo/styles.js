@@ -7,4 +7,13 @@ export const LogoWrapper = styled.div`
   :hover {
     cursor: pointer;
   }
+
+  @media (max-width: 575px) {
+    margin-bottom: 0;
+    svg {
+      width: 50vw;
+      height: 30vw;
+    }
+  }
 `;
+

@@ -16,4 +16,8 @@ export const StickyWrapper = styled.div`
   padding: 20px 0 15px;
   margin-bottom: 20px;
   width: 100%;
+  @media (max-width: 575px) {
+    padding: 5vw 0 4vw;
+    /* margin-bottom: 2vw; */
+  }
 `

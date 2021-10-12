@@ -69,7 +69,7 @@ console.log("data", data)
         // url="https://pavlushin.design/"
       />
       <Logo />
-        <IndexPageNoFiltersView cards={data.allFonts?.edges}/>
+        <IndexPageNoFiltersView cards={data.allFonts?.edges.slice(0,5)}/>
     </Layout>
   );
 };

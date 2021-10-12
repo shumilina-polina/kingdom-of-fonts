@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Img from "gatsby-image";
-import TextareaAutosize from "react-textarea-autosize";
 
 export const Wrapper = styled.div`
   background: var(--color-grey);
@@ -11,14 +10,22 @@ export const Wrapper = styled.div`
   flex-direction: column;
   ${(props) =>
     props.color &&
-    `
-        background: ${props.color};
-    `};
+  `
+      background: ${props.color};
+  `};
+
+  @media (max-width: 575px) {
+    padding: 4.5vw;
+    border-radius: 1.5vw;
+  }
 `;
 
 export const FontFormats = styled.div`
   display: flex;
   margin-bottom: 10px;
+  @media (max-width: 575px) {
+    margin-bottom: 3vw;
+  }
 `;
 
 export const Format = styled.div`
@@ -31,17 +38,33 @@ export const Format = styled.div`
   :last-child {
     margin-right: 0;
   }
+  @media (max-width: 575px) {
+    font-size: 3.4vw;
+    padding: 0.7vw 3vw;
+    margin-right: 2vw;
+    border-radius: 1.5vw;
+    :last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
 export const Image = styled(Img)`
   width: 100%;
   max-height: 100px;
   height: 100px;
+  @media (max-width: 575px) {
+    max-height: 40vw;
+    height: 40vw;
+  }
 `;
 
 export const CardInfo = styled.div`
   display: flex;
   margin-bottom: 10px;
+  @media (max-width: 575px) {
+    margin-bottom: 4vw;
+  }
 
 `;
 
@@ -54,6 +77,7 @@ export const InfoItem = styled.div`
   font-size: 12px;
   color: rgba(256, 256, 256, 0.5);
   width: 50%;
+
   span {
     margin: 0 2px;
     font-size: 12px;
@@ -64,6 +88,19 @@ export const InfoItem = styled.div`
   `}
   :first-child {
     margin-right: 12px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 1vw;
+    font-size: 4vw;
+    border-radius: 1.5vw;
+    span {
+      margin: 0 1vw;
+      font-size: 4vw;
+    }
+    :first-child {
+      margin-right: 4vw;
+    }
   }
 `;
 
@@ -78,14 +115,10 @@ export const TestFontField = styled.textarea`
   color: white;
   letter-spacing: normal;
   line-height: 1.1;
-  /* max-height: 100px; */
   min-height: 90px;
   height: 90px;
   max-height: 90px;
-  /* height: 100%; */
-  /* height: auto; */
   overflow: hidden;
-  
   flex-grow: 1;
   ::placeholder {
     color: white;
@@ -129,8 +162,22 @@ export const TestFontField = styled.textarea`
     color: transparent;
   };
 
-  /* font-family: "Press Start 2P"; */
-  
+  @media (max-width: 575px) {
+    border-radius: 1.5vw;
+    padding: 3vw 4vw;
+    margin-bottom: 4vw;
+    min-height: 29vw;
+    height: 29vw;
+    max-height: 29vw;
+    ${(props) =>
+      props.fontSize &&
+      `
+      font-size: ${props.fontSize}px;
+      ::placeholder {
+        font-size: ${props.fontSize}px;
+      }
+    `}
+  } 
 `;
 
 export const DownloadButton = styled.a`
@@ -155,12 +202,19 @@ export const DownloadButton = styled.a`
     letter-spacing: 0.05rem;
     background: rgba(256,256,256,0.15);
   }
+
+  @media (max-width: 575px) {
+    padding: 1.8vw;
+    font-size: 3.8vw;
+    margin-bottom: 4vw;
+    :hover {
+      font-size: 3.8vw;
+    }
+  }
 `;
 
 export const FontAuthors = styled.div`
   text-align: center;
-  /* color: rgba(256, 256, 256, 0.5);
-  font-weight: 500; */
   
   p {
     font-size: 12px;
@@ -168,10 +222,6 @@ export const FontAuthors = styled.div`
     font-weight: 500;
     font-style: italic;
   }
-  /* i {
-    color: rgba(256, 256, 256, 0.5);
-    font-size: 12px;
-  } */
   a {
     color: rgba(256, 256, 256, 0.5);
     font-size: 12px;
@@ -185,6 +235,18 @@ export const FontAuthors = styled.div`
     }
   }
 
+  @media (max-width: 575px) {
+    p {
+      font-size: 3.8vw;
+    }
+    a {
+      font-size: 3.8vw;
+      :hover {
+        font-size: 3.8vw;
+      }
+    }
+  }
+
 `;
 
 export const FontImage = styled(Img)`
@@ -192,6 +254,11 @@ export const FontImage = styled(Img)`
   margin-bottom: 10px;
   border-radius: 5px;
   height: 160px;
+  @media (max-width: 575px) {
+    margin-bottom: 4vw;
+    height: 50vw;
+    border-radius: 1.5vw;
+  }
 `
 
 export const StretchWrapper = styled.div`

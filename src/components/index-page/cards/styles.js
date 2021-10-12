@@ -12,8 +12,9 @@ export const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 575px) {
     grid-template-columns: 1fr;
+    grid-gap: 8vw;
   }
 `;
 
@@ -24,12 +25,22 @@ export const SubcategoryTitle = styled.div`
   z-index: 2;
   margin-bottom: 28px;
   color: rgba(256,256,256,0.15);
+
+  @media (max-width: 575px) {
+    padding: 0 5vw;
+    margin-bottom: 8vw;
+    font-size: 4.3vw;
+  }
 `
 
 export const SubcategoryItems = styled.div`
   /* padding-bottom: 48px; */
   position: relative;
   padding-top: 48px;
+
+  @media (max-width: 575px) {
+    padding-top: 10vw;
+  }
   /* :first-child {
     padding-top: 0;
   } */
@@ -53,10 +64,19 @@ export const SubcategorySectionItem = styled.div`
     z-index: 1;
 
   }
+  @media (max-width: 575px) {
+    :after {
+      height: 3vw;
+      border-bottom: 2px solid rgba(256, 256, 256, 0.1);
+    }
+  }
 
 `
 
 export const SubcategoryItemsId = styled.div`
   position: absolute;
   top: -23px;
+  @media (max-width: 575px) {
+    top: -12vw;
+  }
 `

@@ -8,6 +8,7 @@ export const FooterWrapper = styled.div`
   position: relative;
   display: flex;
   border-top: 1px solid rgba(256, 256, 256, 0.1);
+  width: 100%;
 
   /* @media only screen and (max-width: 575px) {
     margin-top: 5vw;
@@ -23,6 +24,7 @@ export const FooterColumn = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
   :nth-child(1) {
     /* flex-grow: 2; */
     /* background: blue; */
@@ -42,6 +44,35 @@ export const FooterColumn = styled.div`
 
   @media (max-width: 575px) {
     width: 100% !important;
+
+    :first-child {
+      margin-bottom: 10vw;
+      /* padding: 0 1vw; */
+    }
+
+    :nth-child(2) {
+      margin-bottom: 8vw;
+      padding: 0 2vw;
+    }
+
+    :nth-child(3) {
+      background: rgba(256,256,256, 0.08);
+      border-radius: 8px;
+      padding: 4vw 4vw;
+      margin-bottom: 8vw;
+    }
+    :nth-child(4) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4vw;
+
+      svg {
+        width: 20vw;
+      }
+    }
   }
   /* align-items: space-between; */
   /* background: red; */
@@ -52,6 +83,11 @@ export const Title = styled.div`
   margin-bottom: 40px;
   font-size: 14px;
   margin-left: 8px;
+
+  @media (max-width: 575px) {
+    font-size: 4.3vw;
+    margin-bottom: 4.2vw;
+  }
 `;
 
 export const Authors = styled.div`
@@ -60,6 +96,11 @@ export const Authors = styled.div`
   flex-direction: column;
   max-width: 660px;
   /* margin-bottom: 32px; */
+  @media (max-width: 575px) {
+    max-width: 100%;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
 `;
 
 export const Author = styled.div`
@@ -93,14 +134,27 @@ export const Author = styled.div`
     }
     span {
       display: block;
-      padding: 0 8px;
-      margin-top: 3px;
+      padding: 0;
+      margin-top: 0;
     }
+
   }
 
   @media (max-width: 575px) {
     display: flex;
-    margin-bottom: 4px;
+    margin-bottom: 2.5vw;
+    margin-right: 0;
+    font-size: 4.3vw;
+    span {
+      font-size: 4.3vw;
+      padding: 0;
+    }
+    a {
+      padding: 0 1.6vw;
+      :hover {
+        background: none;
+      }
+    }
   }
 
 `
@@ -111,6 +165,11 @@ export const InfoTitle = styled.div`
   margin-bottom: 7px;
   width: 150px;
   font-size: 14px;
+  @media (max-width: 575px) {
+    font-size: 4vw;
+    width: 100%;
+    white-space: nowrap;
+  }
 `;
 
 export const InfoWrapper = styled.div`
@@ -122,6 +181,13 @@ export const InfoWrapper = styled.div`
     width: 45px;
     height: 28px;
   }
+
+  /* @media (max-width: 575px) {
+    svg {
+      width: 11vw;
+      height: 11vw;
+    }
+  } */
 `
 
 export const Links = styled.div`
@@ -135,6 +201,14 @@ export const Links = styled.div`
   margin-bottom: 5px;
   :last-child {
     margin-bottom: 0;
+  }
+  @media (max-width: 575px) {
+    /* font-size: 4vw; */
+    width: 100%;
+    flex-wrap: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `;
 
@@ -169,6 +243,17 @@ export const FooterLink = styled.a`
       border-color: rgba(235, 91, 11, 0.4);;
     }
   }
+  @media (max-width: 575px) {
+    font-size: 4.1vw;
+    margin-top: 0;
+    :first-child {
+      margin-right: 3vw;
+    }
+    :hover {
+      font-size: 4.1vw;
+
+    }
+  }
 `
 
 
@@ -186,13 +271,24 @@ export const InfoYear = styled.div`
     line-height: 1.4;
     display: block;
   }
+  @media (max-width: 575px) {
+    font-size: 4.3vw;
+    line-height: 1.7;
+    span {
+      font-size: 4.3vw;
+      margin-bottom: 0;
+      line-height: 1.8;
+    }
+  }
 `
 
 export const LogoWrapper = styled.div`
   svg {
     width: 50px;
   } 
+
   /* flex-grow: 1;
+
   flex-basis: 0; */
   /* flex: 1; */
   /* margin-left: auto; */
@@ -231,6 +327,9 @@ export const AnnounceWrapper = styled.a`
     right: auto;
     top: auto;
     margin: 0 auto;
+    transform: none;
+    width: 80vw;
+    height: 80vw;
   }
 `
 
@@ -245,6 +344,13 @@ export const AnnouncementContent = styled.div`
   top: -3px;
   left: 0px;
   width: 90%;
+
+  @media (max-width: 575px) {
+    /* top: -3vw; */
+    left: 0px;
+    width: 70vw;
+
+  }
   /* top: 50px;
   left: 0; */
 
@@ -256,6 +362,10 @@ export const AnnouncementTitle = styled.div`
   font-weight: normal;
   font-size: 30px;
   text-transform: uppercase;
+
+  @media (max-width: 575px) {
+    font-size: 13vw;
+  }
 `
 
 
@@ -272,16 +382,21 @@ export const AnnouncementText = styled.div`
     :hover {
       text-decoration: none;
     }
-    /* text-decoration: none;
-    border-bottom: 1px solid white;
-    padding: 0;
-    :hover {
-      border-bottom: none;
-    } */
+
+
+  }
+  @media (max-width: 575px) {
+    font-size: 6.5vw;
+    padding: 0 3vw;
+    line-height: 1.1;
+    span {
+      font-size: 6.5vw;
+    }
   }
 `
 export const DesktopFooter = styled.div`
-  display: block;
+  display: flex;
+  width: 100%;
 
   @media (max-width: 575px) {
     display: none;
@@ -290,6 +405,7 @@ export const DesktopFooter = styled.div`
 
 export const MobileFooter = styled.div`
   display: none;
+  width: 100%;
 
   @media (max-width: 575px) {
     display: block;
