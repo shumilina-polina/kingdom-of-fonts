@@ -10,6 +10,13 @@ import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView
 import useCards from "../../hooks/useCards";
 import { categories } from "../../categories";
 import SEO from "../../seo";
+import {
+
+  LogoWithCurve,
+  CurveIcon,
+  ShadowCircle,
+  CurveMobileIcon,
+} from "../../components/access-page/style";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;
@@ -170,7 +177,12 @@ const StylizedPage = ({data}) => {
         // ]}
         // url="https://pavlushin.design/"
       />
-      <Logo />
+              <CurveIcon/>
+        <CurveMobileIcon/>
+        <LogoWithCurve>
+          <Logo />
+          <ShadowCircle/>
+        </LogoWithCurve>
         <IndexPageCategoryFilterView
             cards={data.stylizedFonts.edges}
             category={categories[2]}

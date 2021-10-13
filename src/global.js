@@ -36,6 +36,11 @@ export const GlobalStyle = createGlobalStyle`
 
     main {
         padding-top: 46px;
+
+        @media (max-width: 575px) {
+          padding-top: 10vw;
+        }
+
     }
 
 
@@ -52,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         height: 100%;
         background: var(--color-background);
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
 
@@ -64,6 +69,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
+        /* overflow-x: hidden; */
     }
 
     input, input:hover, input:active, input:focus {
@@ -134,11 +140,15 @@ export const Container = styled.div`
   height: 100%;
   min-height: 100%;
   @media (max-width: 1200px) {
-    width: 900px;
-    padding: 0 30px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 30px; */
   }
-  @media (max-width: 900px) {
-    width: 600px;
+  @media (max-width: 1050px) {
+    width: 100%;
   }
   @media (max-width: 575px) {
     padding: 0 4vw;

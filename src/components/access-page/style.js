@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Curve from "../../assets/svgs/curve.svg";
+import MobileCurve from "../../assets/svgs/curve-mobile.svg";
 
 export const AccessWrapper = styled.div`
     background: #242424;
@@ -14,6 +15,14 @@ export const AccessWrapper = styled.div`
     overflow: hidden;
     position: relative;
 `;
+
+// export const OverflowHidden = styled.div`
+//     /* overflow-x: hidden; */
+//     width: 100%;
+//     min-width: 100%;
+//     background: red;
+//     position: relative;
+// `
 
 export const AccessInfo = styled.div``;
 
@@ -156,22 +165,48 @@ export const LogoWithCurve = styled.div`
 
 export const CurveIcon = styled(Curve)`
     position: absolute;
-    top: -25px;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1500px;
+    width: 1150px;
+    display: block;
+    @media (max-width: 575px) {
+        display: none;
+    }
+`
+
+export const CurveMobileIcon = styled(MobileCurve)`
+    position: absolute;
+    top: 20vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95vw;
+    display: none;
+    @media (max-width: 575px) {
+        display: block;
+    }
 `
 
 export const ShadowCircle = styled.div`
     background: rgb(21, 21, 21);
-    width: 80%;
+    width: 100%;
     height: 80%;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgb(21, 21, 21);
+    box-shadow: 0 0 5px rgb(21, 21, 21, 0.5);
     position: absolute;
     top: 50%;
     left: 48%;
     transform: translate(-50%, -50%);
+    filter: blur(10px);
+    @media (max-width: 575px) {
+        width: 40%;
+        /* height: 80%; */
+        box-shadow: 0 0 8vw rgb(21, 21, 21);
+        filter: blur(2vw);
+        /* box-shadow: 0 0 8vw red; */
+        /* z-index: 1; */
+        /* box-shadow: 0 0 5vw red; */
+    }
     /* left: -1px; */
     /* z-index: -1; */
 `

@@ -10,6 +10,13 @@ import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView
 import useCards from "../../hooks/useCards";
 import { categories } from "../../categories";
 import SEO from "../../seo";
+import {
+
+  LogoWithCurve,
+  CurveIcon,
+  ShadowCircle,
+  CurveMobileIcon,
+} from "../../components/access-page/style";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 
@@ -68,7 +75,12 @@ console.log("data", data)
         // ]}
         // url="https://pavlushin.design/"
       />
-      <Logo />
+              <CurveIcon/>
+        <CurveMobileIcon/>
+        <LogoWithCurve>
+          <Logo />
+          <ShadowCircle/>
+        </LogoWithCurve>
         <IndexPageNoFiltersView cards={data.allFonts?.edges.slice(0,5)}/>
     </Layout>
   );

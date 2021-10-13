@@ -12,7 +12,8 @@ export const LogoWrapper = styled.div`
     margin-bottom: 0;
     svg {
       width: 50vw;
-      height: 30vw;
+      height: 28vw;
+      z-index: 3;
     }
   }
 `;

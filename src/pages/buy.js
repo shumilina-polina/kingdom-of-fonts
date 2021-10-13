@@ -16,6 +16,7 @@ import {
   AccessImage,
   LogoWithCurve,
   CurveIcon,
+  CurveMobileIcon,
   ShadowCircle,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
@@ -26,16 +27,18 @@ import Logo from "../components/logo/Logo";
 import buyImage from "../assets/buy.png";
 import { Container } from "../global";
 
+
 // markup
 const BuyPage = () => {
   const [warning, setWarning] = useState(false)
   return (
     <Layout>
-      <CurveIcon/>
-      <LogoWithCurve>
-        <Logo />
-        <ShadowCircle/>
-      </LogoWithCurve>
+              <CurveIcon/>
+        <CurveMobileIcon/>
+        <LogoWithCurve>
+          <Logo />
+          <ShadowCircle/>
+        </LogoWithCurve>
       <Container>
         {warning ? (
           <AccessWrapper>

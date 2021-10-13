@@ -9,7 +9,21 @@ export const FooterWrapper = styled.div`
   display: flex;
   border-top: 1px solid rgba(256, 256, 256, 0.1);
   width: 100%;
-
+  @media (max-width: 1200px) {
+    padding-right: 20px;
+    padding-left: 20px;
+     
+  }
+  @media (max-width: 1050px) {
+    width: 100%;
+  }
+  @media (max-width: 575px) {
+    /* padding: 0 4vw; */
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
   /* @media only screen and (max-width: 575px) {
     margin-top: 5vw;
     margin-bottom: 5vw;
@@ -109,6 +123,8 @@ export const Author = styled.div`
   font-size: 14px;
   span {
     font-size: 14px;
+    /* padding: 0 4px; */
+    /* margin: 0 6px; */
   }
   br {
     display: none;

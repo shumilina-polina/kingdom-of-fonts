@@ -10,6 +10,13 @@ import { Link, navigate } from "gatsby";
 // import useCards from "../hooks/useCards";
 // import { categories } from "../categories";
 import SEO from "../seo";
+// import {
+
+//   LogoWithCurve,
+//   CurveIcon,
+//   ShadowCircle,
+//   CurveMobileIcon,
+// } from "../../components/access-page/style";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;

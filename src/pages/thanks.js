@@ -17,6 +17,7 @@ import {
   LogoWithCurve,
   CurveIcon,
   ShadowCircle,
+  CurveMobileIcon,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
 import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
@@ -40,10 +41,12 @@ const ThanksPage = () => {
   return (
     <Layout>
       <CurveIcon/>
-      <LogoWithCurve>
-        <Logo />
-        <ShadowCircle/>
-      </LogoWithCurve>
+      <CurveIcon/>
+        <CurveMobileIcon/>
+        <LogoWithCurve>
+          <Logo />
+          <ShadowCircle/>
+        </LogoWithCurve>
       <Container>
         <AccessWrapper>
           <AccessImage src={buyImage} />

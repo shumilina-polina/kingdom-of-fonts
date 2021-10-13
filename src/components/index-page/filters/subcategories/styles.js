@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 575px) {
     justify-content: start;
-    padding: 1vw 4vw 0;
+    padding: 1vw 3vw;
     overflow-x: scroll;
     scrollbar-width: none;
     ::-webkit-scrollbar { 
@@ -29,16 +29,17 @@ export const SubCategory = styled.div`
     }
   }
   @media (max-width: 575px) {
-    margin: 0 5vw 2vw 0;
+    margin: 0 0 2vw 0;
+    padding: 0 3vw;
     :last-child {
       margin-right: 0;
     }
     a {
-      font-size: 5vw;
+      font-size: 4.4vw;
     }
     :hover {
       a {
-        font-size: 5vw;
+        font-size: 4.4vw;
       }
     }
   }
@@ -51,11 +52,7 @@ export const SubCategoryItem = styled.a`
     border-bottom: 1px solid rgba(69, 231, 134, 0.4);
     white-space: nowrap;
     text-decoration: none;
-    /* :hover {
-      font-size: 14px;
-      color: var(--color-green);
-      text-decoration: none;
-    } */
+    
   ${(props) =>
     props.selected &&
     `

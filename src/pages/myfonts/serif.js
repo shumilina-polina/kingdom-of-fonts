@@ -10,6 +10,15 @@ import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView
 import useCards from "../../hooks/useCards";
 import { categories } from "../../categories";
 import SEO from "../../seo";
+import {
+
+  LogoWithCurve,
+  CurveIcon,
+  ShadowCircle,
+  CurveMobileIcon,
+  OverflowHidden,
+  
+} from "../../components/access-page/style";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;
@@ -170,7 +179,7 @@ const SerifPage = ({data}) => {
         // ]}
         // url="https://pavlushin.design/"
       />
-      <Logo />
+
         <IndexPageCategoryFilterView
             cards={data.serifFonts.edges}
             category={categories[1]}

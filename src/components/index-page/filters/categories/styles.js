@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
     justify-content: start;
     overflow-x: scroll;
     scrollbar-width: none;
-    padding: 0 1.5vw;
+    padding: 0 3vw;
     margin-bottom: 5vw;
     ::-webkit-scrollbar { 
       display: none;
@@ -40,14 +40,14 @@ export const CategoryItem = styled(Link)`
     `}
 
 @media (max-width: 575px) {
-  font-size: 6vw;
-  padding: 0;
-  margin-right: 4.5vw;
+  font-size: 5vw;
+  padding: 0 3vw;
+  margin: 0;
   :last-child {
-    margin-right: 0;
+    margin-right: 3vw;
   }
   :hover {
-    font-size: 6vw;
+    font-size: 5vw;
     border-radius: 1vw;
     background: none;
   }

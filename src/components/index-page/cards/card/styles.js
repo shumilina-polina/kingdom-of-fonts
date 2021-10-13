@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   box-shadow: 0px 2.47088px 6.17719px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
+  width: 100%;
   ${(props) =>
     props.color &&
   `

@@ -8,6 +8,13 @@ import { Link } from "gatsby";
 import RestoreAccessPageView from "../views/RestoreAccessPageView";
 import { StickyWrapper } from "../components/index-page/filters/styles";
 import CategoriesFilter from "../components/index-page/filters/categories/CategoriesFilter";
+import {
+
+  LogoWithCurve,
+  CurveIcon,
+  ShadowCircle,
+  CurveMobileIcon,
+} from "../components/access-page/style";
 
 // markup
 const RestoreAccessPage = () => {
@@ -18,7 +25,12 @@ const RestoreAccessPage = () => {
   }, []);
   return (
     <Layout footerReduced>
-      <Logo />
+              <CurveIcon/>
+        <CurveMobileIcon/>
+        <LogoWithCurve>
+          <Logo />
+          <ShadowCircle/>
+        </LogoWithCurve>
       <StickyWrapper>
         <CategoriesFilter setFilters={() => {}} />
       </StickyWrapper>
