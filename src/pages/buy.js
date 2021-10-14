@@ -18,6 +18,11 @@ import {
   CurveIcon,
   CurveMobileIcon,
   ShadowCircle,
+  DesktopWrapper,
+  MobileWrapper,
+  AccessImageWrapper,
+  AccessImageStepOne,
+  AccessImageStepTwo,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
 import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
@@ -25,112 +30,172 @@ import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 
 import buyImage from "../assets/buy.png";
+import buyImageMobile from "../assets/buy_mobile.png";
+import moneyImage from "../assets/money.png";
+import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
 
-
+// const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup
 const BuyPage = () => {
   const [warning, setWarning] = useState(false)
+
+  const stepOneTitle = "Подписка на год";
+  const stepOneText = (<>Нажимая кнопку, <span>вы покупаете доступ к сайту</span> с подборкой клёвых бесплатных шрифтов, собранных по всем интернетам и соглашаетесь с тем, что вы прекрасны</>)
+  const stepOneButtonText = "Подписаться"
+  const stepOneFirstYearTitle = (<>Первый год <span>1990</span></>)
+  const stepOneFirstYearPrice = (<>990<span>₽</span></>)
+  const stepOneSecondYearTitle = (<>Со второго года</>)
+  const stepOneSecondYearPrice = (<>199<span>₽/мес</span></>)
+
+  const stepTwoTitle = "Один нюанс";
+  const stepTwoText = (<>После успешной оплаты на Юмани появится окно с подтверждением и кнопкой <span>вернуться на сайт</span>, на эту <span>кнопку</span> нужно <span>нажать</span>, чтобы  вернуться к нам сюда за шрифтами</>)
+  const stepTwoForm = (
+    <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
+      <input type="hidden" name="receiver" value="410016040384130" />
+      <input type="hidden" name="quickpay-form" value="donate" />
+      <input type="hidden" name="targets" value="Бесплатная кириллица" />
+      <input type="hidden" name="sum" value="990" data-type="number" />
+      <input
+        type="hidden"
+        name="comment"
+        value="Хочу получить доступ к библиотеке шрифтов"
+      />
+      <input type="hidden" name="need-fio" value="false" />
+      <input type="hidden" name="need-email" value="true" />
+      <input type="hidden" name="need-phone" value="false" />
+      <input type="hidden" name="need-address" value="false" />
+      <input
+        type="hidden"
+        name="successURL"
+        value="https://pavlushin.design/thanks"
+      />
+      <AccessButton type="submit" value="Оплатить">Оплатить</AccessButton>
+    </form>
+  )
+  const youMoneyText = "Перейти к оплате на Юмани"
   return (
     <Layout>
-              <CurveIcon/>
+              {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
       <Container>
         {warning ? (
+          <>
+          <DesktopWrapper>
+            <AccessWrapper>
+              <AccessImageStepTwo src={moneyImage} />
+              <AccessInfo>
+                <AccessTitle>{stepTwoTitle}</AccessTitle>
+                <AccessText>{stepTwoText}</AccessText>
+              </AccessInfo>
+              <AccessLine/>
+              <AccessFooter>
+                {stepTwoForm}
+                <ArrowIcon/>
+                <YouMoneyWrapper>
+                  <YouMoneyLogo/>
+                  <YouMoneyText>
+                    {youMoneyText}
+                  </YouMoneyText>
+                </YouMoneyWrapper>
+                <ArrowIcon/>
+              </AccessFooter>
+            </AccessWrapper>
+          </DesktopWrapper>
+          <MobileWrapper>
           <AccessWrapper>
-            <AccessImage src={buyImage} />
-            <AccessInfo>
-              <AccessTitle>Один нюанс</AccessTitle>
-              <AccessText>После успешной оплаты на Юмани появится окно с подтверждением и кнопкой <span>вернуться на сайт</span>, на эту <span>кнопку</span> нужно <span>нажать</span>, чтобы  вернуться к нам сюда за шрифтами</AccessText>
-            </AccessInfo>
-            <AccessLine/>
-            <AccessFooter>
-              <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
-                <input type="hidden" name="receiver" value="410016040384130" />
-                {/* <input
-                  type="hidden"
-                  name="formcomment"
-                  value="Проект «Железный человек»: реактор холодного ядерного синтеза"
-                />
-                <input
-                  type="hidden"
-                  name="short-dest"
-                  value="Проект «Железный человек»: реактор холодного ядерного синтеза"
-                /> */}
-                {/* <input type="hidden" name="label" value="$order_id" /> */}
-                <input type="hidden" name="quickpay-form" value="donate" />
-                <input type="hidden" name="targets" value="Бесплатная кириллица" />
-                <input type="hidden" name="sum" value="990" data-type="number" />
-                <input
-                  type="hidden"
-                  name="comment"
-                  value="Хочу получить доступ к библиотеке шрифтов"
-                />
-                <input type="hidden" name="need-fio" value="false" />
-                <input type="hidden" name="need-email" value="true" />
-                <input type="hidden" name="need-phone" value="false" />
-                <input type="hidden" name="need-address" value="false" />
-                <input
-                  type="hidden"
-                  name="successURL"
-                  value="https://pavlushin.design/thanks"
-                />
-                {/* <label>
-                  <input type="radio" name="paymentType" value="PC" />
-                  ЮMoney
-                </label>
-                <label>
-                  <input type="radio" name="paymentType" value="AC" />
-                  Банковской картой
-                </label> */}
-                <AccessButton type="submit" value="Оплатить">Оплатить</AccessButton>
-              </form>
-              <ArrowIcon/>
-              <YouMoneyWrapper>
-                <YouMoneyLogo/>
-                <YouMoneyText>
-                  Перейти к оплате на Юмани
-                </YouMoneyText>
-              </YouMoneyWrapper>
-            </AccessFooter>
-          </AccessWrapper>
+   
+              <AccessImageStepTwo src={moneyImageMobile} />
+  
+              
+              <AccessInfo>
+                <AccessTitle>{stepTwoTitle}</AccessTitle>
+                <AccessText>{stepTwoText}</AccessText>
+              </AccessInfo>
+              <AccessFooter>
+                {stepTwoForm}
+                <YouMoneyWrapper>
+                  <YouMoneyLogo/>
+                </YouMoneyWrapper>
+              </AccessFooter>
+            </AccessWrapper>
+          </MobileWrapper>
+          </>
         ) : (
+          <>
+          <DesktopWrapper>
           <AccessWrapper>
-            <AccessImage src={buyImage} />
+            <AccessImageStepOne src={buyImage} />
             <AccessInfo>
-              <AccessTitle>Подписка на год</AccessTitle>
-              <AccessText>Нажимая кнопку, <span>вы покупаете доступ к сайту</span> с подборкой клёвых бесплатных шрифтов, собранных по всем интернетам и соглашаетесь с тем, что вы прекрасны</AccessText>
+              <AccessTitle>{stepOneTitle}</AccessTitle>
+              <AccessText>{stepOneText}</AccessText>
             </AccessInfo>
             <AccessLine/>
             <AccessFooter>
               <AccessButton onClick={() => setWarning(true)}>
-                Подписаться
+                {stepOneButtonText}
               </AccessButton>
               <ArrowIcon/>
               <AccessPriceWrapper>
                 <AccessPriceYear>
                   <AccessPriceTitle>
-                    Первый год <span>1990</span>
+                    {stepOneFirstYearTitle}
                   </AccessPriceTitle>
                   <AccessPrice green>
-                    990<span>₽</span>
+                    {stepOneFirstYearPrice}
                   </AccessPrice>
                 </AccessPriceYear>
                 <AccessPriceYear>
                 <AccessPriceTitle>
-                    Со второго года
+                    {stepOneSecondYearTitle}
                   </AccessPriceTitle>
                   <AccessPrice>
-                    199<span>₽/мес</span>
+                    {stepOneSecondYearPrice}
                   </AccessPrice>
                 </AccessPriceYear>
               </AccessPriceWrapper>
             </AccessFooter>
           </AccessWrapper>
+          </DesktopWrapper>
+          <MobileWrapper>
+          <AccessWrapper>
+            <AccessImageWrapper>
+              <AccessImageStepOne src={buyImageMobile} />
+            </AccessImageWrapper>
+            <AccessInfo>
+              <AccessTitle>{stepOneTitle}</AccessTitle>
+            </AccessInfo>
+            <AccessFooter>
+              <AccessPriceWrapper>
+                <AccessPriceYear>
+                  <AccessPriceTitle>
+                    {stepOneFirstYearTitle}
+                  </AccessPriceTitle>
+                  <AccessPrice green>
+                    {stepOneFirstYearPrice}
+                  </AccessPrice>
+                </AccessPriceYear>
+                <AccessPriceYear>
+                <AccessPriceTitle>
+                    {stepOneSecondYearTitle}
+                  </AccessPriceTitle>
+                  <AccessPrice>
+                    {stepOneSecondYearPrice}
+                  </AccessPrice>
+                </AccessPriceYear>
+              </AccessPriceWrapper>
+            </AccessFooter>
+            <AccessButton onClick={() => setWarning(true)}>
+              {stepOneButtonText}
+            </AccessButton>
+            <AccessText>{stepOneText}</AccessText>
+          </AccessWrapper>
+          </MobileWrapper>
+          </>
         )}
       </Container>
     </Layout>

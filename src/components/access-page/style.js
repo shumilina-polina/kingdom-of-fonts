@@ -4,25 +4,31 @@ import Curve from "../../assets/svgs/curve.svg";
 import MobileCurve from "../../assets/svgs/curve-mobile.svg";
 
 export const AccessWrapper = styled.div`
-    background: #242424;
+    background: rgba(256, 256, 256, 0.01);
+
     padding: 60px 80px;
-    border-radius: 5px;
+    border-radius: 20px;
     /* display: flex; */
     /* align-items: flex-end; */
     /* justify-content: space-between; */
-    box-shadow: 0px 2.47088px 6.17719px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2.47088px 6.17719px rgba(0, 0, 0, 0.25), inset 0 0 50px rgba(256, 256, 256, 0.08);
     margin-top: 50px;
     overflow: hidden;
     position: relative;
+
+    @media (max-width: 575px) {
+        padding: 5vw 4vw 8vw;
+        border-radius: 3vw;
+        margin-top: 10vw;
+        overflow: unset;
+    }
 `;
 
-// export const OverflowHidden = styled.div`
-//     /* overflow-x: hidden; */
-//     width: 100%;
-//     min-width: 100%;
-//     background: red;
-//     position: relative;
-// `
+export const AccessImageWrapper = styled.div`
+    /* position: relative; */
+    height: 40vw;
+    overflow: hidden;
+`
 
 export const AccessInfo = styled.div``;
 
@@ -33,13 +39,58 @@ export const AccessImage = styled.img`
     right: -400px;
     z-index: 1;
     bottom: -230px;
+
+    @media (max-width: 575px) {
+        /* display: none; */
+    }
 `;
+
+export const AccessImageStepOne = styled.img`
+    width: 930px;
+    /* height: 200px; */
+    position: absolute;
+    right: -200px;
+    z-index: 1;
+    bottom: -150px;
+
+    @media (max-width: 575px) {
+        width: 100vw;
+    /* height: 200px; */
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        top: -75vw;
+    }
+`
+
+export const AccessImageStepTwo = styled.img`
+    width: 700px;
+    /* height: 200px; */
+    position: absolute;
+    right: -200px;
+    z-index: 1;
+    bottom: 60%;
+    transform: translateY(50%);
+
+    @media (max-width: 575px) {
+        width: 80vw;
+    /* height: 200px; */
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        bottom: 0;
+    }
+`
 
 export const AccessTitle = styled.div`
     text-transform: uppercase;
     font-size: 32px;
     color: white;
     font-weight: 600;
+    @media (max-width: 575px) {
+        font-size: 7vw;
+        text-align: center;
+    }
 `;
 
 export const AccessText = styled.div`
@@ -51,12 +102,23 @@ export const AccessText = styled.div`
         font-size: 32px;
         color: var(--color-green);
     }
+    @media (max-width: 575px) {
+        font-size: 4vw;
+        max-width: 100%;
+        text-align: center;
+        span {
+            font-size: 4vw;
+        }
+}   
 `;
 
 export const AccessLine = styled.div`
     height: 2px;
     background: rgba(256, 256, 256, 0.1);
     margin: 20px 0;
+    @media (max-width: 575px) {
+        
+    }
 `;
 
 export const AccessFooter = styled.div`
@@ -67,6 +129,14 @@ export const AccessFooter = styled.div`
         fill: var(--color-grey);
         width: 55px;
         margin: 0 20px;
+    }
+    @media (max-width: 575px) {
+        flex-direction: column;
+        padding-top: 0;
+        svg {
+            width: 0;
+            margin: 0;
+        }
     }
 `;
 
@@ -86,6 +156,15 @@ export const AccessButton = styled.button`
         background: #14793E;
         cursor: pointer
     }
+    @media (max-width: 575px) {
+        width: 100%;
+        padding: 4vw 0;
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        :hover {
+            font-size: 5vw;
+        }
+}
 `;
 
 export const YouMoneyWrapper = styled.div`
@@ -95,21 +174,34 @@ export const YouMoneyWrapper = styled.div`
         width: 90px;
         margin: 0 10px;
     }
+    @media (max-width: 575px) {
+
+}
+
 `;
 
 export const YouMoneyText = styled.div`
     font-size: 16px;
-    width: 100px;
+    width: 80px;
     color: #BDBDBD;
+    @media (max-width: 575px) {
+        display: none;
+    }
 `;
 
 export const AccessPriceWrapper = styled.div`
     display: flex;
     /* margin-left: 20px; */
+    @media (max-width: 575px) {
+
+}
 `;
 
 export const AccessPriceYear = styled.div`
     margin-right: 20px;
+    @media (max-width: 575px) {
+        margin-right: 4vw;
+}
 `;
 
 export const AccessPriceTitle = styled.div`
@@ -129,6 +221,9 @@ export const AccessPriceTitle = styled.div`
             width: 100%;
         }
     }
+    @media (max-width: 575px) {
+    font-size: 4vw;
+}
 `;
 
 export const AccessPrice = styled.div`
@@ -149,6 +244,14 @@ export const AccessPrice = styled.div`
         }
     `}
     /* font-weight: 300; */
+    @media (max-width: 575px) {
+    font-size: 10vw;
+    line-height: 1;
+    span {
+        font-size: 5vw;
+        margin-left: 1vw;
+    }
+}
 `;
 
 export const LogoWithCurve = styled.div`
@@ -161,6 +264,9 @@ export const LogoWithCurve = styled.div`
         z-index: 1;
     }
     position: relative;
+    @media (max-width: 575px) {
+
+}
 `;
 
 export const CurveIcon = styled(Curve)`
@@ -209,5 +315,19 @@ export const ShadowCircle = styled.div`
     }
     /* left: -1px; */
     /* z-index: -1; */
+`
+
+export const DesktopWrapper = styled.div`
+    display: block;
+    @media (max-width: 575px) {
+        display: none;
+    }
+`
+
+export const MobileWrapper = styled.div`
+    display: none;
+    @media (max-width: 575px) {
+        display: block;
+    }
 `
 

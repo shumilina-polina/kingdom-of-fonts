@@ -25,12 +25,12 @@ const RestoreAccessPage = () => {
   }, []);
   return (
     <Layout footerReduced>
-              <CurveIcon/>
+              {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
       <StickyWrapper>
         <CategoriesFilter setFilters={() => {}} />
       </StickyWrapper>

@@ -75,13 +75,13 @@ console.log("data", data)
         // ]}
         // url="https://pavlushin.design/"
       />
-              <CurveIcon/>
+              {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
-        <IndexPageNoFiltersView cards={data.allFonts?.edges.slice(0,5)}/>
+        </LogoWithCurve> */}
+        <IndexPageNoFiltersView cards={data.allFonts?.edges}/>
     </Layout>
   );
 };

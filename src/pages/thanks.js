@@ -40,13 +40,13 @@ const ThanksPage = () => {
 
   return (
     <Layout>
-      <CurveIcon/>
+      {/* <CurveIcon/>
       <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
       <Container>
         <AccessWrapper>
           <AccessImage src={buyImage} />

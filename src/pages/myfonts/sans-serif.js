@@ -177,12 +177,12 @@ const SansSerifPage = ({data}) => {
         // ]}
         // url="https://pavlushin.design/"
       />
-        <CurveIcon/>
+        {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
       {/* <Logo /> */}
         <IndexPageCategoryFilterView
             cards={data.sansSerifFonts.edges}

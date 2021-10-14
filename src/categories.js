@@ -25,7 +25,7 @@ export const categories = [
       { name: "Новостильные", url: "modern", id: 4  },
       { name: "Брусковые", url: "slab", id: 5  },
       { name: "Латинские", url: "latin", id: 6  },
-      { name: "Готические", url: "gothic", id: 7  },
+      // { name: "Готические", url: "gothic", id: 7  },
     ],
   },
   {
@@ -43,7 +43,7 @@ export const categories = [
     url: "handwritten",
     subCategories: [
       { name: "Каллиграфия", url: "calligraphy", id: 1  },
-      { name: "Пером", url: "brush", id: 2  },
+      { name: "Кистью", url: "brush", id: 2  },
     ],
   },
 ];

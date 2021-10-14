@@ -177,12 +177,12 @@ const StylizedPage = ({data}) => {
         // ]}
         // url="https://pavlushin.design/"
       />
-              <CurveIcon/>
+              {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
         <IndexPageCategoryFilterView
             cards={data.stylizedFonts.edges}
             category={categories[2]}

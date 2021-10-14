@@ -177,12 +177,12 @@ const HandwrittenPage = ({data}) => {
         // ]}
         // url="https://pavlushin.design/"
       />
-              <CurveIcon/>
+              {/* <CurveIcon/>
         <CurveMobileIcon/>
         <LogoWithCurve>
           <Logo />
           <ShadowCircle/>
-        </LogoWithCurve>
+        </LogoWithCurve> */}
         <IndexPageCategoryFilterView
             cards={data.handwrittenFonts?.edges}
             category={categories[3]}
