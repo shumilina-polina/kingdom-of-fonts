@@ -18,9 +18,13 @@ export const AccessWrapper = styled.div`
 
     @media (max-width: 575px) {
         padding: 5vw 4vw 8vw;
-        border-radius: 3vw;
+        border-radius: 6vw;
         margin-top: 10vw;
         overflow: unset;
+        form {
+            width: 100%;
+            margin: 5vw 0;
+        }
     }
 `;
 
@@ -73,13 +77,26 @@ export const AccessImageStepTwo = styled.img`
     transform: translateY(50%);
 
     @media (max-width: 575px) {
-        width: 80vw;
+        bottom: -10vw;
+        right: 51%;
+        transform: translateX(50%);
+        /* top: 0; */
+        width: 132vw;
     /* height: 200px; */
-        position: absolute;
-        right: 0;
+        /* position: static;
+        left: 0;
+        right: auto;
         z-index: 1;
-        bottom: 0;
+        top: 0;
+        bottom: auto; */
     }
+`
+
+export const AccessImageStepTwoWrapper = styled.div`
+    position: relative;
+    height: 84vw;
+    margin-bottom: 5vw;
+    /* background: red; */
 `
 
 export const AccessTitle = styled.div`
@@ -88,8 +105,9 @@ export const AccessTitle = styled.div`
     color: white;
     font-weight: 600;
     @media (max-width: 575px) {
-        font-size: 7vw;
+        font-size: 8.2vw;
         text-align: center;
+        margin-bottom: 2vw;
     }
 `;
 
@@ -106,8 +124,9 @@ export const AccessText = styled.div`
         font-size: 4vw;
         max-width: 100%;
         text-align: center;
+        line-height: 1.25;
         span {
-            font-size: 4vw;
+            font-size: 4.1vw;
         }
 }   
 `;
@@ -159,10 +178,10 @@ export const AccessButton = styled.button`
     @media (max-width: 575px) {
         width: 100%;
         padding: 4vw 0;
-        font-size: 5vw;
+        font-size: 6.5vw;
         border-radius: 1.5vw;
         :hover {
-            font-size: 5vw;
+            font-size: 6.5vw;
         }
 }
 `;
@@ -175,8 +194,11 @@ export const YouMoneyWrapper = styled.div`
         margin: 0 10px;
     }
     @media (max-width: 575px) {
-
-}
+        svg {
+            width: 30vw;
+            /* margin: 0 10px; */
+        }
+    }
 
 `;
 
@@ -222,8 +244,8 @@ export const AccessPriceTitle = styled.div`
         }
     }
     @media (max-width: 575px) {
-    font-size: 4vw;
-}
+        font-size: 5vw;
+    }
 `;
 
 export const AccessPrice = styled.div`
@@ -259,6 +281,9 @@ export const LogoWithCurve = styled.div`
     /* svg {
         box-shadow: 0 0 5px black;
     } */
+    display: flex;
+    justify-content: center;
+
     svg {
         position: relative;
         z-index: 1;
@@ -269,9 +294,20 @@ export const LogoWithCurve = styled.div`
 }
 `;
 
+export const LogoWrapper = styled.div`
+    padding-top: 50px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 575px) {
+        padding-top: 10vw;
+    }
+    /* width: 100%; */
+    /* overflow-x: hidden; */
+`;  
+
 export const CurveIcon = styled(Curve)`
     position: absolute;
-    top: 5px;
+    top: 8px;
     left: 50%;
     transform: translateX(-50%);
     width: 1150px;
@@ -295,7 +331,7 @@ export const CurveMobileIcon = styled(MobileCurve)`
 
 export const ShadowCircle = styled.div`
     background: rgb(21, 21, 21);
-    width: 100%;
+    width: 80%;
     height: 80%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(21, 21, 21, 0.5);

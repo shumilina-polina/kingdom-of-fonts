@@ -10,7 +10,9 @@ import {
   ShadowCircle,
   CurveMobileIcon,
   OverflowHidden,
+  LogoWrapper,
 } from "../components/access-page/style";
+import img from "../assets/svgs/curve.svg";
 
 
 
@@ -21,15 +23,14 @@ const Layout = ({ children, footerReduced }) => {
   return (
     <>
       <GlobalStyle />
-            {/* <OverflowHidden> */}
-            <CurveIcon/>
-        <CurveMobileIcon/>
-      {/* </OverflowHidden> */}
+      <LogoWrapper img={img}>
+          <CurveIcon/>
+          <CurveMobileIcon/>
+          <LogoWithCurve>
+            <Logo />
+          </LogoWithCurve>
+      </LogoWrapper>
         
-        <LogoWithCurve>
-          <Logo />
-          <ShadowCircle/>
-        </LogoWithCurve>
         <main style={{position: "relative"}}>{children}</main>
       <Footer footerReduced={footerReduced}/>
     </>

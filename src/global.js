@@ -35,10 +35,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     main {
-        padding-top: 46px;
+        padding-top: 0px;
 
         @media (max-width: 575px) {
-          padding-top: 10vw;
+          padding-top: 0;
         }
 
     }

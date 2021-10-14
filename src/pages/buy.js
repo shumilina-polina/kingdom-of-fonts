@@ -23,9 +23,11 @@ import {
   AccessImageWrapper,
   AccessImageStepOne,
   AccessImageStepTwo,
+  AccessImageStepTwoWrapper,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
 import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
+import YouMoneyMobileLogo from '../assets/svgs/money_mobile.svg';
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 
@@ -106,12 +108,11 @@ const BuyPage = () => {
               </AccessFooter>
             </AccessWrapper>
           </DesktopWrapper>
-          <MobileWrapper>
+          <MobileWrapper >
           <AccessWrapper>
-   
-              <AccessImageStepTwo src={moneyImageMobile} />
-  
-              
+            <AccessImageStepTwoWrapper>
+            <AccessImageStepTwo src={moneyImageMobile} />
+            </AccessImageStepTwoWrapper>
               <AccessInfo>
                 <AccessTitle>{stepTwoTitle}</AccessTitle>
                 <AccessText>{stepTwoText}</AccessText>
@@ -119,7 +120,7 @@ const BuyPage = () => {
               <AccessFooter>
                 {stepTwoForm}
                 <YouMoneyWrapper>
-                  <YouMoneyLogo/>
+                  <YouMoneyMobileLogo/>
                 </YouMoneyWrapper>
               </AccessFooter>
             </AccessWrapper>

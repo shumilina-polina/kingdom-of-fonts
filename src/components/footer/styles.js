@@ -22,6 +22,7 @@ export const FooterWrapper = styled.div`
     width: 100%;
     padding-right: 0;
     padding-left: 0;
+    margin-top: 10vw;
   }
   
   /* @media only screen and (max-width: 575px) {
