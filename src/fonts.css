@@ -576,3 +576,579 @@ html {
     font-weight: normal;
     font-display: block;
 }
+
+@font-face {
+    font-family: "AlegreyaSans";
+    src: url("./assets/fonts/AlegreyaSans/AlegreyaSans.woff2") format("woff2"),
+         url("./assets/fonts/AlegreyaSans/AlegreyaSans.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "BadScript";
+    src: url("./assets/fonts/BadScript/BadScript.woff2") format("woff2"),
+         url("./assets/fonts/BadScript/BadScript.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Balkara";
+    src: url("./assets/fonts/Balkara/Balkara.woff2") format("woff2"),
+         url("./assets/fonts/Balkara/Balkara.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Beryozki";
+    src: url("./assets/fonts/Beryozki/Beryozki.woff2") format("woff2"),
+         url("./assets/fonts/Beryozki/Beryozki.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url("./assets/fonts/Caveat/Caveat.woff2") format("woff2"),
+         url("./assets/fonts/Caveat/Caveat.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Colus";
+    src: url("./assets/fonts/Colus/Colus.woff2") format("woff2"),
+         url("./assets/fonts/Colus/Colus.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Commissioner";
+    src: url("./assets/fonts/Commissioner/Commissioner.woff2") format("woff2"),
+         url("./assets/fonts/Commissioner/Commissioner.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Concrete";
+    src: url("./assets/fonts/Concrete/Concrete.woff2") format("woff2"),
+         url("./assets/fonts/Concrete/Concrete.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Corki";
+    src: url("./assets/fonts/Corki/Corki.woff2") format("woff2"),
+         url("./assets/fonts/Corki/Corki.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "CormorantUnicase";
+    src: url("./assets/fonts/CormorantUnicase/CormorantUnicase.woff2") format("woff2"),
+         url("./assets/fonts/CormorantUnicase/CormorantUnicase.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "DidactGothic";
+    src: url("./assets/fonts/DidactGothic/DidactGothic.woff2") format("woff2"),
+         url("./assets/fonts/DidactGothic/DidactGothic.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "DotGothic16";
+    src: url("./assets/fonts/DotGothic16/DotGothic16.woff2") format("woff2"),
+         url("./assets/fonts/DotGothic16/DotGothic16.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "EastSeaDokdo";
+    src: url("./assets/fonts/EastSeaDokdo/EastSeaDokdo.woff2") format("woff2"),
+         url("./assets/fonts/EastSeaDokdo/EastSeaDokdo.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Fantazyor";
+    src: url("./assets/fonts/Fantazyor/Fantazyor.woff2") format("woff2"),
+         url("./assets/fonts/Fantazyor/Fantazyor.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "FiraCode";
+    src: url("./assets/fonts/FiraCode/FiraCode.woff2") format("woff2"),
+         url("./assets/fonts/FiraCode/FiraCode.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Galaktika";
+    src: url("./assets/fonts/Galaktika/Galaktika.woff2") format("woff2"),
+         url("./assets/fonts/Galaktika/Galaktika.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Galaktika";
+    src: url("./assets/fonts/Galaktika/Galaktika.woff2") format("woff2"),
+         url("./assets/fonts/Galaktika/Galaktika.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Gogol";
+    src: url("./assets/fonts/Gogol/Gogol.woff2") format("woff2"),
+         url("./assets/fonts/Gogol/Gogol.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "GolosText";
+    src: url("./assets/fonts/GolosText/GolosText.woff2") format("woff2"),
+         url("./assets/fonts/GolosText/GolosText.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "GolosUI";
+    src: url("./assets/fonts/GolosUI/GolosUI.woff2") format("woff2"),
+         url("./assets/fonts/GolosUI/GolosUI.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Gropled";
+    src: url("./assets/fonts/Gropled/Gropled.woff2") format("woff2"),
+         url("./assets/fonts/Gropled/Gropled.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "HachiMaruPop";
+    src: url("./assets/fonts/HachiMaruPop/HachiMaruPop.woff2") format("woff2"),
+         url("./assets/fonts/HachiMaruPop/HachiMaruPop.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Hagin";
+    src: url("./assets/fonts/Hagin/Hagin.woff2") format("woff2"),
+         url("./assets/fonts/Hagin/Hagin.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "HinaMincho";
+    src: url("./assets/fonts/HinaMincho/HinaMincho.woff2") format("woff2"),
+         url("./assets/fonts/HinaMincho/HinaMincho.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "IgraSans";
+    src: url("./assets/fonts/IgraSans/IgraSans.woff2") format("woff2"),
+         url("./assets/fonts/IgraSans/IgraSans.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("./assets/fonts/JetBrainsMono/JetBrainsMono.woff2") format("woff2"),
+         url("./assets/fonts/JetBrainsMono/JetBrainsMono.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("./assets/fonts/Jost/Jost.woff2") format("woff2"),
+         url("./assets/fonts/Jost/Jost.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Kanyon";
+    src: url("./assets/fonts/Kanyon/Kanyon.woff2") format("woff2"),
+         url("./assets/fonts/Kanyon/Kanyon.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Kurale";
+    src: url("./assets/fonts/Kurale/Kurale.woff2") format("woff2"),
+         url("./assets/fonts/Kurale/Kurale.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "KyivTypeTitling";
+    src: url("./assets/fonts/KyivTypeTitling/KyivTypeTitling.woff2") format("woff2"),
+         url("./assets/fonts/KyivTypeTitling/KyivTypeTitling.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Lack";
+    src: url("./assets/fonts/Lack/Lack.woff2") format("woff2"),
+         url("./assets/fonts/Lack/Lack.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Literata";
+    src: url("./assets/fonts/Literata/Literata.woff2") format("woff2"),
+         url("./assets/fonts/Literata/Literata.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "MarckScript";
+    src: url("./assets/fonts/MarckScript/MarckScript.woff2") format("woff2"),
+         url("./assets/fonts/MarckScript/MarckScript.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Marenkov";
+    src: url("./assets/fonts/Marenkov/Marenkov.woff2") format("woff2"),
+         url("./assets/fonts/Marenkov/Marenkov.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Maxico";
+    src: url("./assets/fonts/Maxico/Maxico.woff2") format("woff2"),
+         url("./assets/fonts/Maxico/Maxico.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Moniqa";
+    src: url("./assets/fonts/Moniqa/Moniqa.woff2") format("woff2"),
+         url("./assets/fonts/Moniqa/Moniqa.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "NewWheels";
+    src: url("./assets/fonts/NewWheels/NewWheels.woff2") format("woff2"),
+         url("./assets/fonts/NewWheels/NewWheels.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "OldStandardTT";
+    src: url("./assets/fonts/OldStandardTT/OldStandardTT.woff2") format("woff2"),
+         url("./assets/fonts/OldStandardTT/OldStandardTT.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url("./assets/fonts/Pacifico/Pacifico.woff2") format("woff2"),
+         url("./assets/fonts/Pacifico/Pacifico.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Palka";
+    src: url("./assets/fonts/Palka/Palka.woff2") format("woff2"),
+         url("./assets/fonts/Palka/Palka.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Pattaya";
+    src: url("./assets/fonts/Pattaya/Pattaya.woff2") format("woff2"),
+         url("./assets/fonts/Pattaya/Pattaya.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PeaceSans";
+    src: url("./assets/fonts/PeaceSans/PeaceSans.woff2") format("woff2"),
+         url("./assets/fonts/PeaceSans/PeaceSans.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Piazzolla";
+    src: url("./assets/fonts/Piazzolla/Piazzolla.woff2") format("woff2"),
+         url("./assets/fonts/Piazzolla/Piazzolla.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Podkova";
+    src: url("./assets/fonts/Podkova/Podkova.woff2") format("woff2"),
+         url("./assets/fonts/Podkova/Podkova.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PoiretOne";
+    src: url("./assets/fonts/PoiretOne/PoiretOne.woff2") format("woff2"),
+         url("./assets/fonts/PoiretOne/PoiretOne.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Polonium";
+    src: url("./assets/fonts/Polonium/Polonium.woff2") format("woff2"),
+         url("./assets/fonts/Polonium/Polonium.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Prata";
+    src: url("./assets/fonts/Prata/Prata.woff2") format("woff2"),
+         url("./assets/fonts/Prata/Prata.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Pribambas";
+    src: url("./assets/fonts/Pribambas/Pribambas.woff2") format("woff2"),
+         url("./assets/fonts/Pribambas/Pribambas.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PTAstraSerif";
+    src: url("./assets/fonts/PTAstraSerif/PTAstraSerif.woff2") format("woff2"),
+         url("./assets/fonts/PTAstraSerif/PTAstraSerif.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "PTMono";
+    src: url("./assets/fonts/PTMono/PTMono.woff2") format("woff2"),
+         url("./assets/fonts/PTMono/PTMono.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Ramona";
+    src: url("./assets/fonts/Ramona/Ramona.woff2") format("woff2"),
+         url("./assets/fonts/Ramona/Ramona.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "RBNaftalin";
+    src: url("./assets/fonts/RBNaftalin/RBNaftalin.woff2") format("woff2"),
+         url("./assets/fonts/RBNaftalin/RBNaftalin.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "ReggaeOne";
+    src: url("./assets/fonts/ReggaeOne/ReggaeOne.woff2") format("woff2"),
+         url("./assets/fonts/ReggaeOne/ReggaeOne.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "RobotoMono";
+    src: url("./assets/fonts/RobotoMono/RobotoMono.woff2") format("woff2"),
+         url("./assets/fonts/RobotoMono/RobotoMono.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "RousseauDeco";
+    src: url("./assets/fonts/RousseauDeco/RousseauDeco.woff2") format("woff2"),
+         url("./assets/fonts/RousseauDeco/RousseauDeco.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sansation";
+    src: url("./assets/fonts/Sansation/Sansation.woff2") format("woff2"),
+         url("./assets/fonts/Sansation/Sansation.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "SeymourOne";
+    src: url("./assets/fonts/SeymourOne/SeymourOne.woff2") format("woff2"),
+         url("./assets/fonts/SeymourOne/SeymourOne.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Shadow";
+    src: url("./assets/fonts/Shadow/Shadow.woff2") format("woff2"),
+         url("./assets/fonts/Shadow/Shadow.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Shanghai";
+    src: url("./assets/fonts/Shanghai/Shanghai.woff2") format("woff2"),
+         url("./assets/fonts/Shanghai/Shanghai.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Silverfake";
+    src: url("./assets/fonts/Silverfake/Silverfake.woff2") format("woff2"),
+         url("./assets/fonts/Silverfake/Silverfake.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sirotica";
+    src: url("./assets/fonts/Sirotica/Sirotica.woff2") format("woff2"),
+         url("./assets/fonts/Sirotica/Sirotica.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Sjz";
+    src: url("./assets/fonts/Sjz/Sjz.woff2") format("woff2"),
+         url("./assets/fonts/Sjz/Sjz.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Stadium";
+    src: url("./assets/fonts/Stadium/Stadium.woff2") format("woff2"),
+         url("./assets/fonts/Stadium/Stadium.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Storytella";
+    src: url("./assets/fonts/Storytella/Storytella.woff2") format("woff2"),
+         url("./assets/fonts/Storytella/Storytella.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Underdog";
+    src: url("./assets/fonts/Underdog/Underdog.woff2") format("woff2"),
+         url("./assets/fonts/Underdog/Underdog.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Usually";
+    src: url("./assets/fonts/Usually/Usually.woff2") format("woff2"),
+         url("./assets/fonts/Usually/Usually.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "ViaodaLibre";
+    src: url("./assets/fonts/ViaodaLibre/ViaodaLibre.woff2") format("woff2"),
+         url("./assets/fonts/ViaodaLibre/ViaodaLibre.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "VictorMono";
+    src: url("./assets/fonts/VictorMono/VictorMono.woff2") format("woff2"),
+         url("./assets/fonts/VictorMono/VictorMono.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "VPCH2";
+    src: url("./assets/fonts/VPCH2/VPCH2.woff2") format("woff2"),
+         url("./assets/fonts/VPCH2/VPCH2.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "WaffelsteinStencil";
+    src: url("./assets/fonts/WaffelsteinStencil/WaffelsteinStencil.woff2") format("woff2"),
+         url("./assets/fonts/WaffelsteinStencil/WaffelsteinStencil.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "XXIIArabianOneNightStand";
+    src: url("./assets/fonts/XXIIArabianOneNightStand/XXIIArabianOneNightStand.woff2") format("woff2"),
+         url("./assets/fonts/XXIIArabianOneNightStand/XXIIArabianOneNightStand.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "YanoneKaffeesatz";
+    src: url("./assets/fonts/YanoneKaffeesatz/YanoneKaffeesatz.woff2") format("woff2"),
+         url("./assets/fonts/YanoneKaffeesatz/YanoneKaffeesatz.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
