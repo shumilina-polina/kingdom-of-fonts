@@ -24,6 +24,7 @@ import {
   AccessImageStepOne,
   AccessImageStepTwo,
   AccessImageStepTwoWrapper,
+  AccessButtonStepTwo,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
 import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
@@ -43,15 +44,15 @@ const BuyPage = () => {
   const [warning, setWarning] = useState(false)
 
   const stepOneTitle = "Подписка на год";
-  const stepOneText = (<>Нажимая кнопку, <span>вы покупаете доступ к сайту</span> с подборкой клёвых бесплатных шрифтов, собранных по всем интернетам и соглашаетесь с тем, что вы прекрасны</>)
+  const stepOneText = (<>Нажимая кнопку, <span>вы покупаете доступ к&nbsp;сайту</span> с&nbsp;библиотекой клёвых бесплатных шрифтов, собранных по&nbsp;всем интернетам и&nbsp;соглашаетесь с&nbsp;тем, что вы прекрасны&nbsp;:*</>)
   const stepOneButtonText = "Подписаться"
   const stepOneFirstYearTitle = (<>Первый год <span>1990</span></>)
   const stepOneFirstYearPrice = (<>990<span>₽</span></>)
   const stepOneSecondYearTitle = (<>Со второго года</>)
-  const stepOneSecondYearPrice = (<>199<span>₽/мес</span></>)
+  const stepOneSecondYearPrice = (<>190<span>₽/мес</span></>)
 
   const stepTwoTitle = "Один нюанс";
-  const stepTwoText = (<>После успешной оплаты на Юмани появится окно с подтверждением и кнопкой <span>вернуться на сайт</span>, на эту <span>кнопку</span> нужно <span>нажать</span>, чтобы  вернуться к нам сюда за шрифтами</>)
+  const stepTwoText = (<>После успешной оплаты на&nbsp;Юмани появится окно с&nbsp;подтверждением и&nbsp;кнопкой <span>вернуться на&nbsp;сайт</span>, на&nbsp;эту <span>кнопку</span> нужно <span>нажать</span>, чтобы  вернуться к&nbsp;нам сюда за&nbsp;шрифтами</>)
   const stepTwoForm = (
     <form method="POST" action="https://yoomoney.ru/quickpay/confirm.xml">
       <input type="hidden" name="receiver" value="410016040384130" />
@@ -72,7 +73,7 @@ const BuyPage = () => {
         name="successURL"
         value="https://pavlushin.design/thanks"
       />
-      <AccessButton type="submit" value="Оплатить">Оплатить</AccessButton>
+      <AccessButtonStepTwo type="submit" value="Оплатить">Оплатить</AccessButtonStepTwo>
     </form>
   )
   const youMoneyText = "Перейти к оплате на Юмани"

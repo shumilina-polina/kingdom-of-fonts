@@ -38,15 +38,21 @@ import buyImage from "../assets/buy.png";
 import buyImageMobile from "../assets/buy_mobile.png";
 import thanksImage from "../assets/thanks.png";
 import devicesImage from "../assets/devices.png";
-import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup
-const ThanksPage = () => {
+const RestoreAccessPage = () => {
 
-  const title = "Всё прошло супер!";
-  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска и&nbsp;работы :3</>)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // localStorage.setItem("kingdomOfFontsAccess", "true");
+    }
+  }, []);
+
+  const title = "Доступ к шрифтам";
+  
+  const text = (<>Восстань, пророк! И&nbsp;виждь, И&nbsp;внемли, исполнись волею моей, И,&nbsp;обходя моря и&nbsp;земли <span>Шрифтами&nbsp;жги сердца людей!</span></>)
   const buttonText = "К шрифтам"
 
   return (
@@ -55,9 +61,9 @@ const ThanksPage = () => {
           <DesktopWrapper>
             <AccessWrapper>
               <AccessImageThanks src={thanksImage} />
-              <AccessInfo>
-                <AccessTitle>{title}</AccessTitle>
-                <AccessText>{text}</AccessText>
+              <AccessInfo >
+                <AccessTitle style={{marginBottom: "15px"}}>{title}</AccessTitle>
+                <AccessText >{text}</AccessText>
               </AccessInfo>
               <AccessLine/>
               <AccessFooter>
@@ -80,7 +86,7 @@ const ThanksPage = () => {
               </AccessInfo>
               <AccessFooter>
                 <AccessThanksButton>
-                  {buttonText}
+                  {buttonText}ds
                 </AccessThanksButton>
               </AccessFooter>
             </AccessWrapper>
@@ -90,4 +96,4 @@ const ThanksPage = () => {
   );
 };
 
-export default ThanksPage;
+export default RestoreAccessPage;
