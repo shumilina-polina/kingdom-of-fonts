@@ -56,6 +56,7 @@ html {
     font-display: block;
 }
 
+
 @font-face {
     font-family: "IrishAP";
     src: url("./assets/fonts/IrishAP/IrishAP.woff2") format("woff2"),
