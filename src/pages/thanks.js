@@ -24,8 +24,13 @@ import {
   AccessImageStepOne,
   AccessImageThanks,
   AccessThanksButton,
-  AccessImageStepTwoWrapper,
+  AccessImageMobileThanksWrapper,
+  AccessImageMobileThanks,
+  AccessInfoOverlay,
+  AccessInfoWrapper,
   AccessButtonStepTwo,
+  AccessImageThanksMobile,
+  AccessImageThanksLight,
   DevicesImage,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
@@ -34,9 +39,11 @@ import YouMoneyMobileLogo from '../assets/svgs/money_mobile.svg';
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 
-import buyImage from "../assets/buy.png";
-import buyImageMobile from "../assets/buy_mobile.png";
+// import buyImage from "../assets/buy.png";
+// import buyImageMobile from "../assets/buy_mobile.png";
 import thanksImage from "../assets/thanks.png";
+import thanksImageMobile from "../assets/thanks_mobile.png"
+import thanksImageLightMobile from "../assets/thanks_green-light.png";
 import devicesImage from "../assets/devices.png";
 import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
@@ -71,11 +78,13 @@ const ThanksPage = () => {
           </DesktopWrapper>
           <MobileWrapper >
           <AccessWrapper>
-            <AccessImageStepTwoWrapper>
-            {/* <AccessImageStepTwo src={moneyImageMobile} /> */}
-            </AccessImageStepTwoWrapper>
+            <AccessImageMobileThanksWrapper>
+              <AccessImageMobileThanks src={thanksImageMobile} />
+              <AccessImageThanksLight src={thanksImageLightMobile} />
+            </AccessImageMobileThanksWrapper>
+            <AccessInfoWrapper>
               <AccessInfo>
-                <AccessTitle>{title}</AccessTitle>
+                <AccessTitle fontSize="6vw">{title}</AccessTitle>
                 <AccessText>{text}</AccessText>
               </AccessInfo>
               <AccessFooter>
@@ -83,6 +92,8 @@ const ThanksPage = () => {
                   {buttonText}
                 </AccessThanksButton>
               </AccessFooter>
+            </AccessInfoWrapper>
+              
             </AccessWrapper>
           </MobileWrapper>
       </Container>

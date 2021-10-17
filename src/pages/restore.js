@@ -34,8 +34,8 @@ import YouMoneyMobileLogo from '../assets/svgs/money_mobile.svg';
 import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 
-import buyImage from "../assets/buy.png";
-import buyImageMobile from "../assets/buy_mobile.png";
+// import buyImage from "../assets/buy.png";
+// import buyImageMobile from "../assets/buy_mobile.png";
 import thanksImage from "../assets/thanks.png";
 import devicesImage from "../assets/devices.png";
 import { Container } from "../global";

@@ -33,7 +33,7 @@ import Layout from "../components/Layout";
 import Logo from "../components/logo/Logo";
 
 import buyImage from "../assets/buy.png";
-import buyImageMobile from "../assets/buy_mobile.png";
+import buyImageMobile from "../assets/envelope_mobile.png";
 import moneyImage from "../assets/money.png";
 import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";

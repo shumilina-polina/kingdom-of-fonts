@@ -4,6 +4,37 @@ import Curve from "../../assets/svgs/curve.svg";
 import MobileCurve from "../../assets/svgs/curve-mobile.svg";
 import { Link } from "gatsby";
 
+export const AccessInfoOverlay = styled.div`
+
+`
+
+export const AccessImageMobileThanksWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+`
+
+export const AccessImageMobileThanks = styled.img`
+    width: 67vw;
+`
+
+export const AccessInfoWrapper = styled.div`
+    background-color: rgba(25, 29, 27, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 5vw 4vw 8vw;
+    z-index: 2;
+    border-radius: 0 0 6vw 6vw;
+`
+
 export const AccessWrapper = styled.div`
     background: rgba(256, 256, 256, 0.01);
 
@@ -20,8 +51,12 @@ export const AccessWrapper = styled.div`
     @media (max-width: 575px) {
         padding: 5vw 4vw 8vw;
         border-radius: 6vw;
-        margin-top: 10vw;
+        margin-top: 5vw;
         overflow: unset;
+        height: 158vw;
+        /* width: 95vw; */
+        min-width: 100%;
+        width: 100%;
         form {
             width: 100%;
             margin: 5vw 0;
@@ -35,7 +70,10 @@ export const AccessImageWrapper = styled.div`
     overflow: hidden;
 `
 
-export const AccessInfo = styled.div``;
+export const AccessInfo = styled.div`
+    position: relative;
+    z-index: 1;
+`;
 
 export const AccessImage = styled.img`
     width: 1150px;
@@ -97,7 +135,7 @@ export const AccessImageThanks = styled.img`
     width: 700px;
     position: absolute;
     right: -35px;
-    z-index: 1;
+    z-index: 2;
     bottom: 50%;
     transform: translateY(50%);
 
@@ -107,6 +145,15 @@ export const AccessImageThanks = styled.img`
         transform: translateX(50%);
         width: 132vw;
     }
+`
+
+export const AccessImageThanksLight = styled.img`
+    width: 150vw;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    bottom: 10vw;
+    transform: translateX(-50%);
 `
 
 export const AccessImageStepTwoWrapper = styled.div`
@@ -126,7 +173,11 @@ export const AccessTitle = styled.div`
         font-size: 8.2vw;
         text-align: center;
         margin-bottom: 2vw;
+        ${props => props.fontSize && `
+            font-size: ${props.fontSize};
+        `}
     }
+
 `;
 
 export const AccessText = styled.div`
@@ -218,6 +269,7 @@ export const AccessThanksButton = styled(Link)`
     ${ButtonStyle};
     padding-left: 50px;
     padding-right: 50px;
+    text-align: center;
 `
 
 export const YouMoneyWrapper = styled.div`
@@ -402,6 +454,7 @@ export const MobileWrapper = styled.div`
     display: none;
     @media (max-width: 575px) {
         display: block;
+        width: 100%;
     }
 `
 

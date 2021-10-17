@@ -1385,3 +1385,19 @@ html {
     font-weight: normal;
     font-display: block;
 }
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("./assets/fonts/OpenSans/OpenSans.woff2") format("woff2"),
+         url("./assets/fonts/OpenSans/OpenSans.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "CormorantInfant";
+    src: url("./assets/fonts/CormorantInfant/CormorantInfant.woff2") format("woff2"),
+         url("./assets/fonts/CormorantInfant/CormorantInfant.woff") format("woff");
+    font-weight: normal;
+    font-display: block;
+}
