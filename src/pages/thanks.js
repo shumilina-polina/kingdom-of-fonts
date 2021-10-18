@@ -53,50 +53,51 @@ import { Container } from "../global";
 const ThanksPage = () => {
 
   const title = "Всё прошло супер!";
-  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска и&nbsp;работы :3</>)
+  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что&nbsp;вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для&nbsp;проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска и&nbsp;работы :3</>)
   const buttonText = "К шрифтам"
 
   return (
+
     <Layout>
-      <Container>
-          <DesktopWrapper>
-            <AccessWrapper>
-              <AccessImageThanks src={thanksImage} />
-              <AccessInfo>
-                <AccessTitle>{title}</AccessTitle>
-                <AccessText>{text}</AccessText>
-              </AccessInfo>
-              <AccessLine/>
-              <AccessFooter>
-              <AccessThanksButton to="/myfonts">
-                {buttonText}
-              </AccessThanksButton>
-                <ArrowIcon/>
-                <DevicesImage src={devicesImage} />
-              </AccessFooter>
-            </AccessWrapper>
-          </DesktopWrapper>
-          <MobileWrapper >
-          <AccessWrapper>
-            <AccessImageMobileThanksWrapper>
-              <AccessImageMobileThanks src={thanksImageMobile} />
-              <AccessImageThanksLight src={thanksImageLightMobile} />
-            </AccessImageMobileThanksWrapper>
-            <AccessInfoWrapper>
-              <AccessInfo>
-                <AccessTitle fontSize="6vw">{title}</AccessTitle>
-                <AccessText>{text}</AccessText>
-              </AccessInfo>
-              <AccessFooter>
-                <AccessThanksButton>
+        <Container>
+            <DesktopWrapper>
+              <AccessWrapper>
+                <AccessImageThanks src={thanksImage} />
+                <AccessInfo>
+                  <AccessTitle>{title}</AccessTitle>
+                  <AccessText>{text}</AccessText>
+                </AccessInfo>
+                <AccessLine/>
+                <AccessFooter>
+                <AccessThanksButton to="/myfonts">
                   {buttonText}
                 </AccessThanksButton>
-              </AccessFooter>
-            </AccessInfoWrapper>
-              
-            </AccessWrapper>
-          </MobileWrapper>
-      </Container>
+                  <ArrowIcon/>
+                  <DevicesImage src={devicesImage} />
+                </AccessFooter>
+              </AccessWrapper>
+            </DesktopWrapper>
+            <MobileWrapper >
+            <AccessWrapper>
+              <AccessImageMobileThanksWrapper>
+                <AccessImageMobileThanks src={thanksImageMobile} />
+                <AccessImageThanksLight src={thanksImageLightMobile} />
+              </AccessImageMobileThanksWrapper>
+              <AccessInfoWrapper>
+                <AccessInfo>
+                  <AccessTitle fontSize="7.4vw">{title}</AccessTitle>
+                  <AccessText>{text}</AccessText>
+                </AccessInfo>
+                <AccessFooter>
+                  <AccessThanksButton to="/myfonts">
+                    {buttonText}
+                  </AccessThanksButton>
+                </AccessFooter>
+              </AccessInfoWrapper>
+                
+              </AccessWrapper>
+            </MobileWrapper>
+        </Container>
     </Layout>
   );
 };

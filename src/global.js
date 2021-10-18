@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         height: 100%;
         background: var(--color-background);
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
 
 

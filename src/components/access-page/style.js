@@ -53,7 +53,7 @@ export const AccessWrapper = styled.div`
         border-radius: 6vw;
         margin-top: 5vw;
         overflow: unset;
-        height: 158vw;
+        height: 168vw;
         /* width: 95vw; */
         min-width: 100%;
         width: 100%;
@@ -197,6 +197,7 @@ export const AccessText = styled.div`
         span {
             font-size: 4.1vw;
         }
+        margin-bottom: 7vw;
 }   
 `;
 
@@ -376,7 +377,7 @@ export const LogoWithCurve = styled.div`
 
     svg {
         position: relative;
-        z-index: 1;
+        z-index: 9999;
     }
     position: relative;
     @media (max-width: 575px) {
@@ -387,6 +388,7 @@ export const LogoWithCurve = styled.div`
 export const LogoWrapper = styled.div`
     padding-top: 50px;
     position: relative;
+    /* z-index: 9999; */
     overflow: hidden;
     @media (max-width: 575px) {
         padding-top: 10vw;

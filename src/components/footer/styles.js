@@ -261,13 +261,13 @@ export const FooterLink = styled.a`
     }
   }
   @media (max-width: 575px) {
-    font-size: 4.1vw;
+    font-size: 3.9vw;
     margin-top: 0;
     :first-child {
       margin-right: 3vw;
     }
     :hover {
-      font-size: 4.1vw;
+      font-size: 3.9vw;
 
     }
   }
