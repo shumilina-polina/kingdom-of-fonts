@@ -85,18 +85,8 @@ const SerifPage = ({data}) => {
   return (
     <Layout>
       <SEO
-        // title="Бесплатная кириллица"
-        // description="Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов."
-        // keywords={[
-        //   "подборка",
-        //   "шрифты",
-        //   "fonts",
-        //   "кириллица",
-        //   "бесплатно"
-        // ]}
-        // url="https://pavlushin.design/"
+        url="https://pavlushin.design/myfonts/serif"
       />
-
         <IndexPageCategoryFilterView
             cards={data.serifFonts.edges}
             category={categories[1]}

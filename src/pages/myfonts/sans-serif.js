@@ -81,24 +81,8 @@ const SansSerifPage = ({data}) => {
   return (
     <Layout>
       <SEO
-        // title="Бесплатная кириллица"
-        // description="Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов."
-        // keywords={[
-        //   "подборка",
-        //   "шрифты",
-        //   "fonts",
-        //   "кириллица",
-        //   "бесплатно"
-        // ]}
-        // url="https://pavlushin.design/"
+        url="https://pavlushin.design/myfonts/sans-serif"
       />
-        {/* <CurveIcon/>
-        <CurveMobileIcon/>
-        <LogoWithCurve>
-          <Logo />
-          <ShadowCircle/>
-        </LogoWithCurve> */}
-      {/* <Logo /> */}
         <IndexPageCategoryFilterView
             cards={data.sansSerifFonts.edges}
             category={categories[0]}

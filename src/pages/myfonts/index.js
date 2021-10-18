@@ -66,23 +66,8 @@ useAccess()
   return (
     <Layout>
       <SEO
-        // title="Бесплатная кириллица"
-        // description="Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов."
-        // keywords={[
-        //   "подборка",
-        //   "шрифты",
-        //   "fonts",
-        //   "кириллица",
-        //   "бесплатно"
-        // ]}
-        // url="https://pavlushin.design/"
+        url="https://pavlushin.design/myfonts"
       />
-              {/* <CurveIcon/>
-        <CurveMobileIcon/>
-        <LogoWithCurve>
-          <Logo />
-          <ShadowCircle/>
-        </LogoWithCurve> */}
         <IndexPageNoFiltersView cards={data.allFonts?.edges}/>
     </Layout>
   );

@@ -79,23 +79,8 @@ const StylizedPage = ({data}) => {
   return (
     <Layout>
       <SEO
-        // title="Бесплатная кириллица"
-        // description="Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов."
-        // keywords={[
-        //   "подборка",
-        //   "шрифты",
-        //   "fonts",
-        //   "кириллица",
-        //   "бесплатно"
-        // ]}
-        // url="https://pavlushin.design/"
+        url="https://pavlushin.design/myfonts/stylized"
       />
-              {/* <CurveIcon/>
-        <CurveMobileIcon/>
-        <LogoWithCurve>
-          <Logo />
-          <ShadowCircle/>
-        </LogoWithCurve> */}
         <IndexPageCategoryFilterView
             cards={data.stylizedFonts.edges}
             category={categories[2]}

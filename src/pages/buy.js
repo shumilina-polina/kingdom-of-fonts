@@ -37,6 +37,7 @@ import buyImageMobile from "../assets/envelope_mobile.png";
 import moneyImage from "../assets/money.png";
 import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
+import SEO from "../seo";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup
@@ -79,6 +80,7 @@ const BuyPage = () => {
   const youMoneyText = "Перейти к оплате на Юмани"
   const youMoneyTextMobile = "Перейти к оплате на сайт Юмани"
   return (
+    <>
     <Layout>
               {/* <CurveIcon/>
         <CurveMobileIcon/>
@@ -206,6 +208,7 @@ const BuyPage = () => {
         )}
       </Container>
     </Layout>
+    </>
   );
 };
 

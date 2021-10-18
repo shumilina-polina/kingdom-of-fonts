@@ -21,6 +21,7 @@
    url,
    ogImageVk,
    socialDescription,
+   noIndex,
  }) => {
    const { site } = useStaticQuery(
      graphql`
@@ -118,6 +119,7 @@
    return (
      <Helmet htmlAttributes={{ lang }} title={metaTitle} meta={defaultMeta.concat(propMeta)}>
        {url && <link rel="canonical" href={metaOgUrl} />}
+       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
      </Helmet>
    )

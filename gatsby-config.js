@@ -18,6 +18,14 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-react-helmet",
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://pavlushin.design',
+        sitemap: 'https://pavlushin.design/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/', disallow: ["/restore", "/thanks"] }, {userAgent: 'Yandex', allow: '/', disallow: ["/restore", "/thanks"]}, {userAgent: 'Googlebot', allow: '/', disallow: ["/restore", "/thanks"]}]
+      }
+    },
 
     "gatsby-plugin-sitemap",
     {
