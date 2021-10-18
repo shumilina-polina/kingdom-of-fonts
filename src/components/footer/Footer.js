@@ -101,7 +101,7 @@ const Footer = ({footerReduced}) => {
                   <Links>
                     <FooterLink href="https://t.me/katerinazuryan" target="_blank">Телеграммировать</FooterLink>
                     <br/>
-                    <FooterLink type="email" href="mailto:fonts@pavlushin.design">Отправить@голубей</FooterLink>
+                    <FooterLink type="email" href="mailto:fonts@pavlushin.design">fonts@pavlushin.design</FooterLink>
                   </Links>
                 </FooterColumn>
                 <FooterColumn> 
