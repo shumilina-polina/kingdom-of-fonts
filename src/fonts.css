@@ -1069,7 +1069,8 @@ html {
 @font-face {
     font-family: "Sjz";
     src: url("./assets/fonts/Sjz/Sjz.woff2") format("woff2"),
-         url("./assets/fonts/Sjz/Sjz.woff") format("woff");
+         url("./assets/fonts/Sjz/Sjz.woff") format("woff"),
+         url("./assets/fonts/Sjz/Sjz.otf") format("opentype");
     font-weight: normal;
     font-display: block;
 }

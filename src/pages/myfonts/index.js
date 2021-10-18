@@ -17,6 +17,7 @@ import {
   ShadowCircle,
   CurveMobileIcon,
 } from "../../components/access-page/style";
+import { useAccess } from "../../hooks/useAccess";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 
@@ -61,6 +62,7 @@ export const contentfulQuery = graphql`
 // markup
 const IndexPage = ({data}) => {
 // console.log("data", data)
+useAccess()
   return (
     <Layout>
       <SEO

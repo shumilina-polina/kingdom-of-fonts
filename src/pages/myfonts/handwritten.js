@@ -4,6 +4,7 @@ import { navigate } from "gatsby";
 import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView";
 import { categories } from "../../categories";
 import SEO from "../../seo";
+import { useAccess } from "../../hooks/useAccess";
 
 export const contentfulQuery = graphql`
   query contentfulHandwrittenQuery {
@@ -46,31 +47,7 @@ export const contentfulQuery = graphql`
 
 // markup
 const HandwrittenPage = ({data}) => {
-
-  // включить эти две вещи когда будешь тестировать доступность
-  const [loading, setLoading] = useState(true);
-  const [access, setAccess] = useState(false);
-
-
-  //включить когда будешь тестировать доступность
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("kingdomOfFontsAccess")) {
-        setLoading(false);
-        setAccess(true);
-      } else {
-        navigate("https://fonts.pavlushin.design/")
-      }
-    }
-  }, []);
-
-  if (loading) {
-    return <Layout></Layout>;
-  }
-
-  if (!access) {
-    navigate("https://fonts.pavlushin.design/")
-  }
+  useAccess()
 
 
   return (
