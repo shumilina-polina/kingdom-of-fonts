@@ -38,7 +38,7 @@ const Card = ({ data }) => {
     },
   }
 
-  console.log("fontCSS", data.fontCSS)
+  // console.log("fontCSS", data.fontCSS)
 
   
   return (
@@ -51,7 +51,7 @@ const Card = ({ data }) => {
       <FontImage fluid={data.fontImage?.fluid} />
       <CardInfo>
         <InfoItem>{data.fontWeights}</InfoItem>
-        {console.log("fontCurrency", data.fontCurrency)}
+        {/* {console.log("fontCurrency", data.fontCurrency)} */}
         <InfoItem>{data.fontCurrency?.length ? (
           <>
             {data.fontCurrency?.map((el, idx) => {
@@ -65,7 +65,7 @@ const Card = ({ data }) => {
         )}</InfoItem>
       </CardInfo>
       <StretchWrapper>
-        {console.log("fontName", data.fontName)}
+        {/* {console.log("fontName", data.fontName)} */}
         <TestFontField
           // minRows={2}
           fontName={data.fontName}

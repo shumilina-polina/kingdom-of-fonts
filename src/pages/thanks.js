@@ -52,8 +52,14 @@ import { Container } from "../global";
 // markup
 const ThanksPage = () => {
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("kingdomOfFontsAccess", "true");
+    }
+  }, []);
+
   const title = "Всё прошло супер!";
-  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что&nbsp;вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для&nbsp;проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска и&nbsp;работы :3</>)
+  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что&nbsp;вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для&nbsp;проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска&nbsp;новых :3</>)
   const buttonText = "К шрифтам"
 
   return (
@@ -78,7 +84,7 @@ const ThanksPage = () => {
               </AccessWrapper>
             </DesktopWrapper>
             <MobileWrapper >
-            <AccessWrapper>
+            <AccessWrapper wrapperHeight="167vw">
               <AccessImageMobileThanksWrapper>
                 <AccessImageMobileThanks src={thanksImageMobile} />
                 <AccessImageThanksLight src={thanksImageLightMobile} />
@@ -86,7 +92,7 @@ const ThanksPage = () => {
               <AccessInfoWrapper>
                 <AccessInfo>
                   <AccessTitle fontSize="7.4vw">{title}</AccessTitle>
-                  <AccessText>{text}</AccessText>
+                  <AccessText marginBottom="7vw">{text}</AccessText>
                 </AccessInfo>
                 <AccessFooter>
                   <AccessThanksButton to="/myfonts">

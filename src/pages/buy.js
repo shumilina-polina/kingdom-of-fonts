@@ -76,7 +76,8 @@ const BuyPage = () => {
       <AccessButtonStepTwo type="submit" value="Оплатить">Оплатить</AccessButtonStepTwo>
     </form>
   )
-  const youMoneyText = "Перейти к оплате на Юмани"
+  const youMoneyText = "Перейти к оплате на Юмани"
+  const youMoneyTextMobile = "Перейти к оплате на сайт Юмани"
   return (
     <Layout>
               {/* <CurveIcon/>
@@ -111,18 +112,22 @@ const BuyPage = () => {
           </DesktopWrapper>
           <MobileWrapper >
           <AccessWrapper>
-            <AccessImageStepTwoWrapper>
-            <AccessImageStepTwo src={moneyImageMobile} />
-            </AccessImageStepTwoWrapper>
-              <AccessInfo>
+            <AccessInfo>
                 <AccessTitle>{stepTwoTitle}</AccessTitle>
                 <AccessText>{stepTwoText}</AccessText>
               </AccessInfo>
+            <AccessImageStepTwoWrapper>
+              <AccessImageStepTwo src={moneyImageMobile} />
+            </AccessImageStepTwoWrapper>
+              <YouMoneyWrapper>
+                  <YouMoneyLogo/>
+                  <YouMoneyText>
+                    {youMoneyTextMobile}
+                  </YouMoneyText>
+                </YouMoneyWrapper>
               <AccessFooter>
                 {stepTwoForm}
-                <YouMoneyWrapper>
-                  <YouMoneyMobileLogo/>
-                </YouMoneyWrapper>
+
               </AccessFooter>
             </AccessWrapper>
           </MobileWrapper>

@@ -60,7 +60,7 @@ export const contentfulQuery = graphql`
 
 // markup
 const IndexPage = ({data}) => {
-console.log("data", data)
+// console.log("data", data)
   return (
     <Layout>
       <SEO

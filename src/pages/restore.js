@@ -24,8 +24,13 @@ import {
   AccessImageStepOne,
   AccessImageThanks,
   AccessThanksButton,
-  AccessImageStepTwoWrapper,
+  AccessImageMobileThanksWrapper,
+  AccessImageMobileThanks,
+  AccessInfoOverlay,
+  AccessInfoWrapper,
   AccessButtonStepTwo,
+  AccessImageThanksMobile,
+  AccessImageThanksLight,
   DevicesImage,
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
@@ -37,7 +42,10 @@ import Logo from "../components/logo/Logo";
 // import buyImage from "../assets/buy.png";
 // import buyImageMobile from "../assets/buy_mobile.png";
 import thanksImage from "../assets/thanks.png";
+import thanksImageMobile from "../assets/thanks_mobile.png"
+import thanksImageLightMobile from "../assets/thanks_green-light.png";
 import devicesImage from "../assets/devices.png";
+import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
@@ -46,54 +54,60 @@ const RestoreAccessPage = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // localStorage.setItem("kingdomOfFontsAccess", "true");
+      localStorage.setItem("kingdomOfFontsAccess", "true");
     }
   }, []);
 
   const title = "Доступ к шрифтам";
   
-  const text = (<>Восстань, пророк! И&nbsp;виждь, И&nbsp;внемли, исполнись волею моей, И,&nbsp;обходя моря и&nbsp;земли <span>Шрифтами&nbsp;жги сердца людей!</span></>)
+  const text = (<>Восстань, пророк! И&nbsp;виждь, И&nbsp;внемли, исполнись волею моей, И,&nbsp;обходя моря и&nbsp;земли, <span>Шрифтами&nbsp;жги сердца людей!</span></>)
   const buttonText = "К шрифтам"
 
   return (
+
     <Layout>
-      <Container>
-          <DesktopWrapper>
-            <AccessWrapper>
-              <AccessImageThanks src={thanksImage} />
-              <AccessInfo >
-                <AccessTitle style={{marginBottom: "15px"}}>{title}</AccessTitle>
-                <AccessText >{text}</AccessText>
-              </AccessInfo>
-              <AccessLine/>
-              <AccessFooter>
-              <AccessThanksButton to="/myfonts">
-                {buttonText}
-              </AccessThanksButton>
-                <ArrowIcon/>
-                <DevicesImage src={devicesImage} />
-              </AccessFooter>
-            </AccessWrapper>
-          </DesktopWrapper>
-          <MobileWrapper >
-          <AccessWrapper>
-            <AccessImageStepTwoWrapper>
-            {/* <AccessImageStepTwo src={moneyImageMobile} /> */}
-            </AccessImageStepTwoWrapper>
-              <AccessInfo>
-                <AccessTitle>{title}</AccessTitle>
-                <AccessText>{text}</AccessText>
-              </AccessInfo>
-              <AccessFooter>
-                <AccessThanksButton>
-                  {buttonText}ds
+        <Container>
+            <DesktopWrapper>
+              <AccessWrapper>
+                <AccessImageThanks src={thanksImage} />
+                <AccessInfo>
+                  <AccessTitle>{title}</AccessTitle>
+                  <AccessText>{text}</AccessText>
+                </AccessInfo>
+                <AccessLine/>
+                <AccessFooter>
+                <AccessThanksButton to="/myfonts">
+                  {buttonText}
                 </AccessThanksButton>
-              </AccessFooter>
-            </AccessWrapper>
-          </MobileWrapper>
-      </Container>
+                  <ArrowIcon/>
+                  <DevicesImage src={devicesImage} />
+                </AccessFooter>
+              </AccessWrapper>
+            </DesktopWrapper>
+            <MobileWrapper >
+            <AccessWrapper wrapperHeight="158vw">
+              <AccessImageMobileThanksWrapper>
+                <AccessImageMobileThanks src={thanksImageMobile} />
+                <AccessImageThanksLight src={thanksImageLightMobile} />
+              </AccessImageMobileThanksWrapper>
+              <AccessInfoWrapper >
+                <AccessInfo>
+                  <AccessTitle fontSize="7.4vw">{title}</AccessTitle>
+                  <AccessText marginBottom="7vw">{text}</AccessText>
+                </AccessInfo>
+                <AccessFooter>
+                  <AccessThanksButton to="/myfonts">
+                    {buttonText}
+                  </AccessThanksButton>
+                </AccessFooter>
+              </AccessInfoWrapper>
+                
+              </AccessWrapper>
+            </MobileWrapper>
+        </Container>
     </Layout>
   );
 };
 
 export default RestoreAccessPage;
+

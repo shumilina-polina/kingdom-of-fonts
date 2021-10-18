@@ -9,25 +9,9 @@
  // import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
+
  
- type metaType = Array<{
-   property?: string
-   name?: string
-   content?: string
- }>
- type Props = {
-   description?: string
-   lang?: string
-   meta?: metaType
-   title?: string
-   keywords?: string[]
-   ogImage?: string
-   url?: string
-   ogImageVk?: string
-   socialDescription?: string
- }
- 
- const SEO: React.FC<Props> = ({
+ const SEO = ({
    description,
    lang,
    meta,
@@ -65,7 +49,7 @@
    const metaSocialDescription =
      socialDescription || description || site.siteMetadata.description
  
-   const defaultMeta: metaType = [
+   const defaultMeta = [
      {
        name: `description`,
        content: metaDescription,
@@ -78,23 +62,23 @@
        property: `og:description`,
        content: metaDescription,
      },
-    //  {
-    //    property: `vk:image`,
-    //    content: metaOgImageVk,
-    //  },
-    //  {
-    //    property: `og:image`,
-    //    content: metaOgImage,
-    //  },
+     {
+       property: `vk:image`,
+       content: metaOgImageVk,
+     },
+     {
+       property: `og:image`,
+       content: metaOgImage,
+     },
  
-    //  {
-    //    property: `og:image:width`,
-    //    content: "1200",
-    //  },
-    //  {
-    //    property: `og:image:height`,
-    //    content: "630",
-    //  },
+     {
+       property: `og:image:width`,
+       content: "1200",
+     },
+     {
+       property: `og:image:height`,
+       content: "630",
+     },
      {
        property: `og:type`,
        content: `website`,
@@ -107,29 +91,29 @@
        name: `twitter:title`,
        content: metaTitle,
      },
-    //  {
-    //    name: `twitter:image`,
-    //    content: metaOgImage,
-    //  },
+     {
+       name: `twitter:image`,
+       content: metaOgImage,
+     },
      {
        name: `twitter:description`,
        content: metaSocialDescription,
      },
-    //  {
-    //    name: `twitter:card`,
-    //    content: `summary_large_image`,
-    //  },
+     {
+       name: `twitter:card`,
+       content: `summary_large_image`,
+     },
      {
        name: `keywords`,
        content: metaKeywords,
      },
-     {
-       name: `p:domain_verify`,
-       content: `7110133d060664b8d775d9aed52f11c2`,
-     },
+    //  {
+    //    name: `p:domain_verify`,
+    //    content: `7110133d060664b8d775d9aed52f11c2`,
+    //  },
    ]
  
-   const propMeta: metaType = defaultMeta.concat(meta || [])
+   const propMeta = defaultMeta.concat(meta || [])
  
    return (
      <Helmet htmlAttributes={{ lang }} title={metaTitle} meta={defaultMeta.concat(propMeta)}>
@@ -144,13 +128,6 @@
    meta: [],
    description: ``,
  }
- 
- // SEO.propTypes = {
- //   description: PropTypes.string,
- //   lang: PropTypes.string,
- //   meta: PropTypes.arrayOf(PropTypes.object),
- //   title: PropTypes.string.isRequired,
- // }
- 
- export default SEO
+
+export default SEO
  

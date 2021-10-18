@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Бесплатная кириллица`,
-    description: `Подборка лучших кириллических шрифтов с бесплатной коммерческой лицензией для ваших проектов.`,
+    description: `Лучшие бесплатные кириллические шрифты для коммерческих и личных проектов.`,
     author: `Андрей Павлушин`,
     keywords: `подборка,шрифты,fonts,кириллица,бесплатно`,
-    ogImage: `images/index.jpg`,
-    ogImageVk: `images/index-vk.jpg`,
+    ogImage: `images/seo.jpg`,
+    ogImageVk: `images/seo-vk.jpg`,
     siteUrl: `https://pavlushin.design`
   },
   plugins: [

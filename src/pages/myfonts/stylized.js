@@ -73,7 +73,7 @@ export const contentfulQuery = graphql`
 // markup
 const StylizedPage = ({data}) => {
 
-    console.log("data", data)
+    // console.log("data", data)
   // включить эти две вещи когда будешь тестировать доступность
   // const [loading, setLoading] = useState(true);
   // const [access, setAccess] = useState(false);

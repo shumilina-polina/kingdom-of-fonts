@@ -49,18 +49,21 @@ export const AccessWrapper = styled.div`
     position: relative;
 
     @media (max-width: 575px) {
-        padding: 5vw 4vw 8vw;
+        padding: 5vw 4vw;
         border-radius: 6vw;
         margin-top: 5vw;
         overflow: unset;
-        height: 168vw;
+        /* height: 168vw; */
         /* width: 95vw; */
         min-width: 100%;
         width: 100%;
         form {
             width: 100%;
-            margin: 5vw 0;
+            margin: 5vw 0 0;
         }
+        ${props => props.wrapperHeight && `
+            height: ${props.wrapperHeight};
+        `}
     }
 `;
 
@@ -116,11 +119,11 @@ export const AccessImageStepTwo = styled.img`
     transform: translateY(50%);
 
     @media (max-width: 575px) {
-        bottom: -10vw;
-        right: 51%;
-        transform: translateX(50%);
+        bottom: -17vw;
+        right: 50%;
+        transform: translateX(50%) rotate(-4deg);
         /* top: 0; */
-        width: 132vw;
+        width: 110vw;
     /* height: 200px; */
         /* position: static;
         left: 0;
@@ -197,7 +200,10 @@ export const AccessText = styled.div`
         span {
             font-size: 4.1vw;
         }
-        margin-bottom: 7vw;
+        ${props => props.marginBottom && `
+            margin-bottom: ${props.marginBottom};
+        `}
+        
 }   
 `;
 
@@ -275,14 +281,17 @@ export const AccessThanksButton = styled(Link)`
 
 export const YouMoneyWrapper = styled.div`
     display: flex;
+
     align-items: center;
     svg {
         width: 90px;
         margin: 0 10px;
     }
     @media (max-width: 575px) {
+        width: 100%;
+        justify-content: center;
         svg {
-            width: 30vw;
+            width: 15vw;
             /* margin: 0 10px; */
         }
     }
@@ -294,7 +303,9 @@ export const YouMoneyText = styled.div`
     width: 80px;
     color: #BDBDBD;
     @media (max-width: 575px) {
-        display: none;
+        /* display: none; */
+        width: 40vw;
+        font-size: 4vw;
     }
 `;
 
