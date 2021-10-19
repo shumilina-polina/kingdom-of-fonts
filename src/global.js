@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         height: 100%;
         background: var(--color-background);
-        overflow-x: hidden;
+        
     }
 
 
@@ -132,6 +132,18 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: auto;
     }
 
+    #___gatsby {
+      /* overflow-x: hidden; */
+    }
+
+    #gatsby-focus-wrapper {
+      /* overflow-x: hidden; */
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
 `;
 
 export const Container = styled.div`
@@ -153,6 +165,7 @@ export const Container = styled.div`
   @media (max-width: 575px) {
     padding: 0 4vw;
     width: 100%;
+
   }
   
 

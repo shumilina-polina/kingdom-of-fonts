@@ -16,6 +16,7 @@ export const AccessImageMobileThanksWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+    /* overflow-x: hidden; */
 `
 
 export const AccessImageMobileThanks = styled.img`
@@ -48,6 +49,10 @@ export const AccessInfoWrapper = styled.div`
     padding: 5vw 4vw 8vw;
     z-index: 2;
     border-radius: 0 0 6vw 6vw;
+
+    @supports(-moz-appearance: none) {
+        background-color: rgba(25, 29, 27, 0.9);
+    }
 `
 
 export const AccessWrapper = styled.div`
