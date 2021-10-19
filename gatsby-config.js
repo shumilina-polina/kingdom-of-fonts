@@ -26,8 +26,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/', disallow: ["/restore", "/thanks"] }, {userAgent: 'Yandex', allow: '/', disallow: ["/restore", "/thanks"]}, {userAgent: 'Googlebot', allow: '/', disallow: ["/restore", "/thanks"]}]
       }
     },
-
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        exclude: [`/thanks`, `/restore`],
+      }
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
