@@ -3,6 +3,7 @@ import { Container, GlobalStyle } from "../global";
 import Footer from "./footer/Footer";
 import "../fonts.css";
 import Logo from "../components/logo/Logo";
+import { useLocation } from "@reach/router"
 import {
 
   LogoWithCurve,
@@ -21,10 +22,9 @@ const Layout = ({ children, footerReduced }) => {
   //   require('smooth-scroll')('a[href*="#"]');
   // }
 
-  let overflowed;
-  if (typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname)) {
-    overflowed = true;
-  }
+  const location = useLocation()
+
+  const overflowed = ["/restore", "/buy", "/thanks"].includes(location.pathname);
 
   return (
     <>
