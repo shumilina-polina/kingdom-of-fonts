@@ -18,6 +18,7 @@ import {
   CurveMobileIcon,
 } from "../../components/access-page/style";
 import { useAccess } from "../../hooks/useAccess";
+import Spinner from "../../components/Spinner";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;
@@ -75,9 +76,9 @@ export const contentfulQuery = graphql`
 const StylizedPage = ({data}) => {
 
   const { loading } = useAccess()
-  console.log("loading", loading)
+  // console.log("loading", loading)
   if (loading) {
-    return <Layout></Layout>;
+    return <Layout><Spinner/></Layout>;
   }
 
   return (

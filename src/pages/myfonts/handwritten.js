@@ -5,6 +5,7 @@ import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView
 import { categories } from "../../categories";
 import SEO from "../../seo";
 import { useAccess } from "../../hooks/useAccess";
+import Spinner from "../../components/Spinner";
 
 export const contentfulQuery = graphql`
   query contentfulHandwrittenQuery {
@@ -48,10 +49,10 @@ export const contentfulQuery = graphql`
 // markup
 const HandwrittenPage = ({data}) => {
   const { loading } = useAccess()
-  console.log("loading", loading)
+  // console.log("loading", loading)
   if (loading) {
     return <Layout>
-      <div style={{minHeight: "100%"}}></div>
+      <Spinner/>
     </Layout>;
   }
 
