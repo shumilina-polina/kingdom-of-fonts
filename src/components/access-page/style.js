@@ -210,15 +210,21 @@ export const AccessText = styled.div`
         color: var(--color-green);
     }
     @media (max-width: 575px) {
-        font-size: 3.8vw;
+        font-size: 4.1vw;
         max-width: 100%;
         text-align: center;
         line-height: 1.25;
         span {
-            font-size: 3.8vw;
+            font-size: 4.1vw;
         }
         ${props => props.marginBottom && `
             margin-bottom: ${props.marginBottom};
+        `}
+        ${props => props.fontSize && `
+            font-size: ${props.fontSize};
+            span {
+                font-size: ${props.fontSize};
+            }
         `}
         
 }   

@@ -47,7 +47,13 @@ export const contentfulQuery = graphql`
 
 // markup
 const HandwrittenPage = ({data}) => {
-  useAccess()
+  const { loading } = useAccess()
+  console.log("loading", loading)
+  if (loading) {
+    return <Layout>
+      <div style={{minHeight: "100%"}}></div>
+    </Layout>;
+  }
 
 
   return (

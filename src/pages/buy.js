@@ -88,6 +88,7 @@ const BuyPage = () => {
   const youMoneyTextMobile = "Перейти к оплате на сайт Юмани"
   return (
     <>
+    <SEO />
     <Layout>
       <Container>
         {warning ? (
@@ -205,7 +206,7 @@ const BuyPage = () => {
             <AccessButton marginBottom="4vw" onClick={() => setWarning(true)}>
               {stepOneButtonText}
             </AccessButton>
-            <AccessText>{stepOneText}</AccessText>
+            <AccessText fontSize="3.8vw">{stepOneText}</AccessText>
               </AccessInfoWrapper>
               
             

@@ -76,7 +76,11 @@ const SansSerifPage = ({data}) => {
 
     console.log("data", data)
 
-    useAccess()
+    const { loading } = useAccess()
+    console.log("loading", loading)
+    if (loading) {
+      return <Layout></Layout>;
+    }
 
   return (
     <Layout>
