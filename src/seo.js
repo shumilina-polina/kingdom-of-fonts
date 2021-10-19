@@ -19,9 +19,9 @@
    meta,
    title,
    keywords,
-   ogImage,
+  //  ogImage,
    url,
-   ogImageVk,
+  //  ogImageVk,
    socialDescription,
    noIndex,
  }) => {
