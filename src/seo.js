@@ -9,8 +9,8 @@
  // import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
- import ogImage from "./assets/seo/seo.jpg";
- import ogImageVk from "./assets/seo/seo-vk.jpg";
+//  import ogImage from "./assets/seo/seo.jpg";
+//  import ogImageVk from "./assets/seo/seo-vk.jpg";
 
  
  const SEO = ({
@@ -19,9 +19,9 @@
    meta,
    title,
    keywords,
-  //  ogImage,
+   ogImage,
    url,
-  //  ogImageVk,
+   ogImageVk,
    socialDescription,
    noIndex,
  }) => {
@@ -47,10 +47,10 @@
    const metaKeywords = keywords || site.siteMetadata.keywords
    const metaOgImage = ogImage || site.siteMetadata.ogImage
    const metaTitle = title || site.siteMetadata.title
-  //  const metaOgUrl = url || site.siteMetadata.siteUrl
-  //  const metaOgImageVk = ogImageVk || site.siteMetadata.ogImageVk
-   const metaOgUrl = ogImage
-   const metaOgImageVk = ogImageVk
+   const metaOgUrl = url || site.siteMetadata.siteUrl
+   const metaOgImageVk = ogImageVk || site.siteMetadata.ogImageVk
+  //  const metaOgUrl = ogImage
+  //  const metaOgImageVk = ogImageVk
    const metaSocialDescription =
      socialDescription || description || site.siteMetadata.description
  
