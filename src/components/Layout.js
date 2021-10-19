@@ -21,7 +21,10 @@ const Layout = ({ children, footerReduced }) => {
   //   require('smooth-scroll')('a[href*="#"]');
   // }
 
-  const overflowed = typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname);
+  let overflowed;
+  if (typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname)) {
+    overflowed = true;
+  }
 
   return (
     <>
