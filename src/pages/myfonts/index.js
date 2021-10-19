@@ -19,6 +19,7 @@ import {
 } from "../../components/access-page/style";
 import { useAccess } from "../../hooks/useAccess";
 import Spinner from "../../components/Spinner";
+import { GlobalStyle } from "../../global";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 
@@ -70,6 +71,7 @@ if (loading) {
 }
   return (
     <Layout>
+      <GlobalStyle/>
       <SEO
         url="https://pavlushin.design/myfonts"
       />

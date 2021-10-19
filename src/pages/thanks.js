@@ -46,7 +46,7 @@ import thanksImageMobile from "../assets/thanks_mobile.png"
 import thanksImageLightMobile from "../assets/thanks_green-light.png";
 import devicesImage from "../assets/devices.png";
 import moneyImageMobile from "../assets/money_mobile.png";
-import { Container } from "../global";
+import { Container, GlobalStyle, GlobalStyleOverflowed } from "../global";
 import SEO from "../seo";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
@@ -67,6 +67,7 @@ const ThanksPage = () => {
 
     <Layout>
       <SEO noIndex/>
+      <GlobalStyleOverflowed/>
         <Container>
             <DesktopWrapper>
               <AccessWrapper>

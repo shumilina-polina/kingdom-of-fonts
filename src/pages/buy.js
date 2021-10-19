@@ -41,7 +41,7 @@ import buyImage from "../assets/buy.png";
 import buyImageMobile from "../assets/envelope_mobile.png";
 import moneyImage from "../assets/money.png";
 import moneyImageMobile from "../assets/money_mobile.png";
-import { Container } from "../global";
+import { Container, GlobalStyle, GlobalStyleOverflowed } from "../global";
 import envelopeImageMobile from "../assets/envelope_mobile.png"
 import envelopeImageLightMobile from "../assets/envelope_green-light.png";
 import SEO from "../seo";
@@ -90,6 +90,7 @@ const BuyPage = () => {
     <>
     <SEO />
     <Layout>
+      <GlobalStyleOverflowed/>
       <Container>
         {warning ? (
           <>

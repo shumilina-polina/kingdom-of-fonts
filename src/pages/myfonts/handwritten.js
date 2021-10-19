@@ -6,6 +6,7 @@ import { categories } from "../../categories";
 import SEO from "../../seo";
 import { useAccess } from "../../hooks/useAccess";
 import Spinner from "../../components/Spinner";
+import { GlobalStyle } from "../../global";
 
 export const contentfulQuery = graphql`
   query contentfulHandwrittenQuery {
@@ -59,6 +60,7 @@ const HandwrittenPage = ({data}) => {
 
   return (
     <Layout>
+      <GlobalStyle/>
       <SEO
         url="https://pavlushin.design/myfonts/handwritten"
       />
