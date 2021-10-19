@@ -84,7 +84,7 @@ const StylizedPage = ({data}) => {
 
   return (
     <>
-    <GlobalStyle/>
+    {/* <GlobalStyle/> */}
     <Layout>
       
       <SEO

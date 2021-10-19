@@ -86,7 +86,7 @@ const SerifPage = ({data}) => {
 
   return (
     <>
-    <GlobalStyle/>
+    {/* <GlobalStyle/> */}
     <Layout>
       
       <SEO

@@ -28,7 +28,7 @@ const Layout = ({ children, footerReduced }) => {
 
   return (
     <>
-      
+      <GlobalStyle/>
       <LogoWrapper img={img}>
           <CurveIcon/>
           <CurveMobileIcon/>

@@ -86,7 +86,7 @@ const SansSerifPage = ({data}) => {
 
   return (
     <>
-<GlobalStyle/>
+{/* <GlobalStyle/> */}
     <Layout>
       
       <SEO

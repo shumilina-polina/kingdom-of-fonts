@@ -141,7 +141,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const GlobalStyleOverflowed = createGlobalStyle`
-    ${styles}
+    /* ${styles} */
     #___gatsby {
       overflow-x: hidden;
     }

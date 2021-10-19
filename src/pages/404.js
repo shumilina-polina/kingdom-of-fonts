@@ -7,7 +7,7 @@ import { Container, GlobalStyle } from "../global"
 const NotFoundPage = () => {
   return (
     <>
-    <GlobalStyle/>
+    {/* <GlobalStyle/> */}
     <Layout>
       
       <Container>

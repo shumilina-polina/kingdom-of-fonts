@@ -60,7 +60,7 @@ const HandwrittenPage = ({data}) => {
 
   return (
     <>
-    <GlobalStyle/>
+    {/* <GlobalStyle/> */}
     <Layout>
       
       <SEO

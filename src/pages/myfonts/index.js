@@ -71,7 +71,7 @@ if (loading) {
 }
   return (
     <>
-    <GlobalStyle/>
+    {/* <GlobalStyle/> */}
     <Layout>
       
       <SEO
