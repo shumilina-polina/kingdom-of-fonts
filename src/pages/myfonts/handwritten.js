@@ -59,8 +59,10 @@ const HandwrittenPage = ({data}) => {
 
 
   return (
+    <>
+    <GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <SEO
         url="https://pavlushin.design/myfonts/handwritten"
       />
@@ -69,6 +71,7 @@ const HandwrittenPage = ({data}) => {
             category={categories[3]}
         />
     </Layout>
+    </>
   );
 };
 

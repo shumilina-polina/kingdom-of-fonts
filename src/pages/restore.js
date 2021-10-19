@@ -65,10 +65,11 @@ const RestoreAccessPage = () => {
   const buttonText = "К шрифтам"
 
   return (
-
+    <>
+<GlobalStyleOverflowed/>
     <Layout>
       <SEO noIndex />
-      <GlobalStyleOverflowed/>
+      
         <Container>
             <DesktopWrapper>
               <AccessWrapper>
@@ -109,6 +110,7 @@ const RestoreAccessPage = () => {
             </MobileWrapper>
         </Container>
     </Layout>
+    </>
   );
 };
 

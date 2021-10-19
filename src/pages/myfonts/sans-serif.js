@@ -85,8 +85,10 @@ const SansSerifPage = ({data}) => {
     }
 
   return (
+    <>
+<GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <SEO
         url="https://pavlushin.design/myfonts/sans-serif"
       />
@@ -96,6 +98,7 @@ const SansSerifPage = ({data}) => {
             // setFilters={setFilters}
         />
     </Layout>
+    </>
   );
 };
 

@@ -85,8 +85,10 @@ const SerifPage = ({data}) => {
   }
 
   return (
+    <>
+    <GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <SEO
         url="https://pavlushin.design/myfonts/serif"
       />
@@ -96,6 +98,7 @@ const SerifPage = ({data}) => {
             // setFilters={setFilters}
         />
     </Layout>
+    </>
   );
 };
 

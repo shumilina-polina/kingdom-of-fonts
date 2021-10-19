@@ -6,14 +6,18 @@ import { Container, GlobalStyle } from "../global"
 // markup
 const NotFoundPage = () => {
   return (
+    <>
+    <GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <Container>
         <AccessWrapper>
           <NotFoundText>404 <span>Страница не найдена :(</span></NotFoundText>
         </AccessWrapper>
       </Container>
     </Layout>
+    </>
+    
   )
 }
 

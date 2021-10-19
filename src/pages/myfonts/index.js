@@ -70,13 +70,16 @@ if (loading) {
   return <Layout><Spinner/></Layout>;
 }
   return (
+    <>
+    <GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <SEO
         url="https://pavlushin.design/myfonts"
       />
         <IndexPageNoFiltersView cards={data.allFonts?.edges}/>
     </Layout>
+    </>
   );
 };
 

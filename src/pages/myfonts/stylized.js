@@ -83,8 +83,10 @@ const StylizedPage = ({data}) => {
   }
 
   return (
+    <>
+    <GlobalStyle/>
     <Layout>
-      <GlobalStyle/>
+      
       <SEO
         url="https://pavlushin.design/myfonts/stylized"
       />
@@ -94,6 +96,7 @@ const StylizedPage = ({data}) => {
             // setFilters={setFilters}
         />
     </Layout>
+    </>
   );
 };
 

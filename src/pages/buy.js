@@ -89,8 +89,9 @@ const BuyPage = () => {
   return (
     <>
     <SEO />
+    <GlobalStyleOverflowed/>
     <Layout>
-      <GlobalStyleOverflowed/>
+      
       <Container>
         {warning ? (
           <>

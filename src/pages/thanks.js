@@ -64,10 +64,10 @@ const ThanksPage = () => {
   const buttonText = "К шрифтам"
 
   return (
-
+<><GlobalStyleOverflowed/>
     <Layout>
       <SEO noIndex/>
-      <GlobalStyleOverflowed/>
+      
         <Container>
             <DesktopWrapper>
               <AccessWrapper>
@@ -108,6 +108,7 @@ const ThanksPage = () => {
             </MobileWrapper>
         </Container>
     </Layout>
+    </>
   );
 };
 
