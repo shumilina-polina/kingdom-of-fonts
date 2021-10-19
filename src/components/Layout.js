@@ -21,9 +21,11 @@ const Layout = ({ children, footerReduced }) => {
   //   require('smooth-scroll')('a[href*="#"]');
   // }
 
+  const overflowed = typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname);
+
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle overflowed={overflowed}/>
       <LogoWrapper img={img}>
           <CurveIcon/>
           <CurveMobileIcon/>

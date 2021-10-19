@@ -102,10 +102,14 @@ export const AccessWrapper = styled.div`
             width: 100%;
             margin: 5vw 0 0;
         }
+        
+
+
         ${props => props.wrapperHeight && `
             height: ${props.wrapperHeight};
         `}
-    }
+
+
 `;
 
 export const AccessImageWrapper = styled.div`

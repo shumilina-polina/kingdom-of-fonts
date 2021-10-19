@@ -132,11 +132,12 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: auto;
     }
 
-    ${typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname) && `
-      #___gatsby {
+    ${props => props.overflowed && `
+          #___gatsby {
         overflow-x: hidden;
       }
     `}
+
 `;
 
 export const Container = styled.div`
