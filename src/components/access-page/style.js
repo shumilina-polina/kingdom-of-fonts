@@ -22,6 +22,21 @@ export const AccessImageMobileThanks = styled.img`
     width: 67vw;
 `
 
+export const AccessImageMobileEnvelope = styled.img`
+    width: 93vw;
+    transform: translateX(-3.1vw);
+    /* right: 0; */
+`
+
+export const AccessImageEnvelopeLight = styled.img`
+    width: 140vw;
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    bottom: 33vw;
+    transform: translateX(-60%);
+`
+
 export const AccessInfoWrapper = styled.div`
     background-color: rgba(25, 29, 27, 0.4);
     position: absolute;
@@ -159,6 +174,8 @@ export const AccessImageThanksLight = styled.img`
     transform: translateX(-50%);
 `
 
+
+
 export const AccessImageStepTwoWrapper = styled.div`
     position: relative;
     height: 84vw;
@@ -193,12 +210,12 @@ export const AccessText = styled.div`
         color: var(--color-green);
     }
     @media (max-width: 575px) {
-        font-size: 4vw;
+        font-size: 3.8vw;
         max-width: 100%;
         text-align: center;
         line-height: 1.25;
         span {
-            font-size: 4.1vw;
+            font-size: 3.8vw;
         }
         ${props => props.marginBottom && `
             margin-bottom: ${props.marginBottom};
@@ -259,6 +276,9 @@ background: linear-gradient(180deg, #45E786 0%, #14793E 100%);
         :hover {
             font-size: 6.5vw;
         }
+        ${props => props.marginBottom && `
+            margin-bottom: ${props.marginBottom};
+        `}
 }
 `
 
@@ -313,14 +333,24 @@ export const AccessPriceWrapper = styled.div`
     display: flex;
     /* margin-left: 20px; */
     @media (max-width: 575px) {
-
-}
+        margin-bottom: 4vw;
+        justify-content: space-between;
+        svg {
+            width: 10vw;
+            margin: 0;
+            fill: red;
+            position: relative;
+            left: -3vw;
+            top: 3vw;
+        }
+    }
 `;
 
 export const AccessPriceYear = styled.div`
     margin-right: 20px;
     @media (max-width: 575px) {
-        margin-right: 4vw;
+        margin-right: 0;
+
 }
 `;
 
@@ -346,7 +376,11 @@ export const AccessPriceTitle = styled.div`
         }
     }
     @media (max-width: 575px) {
-        font-size: 5vw;
+        font-size: 4vw;
+        margin-bottom: 1vw;
+        span {
+            font-size: 4vw;
+        }
     }
 `;
 
@@ -369,10 +403,10 @@ export const AccessPrice = styled.div`
     `}
     /* font-weight: 300; */
     @media (max-width: 575px) {
-    font-size: 10vw;
+    font-size: 12vw;
     line-height: 1;
     span {
-        font-size: 5vw;
+        font-size: 6vw;
         margin-left: 1vw;
     }
 }

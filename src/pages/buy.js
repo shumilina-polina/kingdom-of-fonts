@@ -25,6 +25,11 @@ import {
   AccessImageStepTwo,
   AccessImageStepTwoWrapper,
   AccessButtonStepTwo,
+  AccessImageMobileThanksWrapper,
+  AccessImageMobileEnvelope,
+  AccessImageEnvelopeLight,
+  AccessThanksButton,
+  AccessInfoWrapper
 } from "../components/access-page/style";
 import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
 import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
@@ -37,6 +42,8 @@ import buyImageMobile from "../assets/envelope_mobile.png";
 import moneyImage from "../assets/money.png";
 import moneyImageMobile from "../assets/money_mobile.png";
 import { Container } from "../global";
+import envelopeImageMobile from "../assets/envelope_mobile.png"
+import envelopeImageLightMobile from "../assets/envelope_green-light.png";
 import SEO from "../seo";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
@@ -82,12 +89,6 @@ const BuyPage = () => {
   return (
     <>
     <Layout>
-              {/* <CurveIcon/>
-        <CurveMobileIcon/>
-        <LogoWithCurve>
-          <Logo />
-          <ShadowCircle/>
-        </LogoWithCurve> */}
       <Container>
         {warning ? (
           <>
@@ -171,14 +172,16 @@ const BuyPage = () => {
           </AccessWrapper>
           </DesktopWrapper>
           <MobileWrapper>
-          <AccessWrapper>
-            <AccessImageWrapper>
-              <AccessImageStepOne src={buyImageMobile} />
-            </AccessImageWrapper>
-            <AccessInfo>
-              <AccessTitle>{stepOneTitle}</AccessTitle>
-            </AccessInfo>
-            <AccessFooter>
+          <AccessWrapper wrapperHeight="169vw">
+              <AccessImageMobileThanksWrapper>
+                <AccessImageMobileEnvelope src={envelopeImageMobile} />
+                <AccessImageEnvelopeLight src={envelopeImageLightMobile} />
+              </AccessImageMobileThanksWrapper>
+              <AccessInfoWrapper>
+                <AccessInfo>
+                  <AccessTitle fontSize="8.1vw">{stepOneTitle}</AccessTitle>
+                </AccessInfo>
+                <AccessFooter>
               <AccessPriceWrapper>
                 <AccessPriceYear>
                   <AccessPriceTitle>
@@ -188,6 +191,7 @@ const BuyPage = () => {
                     {stepOneFirstYearPrice}
                   </AccessPrice>
                 </AccessPriceYear>
+                <ArrowIcon/>
                 <AccessPriceYear>
                 <AccessPriceTitle>
                     {stepOneSecondYearTitle}
@@ -198,11 +202,14 @@ const BuyPage = () => {
                 </AccessPriceYear>
               </AccessPriceWrapper>
             </AccessFooter>
-            <AccessButton onClick={() => setWarning(true)}>
+            <AccessButton marginBottom="4vw" onClick={() => setWarning(true)}>
               {stepOneButtonText}
             </AccessButton>
             <AccessText>{stepOneText}</AccessText>
-          </AccessWrapper>
+              </AccessInfoWrapper>
+              
+            
+              </AccessWrapper>
           </MobileWrapper>
           </>
         )}
