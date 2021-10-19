@@ -20,6 +20,7 @@ const Layout = ({ children, footerReduced }) => {
   // if (typeof window !== 'undefined') {
   //   require('smooth-scroll')('a[href*="#"]');
   // }
+
   return (
     <>
       <GlobalStyle />

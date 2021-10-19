@@ -25,7 +25,7 @@ export const AccessImageMobileThanks = styled.img`
 
 export const AccessImageMobileEnvelope = styled.img`
     width: 93vw;
-    transform: translateX(-3.1vw);
+    transform: translateX(-.5vw);
     /* right: 0; */
 `
 

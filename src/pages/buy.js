@@ -206,7 +206,7 @@ const BuyPage = () => {
             <AccessButton marginBottom="4vw" onClick={() => setWarning(true)}>
               {stepOneButtonText}
             </AccessButton>
-            <AccessText fontSize="3.8vw">{stepOneText}</AccessText>
+            <AccessText fontSize="4vw">{stepOneText}</AccessText>
               </AccessInfoWrapper>
               
             

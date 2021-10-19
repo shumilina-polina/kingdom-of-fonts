@@ -132,18 +132,11 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: auto;
     }
 
-    #___gatsby {
-      /* overflow-x: hidden; */
-    }
-
-    #gatsby-focus-wrapper {
-      /* overflow-x: hidden; */
-    }
-
-    html {
-      overflow-x: hidden;
-    }
-
+    ${window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname) && `
+      #___gatsby {
+        overflow-x: hidden;
+      }
+    `}
 `;
 
 export const Container = styled.div`
