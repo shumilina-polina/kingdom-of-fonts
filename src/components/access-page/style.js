@@ -108,7 +108,7 @@ export const AccessWrapper = styled.div`
         ${props => props.wrapperHeight && `
             height: ${props.wrapperHeight};
         `}
-
+    }
 
 `;
 
