@@ -32,6 +32,7 @@ module.exports = {
         exclude: [`/thanks`, `/restore`],
       }
     },
+    `gatsby-plugin-htaccess`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

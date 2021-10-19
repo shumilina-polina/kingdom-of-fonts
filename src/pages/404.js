@@ -1,11 +1,18 @@
 import * as React from "react"
+import { AccessWrapper, NotFoundText } from "../components/access-page/style"
+import Layout from "../components/Layout"
+import { Container } from "../global"
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main>
-      404
-    </main>
+    <Layout>
+      <Container>
+        <AccessWrapper>
+          <NotFoundText>404 <span>Страница не найдена :(</span></NotFoundText>
+        </AccessWrapper>
+      </Container>
+    </Layout>
   )
 }
 

@@ -132,7 +132,7 @@ export const GlobalStyle = createGlobalStyle`
         margin-top: auto;
     }
 
-    ${window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname) && `
+    ${typeof window !== undefined && ["/restore", "/buy", "/thanks"].includes(window.location.pathname) && `
       #___gatsby {
         overflow-x: hidden;
       }

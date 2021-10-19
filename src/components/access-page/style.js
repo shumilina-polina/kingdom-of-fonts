@@ -4,6 +4,26 @@ import Curve from "../../assets/svgs/curve.svg";
 import MobileCurve from "../../assets/svgs/curve-mobile.svg";
 import { Link } from "gatsby";
 
+export const NotFoundText = styled.div`
+    font-size: 150px;
+    text-align: center;
+    color: var(--color-grey);
+    font-weight: bold;
+    margin-top: -40px;
+    span {
+        display: block;
+        font-size: 30px;
+    }
+    @media (max-width: 575px) {
+        font-size: 35vw;
+        margin-bottom: 5vw;
+        margin-top: 0;
+        span {
+            font-size: 6vw;
+        }
+    }
+`
+
 export const AccessInfoOverlay = styled.div`
 
 `
@@ -67,6 +87,7 @@ export const AccessWrapper = styled.div`
     margin-top: 25px;
     overflow: hidden;
     position: relative;
+    width: 100%;
 
     @media (max-width: 575px) {
         padding: 5vw 4vw;
