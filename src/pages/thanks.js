@@ -87,7 +87,7 @@ const ThanksPage = () => {
               </AccessWrapper>
             </DesktopWrapper>
             <MobileWrapper >
-            <AccessWrapper wrapperHeight="167vw">
+            <AccessWrapper wrapperHeight="162vw">
               <AccessImageMobileThanksWrapper>
                 <AccessImageMobileThanks src={thanksImageMobile} />
                 <AccessImageThanksLight src={thanksImageLightMobile} />
