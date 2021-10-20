@@ -244,6 +244,7 @@ export const AccessText = styled.div`
         max-width: 100%;
         text-align: center;
         line-height: 1.25;
+        letter-spacing: -0.1vw;
         span {
             font-size: 4.1vw;
         }
@@ -371,8 +372,10 @@ export const AccessPriceWrapper = styled.div`
     @media (max-width: 575px) {
         margin-bottom: 4vw;
         justify-content: space-between;
+        align-items: center;
         svg {
             width: 10vw;
+            height: 11vw;
             margin: 0;
             fill: red;
             position: relative;
