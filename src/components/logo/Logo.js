@@ -5,7 +5,7 @@ import { navigate } from "gatsby";
 
 const Logo = () => {
   return (
-    <LogoWrapper onClick={() => navigate("/myfonts")}>
+    <LogoWrapper onClick={() => navigate("/fonts/library")}>
       <LogoIcon />
       <ShadowCircle/>
     </LogoWrapper>

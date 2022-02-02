@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from "react";
 // import { cards } from "../components/index-page/cards/data";
-import Layout from "../../components/Layout";
-import Logo from "../../components/logo/Logo";
+import Layout from "../../../components/Layout";
+import Logo from "../../../components/logo/Logo";
 import { Link, navigate } from "gatsby";
-import { useQuery } from "../../hooks/useQuery";
-import IndexPageNoFiltersView from "../../views/IndexPageNoFiltersView";
-import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView";
+import { useQuery } from "../../../hooks/useQuery";
+import IndexPageNoFiltersView from "../../../views/IndexPageNoFiltersView";
+import IndexPageCategoryFilterView from "../../../views/IndexPageCategoryFilterView";
 // import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
-import useCards from "../../hooks/useCards";
-import { categories } from "../../categories";
-import SEO from "../../seo";
+import useCards from "../../../hooks/useCards";
+import { categories } from "../../../categories";
+import SEO from "../../../seo";
 import {
 
   LogoWithCurve,
   CurveIcon,
   ShadowCircle,
   CurveMobileIcon,
-} from "../../components/access-page/style";
-import { useAccess } from "../../hooks/useAccess";
-import Spinner from "../../components/Spinner";
-import { GlobalStyle } from "../../global";
+} from "../../../components/access-page/style";
+import { useAccess } from "../../../hooks/useAccess";
+import Spinner from "../../../components/Spinner";
+import { GlobalStyle } from "../../../global";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 
@@ -73,9 +73,9 @@ if (loading) {
     <>
     {/* <GlobalStyle/> */}
     <Layout>
-      
+
       <SEO
-        url="https://pavlushin.design/myfonts"
+        url="https://pavlushin.design/fonts/library"
       />
         <IndexPageNoFiltersView cards={data.allFonts?.edges}/>
     </Layout>

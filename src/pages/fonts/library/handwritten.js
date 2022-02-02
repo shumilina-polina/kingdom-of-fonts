@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../components/Layout";
+import Layout from "../../../components/Layout";
 import { navigate } from "gatsby";
-import IndexPageCategoryFilterView from "../../views/IndexPageCategoryFilterView";
-import { categories } from "../../categories";
-import SEO from "../../seo";
-import { useAccess } from "../../hooks/useAccess";
-import Spinner from "../../components/Spinner";
-import { GlobalStyle } from "../../global";
+import IndexPageCategoryFilterView from "../../../views/IndexPageCategoryFilterView";
+import { categories } from "../../../categories";
+import SEO from "../../../seo";
+import { useAccess } from "../../../hooks/useAccess";
+import Spinner from "../../../components/Spinner";
+import { GlobalStyle } from "../../../global";
 
 export const contentfulQuery = graphql`
   query contentfulHandwrittenQuery {
@@ -62,9 +62,9 @@ const HandwrittenPage = ({data}) => {
     <>
     {/* <GlobalStyle/> */}
     <Layout>
-      
+
       <SEO
-        url="https://pavlushin.design/myfonts/handwritten"
+        url="https://pavlushin.design/fonts/library/handwritten"
       />
         <IndexPageCategoryFilterView
             cards={data.handwrittenFonts?.edges}

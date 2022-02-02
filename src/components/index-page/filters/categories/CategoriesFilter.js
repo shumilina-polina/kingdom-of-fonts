@@ -11,7 +11,7 @@ const CategoriesFilter = ({ category }) => {
         return (
           <CategoryItem
             key={uuidv4()}
-            to={`/myfonts/${cat.url}`}
+            to={`/fonts/library/${cat.url}`}
             selected={cat.name === category?.name}
           >
             {cat.name}

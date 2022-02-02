@@ -30,21 +30,21 @@ import {
   AccessImageEnvelopeLight,
   AccessThanksButton,
   AccessInfoWrapper
-} from "../components/access-page/style";
-import ArrowIcon from '../assets/svgs/arrow-icon.svg'; 
-import YouMoneyLogo from '../assets/svgs/youmoney.svg'; 
-import YouMoneyMobileLogo from '../assets/svgs/money_mobile.svg';
-import Layout from "../components/Layout";
-import Logo from "../components/logo/Logo";
+} from "../../components/access-page/style";
+import ArrowIcon from '../../assets/svgs/arrow-icon.svg';
+import YouMoneyLogo from '../../assets/svgs/youmoney.svg';
+import YouMoneyMobileLogo from '../../assets/svgs/money_mobile.svg';
+import Layout from "../../components/Layout";
+import Logo from "../../components/logo/Logo";
 
-import buyImage from "../assets/buy.png";
-import buyImageMobile from "../assets/envelope_mobile.png";
-import moneyImage from "../assets/money.png";
-import moneyImageMobile from "../assets/money_mobile.png";
-import { Container, GlobalStyle, GlobalStyleOverflowed } from "../global";
-import envelopeImageMobile from "../assets/envelope_mobile.png"
-import envelopeImageLightMobile from "../assets/envelope_green-light.png";
-import SEO from "../seo";
+import buyImage from "../../assets/buy.png";
+import buyImageMobile from "../../assets/envelope_mobile.png";
+import moneyImage from "../../assets/money.png";
+import moneyImageMobile from "../../assets/money_mobile.png";
+import { Container, GlobalStyle, GlobalStyleOverflowed } from "../../global";
+import envelopeImageMobile from "../../assets/envelope_mobile.png"
+import envelopeImageLightMobile from "../../assets/envelope_green-light.png";
+import SEO from "../../seo";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup
@@ -79,7 +79,7 @@ const BuyPage = () => {
       <input
         type="hidden"
         name="successURL"
-        value="https://pavlushin.design/thanks"
+        value="https://pavlushin.design/fonts/murmur"
       />
       <AccessButtonStepTwo type="submit" value="Оплатить">Оплатить</AccessButtonStepTwo>
     </form>
