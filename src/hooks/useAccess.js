@@ -1,26 +1,17 @@
-import {useEffect, useState} from 'react'
-
+import {useContext, useEffect, useState} from 'react'
 import { navigate } from "gatsby-link";
-// import Layout from "../components/Layout";
-
+import { UserContext } from "../context/UserContext";
 
 export const useAccess = () => {
-    // включить эти две вещи когда будешь тестировать доступность
-  const [loading, setLoading] = useState(true);
-//   const [access, setAccess] = useState(false);
+  const [loading, setLoading] = useState(false)
 
+  const {user} = useContext(UserContext)
 
-  //включить когда будешь тестировать доступность
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("kingdomOfFontsAccess")) {
-        setLoading(false);
-        // setAccess(true);
-      } else {
-        navigate("https://fonts.pavlushin.design/")
-      }
+    if (!user || !user.subscriptions.fonts) {
+      navigate("/fonts/subscribe/")
     }
-  }, []);
+  }, [user])
 
   return { loading }
 }

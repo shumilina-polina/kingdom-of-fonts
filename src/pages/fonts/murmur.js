@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useQueryParam, StringParam } from "use-query-params";
 import {
   AccessInfo,
   AccessLine,
@@ -31,7 +32,7 @@ import {
   AccessButtonStepTwo,
   AccessImageThanksMobile,
   AccessImageThanksLight,
-  DevicesImage,
+  DevicesImage, AccessForm, AccessFormField, AccessFormControl, AccessInput, AccessInputIcon, AccessInputHelpText,
 } from "../../components/access-page/style";
 import ArrowIcon from '../../assets/svgs/arrow-icon.svg';
 import YouMoneyLogo from '../../assets/svgs/youmoney.svg';
@@ -48,66 +49,59 @@ import devicesImage from "../../assets/devices.png";
 import moneyImageMobile from "../../assets/money_mobile.png";
 import { Container, GlobalStyle, GlobalStyleOverflowed } from "../../global";
 import SEO from "../../seo";
+import CheckIcon from "../../assets/svgs/check-icon.svg";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup
 const ThanksPage = () => {
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("kingdomOfFontsAccess", "true");
-    }
-  }, []);
+  const [email] = useQueryParam("email", StringParam)
 
   const title = "Всё прошло супер!";
-  const text = (<>Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что&nbsp;вам огромное спасибо!<span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для&nbsp;проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска&nbsp;новых&nbsp;:3</>)
-  const buttonText = "К шрифтам"
+  const text = (<>
+    Вы оплатили доступ к&nbsp;библиотеке, за&nbsp;что&nbsp;вам огромное спасибо!<br/>
+    <span> Теперь&nbsp;у&nbsp;вас есть клёвые шрифты</span> для&nbsp;проектов, а&nbsp;у&nbsp;нас вдохновение и&nbsp;энергия для поиска&nbsp;новых&nbsp;:3
+  </>)
+  const emailHelpTextSuccess = "Cсылку для входа на сайт отправили, проверьте эту почту и спам :)"
+
+  const onFormSubmitNoop = (e) => {
+    e.preventDefault()
+  }
 
   return (
-<><GlobalStyleOverflowed/>
-    <Layout>
-      <SEO noIndex/>
-      
-        <Container>
-            <DesktopWrapper>
-              <AccessWrapper>
-                <AccessImageThanks src={thanksImage} />
-                <AccessInfo>
-                  <AccessTitle>{title}</AccessTitle>
-                  <AccessText>{text}</AccessText>
-                </AccessInfo>
-                <AccessLine/>
-                <AccessFooter>
-                <AccessThanksButton to="/fonts/library">
-                  {buttonText}
-                </AccessThanksButton>
-                  <ArrowIcon/>
-                  <DevicesImage src={devicesImage} />
-                </AccessFooter>
-              </AccessWrapper>
-            </DesktopWrapper>
-            <MobileWrapper >
-            <AccessWrapper wrapperHeight="162vw">
-              <AccessImageMobileThanksWrapper>
-                <AccessImageMobileThanks src={thanksImageMobile} />
-                <AccessImageThanksLight src={thanksImageLightMobile} />
-              </AccessImageMobileThanksWrapper>
-              <AccessInfoWrapper>
-                <AccessInfo>
-                  <AccessTitle fontSize="7.4vw">{title}</AccessTitle>
-                  <AccessText marginBottom="7vw">{text}</AccessText>
-                </AccessInfo>
-                <AccessFooter>
-                  <AccessThanksButton to="/fonts/library">
-                    {buttonText}
-                  </AccessThanksButton>
-                </AccessFooter>
-              </AccessInfoWrapper>
-                
-              </AccessWrapper>
-            </MobileWrapper>
-        </Container>
-    </Layout>
+    <>
+      <GlobalStyleOverflowed/>
+      <Layout>
+        <SEO noIndex/>
+        <AccessWrapper>
+          <AccessImageThanks src={thanksImage} />
+          <AccessInfo>
+            <AccessTitle>{title}</AccessTitle>
+            <AccessText>{text}</AccessText>
+          </AccessInfo>
+          {email && (
+            <AccessFooter>
+              <AccessForm onSubmit={onFormSubmitNoop}>
+                <AccessFormField>
+                  <AccessFormControl>
+                    <AccessInput
+                      value={email}
+                      disabled
+                      success
+                      hasIconsRight
+                    />
+                    <AccessInputIcon right success>
+                      <CheckIcon />
+                    </AccessInputIcon>
+                  </AccessFormControl>
+                  <AccessInputHelpText success>
+                    {emailHelpTextSuccess}
+                  </AccessInputHelpText>
+                </AccessFormField>
+              </AccessForm>
+            </AccessFooter>
+          )}
+        </AccessWrapper>
+      </Layout>
     </>
   );
 };

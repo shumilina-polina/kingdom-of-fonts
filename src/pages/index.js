@@ -123,7 +123,7 @@ const IndexPage = () => {
   // console.log("filters", filters)
 
   useEffect(() => {
-    navigate("/fonts/library")
+    navigate("/fonts/library/")
   }, [])
 
   return (

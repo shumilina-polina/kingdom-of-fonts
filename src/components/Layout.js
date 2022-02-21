@@ -24,10 +24,10 @@ const Layout = ({ children, footerReduced }) => {
 
   const location = useLocation()
 
-  const overflowed = ["/restore", "/buy", "/thanks"].includes(location.pathname);
+  // const overflowed = ["/restore", "/buy", "/thanks"].includes(location.pathname);
 
   return (
-    <>
+    <Container>
       <GlobalStyle/>
       <LogoWrapper img={img}>
           <CurveIcon/>
@@ -39,7 +39,7 @@ const Layout = ({ children, footerReduced }) => {
         
         <main style={{position: "relative"}}>{children}</main>
       <Footer footerReduced={footerReduced}/>
-    </>
+    </Container>
   );
 };
 

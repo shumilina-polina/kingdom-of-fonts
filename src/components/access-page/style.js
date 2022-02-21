@@ -78,16 +78,15 @@ export const AccessInfoWrapper = styled.div`
 export const AccessWrapper = styled.div`
     background: rgba(256, 256, 256, 0.01);
 
-    padding: 60px 80px;
     border-radius: 20px;
     /* display: flex; */
     /* align-items: flex-end; */
     /* justify-content: space-between; */
     box-shadow: 0px 2.47088px 6.17719px rgba(0, 0, 0, 0.25), inset 0 0 50px rgba(256, 256, 256, 0.08);
-    margin-top: 25px;
     overflow: hidden;
     position: relative;
     width: 100%;
+    min-height: 533px;
 
     @media (max-width: 575px) {
         padding: 5vw 4vw;
@@ -119,8 +118,11 @@ export const AccessImageWrapper = styled.div`
 `
 
 export const AccessInfo = styled.div`
+    padding: 40px 60px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+    border-bottom: 2px solid #222222;
 `;
 
 export const AccessImage = styled.img`
@@ -137,12 +139,13 @@ export const AccessImage = styled.img`
 `;
 
 export const AccessImageStepOne = styled.img`
-    width: 930px;
+    width: 780px;
     /* height: 200px; */
     position: absolute;
-    right: -170px;
+    right: -130px;
     z-index: 1;
-    bottom: -140px;
+    bottom: -160px;
+    pointer-events: none;
 
     @media (max-width: 575px) {
         width: 100vw;
@@ -180,12 +183,13 @@ export const AccessImageStepTwo = styled.img`
 `
 
 export const AccessImageThanks = styled.img`
-    width: 700px;
+    width: 780px;
     position: absolute;
-    right: -35px;
+    right: -29px;
     z-index: 2;
-    bottom: 50%;
+    bottom: 51%;
     transform: translateY(50%);
+    pointer-events: none;
 
     @media (max-width: 575px) {
         bottom: -10vw;
@@ -215,10 +219,10 @@ export const AccessImageStepTwoWrapper = styled.div`
 
 export const AccessTitle = styled.div`
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     @media (max-width: 575px) {
         font-size: 8.2vw;
         text-align: center;
@@ -232,11 +236,12 @@ export const AccessTitle = styled.div`
 
 export const AccessText = styled.div`
     color: #BDBDBD;
-    font-size: 32px;
-    line-height: 1.25;
-    max-width: 56%;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: -0.03em;
+    width: 704px;
     span {
-        font-size: 32px;
+        font-size: inherit;
         color: var(--color-green);
     }
     @media (max-width: 575px) {
@@ -263,17 +268,17 @@ export const AccessText = styled.div`
 
 export const AccessLine = styled.div`
     height: 2px;
-    background: rgba(256, 256, 256, 0.1);
-    margin: 27px 0 5px;
+    background: #222222;
     @media (max-width: 575px) {
         
     }
 `;
 
 export const AccessFooter = styled.div`
-    padding-top: 20px;
+    padding: 25px 60px 40px 60px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-between;
     svg {
         fill: var(--color-grey);
         width: 55px;
@@ -290,20 +295,18 @@ export const AccessFooter = styled.div`
 `;
 
 const ButtonStyle = css`
-background: linear-gradient(180deg, #45E786 0%, #14793E 100%);
     padding: 18px 40px;
-    color: #151515;
     font-size: 24px;
     text-decoration: none;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 8px;
+    width: 248px;
+    height: 72px;
     
     :hover {
-        color: #151515;
         font-size: 24px;
         font-weight: 500;
-        background: #14793E;
-        cursor: pointer
+        cursor: pointer;
     }
     @media (max-width: 575px) {
         width: 100%;
@@ -319,18 +322,42 @@ background: linear-gradient(180deg, #45E786 0%, #14793E 100%);
 }
 `
 
-export const AccessButton = styled.button`
+export const ButtonPrimaryStyle = css`
     ${ButtonStyle}
+    color: #063318;
+    background: linear-gradient(180deg, #45E786 0%, #14793E 100%);
+    &:hover {
+        color: #063318;
+        background: linear-gradient(180deg, #38B96C 0%, #126E38 100%);
+    }
+`
+
+export const ButtonSecondaryStyle = css`
+    ${ButtonStyle}
+    color: #bdbdbd;
+    background: transparent;
+    border: 2px solid #bdbdbd;
+    &:hover {
+        color: #797B7B;
+        border-color: #797B7B;
+    }
+    &:disabled {
+        border: 2px solid #222222;
+        color: #444444;
+        cursor: not-allowed;
+    }
+`
+
+export const AccessButton = styled.button`
+    ${ButtonSecondaryStyle}
 `;
 
 export const AccessButtonStepTwo = styled.button`
-    ${ButtonStyle};
-    padding-left: 58px;
-    padding-right: 58px;
+    ${ButtonPrimaryStyle}
 `
 
 export const AccessThanksButton = styled(Link)`
-    ${ButtonStyle};
+    ${ButtonPrimaryStyle}
     padding-left: 50px;
     padding-right: 50px;
     text-align: center;
@@ -366,9 +393,146 @@ export const YouMoneyText = styled.div`
     }
 `;
 
+export const AccessForm = styled.form`
+    display: flex;
+`
+
+export const AccessFormField = styled.div`
+    margin-right: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+`
+
+export const AccessFormControl = styled.div`
+    position: relative;
+    
+    ${props => props.width && `
+        width: ${props.width};
+    `}
+`
+
+export const AccessInput = styled.input`
+    color: #bdbdbd;
+    background: transparent;
+    border: 2px solid #222222;
+    border-radius: 8px;
+    font-size: 26px;
+    padding: 16px;
+    height: 72px;
+    width: 472px;
+    
+    ${props => props.success && `
+        color: #45E786;
+        border-color: #45E786 !important;
+    `}
+    
+    ${props => props.danger && `
+        color: #EB5B0B;
+        border-color: #EB5B0B !important;
+    `}
+    
+    ${props => props.hasIconsLeft && `
+        padding-left: 64px;
+    `}
+    
+    ${props => props.hasIconsRight && `
+        padding-right: 64px;
+    `}
+    
+    &:focus {
+        border-color: #444444;
+    }
+    
+    &::placeholder {
+        color: #444444;
+    }
+`
+
+export const AccessInputHelpText = styled.div`
+    color: #bdbdbd;
+    margin-top: 4px;
+    
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+    
+    a:hover {
+        color: #652806;
+    }
+    
+    ${props => props.disabled && `
+        color: #444444;
+    `}
+    
+    ${props => props.success && `
+        color: #45E786;
+    `}
+    
+    ${props => props.danger && `
+        color: #EB5B0B;
+    `}
+`
+
+export const AccessInputIconStyle = css`
+    width: 72px;
+    height: 72px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(81%) hue-rotate(253deg) brightness(85%) contrast(99%);
+
+    ${props => props.right && `
+        position: absolute;
+        top: 0;
+        right: 0;
+    `}
+    
+    ${props => props.right && `
+        position: absolute;
+        top: 0;
+        right: 0;
+    `}
+    
+    ${props => props.success && `
+        filter: brightness(0) saturate(100%) invert(79%) sepia(45%) saturate(641%) hue-rotate(81deg) brightness(94%) contrast(92%);
+    `}
+    
+    ${props => props.danger && `
+        filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(3117%) hue-rotate(14deg) brightness(109%) contrast(91%);
+    `}
+`
+
+export const AccessInputIcon = styled.div`
+    ${AccessInputIconStyle}
+`
+
+export const AccessInputIconButton = styled.button`
+    ${AccessInputIconStyle}
+    
+    background: none;
+    cursor: pointer;
+
+    &:hover, &:disabled {
+        filter: brightness(0) saturate(100%) invert(25%) sepia(1%) saturate(0%) hue-rotate(63deg) brightness(93%) contrast(88%);
+      
+        ${props => props.danger && `
+            filter: brightness(0) saturate(100%) invert(15%) sepia(25%) saturate(4977%) hue-rotate(5deg) brightness(101%) contrast(95%);
+        `}
+    }
+    
+    &:disabled {
+        cursor: not-allowed;
+    }
+`
+
 export const AccessPriceWrapper = styled.div`
     display: flex;
-    /* margin-left: 20px; */
+    margin-left: 60px;
     @media (max-width: 575px) {
         margin-bottom: 4vw;
         justify-content: space-between;
@@ -386,7 +550,9 @@ export const AccessPriceWrapper = styled.div`
 `;
 
 export const AccessPriceYear = styled.div`
-    margin-right: 20px;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
     @media (max-width: 575px) {
         margin-right: 0;
 
@@ -400,6 +566,7 @@ width: 175px;
 export const AccessPriceTitle = styled.div`
     color: #BDBDBD;
     font-size: 16px;
+    margin-left: 5px;
     
     span {
         position: relative;
@@ -424,14 +591,14 @@ export const AccessPriceTitle = styled.div`
 `;
 
 export const AccessPrice = styled.div`
-    color: white;
+    color: #BDBDBD;
     font-size: 52px;
     letter-spacing: -0.1rem;
     line-height: 1;
     span {
         font-size: 28px;
         margin-left: 3px;
-        color: white;
+        color: #BDBDBD;
     }
 
     ${props => props.green && `

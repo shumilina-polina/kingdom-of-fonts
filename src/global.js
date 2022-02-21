@@ -148,7 +148,7 @@ export const GlobalStyleOverflowed = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
   height: 100%;
   min-height: 100%;
