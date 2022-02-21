@@ -15,7 +15,7 @@ import {
   AccessPriceTitle,
   AccessPrice,
   AccessImage,
-  LogoWithCurve,
+  LogoWrapper,
   CurveIcon,
   CurveMobileIcon,
   ShadowCircle,

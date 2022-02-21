@@ -12,7 +12,7 @@ import { categories } from "../../../categories";
 import SEO from "../../../seo";
 import {
 
-  LogoWithCurve,
+  LogoWrapper,
   CurveIcon,
   ShadowCircle,
   CurveMobileIcon,

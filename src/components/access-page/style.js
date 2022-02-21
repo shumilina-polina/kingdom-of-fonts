@@ -618,13 +618,11 @@ export const AccessPrice = styled.div`
 }
 `;
 
-export const LogoWithCurve = styled.div`
+export const LogoWrapper = styled.div`
     /* width: 100%; */
-    /* svg {
-        box-shadow: 0 0 5px black;
-    } */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
     svg {
         position: relative;
@@ -636,24 +634,27 @@ export const LogoWithCurve = styled.div`
 }
 `;
 
-export const LogoWrapper = styled.div`
-    padding-top: 50px;
+export const HeaderWrapper = styled.div`
+    width: 1240px;
+    padding: 28px 0 56px 0;
     position: relative;
     /* z-index: 9999; */
-    overflow: hidden;
     @media (max-width: 575px) {
         padding-top: 10vw;
     }
-    /* width: 100%; */
     /* overflow-x: hidden; */
-`;  
+`;
+
+export const CurveWrapper = styled.div`
+    overflow: hidden;
+`
 
 export const CurveIcon = styled(Curve)`
     position: absolute;
-    top: 8px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 1150px;
+    width: 1240px;
     display: block;
     @media (max-width: 575px) {
         display: none;

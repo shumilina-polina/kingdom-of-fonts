@@ -85,6 +85,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-use-query-params",
     // {
     //   resolve: "gatsby-plugin-anchor-links",
     //   options: {

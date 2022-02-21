@@ -1,1 +1,17 @@
-<svg id="a8f50909-4742-45f6-8553-ff5d26580f99" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1606.83 128.91"><path d="M-159-57C-22.09,6.54,335.25,65,638.31,65S1306,6.54,1447-57" transform="translate(159.42 57.91)" style="fill:none;stroke:#222;stroke-width:2px"/><path d="M642,65H242" transform="translate(159.42 57.91)" style="fill:none;stroke:#222;stroke-width:2px"/><path d="M1042,65H642" transform="translate(159.42 57.91)" style="fill:none;stroke:#222;stroke-width:2px"/><circle cx="401.42" cy="122.91" r="2.5" style="fill:#111;stroke:#828282"/><circle cx="801.42" cy="122.91" r="5.5" style="fill:#111;stroke:#828282"/><circle cx="1201.42" cy="122.91" r="2.5" style="fill:#111;stroke:#828282"/></svg>
+<svg width="1240" height="100" viewBox="0 0 1240 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M-184 -59C-47.0864 4.54166 310.253 63 613.306 63C916.358 63 1280.96 4.54166 1422 -59" stroke="#222222" stroke-width="2"/>
+<path d="M617 63L219 63" stroke="#222222" stroke-width="2"/>
+<path d="M1015 63H617" stroke="#222222" stroke-width="2"/>
+<circle cx="216" cy="63" r="3.5" stroke="#444444"/>
+<circle cx="1018" cy="63" r="3.5" stroke="#444444"/>
+<g filter="url(#filter0_f_2671_2712)">
+<ellipse cx="619.676" cy="63" rx="63.6757" ry="19" fill="#151515"/>
+</g>
+<defs>
+<filter id="filter0_f_2671_2712" x="536.074" y="24.0744" width="167.203" height="77.8512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="9.96279" result="effect1_foregroundBlur_2671_2712"/>
+</filter>
+</defs>
+</svg>
