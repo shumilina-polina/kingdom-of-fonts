@@ -1,3 +1,5 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
     title: `Бесплатная кириллица`,
@@ -99,4 +101,13 @@ module.exports = {
     //   },
     // },
   ],
+  developMiddleware: app => {
+    const middleware = createProxyMiddleware({
+      target: "http://pavlushin.design.docker.localhost:9000",
+      followRedirects: false
+    })
+    app.use("/login", middleware)
+    app.use("/logout", middleware)
+    app.use("/api", middleware)
+  },
 };
