@@ -6,7 +6,7 @@ import "../fonts.css";
 import { useLocation } from "@reach/router"
 
 
-const Layout = ({ children, footerReduced }) => {
+const Layout = ({ children, footerReduced, logoHref }) => {
   // if (typeof window !== 'undefined') {
   //   require('smooth-scroll')('a[href*="#"]');
   // }
@@ -18,7 +18,7 @@ const Layout = ({ children, footerReduced }) => {
   return (
     <Container>
       <GlobalStyle/>
-      <Header />
+      <Header logoHref={logoHref} />
       <main style={{position: "relative"}}>{children}</main>
       <Footer footerReduced={footerReduced}/>
     </Container>

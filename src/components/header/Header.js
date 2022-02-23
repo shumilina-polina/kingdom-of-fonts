@@ -7,7 +7,7 @@ import Logo from "../logo/Logo"
 import { HeaderButton } from "./styles"
 import UserMenuButton from "./UserMenuButton"
 
-const Header = () => {
+const Header = ({ logoHref }) => {
   return (
     <HeaderWrapper>
       <CurveWrapper>
@@ -17,7 +17,7 @@ const Header = () => {
         <HeaderButton as={Link} to="/">
           <PavlushinIcon />
         </HeaderButton>
-        <Logo />
+        <Logo href={logoHref} />
         <UserMenuButton />
       </LogoWrapper>
     </HeaderWrapper>

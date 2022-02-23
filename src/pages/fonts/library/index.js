@@ -72,7 +72,7 @@ if (loading) {
   return (
     <>
     {/* <GlobalStyle/> */}
-    <Layout>
+    <Layout logoHref="/fonts/library/">
 
       <SEO
         url="https://pavlushin.design/fonts/library"
