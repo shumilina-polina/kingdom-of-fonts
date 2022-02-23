@@ -218,10 +218,11 @@ export const AccessImageStepTwoWrapper = styled.div`
 `
 
 export const AccessTitle = styled.div`
-    text-transform: uppercase;
-    font-size: 30px;
+    font-size: 38px;
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+    font-variant: small-caps;
+    text-transform: lowercase;
     margin-bottom: 15px;
     @media (max-width: 575px) {
         font-size: 8.2vw;
