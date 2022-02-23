@@ -1,7 +1,7 @@
 import React from 'react'
 import { AnnounceWrapper, AnnouncementContent, AnnouncementTitle, AnnouncementText } from './styles';
-import image1 from '../../assets/announce-star-1.png';
-import image2 from '../../assets/announce-star-2.png';
+import image1 from '../../assets/announce-star-1.svg';
+import image2 from '../../assets/announce-star-2.svg';
 
 const Announce = () => {
     return (

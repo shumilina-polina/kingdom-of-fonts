@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { ButtonPrimaryStyle } from "../access-page/style"
+
 export const Wrapper = styled.footer``;
 
 export const FooterWrapper = styled.div`
@@ -37,67 +39,22 @@ export const FooterColumn = styled.div`
   /* flex-basis: 1; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-
-  :nth-child(1) {
-    /* flex-grow: 2; */
-    /* background: blue; */
-    width: 17%;
-  }
-  :nth-child(2) {
-    /* flex-grow: 2; */
-    width: 25%;
-  }
-  :nth-child(3) {
-    width: 28%;
-  }
-  :nth-child(4) {
-    width: 29%;
-    /* align-items: flex-end; */
-  }
-
-  @media (max-width: 575px) {
-    width: 100% !important;
-
-    :first-child {
-      margin-bottom: 10vw;
-      /* padding: 0 1vw; */
-    }
-
-    :nth-child(2) {
-      margin-bottom: 8vw;
-      padding: 0 2vw;
-    }
-
-    :nth-child(3) {
-      background: rgba(256,256,256, 0.08);
-      border-radius: 8px;
-      padding: 4vw 4vw;
-      margin-bottom: 8vw;
-    }
-    :nth-child(4) {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 4vw;
-
-      svg {
-        width: 20vw;
-      }
-    }
-  }
-  /* align-items: space-between; */
-  /* background: red; */
 `;
+
+export const FooterColumnSpacer = styled.div`
+  flex: 1;
+`
 
 export const Title = styled.div`
   text-transform: uppercase;
-  margin-bottom: 40px;
-  font-size: 14px;
+  margin-bottom: 32px;
+  font-size: 20px;
   margin-left: 8px;
+  
+  font-variant: small-caps;
+  text-transform: lowercase;
 
   @media (max-width: 575px) {
     font-size: 4.3vw;
@@ -121,9 +78,9 @@ export const Authors = styled.div`
 export const Author = styled.div`
   margin-right: 20px;
   margin-bottom: 9px;
-  font-size: 14px;
+  font-size: 16px;
   span {
-    font-size: 14px;
+    color: #797B7B;
     /* padding: 0 4px; */
     /* margin: 0 6px; */
   }
@@ -135,12 +92,12 @@ export const Author = styled.div`
     margin-bottom: 0;
   }
   a {
-    color: white;
+    color: #BDBDBD;
     /* margin-left: 3px; */
     text-decoration: none;
     padding: 4px 8px;
     :hover {
-      background: rgba(256,256,256,0.05);
+      background: rgba(255, 255, 255, 0.05);
       color: white;
       border-radius: 3px;
     }
@@ -207,27 +164,27 @@ export const InfoWrapper = styled.div`
   } */
 `
 
-export const Links = styled.div`
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-grow: 1;
-  flex-basis: 0; */
-  /* flex: 1; */
-  /* margin-right: auto; */
-  flex-wrap: pre-wrap;
-  margin-bottom: 5px;
-  :last-child {
-    margin-bottom: 0;
-  }
-  @media (max-width: 575px) {
-    /* font-size: 4vw; */
-    width: 100%;
-    flex-wrap: normal;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+export const SocialLinksWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
 `;
+
+export const SocialLink = styled.a`
+  width: 57px;
+  height: 57px;
+  
+  background-size: contain;
+  
+  ${props => props.image && `
+    background-image: url(${props.image});
+  `}
+  
+  ${props => (props.imageHover || props.image) && `
+    &:hover {
+      background-image: url(${props.imageHover || props.image});
+    }
+  `}
+`
 
 export const FooterLink = styled.a`
   display: inline-block;
@@ -301,16 +258,21 @@ export const InfoYear = styled.div`
 
 export const LogoWrapper = styled.div`
   svg {
-    width: 50px;
-  } 
+    width: 56px;
+    height: 56px;
+  }
+    
+  display: flex;
+  align-items: center;
+  
+  text-decoration: none;
+`
 
-  /* flex-grow: 1;
-
-  flex-basis: 0; */
-  /* flex: 1; */
-  /* margin-left: auto; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
+export const LogoText = styled.div`
+  margin-left: 12px;
+  line-height: 18px;
+  
+  padding-bottom: 4px;
 `
 
 export const AnnounceWrapper = styled.a`
@@ -320,13 +282,11 @@ export const AnnounceWrapper = styled.a`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 195px;
-  height: 195px;
+  width: 260px;
+  height: 260px;
   position: relative;
   right: 5px;
   top: 10px;
-  margin-left: auto;
-  transform: scale(1.13);
   text-decoration: none;
   outline: none;
   border: none;
@@ -375,9 +335,9 @@ export const AnnouncementContent = styled.div`
 
 export const AnnouncementTitle = styled.div`
   text-align: center;
-  color: rgba(0,0,0,0.5);
+  color: rgba(0,0,0,0.7);
   font-weight: normal;
-  font-size: 30px;
+  font-size: 38px;
   text-transform: uppercase;
 
   @media (max-width: 575px) {
@@ -388,19 +348,17 @@ export const AnnouncementTitle = styled.div`
 
 export const AnnouncementText = styled.div`
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   padding: 0 20px;
   span {
-    font-size: 15px;
+    font-size: 20px;
     color: white;
     display: inline-block;
     text-decoration: underline;
-    :hover {
+    ${AnnounceWrapper}:hover & {
       text-decoration: none;
     }
-
-
   }
   @media (max-width: 575px) {
     font-size: 6.5vw;
@@ -411,8 +369,128 @@ export const AnnouncementText = styled.div`
     }
   }
 `
+
+export const BlurredLight = styled.div`
+  width: 200px;
+  height: 200px;
+
+  border-radius: 9999px;
+  
+  background: radial-gradient(118.83% 115.73% at 57.11% 128.26%, #45E786 0%, rgba(69, 231, 134, 0) 92.71%);
+  filter: blur(20px);
+  transform: rotate(-88deg);
+`
+
+export const ErrataWrapper = styled.div`
+  position: relative;
+`
+
+export const ErrataBox = styled.div`
+  padding: 16px 16px;
+
+  width: 250px;
+  height: 269px;
+
+  background-color: #151515;
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  
+  transform: skewx(-10deg);
+  
+  overflow: hidden;
+`
+
+export const ErrataBoxShadow = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 269px;
+  
+  transform: skewx(-10deg) translate(15px, 15px);
+
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+`
+
+export const ErrataBlurredLight = styled(BlurredLight)`
+  position: absolute;
+  
+  top: 6px;
+  right: 18px;
+`
+
+export const ErrataContent = styled.div`
+  position: relative;
+`
+
+export const ErrataTextTop = styled.div``
+
+export const ErrataTextBig = styled.div`
+  font-size: 28px;
+  line-height: 33px;
+  color: white;
+`
+
+export const ErrataTelegramButton = styled.a`
+  ${ButtonPrimaryStyle}
+  
+  display: block;
+  
+  width: 100%;
+  height: auto;
+  
+  padding: 13px 19px;
+  margin: 10px 0 5px 0;
+  
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  
+  &:hover {
+    font-size: 20px;
+    letter-spacing: 0.03rem;
+  }
+  
+  // text-transform: uppercase;
+  //
+  // font-size: 17px;
+  // letter-spacing: 0.03rem;
+  //
+  // &:hover {
+  //   font-size: 17px;
+  //   letter-spacing: 0.03rem;
+  // }
+`
+
+export const ErrataTextBottom = styled.div`
+  text-align: center;
+  
+  a {
+    cursor: pointer;
+    color: inherit;
+    
+    ${props => props.underlineLinks && `
+      text-decoration: underline;
+    `}
+  }
+  
+  a:hover {
+    // filter: brightness(70%);
+    text-decoration: none;
+  }
+`
+
+export const Copyright = styled.div`
+
+`
+
 export const DesktopFooter = styled.div`
   display: flex;
+  justify-content: space-between;
+
   width: 100%;
 
   @media (max-width: 575px) {

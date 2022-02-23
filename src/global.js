@@ -104,12 +104,10 @@ div, p, a, span, input, form, button {
       box-sizing: border-box;
 }
 
-a, a:hover {
-color: var(--color-blue);
+a {
 font-weight: inherit;
 letter-spacing: inherit;
 font-size: inherit;
-
 }
 
 button {
