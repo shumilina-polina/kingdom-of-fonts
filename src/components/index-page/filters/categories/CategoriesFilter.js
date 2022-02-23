@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import { categories } from "../../../../categories";
 
 
-const CategoriesFilter = ({ category }) => {
+const CategoriesFilter = ({ category, withMargin }) => {
   return (
-    <Wrapper>
+    <Wrapper withMargin={withMargin}>
       {categories.map((cat) => {
         return (
           <CategoryItem

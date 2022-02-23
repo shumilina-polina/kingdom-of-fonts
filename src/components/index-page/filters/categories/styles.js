@@ -5,7 +5,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+
+  ${props => props.withMargin && `
+    margin-bottom: 12px;
+  `}
 
   @media (max-width: 575px) {
     justify-content: start;
@@ -22,13 +25,13 @@ export const Wrapper = styled.div`
 
 export const CategoryItem = styled(Link)`
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   padding: 2px 8px;
-  margin: 0 10px;
+  margin: 0 7px;
   text-decoration: none;
   :hover {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     background: rgba(256,256,256,0.05);
     border-radius: 3px;

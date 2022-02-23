@@ -77,6 +77,8 @@ export const AccessInfoWrapper = styled.div`
 
 export const AccessWrapper = styled.div`
     background: rgba(256, 256, 256, 0.01);
+    
+    margin: 28px 0 20px;
 
     border-radius: 20px;
     /* display: flex; */
@@ -637,7 +639,7 @@ export const LogoWrapper = styled.div`
 
 export const HeaderWrapper = styled.div`
     width: 1240px;
-    padding: 28px 0 56px 0;
+    padding: 28px 0;
     position: relative;
     /* z-index: 9999; */
     @media (max-width: 575px) {

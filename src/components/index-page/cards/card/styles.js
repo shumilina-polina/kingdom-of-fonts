@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 
 export const Wrapper = styled.div`
   background: var(--color-grey);
-  padding: 14px;
+  padding: 18px 16px 22px 16px;
   border-radius: 5px;
   box-shadow: 0px 2.47088px 6.17719px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -35,6 +35,8 @@ export const Format = styled.div`
   padding: 3px 9px;
   margin-right: 6px;
   font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
   color: white;
   :last-child {
     margin-right: 0;
@@ -116,9 +118,7 @@ export const TestFontField = styled.textarea`
   color: white;
   letter-spacing: normal;
   line-height: 1.1;
-  min-height: 90px;
-  height: 90px;
-  max-height: 90px;
+  height: 96px;
   overflow: hidden;
   flex-grow: 1;
   ::placeholder {
@@ -184,23 +184,22 @@ export const TestFontField = styled.textarea`
 export const DownloadButton = styled.a`
   background: var(--color-white-transparent);
   color: white;
-  padding: 7px;
+  padding: 5px;
   width: 100%;
   display: block;
   border-radius: 5px;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.05rem;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  margin-bottom: 10px;
+  font-variant: small-caps;
+  text-transform: lowercase;
   text-decoration: none;
   :hover {
     cursor: pointer;
-    font-size: 12px;
+    font-size: 16px;
     color: white;
-    font-weight: 500;
-    letter-spacing: 0.05rem;
     background: rgba(256,256,256,0.15);
   }
 
@@ -226,11 +225,11 @@ export const FontAuthors = styled.div`
   a {
     color: rgba(256, 256, 256, 0.5);
     font-size: 12px;
-    text-decoration: none;
+    text-decoration: underline;
     font-style: normal;
     :hover {
       cursor: pointer;
-      text-decoration: underline;
+      text-decoration: none;
       color: rgba(256, 256, 256, 0.5);
       font-size: 12px;
     }
@@ -254,7 +253,7 @@ export const FontImage = styled(Img)`
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
-  height: 160px;
+  height: 164px;
   @media (max-width: 575px) {
     margin-bottom: 4vw;
     height: 50vw;

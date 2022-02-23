@@ -169,7 +169,7 @@ export const Container = styled.div`
   
 
   ${props => props.withMargin && `
-    margin-top: -48px;
+    margin-top: -4px;
   `}
 `;
 

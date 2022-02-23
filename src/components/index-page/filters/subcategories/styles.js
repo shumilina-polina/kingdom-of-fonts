@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 5px;
 
   @media (max-width: 575px) {
     justify-content: start;
@@ -18,14 +17,12 @@ export const Wrapper = styled.div`
 `;
 
 export const SubCategory = styled.div`
-  margin: 0 12px;
-  margin-bottom: 20px;
+  margin: 0 12px 4px 12px;
   :hover {
     cursor: pointer;
     a {
       color: var(--color-orange);
       border-bottom: 1px solid rgba(235, 91, 11, 0.4);
-      font-size: 14px;
     }
   }
   @media (max-width: 575px) {
@@ -46,12 +43,16 @@ export const SubCategory = styled.div`
 `
 
 export const SubCategoryItem = styled.a`
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-green);
     padding-bottom: 1px;
     border-bottom: 1px solid rgba(69, 231, 134, 0.4);
     white-space: nowrap;
     text-decoration: none;
+    
+    &:hover {
+      font-size: 16px;
+    }
     
   ${(props) =>
     props.selected &&

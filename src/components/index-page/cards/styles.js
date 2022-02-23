@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 266px);
-  grid-gap: 30px;
+  grid-template-columns: repeat(4, 280px);
+  grid-gap: 40px;
+  margin: 32px 0;
   width: 100%;
   justify-content: center;
 
@@ -22,11 +23,10 @@ export const Wrapper = styled.div`
 `;
 
 export const SubcategoryTitle = styled.div`
-  padding: 0 60px;
+  padding: 0 26px;
   background: var(--color-background);
   position: relative;
   z-index: 2;
-  margin-bottom: 28px;
   color: rgba(256,256,256,0.15);
 
   @media (max-width: 575px) {
@@ -37,9 +37,7 @@ export const SubcategoryTitle = styled.div`
 `
 
 export const SubcategoryItems = styled.div`
-  /* padding-bottom: 48px; */
   position: relative;
-  padding-top: 48px;
   width: 100%;
   /* display: flex; */
   /* flex-direction: column; */
@@ -56,9 +54,11 @@ export const SubcategoryItems = styled.div`
 
 export const SubcategorySectionItem = styled.div`
   /* background: red; */
-  /* height: 10px; */
+  height: 52px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   position: relative;
 
 
@@ -68,7 +68,7 @@ export const SubcategorySectionItem = styled.div`
     height: 10px;
     border-bottom: 1px solid rgba(256, 256, 256, 0.1);
     position: absolute;
-    top: 0;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;

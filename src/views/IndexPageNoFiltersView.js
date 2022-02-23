@@ -12,7 +12,7 @@ const IndexPageNoFiltersView = ({ cards }) => {
         <CategoriesFilter />
       </StickyWrapper>
       {/* <div style={{height: "40px"}}></div> */}
-      <Container>
+      <Container withMargin>
         <CardList cards={cards} />
       </Container>
     </>

@@ -69,7 +69,7 @@ const IndexPageCategoryFilterView = ({
       {({ currentElementIndexInViewport }) => (
         <>
           <StickyWrapper>
-            <CategoriesFilter category={category} />
+            <CategoriesFilter category={category} withMargin />
             <SubcategoriesFilter
               category={category}
               // setFilters={setFilters}

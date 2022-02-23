@@ -13,8 +13,7 @@ export const StickyWrapper = styled.div`
   top: 0;
   z-index: 3;
   background: var(--color-background);
-  padding: 20px 0 15px;
-  margin-bottom: 20px;
+  padding: 20px 0;
   width: 100%;
   @media (max-width: 575px) {
     padding: 5vw 0 4vw;
