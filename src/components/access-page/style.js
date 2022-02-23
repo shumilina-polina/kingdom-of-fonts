@@ -239,7 +239,7 @@ export const AccessText = styled.div`
     color: #BDBDBD;
     font-size: 36px;
     line-height: 46px;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.03rem;
     width: 704px;
     span {
         font-size: inherit;
