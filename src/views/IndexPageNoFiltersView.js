@@ -4,6 +4,7 @@ import CardList from "../components/index-page/cards/CardList";
 import CategoriesFilter from "../components/index-page/filters/categories/CategoriesFilter";
 import { StickyWrapper } from "../components/index-page/filters/styles";
 import { Container } from "../global";
+import ScrollButtons from "../components/index-page/scroll-buttons/ScrollButtons";
 
 const IndexPageNoFiltersView = ({ cards }) => {
   return (
@@ -15,6 +16,7 @@ const IndexPageNoFiltersView = ({ cards }) => {
       <Container withMargin>
         <CardList cards={cards} />
       </Container>
+      <ScrollButtons />
     </>
   );
 };

@@ -9,6 +9,7 @@ import { useQuery } from "../hooks/useQuery";
 import { Scrollspy } from "@makotot/ghostui";
 import { categories } from "../categories";
 import SubcategorySection from "../components/index-page/cards/SubcategorySection";
+import ScrollButtons from "../components/index-page/scroll-buttons/ScrollButtons";
 
 
 const IndexPageCategoryFilterView = ({
@@ -91,6 +92,7 @@ const IndexPageCategoryFilterView = ({
               )
             })}
           </Container>
+          <ScrollButtons />
         </>
       )}
     </Scrollspy>
