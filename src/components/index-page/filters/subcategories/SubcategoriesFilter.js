@@ -1,5 +1,5 @@
 import React from "react";
-import { SubCategory, SubCategoryItem, Wrapper } from "./styles";
+import { SubCategoryItem, Wrapper } from "./styles";
 import { v4 as uuidv4 } from "uuid";
 // import { navigate } from "gatsby";
 import { categories } from "../../../../categories";
@@ -40,28 +40,23 @@ const SubcategoriesFilter = ({ currentElementIndexInViewport, category }) => {
   // }
 
   // console.log("subCatInView", subCatInView)
-  
+
   return (
     <Wrapper>
       {category?.subCategories?.map((subCat, idx) => {
         return (
-          <SubCategory
+          <SubCategoryItem
             key={uuidv4()}
-            // onClick={selectSubcategory.bind(null, subCat)}
+            // href={`#${subCat.url}`}
+            onClick={() => scrollTo(`#${subCat.url}`)}
+            // to={`/?category=${selectedCategory.url}#${subCat.url}`}
+            // offset={300}
+            // duration={1000}
+            // selected={subCatInView[0]?.name === subCat.name}
+            selected={currentElementIndexInViewport === idx}
           >
-            <SubCategoryItem
-              // href={`#${subCat.url}`}
-              onClick={() => scrollTo(`#${subCat.url}`)}
-              // to={`/?category=${selectedCategory.url}#${subCat.url}`}
-              // offset={300}
-              // duration={1000}
-              // selected={subCatInView[0]?.name === subCat.name}
-              selected={currentElementIndexInViewport === idx}
-            >
-              {subCat.name}
-            </SubCategoryItem>
-            
-          </SubCategory>
+            {subCat.name}
+          </SubCategoryItem>
         );
       })}
     </Wrapper>

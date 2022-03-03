@@ -29,18 +29,20 @@ export const CategoryItem = styled(Link)`
   padding: 2px 8px;
   margin: 0 7px;
   text-decoration: none;
-  :hover {
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    background: rgba(256,256,256,0.05);
-    border-radius: 3px;
-  }
-  ${(props) =>
-    props.selected &&
-    `
-        color: var(--color-grey);
-    `}
+  
+  ${(props) => !props.selected && `
+    :hover {
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      background: rgba(256,256,256,0.05);
+      border-radius: 3px;
+    }
+  `}
+  
+  ${(props) => props.selected && `
+    color: var(--color-grey);
+  `}
 
 @media (max-width: 575px) {
   font-size: 5vw;
