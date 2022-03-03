@@ -15,14 +15,12 @@ const Layout = ({ children, footerReduced, logoHref }) => {
 
   // const overflowed = ["/restore", "/buy", "/thanks"].includes(location.pathname);
 
-  return (
-    <Container>
-      <GlobalStyle/>
-      <Header logoHref={logoHref} />
-      <main style={{position: "relative"}}>{children}</main>
-      <Footer footerReduced={footerReduced}/>
-    </Container>
-  );
+  return (<>
+    <GlobalStyle/>
+    <Header logoHref={logoHref} />
+    <main style={{position: "relative"}}>{children}</main>
+    <Footer footerReduced={footerReduced}/>
+  </>);
 };
 
 export default Layout;

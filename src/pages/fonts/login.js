@@ -241,16 +241,18 @@ const RestoreAccessPage = ({ location }) => {
       <GlobalStyleOverflowed/>
       <Layout>
         <SEO noIndex />
-        <AccessWrapper>
-          <AccessImageThanks src={thanksImage} />
-          <AccessInfo>
-            <AccessTitle>{title}</AccessTitle>
-            <AccessText>{text}</AccessText>
-          </AccessInfo>
-          <AccessFooter>
-            {getForm()}
-          </AccessFooter>
-        </AccessWrapper>
+        <Container>
+          <AccessWrapper>
+            <AccessImageThanks src={thanksImage} />
+            <AccessInfo>
+              <AccessTitle>{title}</AccessTitle>
+              <AccessText>{text}</AccessText>
+            </AccessInfo>
+            <AccessFooter>
+              {getForm()}
+            </AccessFooter>
+          </AccessWrapper>
+        </Container>
       </Layout>
     </>
   );

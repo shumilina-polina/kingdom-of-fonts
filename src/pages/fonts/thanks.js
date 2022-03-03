@@ -72,35 +72,37 @@ const ThanksPage = () => {
       <GlobalStyleOverflowed/>
       <Layout>
         <SEO noIndex/>
-        <AccessWrapper>
-          <AccessImageThanks src={thanksImage} />
-          <AccessInfo>
-            <AccessTitle>{title}</AccessTitle>
-            <AccessText>{text}</AccessText>
-          </AccessInfo>
-          {email && (
-            <AccessFooter>
-              <AccessForm onSubmit={onFormSubmitNoop}>
-                <AccessFormField>
-                  <AccessFormControl>
-                    <AccessInput
-                      value={email}
-                      disabled
-                      success
-                      hasIconsRight
-                    />
-                    <AccessInputIcon right success>
-                      <CheckIcon />
-                    </AccessInputIcon>
-                  </AccessFormControl>
-                  <AccessInputHelpText success>
-                    {emailHelpTextSuccess}
-                  </AccessInputHelpText>
-                </AccessFormField>
-              </AccessForm>
-            </AccessFooter>
-          )}
-        </AccessWrapper>
+        <Container>
+          <AccessWrapper>
+            <AccessImageThanks src={thanksImage} />
+            <AccessInfo>
+              <AccessTitle>{title}</AccessTitle>
+              <AccessText>{text}</AccessText>
+            </AccessInfo>
+            {email && (
+              <AccessFooter>
+                <AccessForm onSubmit={onFormSubmitNoop}>
+                  <AccessFormField>
+                    <AccessFormControl>
+                      <AccessInput
+                        value={email}
+                        disabled
+                        success
+                        hasIconsRight
+                      />
+                      <AccessInputIcon right success>
+                        <CheckIcon />
+                      </AccessInputIcon>
+                    </AccessFormControl>
+                    <AccessInputHelpText success>
+                      {emailHelpTextSuccess}
+                    </AccessInputHelpText>
+                  </AccessFormField>
+                </AccessForm>
+              </AccessFooter>
+            )}
+          </AccessWrapper>
+        </Container>
       </Layout>
     </>
   );

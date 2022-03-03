@@ -230,34 +230,36 @@ const BuyPage = () => {
       <SEO />
       <GlobalStyleOverflowed/>
       <Layout>
-        <AccessWrapper>
-          <AccessInfo>
-            <AccessImageStepOne src={buyImage} />
-            <AccessTitle>{stepOneTitle}</AccessTitle>
-            <AccessText>{stepOneText}</AccessText>
-          </AccessInfo>
-          <AccessFooter>
-            {getForm()}
-            <AccessPriceWrapper>
-              <AccessPriceYear>
-                <AccessPrice green>
-                  {stepOneFirstYearPrice}
-                </AccessPrice>
-                <AccessPriceTitle>
-                  {stepOneFirstYearTitle}
-                </AccessPriceTitle>
-              </AccessPriceYear>
-              <AccessPriceYear>
-                <AccessPrice>
-                  {stepOneSecondYearPrice}
-                </AccessPrice>
-                <AccessPriceTitle>
-                  {stepOneSecondYearTitle}
-                </AccessPriceTitle>
-              </AccessPriceYear>
-            </AccessPriceWrapper>
-          </AccessFooter>
-        </AccessWrapper>
+        <Container>
+          <AccessWrapper>
+            <AccessInfo>
+              <AccessImageStepOne src={buyImage} />
+              <AccessTitle>{stepOneTitle}</AccessTitle>
+              <AccessText>{stepOneText}</AccessText>
+            </AccessInfo>
+            <AccessFooter>
+              {getForm()}
+              <AccessPriceWrapper>
+                <AccessPriceYear>
+                  <AccessPrice green>
+                    {stepOneFirstYearPrice}
+                  </AccessPrice>
+                  <AccessPriceTitle>
+                    {stepOneFirstYearTitle}
+                  </AccessPriceTitle>
+                </AccessPriceYear>
+                <AccessPriceYear>
+                  <AccessPrice>
+                    {stepOneSecondYearPrice}
+                  </AccessPrice>
+                  <AccessPriceTitle>
+                    {stepOneSecondYearTitle}
+                  </AccessPriceTitle>
+                </AccessPriceYear>
+              </AccessPriceWrapper>
+            </AccessFooter>
+          </AccessWrapper>
+        </Container>
       </Layout>
     </>
   );

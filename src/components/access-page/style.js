@@ -638,7 +638,6 @@ export const LogoWrapper = styled.div`
 `;
 
 export const HeaderWrapper = styled.div`
-    width: 1240px;
     padding: 28px 0;
     position: relative;
     /* z-index: 9999; */
