@@ -74,7 +74,7 @@ const PayForm = ({ order, email, children }) => (
     <input
       type="hidden"
       name="successURL"
-      value={`https://pavlushin.design/fonts/murmur?email=${email}`}
+      value={`https://pavlushin.design/fonts/thanks?email=${email}`}
     />
     {children}
   </AccessForm>
