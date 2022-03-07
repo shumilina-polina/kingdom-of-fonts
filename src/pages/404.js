@@ -1,7 +1,7 @@
 import * as React from "react"
 import { AccessWrapper, NotFoundText } from "../components/access-page/style"
 import Layout from "../components/Layout"
-import { Container, GlobalStyle } from "../global"
+import { Container } from "../global"
 
 // markup
 const NotFoundPage = () => {
@@ -9,7 +9,7 @@ const NotFoundPage = () => {
     <>
     {/* <GlobalStyle/> */}
     <Layout>
-      
+
       <Container>
         <AccessWrapper>
           <NotFoundText>404 <span>Страница не найдена :(</span></NotFoundText>
@@ -17,7 +17,7 @@ const NotFoundPage = () => {
       </Container>
     </Layout>
     </>
-    
+
   )
 }
 

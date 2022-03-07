@@ -1,7 +1,5 @@
 import React from "react";
-// import Categories from "./categories/CategoriesFilter";
 import { Wrapper } from "./styles";
-// import Subcategories from "./subcategories/SubcategoriesFilter";
 
 const Filters = ({
   selectedCategory,

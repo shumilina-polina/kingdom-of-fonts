@@ -1,14 +1,7 @@
 import React from "react";
 import { SubCategoryItem, Wrapper } from "./styles";
 import { v4 as uuidv4 } from "uuid";
-// import { navigate } from "gatsby";
-import { categories } from "../../../../categories";
-import { useQuery } from "../../../../hooks/useQuery";
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { navigate } from "@reach/router"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Link } from "gatsby";
-// import scrollTo from "gatsby-plugin-smoothscroll"
 
 const SubcategoriesFilter = ({ currentElementIndexInViewport, category }) => {
   // const query = useQuery();

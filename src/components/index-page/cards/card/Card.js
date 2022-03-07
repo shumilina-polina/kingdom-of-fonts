@@ -3,7 +3,6 @@ import {
   FontFormats,
   Format,
   Wrapper,
-  Image,
   CardInfo,
   InfoItem,
   TestFontField,
@@ -40,7 +39,7 @@ const Card = ({ data }) => {
 
   // console.log("fontCSS", data.fontCSS)
 
-  
+
   return (
     <Wrapper color={data.fontBackground}>
       <FontFormats>
@@ -88,9 +87,9 @@ const Card = ({ data }) => {
             </a> */}
           </FontAuthors>
         </CardFooter>
-        
+
       </StretchWrapper>
-      
+
     </Wrapper>
   );
 };

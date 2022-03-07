@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../../../components/Layout";
-import { navigate } from "gatsby";
 import IndexPageCategoryFilterView from "../../../views/IndexPageCategoryFilterView";
 import { categories } from "../../../categories";
 import SEO from "../../../seo";
 import { useAccess } from "../../../hooks/useAccess";
 import Spinner from "../../../components/Spinner";
-import { GlobalStyle } from "../../../global";
 
 export const contentfulQuery = graphql`
   query contentfulHandwrittenQuery {

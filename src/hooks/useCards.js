@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
-// import gorod from '../assets/fonts/Gorod/Gorod.zip';
 
 const useCards = () => {
 

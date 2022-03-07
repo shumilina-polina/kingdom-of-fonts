@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import { Container } from "../../global";
 import Announce from "./Announce";
@@ -9,18 +8,10 @@ import {
   Wrapper, FooterWrapper, Title,
   Authors,
   Author,
-  Info,
-  InfoTitle,
-  InfoWrapper,
-  Telegram,
-  Email,
-  InfoYear,
-  FooterLink,
   LogoWrapper,
   LogoText,
   FooterColumn,
   DesktopFooter,
-  MobileFooter,
   Copyright,
   FooterColumnSpacer,
 } from "./styles";

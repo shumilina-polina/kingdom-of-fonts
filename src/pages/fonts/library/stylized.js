@@ -1,25 +1,11 @@
-import React, { useState, useEffect } from "react";
-// import { cards } from "../components/index-page/cards/data";
+import React from "react";
 import Layout from "../../../components/Layout";
-import Logo from "../../../components/logo/Logo";
-import { Link, navigate } from "gatsby";
-import { useQuery } from "../../../hooks/useQuery";
-import IndexPageNoFiltersView from "../../../views/IndexPageNoFiltersView";
 import IndexPageCategoryFilterView from "../../../views/IndexPageCategoryFilterView";
-// import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
-import useCards from "../../../hooks/useCards";
 import { categories } from "../../../categories";
 import SEO from "../../../seo";
-import {
-
-  LogoWrapper,
-  CurveIcon,
-  ShadowCircle,
-  CurveMobileIcon,
-} from "../../../components/access-page/style";
 import { useAccess } from "../../../hooks/useAccess";
 import Spinner from "../../../components/Spinner";
-import { GlobalStyle } from "../../../global";
+
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;

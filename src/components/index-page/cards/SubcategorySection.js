@@ -1,10 +1,6 @@
-import React, {useEffect, forwardRef} from 'react'
+import React from 'react'
 import Card from './card/Card'
 import { SubcategoryItems, SubcategorySectionItem, SubcategoryTitle, Wrapper, SubcategoryItemsId } from './styles'
-import { useInView } from 'react-intersection-observer';
-import { useQuery } from '../../../hooks/useQuery';
-import { categories } from '../../../categories';
-import { useScrollDirection } from '../../../hooks/useScrollDirection';
 
 const SubcategorySection = React.forwardRef(({ subCat, sortedCards, setSubCatInView}, ref) => {
     // const { ref, inView, entry } = useInView({
@@ -18,7 +14,7 @@ const SubcategorySection = React.forwardRef(({ subCat, sortedCards, setSubCatInV
 
     // useEffect(() => {
     //     // const subCatIdx = selectedCategory.subCategories.findIndex((el) => el.name === subCat.name)
-        
+
     //     console.log("subCat IN VIEWWW", subCat)
     //     if (inView) {
     //         if (scrollDir === "scrolling down") {
@@ -37,13 +33,13 @@ const SubcategorySection = React.forwardRef(({ subCat, sortedCards, setSubCatInV
     //             return filtered
     //         })
     //     }
-        
+
     // }, [inView])
 
     // console.log("ddf", sortedCards)
     return (
         // <InView onChange={() => console.log("in view", subCat.name)}>
-        <SubcategoryItems 
+        <SubcategoryItems
             ref={ref}
         >
             <SubcategoryItemsId id={subCat.url}/>

@@ -1,6 +1,5 @@
 
 import React from 'react'
-import Layout from '../../components/Layout'
 import { RestoreButton, RestoreText, RestoreWrapper } from './style'
 import ArrowIcon from '../../assets/svgs/arrow-icon.svg';
 

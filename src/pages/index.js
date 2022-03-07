@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from "react";
-// import { cards } from "../components/index-page/cards/data";
+import React, { useEffect } from "react";
 import Layout from "../components/Layout";
-// import Logo from "../components/logo/Logo";
-import { Link, navigate } from "gatsby";
-// import { useQuery } from "../hooks/useQuery";
-// import IndexPageNoFiltersView from "../views/IndexPageNoFiltersView";
-// import IndexPageCategoryFilterView from "../views/IndexPageCategoryFilterView";
-// import IndexPageSubcategoryFilterView from "../views/IndexPageSubcategoryFilterView";
-// import useCards from "../hooks/useCards";
-// import { categories } from "../categories";
+import { navigate } from "gatsby";
 import SEO from "../seo";
-// import {
 
-//   LogoWithCurve,
-//   CurveIcon,
-//   ShadowCircle,
-//   CurveMobileIcon,
-// } from "../../components/access-page/style";
 // import smoothscroll from 'smoothscroll-polyfill';
 
 // window.__forceSmoothScrollPolyfill__ = true;
@@ -36,7 +22,7 @@ const IndexPage = () => {
   // включить эти две вещи когда будешь тестировать доступность
   // const [loading, setLoading] = useState(true);
   // const [access, setAccess] = useState(false);
-  
+
 
   //вот эти две убрать
   // const [loading, setLoading] = useState(false);
@@ -62,7 +48,7 @@ const IndexPage = () => {
   //   }
   //   return ""
   // }
-  
+
 
   // const [filters, setFilters] = useState({
   //   category: getCategoryName(),

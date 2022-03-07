@@ -1,13 +1,9 @@
-import React, {useState, useEffect, useRef, createRef} from "react";
-import CardList from "../components/index-page/cards/CardList";
-import CardListBySubcat from "../components/index-page/cards/CardListBySubCat";
+import React, {createRef} from "react";
 import CategoriesFilter from "../components/index-page/filters/categories/CategoriesFilter";
 import { StickyWrapper } from "../components/index-page/filters/styles";
 import SubcategoriesFilter from "../components/index-page/filters/subcategories/SubcategoriesFilter";
 import { Container } from "../global";
-import { useQuery } from "../hooks/useQuery";
 import { Scrollspy } from "@makotot/ghostui";
-import { categories } from "../categories";
 import SubcategorySection from "../components/index-page/cards/SubcategorySection";
 import ScrollButtons from "../components/index-page/scroll-buttons/ScrollButtons";
 
@@ -41,7 +37,7 @@ const IndexPageCategoryFilterView = ({
   //   ]
   // };
 
-  
+
 
   // sectionRefs
 
@@ -82,7 +78,7 @@ const IndexPageCategoryFilterView = ({
               // console.log("subCat", subCat)
               const sortedCards = cards.filter((card) => card.node.fontSubcategory.includes(subCat.name))
               return (
-                <SubcategorySection 
+                <SubcategorySection
                   // category={category}
                   ref={sectionRefs[idx]}
                   key={"section-" + idx}

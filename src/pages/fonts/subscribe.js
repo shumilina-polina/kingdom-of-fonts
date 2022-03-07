@@ -1,56 +1,30 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
-import { Link, navigate } from "gatsby";
+import React, { useState } from "react";
+import { navigate } from "gatsby";
 import {
   AccessInfo,
-  AccessLine,
   AccessText,
   AccessTitle,
   AccessWrapper,
   AccessFooter,
   AccessButton,
-  YouMoneyWrapper,
-  YouMoneyText,
   AccessForm,
   AccessInput,
   AccessPriceWrapper,
   AccessPriceYear,
   AccessPriceTitle,
   AccessPrice,
-  AccessImage,
-  LogoWrapper,
-  CurveIcon,
-  CurveMobileIcon,
-  ShadowCircle,
-  DesktopWrapper,
-  MobileWrapper,
-  AccessImageWrapper,
   AccessImageStepOne,
-  AccessImageStepTwo,
-  AccessImageStepTwoWrapper,
   AccessButtonStepTwo,
-  AccessImageMobileThanksWrapper,
-  AccessImageMobileEnvelope,
-  AccessImageEnvelopeLight,
-  AccessThanksButton,
-  AccessInfoWrapper, AccessFormField, AccessInputHelpText, AccessButtonPrimaryLink
+  AccessFormField,
+  AccessInputHelpText,
 } from "../../components/access-page/style";
-import ArrowIcon from '../../assets/svgs/arrow-icon.svg';
-import YouMoneyLogo from '../../assets/svgs/youmoney.svg';
-import YouMoneyMobileLogo from '../../assets/svgs/money_mobile.svg';
 import Layout from "../../components/Layout";
-import Logo from "../../components/logo/Logo";
 
 import buyImage from "../../assets/buy.png";
-import buyImageMobile from "../../assets/envelope_mobile.png";
-import moneyImage from "../../assets/money.png";
-import moneyImageMobile from "../../assets/money_mobile.png";
-import { Container, GlobalStyle, GlobalStyleOverflowed } from "../../global";
-import envelopeImageMobile from "../../assets/envelope_mobile.png"
-import envelopeImageLightMobile from "../../assets/envelope_green-light.png";
+import { Container, GlobalStyleOverflowed } from "../../global";
 import SEO from "../../seo";
 
-import { UserContext } from "../../context/UserContext";
-import api, {getValidationErrors, hasErrorCode} from "../../api";
+import api, { getValidationErrors, hasErrorCode } from "../../api";
 
 // const Title = ({children}) => <AccessTitle>{children}</AccessTitle>
 // markup

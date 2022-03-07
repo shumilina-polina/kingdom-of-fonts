@@ -6,13 +6,10 @@
  */
 
  import React from "react"
- // import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
  import { useStaticQuery, graphql } from "gatsby"
-//  import ogImage from "./assets/seo/seo.jpg";
-//  import ogImageVk from "./assets/seo/seo-vk.jpg";
 
- 
+
  const SEO = ({
    description,
    lang,
@@ -42,7 +39,7 @@
        }
      `
    )
- 
+
    const metaDescription = description || site.siteMetadata.description
    const metaKeywords = keywords || site.siteMetadata.keywords
    const metaOgImage = ogImage || site.siteMetadata.ogImage
@@ -53,7 +50,7 @@
   //  const metaOgImageVk = ogImageVk
    const metaSocialDescription =
      socialDescription || description || site.siteMetadata.description
- 
+
    const defaultMeta = [
      {
        name: `description`,
@@ -75,7 +72,7 @@
        property: `og:image`,
        content: metaOgImage,
      },
- 
+
      {
        property: `og:image:width`,
        content: "1200",
@@ -117,9 +114,9 @@
     //    content: `7110133d060664b8d775d9aed52f11c2`,
     //  },
    ]
- 
+
    const propMeta = defaultMeta.concat(meta || [])
- 
+
    return (
      <Helmet htmlAttributes={{ lang }} title={metaTitle} meta={defaultMeta.concat(propMeta)}>
        {url && <link rel="canonical" href={metaOgUrl} />}
@@ -128,7 +125,7 @@
      </Helmet>
    )
  }
- 
+
  SEO.defaultProps = {
    lang: `ru`,
    meta: [],
@@ -136,4 +133,3 @@
  }
 
 export default SEO
- 
