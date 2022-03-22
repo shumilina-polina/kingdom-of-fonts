@@ -6,11 +6,11 @@ const ScrollButtons = () => {
   const [isAtBottom, setIsAtBottom] = useState(false)
 
   const scrollToTop = useCallback(() => {
-    window.scrollTo({top: 0})
+    window.scrollTo({top: 0, behavior: "smooth"})
   }, [])
 
   const scrollToBottom = useCallback(() => {
-    window.scrollTo({top: document.body.scrollHeight - window.innerHeight})
+    window.scrollTo({top: document.body.scrollHeight - window.innerHeight, behavior: "smooth"})
   }, [])
 
   const onWindowScroll = useCallback(() => {
