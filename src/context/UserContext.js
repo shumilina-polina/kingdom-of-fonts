@@ -1,15 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react"
 import api from "../api"
 
-const parseDateRange = (data) => {
-  const obj = JSON.parse(data)
-  return {
-    bounds: obj.bounds,
-    lower: new Date(obj.lower),
-    upper: new Date(obj.upper),
-  }
-}
-
 export const UserContext = React.createContext({
     user: null,
     error: null,
@@ -32,7 +23,10 @@ export const UserContextProvider = ({ children }) => {
     const subscriptions = {}
 
     for (const subscription of response.data.subscriptions) {
-      subscriptions[subscription.item] = parseDateRange(subscription.timespan)
+      subscriptions[subscription.item] = {
+        dateStart: new Date(subscription.date_start),
+        dateEnd: new Date(subscription.date_end)
+      }
     }
 
     setUser({email, name, subscriptions})
