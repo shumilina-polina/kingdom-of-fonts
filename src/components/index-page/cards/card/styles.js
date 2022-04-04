@@ -83,8 +83,6 @@ export const InfoItem = styled.div`
 
   span {
     margin: 0 2px;
-    font-size: 12px;
-    color: rgba(256, 256, 256, 0.5);
   }
   ${props => props.noCurrency && `
     color: rgba(256, 256, 256, 0.2);
@@ -99,7 +97,6 @@ export const InfoItem = styled.div`
     border-radius: 1.5vw;
     span {
       margin: 0 1vw;
-      font-size: 4vw;
     }
     :first-child {
       margin-right: 4vw;
@@ -198,8 +195,6 @@ export const DownloadButton = styled.a`
   text-decoration: none;
   :hover {
     cursor: pointer;
-    font-size: 16px;
-    color: white;
     background: rgba(256,256,256,0.15);
   }
 
@@ -207,9 +202,6 @@ export const DownloadButton = styled.a`
     padding: 1.8vw;
     font-size: 3.8vw;
     margin-bottom: 4vw;
-    :hover {
-      font-size: 3.8vw;
-    }
   }
 `;
 
@@ -230,8 +222,6 @@ export const FontAuthors = styled.div`
     :hover {
       cursor: pointer;
       text-decoration: none;
-      color: rgba(256, 256, 256, 0.5);
-      font-size: 12px;
     }
   }
 
@@ -241,9 +231,6 @@ export const FontAuthors = styled.div`
     }
     a {
       font-size: 3.8vw;
-      :hover {
-        font-size: 3.8vw;
-      }
     }
   }
 

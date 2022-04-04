@@ -44,9 +44,6 @@ export const SubCategoryItem = styled.a`
       margin-right: 0;
     }
     font-size: 4.4vw;
-    :hover {
-      font-size: 4.4vw;
-    }
   }
   
   @media (max-width: 575px) {

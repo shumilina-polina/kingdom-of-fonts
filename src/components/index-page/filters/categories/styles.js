@@ -33,7 +33,6 @@ export const CategoryItem = styled(Link)`
   ${(props) => !props.selected && `
     :hover {
       color: white;
-      font-size: 20px;
       cursor: pointer;
       background: rgba(256,256,256,0.05);
       border-radius: 3px;
@@ -52,7 +51,6 @@ export const CategoryItem = styled(Link)`
     margin-right: 3vw;
   }
   :hover {
-    font-size: 5vw;
     border-radius: 1vw;
     background: none;
   }

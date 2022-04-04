@@ -120,7 +120,6 @@ export const Author = styled.div`
     margin-right: 0;
     font-size: 4.3vw;
     span {
-      font-size: 4.3vw;
       padding: 0;
     }
     a {
@@ -211,7 +210,6 @@ export const FooterLink = styled.a`
   :hover {
     cursor: pointer;
     color: var(--color-orange);
-    font-size: 14px;
     /* border-bottom: 1px solid rgba(235, 91, 11, 0.4); */
     :after {
       border-color: rgba(235, 91, 11, 0.4);;
@@ -222,10 +220,6 @@ export const FooterLink = styled.a`
     margin-top: 0;
     :first-child {
       margin-right: 3vw;
-    }
-    :hover {
-      font-size: 3.9vw;
-
     }
   }
 `
@@ -240,16 +234,13 @@ export const InfoYear = styled.div`
   line-height: 1.4;
   font-size: 14px;
   span {
-    font-size: 14px;
     margin-bottom: 5px;
-    line-height: 1.4;
     display: block;
   }
   @media (max-width: 575px) {
     font-size: 4.3vw;
     line-height: 1.7;
     span {
-      font-size: 4.3vw;
       margin-bottom: 0;
       line-height: 1.8;
     }
@@ -272,7 +263,7 @@ export const LogoText = styled.div`
   margin-left: 12px;
   line-height: 18px;
   
-  padding-bottom: 4px;
+  padding-bottom: 1px;
 `
 
 export const AnnounceWrapper = styled.a`
@@ -352,8 +343,6 @@ export const AnnouncementText = styled.div`
   color: white;
   padding: 0 20px;
   span {
-    font-size: 20px;
-    color: white;
     display: inline-block;
     text-decoration: underline;
     ${AnnounceWrapper}:hover & {
@@ -364,9 +353,6 @@ export const AnnouncementText = styled.div`
     font-size: 6.5vw;
     padding: 0 3vw;
     line-height: 1.1;
-    span {
-      font-size: 6.5vw;
-    }
   }
 `
 
@@ -448,21 +434,6 @@ export const ErrataTelegramButton = styled.a`
   letter-spacing: 0.03rem;
   font-variant: small-caps;
   text-transform: lowercase;
-  
-  &:hover {
-    font-size: 20px;
-    letter-spacing: 0.03rem;
-  }
-  
-  // text-transform: uppercase;
-  //
-  // font-size: 17px;
-  // letter-spacing: 0.03rem;
-  //
-  // &:hover {
-  //   font-size: 17px;
-  //   letter-spacing: 0.03rem;
-  // }
 `
 
 export const ErrataTextBottom = styled.div`

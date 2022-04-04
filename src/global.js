@@ -16,34 +16,11 @@ export const styles = `
 
 
 * {
-  --color-grey: rgb(130, 130, 130);
-  --color-blue: rgb(17, 104, 205);
-  --color-green: #45E786;
-  --color-orange: #EB5B0B;
-  --color-background: rgb(21, 21, 21);
-  --color-white-transparent: rgba(256,256,256,0.1);
-  /* letter-spacing: 0vw; */
-  font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  line-height: 1.35;
-  color: var(--color-grey);
 }
-
-main {
-  padding-top: 0px;
-
-  @media (max-width: 575px) {
-    padding-top: 0;
-  }
-
-}
-
-
 
 #gatsby-focus-wrapper {
   min-height: 100vh;
@@ -55,14 +32,25 @@ main {
 }
 
 body {
+  --color-grey: rgb(130, 130, 130);
+  --color-blue: rgb(17, 104, 205);
+  --color-green: #45E786;
+  --color-orange: #EB5B0B;
+  --color-background: rgb(21, 21, 21);
+  --color-white-transparent: rgba(256,256,256,0.1);
+  
   height: 100%;
   background: var(--color-background);
   
+  line-height: 1.35;
+  color: var(--color-grey);
 }
 
-
-
-
+body, input, button {
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
 
 main {
   width: 100%;

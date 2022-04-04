@@ -244,7 +244,6 @@ export const AccessText = styled.div`
     letter-spacing: -0.03rem;
     width: 704px;
     span {
-        font-size: inherit;
         color: var(--color-green);
     }
     @media (max-width: 575px) {
@@ -253,9 +252,6 @@ export const AccessText = styled.div`
         text-align: center;
         line-height: 1.25;
         letter-spacing: -0.1vw;
-        span {
-            font-size: 4.1vw;
-        }
         ${props => props.marginBottom && `
             margin-bottom: ${props.marginBottom};
         `}
@@ -307,8 +303,6 @@ const ButtonStyle = css`
     height: 72px;
     
     :hover {
-        font-size: 24px;
-        font-weight: 500;
         cursor: pointer;
     }
     @media (max-width: 575px) {
@@ -330,7 +324,6 @@ export const ButtonPrimaryStyle = css`
     color: #063318;
     background: linear-gradient(180deg, #45E786 0%, #14793E 100%);
     &:hover {
-        color: #063318;
         background: linear-gradient(180deg, #38B96C 0%, #126E38 100%);
     }
 `
@@ -573,7 +566,6 @@ export const AccessPriceTitle = styled.div`
     
     span {
         position: relative;
-        color: #BDBDBD;
         :after {
             content: "";
             border-bottom: 1.5px solid var(--color-green);
@@ -587,9 +579,6 @@ export const AccessPriceTitle = styled.div`
     @media (max-width: 575px) {
         font-size: 4vw;
         margin-bottom: 1vw;
-        span {
-            font-size: 4vw;
-        }
     }
 `;
 
@@ -601,14 +590,10 @@ export const AccessPrice = styled.div`
     span {
         font-size: 28px;
         margin-left: 3px;
-        color: #BDBDBD;
     }
 
     ${props => props.green && `
         color: var(--color-green);
-        span {
-            color: var(--color-green);
-        }
     `}
     /* font-weight: 300; */
     @media (max-width: 575px) {

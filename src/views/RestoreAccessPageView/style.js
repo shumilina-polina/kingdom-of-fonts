@@ -41,9 +41,6 @@ export const RestoreButton = styled(Link)`
     font-weight: 500;
     border-radius: 5px;
     :hover {
-        color: #151515;
-        font-size: 24px;
-        font-weight: 500;
         background: #14793E;
     }
 
