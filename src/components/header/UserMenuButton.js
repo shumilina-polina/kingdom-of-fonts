@@ -3,6 +3,7 @@ import { useDetectClickOutside } from "react-detect-click-outside"
 import { Link } from 'gatsby'
 
 import { UserContext } from "../../context/UserContext"
+import { useNoScroll } from "../../hooks/useNoScroll"
 
 import {
   HeaderButton,
@@ -14,11 +15,14 @@ import {
   UserMenuItemInput,
   UserMenuItemIcon,
   UserMenuItemSubText,
-  UserMenuWrapper, UserMenuItemTextPlaceholder,
+  UserMenuWrapper,
+  UserMenuItemTextPlaceholder,
+  UserMenuSpacerItem,
 } from "./styles"
 import UserIcon from "../../assets/svgs/user-icon.svg"
+import CrossIcon from "../../assets/svgs/cross-thin-icon.svg"
 import PencilIcon from "../../assets/svgs/pencil-icon.svg"
-import CheckIcon from "../../assets/svgs/check-icon-16.svg"
+import CheckIcon from "../../assets/svgs/check-icon.svg"
 import LoginIcon from "../../assets/svgs/login-icon.svg"
 import LogoutIcon from "../../assets/svgs/logout-icon.svg"
 
@@ -114,6 +118,7 @@ const UserMenu = ({ onClose = () => {} }) => {
       {user ? (
         <>
           <UserInfoItem />
+          <UserMenuSpacerItem />
           <UserLogoutItem />
         </>
       ) : (
@@ -128,6 +133,8 @@ const UserMenu = ({ onClose = () => {} }) => {
 const UserMenuButton = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  useNoScroll(isOpen, "no-scroll-mobile")
+
   const close = () => {
     setIsOpen(false)
   }
@@ -139,7 +146,7 @@ const UserMenuButton = () => {
   return (
     <UserMenuWrapper>
       <HeaderButton onClick={toggle}>
-        <UserIcon />
+        {isOpen ? <CrossIcon/> : <UserIcon/>}
       </HeaderButton>
       {isOpen && <UserMenu onClose={close} />}
     </UserMenuWrapper>

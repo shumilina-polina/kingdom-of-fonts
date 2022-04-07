@@ -13,6 +13,7 @@ import {
   AccessInputIcon,
   AccessFormControl,
   AccessInputIconButton,
+  AccessBlurredLight,
 } from "../../components/access-page/style";
 import ArrowIcon from '../../assets/svgs/arrow-icon.svg';
 import CheckIcon from '../../assets/svgs/check-icon.svg';
@@ -215,6 +216,7 @@ const RestoreAccessPage = ({ location }) => {
             <AccessFooter>
               {getForm()}
             </AccessFooter>
+            <AccessBlurredLight />
           </AccessWrapper>
         </Container>
       </Layout>

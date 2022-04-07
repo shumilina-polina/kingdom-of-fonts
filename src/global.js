@@ -118,7 +118,11 @@ footer {
   margin-top: auto;
 }
 
-
+@media (max-width: 1260px) {
+  body.no-scroll-mobile {
+    overflow: hidden;
+  }
+}
 `
 
 export const GlobalStyle = createGlobalStyle`
@@ -138,27 +142,34 @@ export const Container = styled.div`
   margin: 0 auto;
   height: 100%;
   min-height: 100%;
-  @media (max-width: 1200px) {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 0 30px; */
-  }
-  @media (max-width: 1050px) {
-    width: 100%;
-  }
-  @media (max-width: 575px) {
-    padding: 0 4vw;
-    width: 100%;
-
-  }
   
+  @media (max-width: 1260px) {
+    width: 100%;
+    padding: 0 3.125vw;
+  }
 
   ${props => props.withMargin && `
     margin-top: -4px;
+  
+    @media (max-width: 575px) {
+      margin-top: -4vw;
+    }
   `}
 `;
 
 export const CustomLink = styled(Link)``;
+
+export const DesktopWrapper = styled.div`
+    display: block;
+    @media (max-width: 1260px) {
+        display: none;
+    }
+`
+
+export const MobileWrapper = styled.div`
+    display: none;
+    @media (max-width: 1260px) {
+        display: block;
+        width: 100%;
+    }
+`

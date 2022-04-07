@@ -78,7 +78,7 @@ export const InfoItem = styled.div`
   text-align: center;
   padding: 4px;
   font-size: 12px;
-  color: rgba(256, 256, 256, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   width: 50%;
 
   span {

@@ -1,1 +1,23 @@
-<svg id="b3af93dd-a048-45c6-bf2d-d875b6b30b01" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 19.6"><path d="M160,14.56H22" transform="translate(0 -0.96)" style="fill:none;stroke:#222"/><path d="M298,14.56H160" transform="translate(0 -0.96)" style="fill:none;stroke:#222"/><circle cx="160" cy="13.6" r="5.5" style="fill:#111;stroke:#828282"/><circle cx="25" cy="13.6" r="2.5" style="fill:#111;stroke:#828282"/><circle cx="295" cy="13.6" r="2.5" style="fill:#111;stroke:#828282"/><path d="M320,1v.87l-.5.08Q232.24,15,156.31,15.06,83.22,15.06,0,2.85V1.76c55.44,8.16,107.67,12.3,156.31,12.3q76.24,0,163.19-13Z" transform="translate(0 -0.96)" style="fill:#222"/></svg>
+<svg width="320" height="60" viewBox="0 0 320 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2561_24850)">
+<path d="M-178.483 -156.822C-120.43 -100.933 -18.1504 38.0009 159.584 38.0009C337.318 38.0009 442.676 -100.933 502.48 -156.822" stroke="#222222" stroke-width="1.5"/>
+<path d="M159 38L63 38" stroke="#222222" stroke-width="1.5"/>
+<path d="M255 38L159 38" stroke="#222222" stroke-width="1.5"/>
+<circle cx="160" cy="38" r="5.5" fill="#151515" stroke="#797B7B"/>
+<circle cx="63" cy="38" r="3" fill="#151515" stroke="#444444" stroke-width="1.5"/>
+<circle cx="254" cy="38" r="3" fill="#151515" stroke="#444444" stroke-width="1.5"/>
+<g filter="url(#filter0_f_2561_24850)">
+<circle cx="160" cy="38" r="38" fill="#151515"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_2561_24850" x="102.074" y="-19.9256" width="115.851" height="115.851" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="9.96279" result="effect1_foregroundBlur_2561_24850"/>
+</filter>
+<clipPath id="clip0_2561_24850">
+<rect width="320" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>

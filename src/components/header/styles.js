@@ -8,16 +8,37 @@ export const HeaderButton = styled.button`
   width: 36px;
   height: 36px;
   
+  filter: brightness(25%);
+  
   &:hover {
-    filter: brightness(70%);
+    filter: brightness(17%);
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 1260px) {
+    width: 7.5vw;
+    height: 7.5vw;
   }
 `
 
 export const UserMenuWrapper = styled.div`
   position: relative;
+  
+  font-size: 16px;
+  
+  @media (max-width: 1260px) {
+    font-size: 5vw;
+  }
 `
 
 export const UserMenuBox = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 300px;
   
   border-radius: 8px;
@@ -29,9 +50,28 @@ export const UserMenuBox = styled.div`
   z-index: 4;
   right: 0;
   top: 100%;
+  
+  @media (max-width: 1260px) {
+    position: fixed;
+
+    top: 23.9vw;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100vw;
+    height: auto;
+
+    border-radius: 0;
+    box-shadow: none;
+
+    border-top: 0.125em #222222 solid;
+  }
 `
 
 const UserMenuItemBase = styled.div`
+  font-size: inherit;
+
   background: none;
   text-align: inherit;
   text-decoration: none;
@@ -39,16 +79,20 @@ const UserMenuItemBase = styled.div`
   cursor: pointer;
   
   width: 100%;
-  min-height: 66px;
+  min-height: 4.125em;
   
-  padding: 18px;
+  padding: 1.125em;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   
   &:not(:last-child) {
-    border-bottom: 2px #222222 solid;
+    border-bottom: 0.125em #222222 solid;
+  }
+
+  @media (max-width: 1260px) {
+    padding: 1.125em 2em;
   }
 `
 
@@ -60,7 +104,7 @@ export const UserMenuItemActive = styled(UserMenuItemBase)`
 
 export const UserMenuItemRow = styled.div`
   width: 100%;
-  height: 22px;
+  height: 1.375em;
   
   display: flex;
 `
@@ -69,7 +113,6 @@ export const UserMenuItemTextBase = styled.div`
   flex: 1;
   
   color: white;
-  font-size: 16px;
 `
 
 export const UserMenuItemText = styled(UserMenuItemTextBase)`
@@ -83,12 +126,13 @@ export const UserMenuItemTextPlaceholder = styled(UserMenuItemTextBase)`
 `
 
 export const UserMenuItemInput = styled.input`
+  font-size: inherit;
+  
   flex: 1;
   
   color: white;
   background: none;
   border: none;
-  font-size: 16px;
   
   ${props => props.disabled && `
     filter: brightness(70%);
@@ -96,6 +140,16 @@ export const UserMenuItemInput = styled.input`
 `
 
 export const UserMenuItemIcon = styled.div`
+  font-size: inherit;
+  
+  width: 1em;
+  height: 1em;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
   background: none;
   
   ${UserMenuItem}:hover & {
@@ -113,7 +167,16 @@ export const UserMenuItemIcon = styled.div`
 
 export const UserMenuItemSubText = styled.div`
   color: #797B7B;
-  font-size: 16px;
   
-  margin-top: 5px;
+  margin-top: 0.3125em;
+`
+
+export const UserMenuSpacerItem = styled.div`
+  @media (max-width: 1260px) {
+    flex: 1;
+  
+    &:not(:last-child) {
+      border-bottom: 0.125em #222222 solid;
+    }
+  }
 `

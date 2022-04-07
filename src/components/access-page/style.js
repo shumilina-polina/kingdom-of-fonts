@@ -1,8 +1,7 @@
 import styled, {css} from "styled-components";
 
-import Curve from "../../assets/svgs/curve.svg";
-import MobileCurve from "../../assets/svgs/curve-mobile.svg";
-import { Link } from "gatsby";
+import _Curve from "../../assets/svgs/curve.svg";
+import _MobileCurve from "../../assets/svgs/curve-mobile.svg";
 
 export const NotFoundText = styled.div`
     font-size: 150px;
@@ -89,28 +88,12 @@ export const AccessWrapper = styled.div`
     position: relative;
     width: 100%;
     min-height: 533px;
-
-    @media (max-width: 575px) {
-        padding: 5vw 4vw;
-        border-radius: 6vw;
-        margin-top: 5vw;
-        overflow: unset;
-        /* height: 168vw; */
-        /* width: 95vw; */
-        min-width: 100%;
-        width: 100%;
-        form {
-            width: 100%;
-            margin: 5vw 0 0;
-        }
-        
-
-
-        ${props => props.wrapperHeight && `
-            height: ${props.wrapperHeight};
-        `}
+    
+    @media (max-width: 1260px) {
+        margin: 0;
+        min-height: unset;
+        border-radius: 6.25vw;
     }
-
 `;
 
 export const AccessImageWrapper = styled.div`
@@ -125,18 +108,10 @@ export const AccessInfo = styled.div`
     z-index: 1;
     overflow: hidden;
     border-bottom: 2px solid #222222;
-`;
-
-export const AccessImage = styled.img`
-    width: 1150px;
-    /* height: 200px; */
-    position: absolute;
-    right: -400px;
-    z-index: 1;
-    bottom: -230px;
-
-    @media (max-width: 575px) {
-        /* display: none; */
+    
+    @media (max-width: 1260px) {
+        padding: 8.75vw 5.625vw;
+        border-bottom: none;
     }
 `;
 
@@ -149,38 +124,8 @@ export const AccessImageStepOne = styled.img`
     bottom: -160px;
     pointer-events: none;
 
-    @media (max-width: 575px) {
-        width: 100vw;
-    /* height: 200px; */
-        position: absolute;
-        right: 0;
-        z-index: 1;
-        top: -75vw;
-    }
-`
-
-export const AccessImageStepTwo = styled.img`
-    width: 740px;
-    /* height: 200px; */
-    position: absolute;
-    right: -170px;
-    z-index: 1;
-    bottom: 59%;
-    transform: translateY(50%);
-
-    @media (max-width: 575px) {
-        bottom: -17vw;
-        right: 50%;
-        transform: translateX(50%) rotate(-4deg);
-        /* top: 0; */
-        width: 110vw;
-    /* height: 200px; */
-        /* position: static;
-        left: 0;
-        right: auto;
-        z-index: 1;
-        top: 0;
-        bottom: auto; */
+    @media (max-width: 1260px) {
+        display: none;
     }
 `
 
@@ -193,30 +138,9 @@ export const AccessImageThanks = styled.img`
     transform: translateY(50%);
     pointer-events: none;
 
-    @media (max-width: 575px) {
-        bottom: -10vw;
-        right: 51%;
-        transform: translateX(50%);
-        width: 132vw;
+    @media (max-width: 1260px) {
+        display: none;
     }
-`
-
-export const AccessImageThanksLight = styled.img`
-    width: 150vw;
-    position: absolute;
-    left: 50%;
-    z-index: -1;
-    bottom: 10vw;
-    transform: translateX(-50%);
-`
-
-
-
-export const AccessImageStepTwoWrapper = styled.div`
-    position: relative;
-    height: 84vw;
-    margin-bottom: 5vw;
-    /* background: red; */
 `
 
 export const AccessTitle = styled.div`
@@ -226,51 +150,28 @@ export const AccessTitle = styled.div`
     font-variant: small-caps;
     text-transform: lowercase;
     margin-bottom: 15px;
-    @media (max-width: 575px) {
-        font-size: 8.2vw;
-        text-align: center;
-        margin-bottom: 2vw;
-        ${props => props.fontSize && `
-            font-size: ${props.fontSize};
-        `}
+    
+    @media (max-width: 1260px) {
+        font-size: 7.5vw;
+        margin-bottom: 1.25vw;
     }
-
 `;
 
 export const AccessText = styled.div`
     color: #BDBDBD;
     font-size: 36px;
     line-height: 46px;
-    letter-spacing: -0.03rem;
+    letter-spacing: -0.07rem;
     width: 704px;
     span {
         color: var(--color-green);
     }
-    @media (max-width: 575px) {
-        font-size: 4.1vw;
-        max-width: 100%;
-        text-align: center;
-        line-height: 1.25;
-        letter-spacing: -0.1vw;
-        ${props => props.marginBottom && `
-            margin-bottom: ${props.marginBottom};
-        `}
-        ${props => props.fontSize && `
-            font-size: ${props.fontSize};
-            span {
-                font-size: ${props.fontSize};
-            }
-        `}
-        
-}   
-`;
-
-export const AccessLine = styled.div`
-    height: 2px;
-    background: #222222;
-    @media (max-width: 575px) {
-        
-    }
+    @media (max-width: 1260px) {
+        font-size: 6.875vw;
+        width: 100%;
+        line-height: 8.75vw;
+        letter-spacing: -0.04rem;
+    }   
 `;
 
 export const AccessFooter = styled.div`
@@ -278,18 +179,10 @@ export const AccessFooter = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    svg {
-        fill: var(--color-grey);
-        width: 55px;
-        margin: 0 12px;
-    }
-    @media (max-width: 575px) {
+    
+    @media (max-width: 1260px) {
+        padding: 0 5.625vw 8.75vw 5.625vw;
         flex-direction: column;
-        padding-top: 0;
-        svg {
-            width: 0;
-            margin: 0;
-        }
     }
 `;
 
@@ -305,18 +198,6 @@ const ButtonStyle = css`
     :hover {
         cursor: pointer;
     }
-    @media (max-width: 575px) {
-        width: 100%;
-        padding: 4vw 0;
-        font-size: 6.5vw;
-        border-radius: 1.5vw;
-        :hover {
-            font-size: 6.5vw;
-        }
-        ${props => props.marginBottom && `
-            margin-bottom: ${props.marginBottom};
-        `}
-}
 `
 
 export const ButtonPrimaryStyle = css`
@@ -344,53 +225,34 @@ export const ButtonSecondaryStyle = css`
     }
 `
 
+const AccessButtonStyle = css`
+    @media (max-width: 1260px) {
+        width: 100%;
+        height: 18.75vw;
+        font-size: 6.875vw;
+        padding: 3.125vw 0;
+        border-radius: 2.5vw;
+        border-width: 0.625vw !important;
+    }
+`
+
 export const AccessButton = styled.button`
     ${ButtonSecondaryStyle}
+    ${AccessButtonStyle}
 `;
 
 export const AccessButtonStepTwo = styled.button`
     ${ButtonPrimaryStyle}
+    ${AccessButtonStyle}
 `
-
-export const AccessThanksButton = styled(Link)`
-    ${ButtonPrimaryStyle}
-    padding-left: 50px;
-    padding-right: 50px;
-    text-align: center;
-`
-
-export const YouMoneyWrapper = styled.div`
-    display: flex;
-
-    align-items: center;
-    svg {
-        width: 90px;
-        margin: 0 10px;
-    }
-    @media (max-width: 575px) {
-        width: 100%;
-        justify-content: center;
-        svg {
-            width: 15vw;
-            /* margin: 0 10px; */
-        }
-    }
-
-`;
-
-export const YouMoneyText = styled.div`
-    font-size: 16px;
-    width: 80px;
-    color: #BDBDBD;
-    @media (max-width: 575px) {
-        /* display: none; */
-        width: 40vw;
-        font-size: 4vw;
-    }
-`;
 
 export const AccessForm = styled.form`
     display: flex;
+    
+    @media (max-width: 1260px) {
+        width: 100%;
+        flex-direction: column;
+    }
 `
 
 export const AccessFormField = styled.div`
@@ -399,14 +261,22 @@ export const AccessFormField = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
+    @media (max-width: 1260px) {
+        margin: 0 0 7.5vw 0;
+        
+        &:last-child {
+            margin: 0;
+        }
+    }
 `
 
 export const AccessFormControl = styled.div`
     position: relative;
     
-    ${props => props.width && `
-        width: ${props.width};
-    `}
+    @media (max-width: 1260px) {
+        width: 100%;
+    }
 `
 
 export const AccessInput = styled.input`
@@ -444,6 +314,14 @@ export const AccessInput = styled.input`
     &::placeholder {
         color: #444444;
     }
+    
+    @media (max-width: 1260px) {
+        width: 100%;
+        height: 15vw;
+        font-size: 5.625vw;
+        border-radius: 2.5vw;
+        border-width: 0.625vw;
+    }
 `
 
 export const AccessInputHelpText = styled.div`
@@ -470,11 +348,17 @@ export const AccessInputHelpText = styled.div`
     ${props => props.danger && `
         color: #EB5B0B;
     `}
+
+    @media (max-width: 1260px) {
+        font-size: 5vw;
+    }
 `
 
 export const AccessInputIconStyle = css`
     width: 72px;
     height: 72px;
+    
+    padding: 24px;
     
     display: flex;
     justify-content: center;
@@ -501,6 +385,18 @@ export const AccessInputIconStyle = css`
     ${props => props.danger && `
         filter: brightness(0) saturate(100%) invert(32%) sepia(97%) saturate(3117%) hue-rotate(14deg) brightness(109%) contrast(91%);
     `}
+    
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 1260px) {
+        width: 15vw;
+        height: 15vw;
+    
+        padding: 5vw;
+    }
 `
 
 export const AccessInputIcon = styled.div`
@@ -529,19 +425,12 @@ export const AccessInputIconButton = styled.button`
 export const AccessPriceWrapper = styled.div`
     display: flex;
     margin-left: 60px;
-    @media (max-width: 575px) {
-        margin-bottom: 4vw;
+    
+    @media (max-width: 1260px) {
         justify-content: space-between;
-        align-items: center;
-        svg {
-            width: 10vw;
-            height: 11vw;
-            margin: 0;
-            fill: red;
-            position: relative;
-            left: -3vw;
-            top: 3vw;
-        }
+
+        width: 100%;
+        margin: 7.5vw 0 0 0;
     }
 `;
 
@@ -549,15 +438,12 @@ export const AccessPriceYear = styled.div`
     &:not(:last-child) {
         margin-right: 20px;
     }
-    @media (max-width: 575px) {
-        margin-right: 0;
-
-}
+    @media (max-width: 1260px) {
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+    }
 `;
-
-export const DevicesImage = styled.img`
-width: 175px;
-`
 
 export const AccessPriceTitle = styled.div`
     color: #BDBDBD;
@@ -576,9 +462,8 @@ export const AccessPriceTitle = styled.div`
             width: 100%;
         }
     }
-    @media (max-width: 575px) {
-        font-size: 4vw;
-        margin-bottom: 1vw;
+    @media (max-width: 1260px) {
+        font-size: 3.75vw;
     }
 `;
 
@@ -595,15 +480,15 @@ export const AccessPrice = styled.div`
     ${props => props.green && `
         color: var(--color-green);
     `}
-    /* font-weight: 300; */
-    @media (max-width: 575px) {
-    font-size: 12vw;
-    line-height: 1;
-    span {
-        font-size: 6vw;
-        margin-left: 1vw;
+
+    @media (max-width: 1260px) {
+        font-size: 13.75vw;
+        line-height: 1;
+        
+        span {
+            font-size: 7.5vw;
+        }
     }
-}
 `;
 
 export const LogoWrapper = styled.div`
@@ -612,90 +497,73 @@ export const LogoWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    svg {
-        position: relative;
-        z-index: 9999;
-    }
     position: relative;
-    @media (max-width: 575px) {
-
-}
 `;
 
 export const HeaderWrapper = styled.div`
     padding: 28px 0;
-    position: relative;
-    /* z-index: 9999; */
-    @media (max-width: 575px) {
-        padding-top: 10vw;
+    
+    @media (max-width: 1260px) {
+        padding: 3.2vw 1.25vw;
     }
-    /* overflow-x: hidden; */
 `;
 
 export const CurveWrapper = styled.div`
     overflow: hidden;
 `
 
-export const CurveIcon = styled(Curve)`
+export const Curve = styled(_Curve)`
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 1240px;
     display: block;
-    @media (max-width: 575px) {
+    @media (max-width: 1260px) {
         display: none;
     }
 `
 
-export const CurveMobileIcon = styled(MobileCurve)`
+export const CurveMobile = styled(_MobileCurve)`
     position: absolute;
-    top: 20vw;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 95vw;
+    width: 100vw;
+    height: auto;
     display: none;
-    @media (max-width: 575px) {
+    @media (max-width: 1260px) {
         display: block;
     }
 `
 
-export const ShadowCircle = styled.div`
-    background: rgb(21, 21, 21);
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgb(21, 21, 21, 0.5);
+export const BlurredLight = styled.div`
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 9999px;
+    
+    background: radial-gradient(118.83% 115.73% at 57.11% 128.26%, #45E786 0%, rgba(69, 231, 134, 0) 92.71%);
+    filter: blur(20px);
+    transform: rotate(-80deg);
+    
+    @media (max-width: 1260px) {
+        width: 62.5vw;
+        height: 62.5vw;
+    
+        filter: blur(6.25vw);
+    }
+`
+
+export const AccessBlurredLight = styled(BlurredLight)`
     position: absolute;
-    top: 50%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    filter: blur(10px);
-    @media (max-width: 575px) {
-        width: 40%;
-        /* height: 80%; */
-        box-shadow: 0 0 8vw rgb(21, 21, 21);
-        filter: blur(2vw);
-        /* box-shadow: 0 0 8vw red; */
-        /* z-index: 1; */
-        /* box-shadow: 0 0 5vw red; */
-    }
-    /* left: -1px; */
-    /* z-index: -1; */
-`
-
-export const DesktopWrapper = styled.div`
-    display: block;
-    @media (max-width: 575px) {
-        display: none;
-    }
-`
-
-export const MobileWrapper = styled.div`
+    
+    top: 12.5vw;
+    right: 12.5vw;
+    
     display: none;
-    @media (max-width: 575px) {
+    
+    @media (max-width: 1260px) {
         display: block;
-        width: 100%;
     }
 `
-

@@ -17,6 +17,7 @@ import {
   AccessButtonStepTwo,
   AccessFormField,
   AccessInputHelpText,
+  AccessBlurredLight,
 } from "../../components/access-page/style";
 import Layout from "../../components/Layout";
 
@@ -232,6 +233,7 @@ const BuyPage = () => {
                 </AccessPriceYear>
               </AccessPriceWrapper>
             </AccessFooter>
+            <AccessBlurredLight />
           </AccessWrapper>
         </Container>
       </Layout>

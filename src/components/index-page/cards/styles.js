@@ -8,9 +8,10 @@ export const Wrapper = styled.div`
   width: 100%;
   justify-content: center;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1260px) {
     grid-template-columns: repeat(3, 266px)
   }
+  
   @media (max-width: 1050px) {
     grid-template-columns: repeat(2, 266px)
   }
@@ -18,7 +19,8 @@ export const Wrapper = styled.div`
   @media (max-width: 575px) {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 8vw;
-    padding: 0 2vw;
+    padding: 0 3vw;
+    margin: 7.5vw 0;
   }
 `;
 
@@ -31,8 +33,7 @@ export const SubcategoryTitle = styled.div`
 
   @media (max-width: 575px) {
     padding: 0 5vw;
-    margin-bottom: 8vw;
-    font-size: 4.3vw;
+    font-size: 5.3vw;
   }
 `
 
@@ -43,13 +44,6 @@ export const SubcategoryItems = styled.div`
   /* flex-direction: column; */
   /* align-items: center; */
   /* justify-content: center; */
-
-  @media (max-width: 575px) {
-    padding-top: 10vw;
-  }
-  /* :first-child {
-    padding-top: 0;
-  } */
 `
 
 export const SubcategorySectionItem = styled.div`
@@ -75,7 +69,7 @@ export const SubcategorySectionItem = styled.div`
 
 
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1260px) {
     :after {
       width: 860px;
     }
@@ -87,20 +81,20 @@ export const SubcategorySectionItem = styled.div`
   }
   @media (max-width: 575px) {
     margin: 0 2vw;
+    height: 16.25vw;
     
     :after {
-      height: 3vw;
+      bottom: 2.9vw;
       width: 100%;
       border-bottom: 2px solid rgba(256, 256, 256, 0.1);
     }
   }
-
 `
 
 export const SubcategoryItemsId = styled.div`
   position: absolute;
-  top: -23px;
+  top: -34px;
   @media (max-width: 575px) {
-    top: -12vw;
+    top: -6vw;
   }
 `

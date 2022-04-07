@@ -4,9 +4,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 575px) {
+  @media (max-width: 1260px) {
     justify-content: start;
-    padding: 1vw 3vw;
+    padding: 0 6vw;
     overflow-x: scroll;
     scrollbar-width: none;
     ::-webkit-scrollbar { 
@@ -38,15 +38,7 @@ export const SubCategoryItem = styled.a`
   `}
   
   @media (max-width: 575px) {
-    margin: 0 0 2vw 0;
-    padding: 0 3vw;
-    :last-child {
-      margin-right: 0;
-    }
-    font-size: 4.4vw;
-  }
-  
-  @media (max-width: 575px) {
-    font-size: 4.3vw;
+    margin: 0 2vw 2vw 2vw;
+    font-size: 5vw;
   }
 `;

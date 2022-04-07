@@ -14,9 +14,9 @@ export const Wrapper = styled.div`
     justify-content: start;
     overflow-x: scroll;
     scrollbar-width: none;
-    padding: 0 3vw;
+    padding: 0 5vw;
     margin-bottom: 5vw;
-    ::-webkit-scrollbar { 
+    ::-webkit-scrollbar {
       display: none;
     }
   }
@@ -43,16 +43,13 @@ export const CategoryItem = styled(Link)`
     color: var(--color-grey);
   `}
 
-@media (max-width: 575px) {
-  font-size: 5vw;
-  padding: 0 3vw;
-  margin: 0;
-  :last-child {
-    margin-right: 3vw;
+  @media (max-width: 575px) {
+    font-size: 6.25vw;
+    padding: 0 3vw;
+    margin: 0;
+    :hover {
+      border-radius: 1vw;
+      background: none;
+    }
   }
-  :hover {
-    border-radius: 1vw;
-    background: none;
-  }
-}
 `;
