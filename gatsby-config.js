@@ -45,18 +45,6 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icons: [
-          {
-            "src": "favicons/32x32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-          },
-          {
-            "src": "32x32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-          },
-        ],
       },
     },
     "gatsby-plugin-smoothscroll",
