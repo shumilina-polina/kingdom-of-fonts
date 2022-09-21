@@ -119,8 +119,13 @@ footer {
 }
 
 @media (max-width: 1260px) {
-  body.no-scroll-mobile {
-    overflow: hidden;
+  .no-scroll-mobile {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 `
