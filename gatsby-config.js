@@ -92,8 +92,9 @@ module.exports = {
   ],
   developMiddleware: app => {
     const middleware = createProxyMiddleware({
-      target: "http://pavlushin.design.docker.localhost:9000",
-      followRedirects: false
+      target: "http://pavlushin.design.docker.localhost",
+      followRedirects: false,
+      changeOrigin: true
     })
     app.use("/login", middleware)
     app.use("/logout", middleware)
