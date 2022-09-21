@@ -51,17 +51,19 @@ const Card = ({ data }) => {
       <CardInfo>
         <InfoItem>{data.fontWeights}</InfoItem>
         {/* {console.log("fontCurrency", data.fontCurrency)} */}
-        <InfoItem>{data.fontCurrency?.length ? (
-          <>
+        {data.fontCurrency?.length ? (
+          <InfoItem>
             {data.fontCurrency?.map((el, idx) => {
               return (
                 <span key={idx}>{el}</span>
               )
             })}
-          </>
+          </InfoItem>
         ) : (
-          <span>Валют нет :(</span>
-        )}</InfoItem>
+          <InfoItem noCurrency>
+            <span>Валют нет :(</span>
+          </InfoItem>
+        )}
       </CardInfo>
       <StretchWrapper>
         {/* {console.log("fontName", data.fontName)} */}
