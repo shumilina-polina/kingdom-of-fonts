@@ -101,7 +101,7 @@ const BuyPage = () => {
     setIsPending(true)
 
     api.post("/create-order/", {
-      item: "fonts",
+      product: "fonts",
       email,
     })
       .then((response) => {

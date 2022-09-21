@@ -23,7 +23,7 @@ export const UserContextProvider = ({ children }) => {
     const subscriptions = {}
 
     for (const subscription of response.data.subscriptions) {
-      subscriptions[subscription.item] = {
+      subscriptions[subscription.product] = {
         dateStart: new Date(subscription.date_start),
         dateEnd: new Date(subscription.date_end)
       }

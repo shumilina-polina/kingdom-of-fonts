@@ -46,7 +46,7 @@ const RestoreAccessPage = ({ location }) => {
     setError(null)
 
     api.post("/email-token/", {
-      item: "fonts",
+      product: "fonts",
       email,
     })
       .then(() => {
