@@ -83,7 +83,10 @@ const BuyPage = () => {
   const emailErrorMessages = {
     invalid: "Не похоже на емейл, где-то ошибка, перепроверьте плиз",
   }
-  const unknownErrorMessage = "У нас проблемы на сервере, подождите или напишите нам"
+  const unknownErrorMessage = (<>
+    У нас проблемы на сервере, подождите или&nbsp;
+    <a href="https://t.me/katerinazuryan" target="_blank">напишите нам</a>
+  </>)
 
   const onEmailChange = (e) => {
     setOrder(null)
