@@ -1,17 +1,20 @@
-import {useContext, useEffect, useState} from 'react'
-import { navigate } from "gatsby-link";
-import { UserContext } from "../context/UserContext";
+import { useContext, useEffect } from "react"
+import { navigate } from "gatsby-link"
+import { UserContext } from "../context/UserContext"
 
 export const useAccess = () => {
-  const [loading, setLoading] = useState(false)
-
-  const {user} = useContext(UserContext)
+  const { user, isFetching } = useContext(UserContext)
+  const hasAccess = user && user.subscriptions.fonts
 
   useEffect(() => {
-    if (!user || !user.subscriptions.fonts) {
+    if (isFetching) return
+
+    if (!user) {
+      navigate("/fonts/login/")
+    } else if (!hasAccess) {
       navigate("/fonts/subscribe/")
     }
-  }, [user])
+  }, [isFetching, user, hasAccess])
 
-  return { loading }
+  return { loading: isFetching || !hasAccess }
 }

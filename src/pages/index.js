@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import { navigate } from "gatsby-link";
+
+import { UserContext } from "../context/UserContext";
 import Layout from "../components/Layout";
-import { navigate } from "gatsby";
 import SEO from "../seo";
+import Spinner from "../components/Spinner";
 
 // import smoothscroll from 'smoothscroll-polyfill';
 
@@ -108,9 +111,17 @@ const IndexPage = () => {
 
   // console.log("filters", filters)
 
+  const {user, isFetching} = useContext(UserContext)
+
   useEffect(() => {
-    navigate("/fonts/library/")
-  }, [])
+    if (isFetching) return
+
+    if (user) {
+      navigate("/fonts/library/")
+    } else {
+      navigate("https://fonts.pavlushin.design/")
+    }
+  }, [isFetching, user])
 
   return (
     <Layout>
@@ -126,6 +137,7 @@ const IndexPage = () => {
         ]}
         url="https://pavlushin.design/"
       />
+      <Spinner/>
       {/* <Logo /> */}
       {/* <Link to="/#footer">to footer</Link> */}
       {/* {query.get("category") ? (

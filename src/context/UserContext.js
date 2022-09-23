@@ -56,8 +56,6 @@ export const UserContextProvider = ({ children }) => {
     fetchUser().catch(setError)
   }, [fetchUser])
 
-  if (isFetching) return null
-
   const value = {
     user,
     error,
