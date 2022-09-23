@@ -99,5 +99,6 @@ module.exports = {
     app.use("/login", middleware)
     app.use("/logout", middleware)
     app.use("/api", middleware)
+    app.use("/media", middleware)
   },
 };

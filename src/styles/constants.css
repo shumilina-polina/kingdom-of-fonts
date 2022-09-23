@@ -1,0 +1,16 @@
+:root {
+  /* colors */
+
+  --graphite-100: #151515;
+  --graphite-90: #212121;
+  --graphite-80: #2E2E2E;
+  --graphite-70: #494949;
+  --graphite-60: #7F7F7F;
+  --graphite-50: #C2C2C2;
+  --graphite-0: white;
+
+  /* collapse */
+
+  --collapse-duration: 0.4s;
+  --collapse-easing: cubic-bezier(.22, .61, .36, 1);
+}
