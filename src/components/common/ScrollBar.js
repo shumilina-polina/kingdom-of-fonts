@@ -5,6 +5,10 @@ import useCSSVariable from "../../hooks/useCSSVariable"
 import useResizeObserver from "../../hooks/useResizeObserver"
 import useScrollObserver from "../../hooks/useScrollObserver"
 
+import "./ScrollBar.css"
+
+const bodyClassName = "scrollbar-dragging"
+
 const ScrollBar = ({ scrollingElementRef }) => {
   const [containerWidth, setContainerWidth] = useState(0)
   const [contentWidth, setContentWidth] = useState(0)
@@ -77,10 +81,14 @@ const ScrollBar = ({ scrollingElementRef }) => {
     const onDragStop = () => {
       document.removeEventListener("mousemove", onDrag)
       document.removeEventListener("mouseup", onDragStop)
+
+      document.body.classList.remove(bodyClassName)
     }
 
     document.addEventListener("mousemove", onDrag)
     document.addEventListener("mouseup", onDragStop)
+
+    document.body.classList.add(bodyClassName)
   }, [scrollingElementRef, contentToScrollBarWidthRatio])
 
   return (
@@ -120,10 +128,12 @@ const ScrollBarHandle = styled.div`
   transform: translateX(var(--handle-translate));
   
   &:hover {
+    background: var(--graphite-80);
     cursor: grab;
   }
   
-  &:active {
+  body.${bodyClassName} & {
+    background: var(--graphite-80);
     cursor: grabbing;
   }
 `
