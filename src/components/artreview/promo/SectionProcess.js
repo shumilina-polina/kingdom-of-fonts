@@ -14,6 +14,7 @@ import chat1 from "../../../assets/artreview/process-chat-1.png"
 import chat2 from "../../../assets/artreview/process-chat-2.png"
 import chat3 from "../../../assets/artreview/process-chat-3.png"
 import chat4 from "../../../assets/artreview/process-chat-4.png"
+import video from "../../../assets/artreview/process-video.mp4"
 import _Calendar from "../../../assets/artreview/svgs/process-calendar.svg"
 import _Star from "../../../assets/artreview/svgs/process-star.svg"
 import Icon1 from "../../../assets/artreview/svgs/process-icon-1.svg"
@@ -92,7 +93,11 @@ const SectionProcess = () => {
         <Block3>
           <Image>
             <Star />
-            <VideoWrapper />
+            <VideoWrapper>
+              <video autoPlay loop muted playsInline>
+                <source src={video} type="video/mp4" />
+              </video>
+            </VideoWrapper>
           </Image>
           <Content>
             <ContentHeader>Смотришь видеоразборы</ContentHeader>
@@ -445,11 +450,13 @@ const VideoWrapper = styled.div`
   
   transform: rotate(-4.86deg);
   
-  background: var(--graphite-80);
-  
   border-radius: 1em;
   
-  /* TODO: video */
+  overflow: hidden;
+  
+  video {
+    width: 100%;
+  }
 `
 
 export default SectionProcess
