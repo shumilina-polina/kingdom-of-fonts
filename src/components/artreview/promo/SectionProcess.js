@@ -336,7 +336,7 @@ const ChatBubble = styled.img`
   pointer-events: none;
   
   opacity: 1;
-  transition: 0.1s opacity;
+  transition: 0.1s opacity, 0.1s transform;
   
   ${props => props.isHidden && `
     opacity: 0;
@@ -348,6 +348,10 @@ const ChatBubble1 = styled(ChatBubble)`
   left: 9.4em;
   
   width: 13.6em;
+  
+  ${props => props.isHidden && `
+    transform: translateX(1em);
+  `}
 `
 
 const ChatBubble2 = styled(ChatBubble)`
@@ -355,6 +359,10 @@ const ChatBubble2 = styled(ChatBubble)`
   left: 0.4em;
   
   width: 13.375em;
+  
+  ${props => props.isHidden && `
+    transform: translateX(-1em);
+  `}
 `
 
 const ChatBubble3 = styled(ChatBubble)`
@@ -362,6 +370,10 @@ const ChatBubble3 = styled(ChatBubble)`
   left: 14.2em;
   
   width: 13.5em;
+  
+  ${props => props.isHidden && `
+    transform: translateX(1em);
+  `}
 `
 
 const ChatBubble4 = styled(ChatBubble)`
@@ -369,6 +381,10 @@ const ChatBubble4 = styled(ChatBubble)`
   left: 3.8em;
   
   width: 12em;
+  
+  ${props => props.isHidden && `
+    transform: translateX(-1em);
+  `}
 `
 
 const Calendar = ({ month, year, frame }) => {
