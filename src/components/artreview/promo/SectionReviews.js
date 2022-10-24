@@ -11,7 +11,7 @@ import useScrollShadows from "../../../hooks/useScrollShadows"
 
 import textStyles from "../../common/text"
 
-import { formatDate } from "../../../utils"
+import { formatDate, removeLineSeparators } from "../../../utils"
 
 import _Chomper from "../../../assets/artreview/svgs/chomper-left.svg"
 import TelegramIcon from "../../../assets/common/svgs/review-telegram.svg"
@@ -66,7 +66,7 @@ const Review = ({ review }) => {
         <ReviewText>
           {review.text_parts.map((part, i) => (
             <ReviewTextPart key={i} highlight={part.highlight}>
-              {part.text}
+              {removeLineSeparators(part.text)}
             </ReviewTextPart>
           ))}
           <ReviewMoreButton href={review.url} target="_blank" rel="noopener noreferrer" />

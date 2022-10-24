@@ -9,6 +9,8 @@ import { usePageData } from "../../../context/PageDataContext"
 
 import textStyles from "../../common/text"
 
+import { removeLineSeparators } from "../../../utils"
+
 const SectionFAQ = () => {
   const pageData = usePageData()
   const entries = pageData.data ? pageData.data.faq_entries : []
@@ -27,8 +29,12 @@ const SectionFAQ = () => {
               <Questions>
                 {entry.questions.map((question) => (
                   <Question key={question.id}>
-                    <QuestionText>{question.question_text}</QuestionText>
-                    <AnswerText big={!!question.is_big}>{question.answer_text}</AnswerText>
+                    <QuestionText>
+                      {removeLineSeparators(question.question_text)}
+                    </QuestionText>
+                    <AnswerText big={!!question.is_big}>
+                      {removeLineSeparators(question.answer_text)}
+                    </AnswerText>
                   </Question>
                 ))}
               </Questions>
