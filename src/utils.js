@@ -31,3 +31,17 @@ export const pluralize = (number, one, few, many) => {
   }
   return many
 }
+
+export const removeLineSeparators = (str) => str.replace(/\u2028/g, "")
+
+export const buildThresholdList = (numSteps = 100) => {
+  let thresholds = []
+
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps
+    thresholds.push(ratio)
+  }
+
+  thresholds.push(0)
+  return thresholds
+}

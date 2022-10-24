@@ -95,12 +95,18 @@ const ScrollBar = ({ scrollingElementRef }) => {
 
 const ScrollBarBody = styled.div`
   width: 100%;
-  height: 1.5em;
+  height: 1em;
   
-  padding: 0.19em;
+  padding: 0.125em;
   
   border: 1px solid var(--graphite-80);
   border-radius: 9999px;
+  
+  @media (min-width: 1090px) {
+    height: 1.5em;
+    
+    padding: 0.19em;
+  }
 `
 
 const ScrollBarHandle = styled.div`

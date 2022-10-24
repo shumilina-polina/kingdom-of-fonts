@@ -18,7 +18,8 @@ import telegramIdle from "../../../assets/artreview/social/telegram-idle.png"
 import telegramHover from "../../../assets/artreview/social/telegram-hover.png"
 import telegramClick from "../../../assets/artreview/social/telegram-click.png"
 import Frame from "../../../assets/artreview/svgs/photo-frame.svg"
-import Squiggle from "../../../assets/artreview/svgs/squiggle-left.svg"
+import FrameMobile from "../../../assets/artreview/svgs/photo-frame-mobile.svg"
+import _Squiggle from "../../../assets/artreview/svgs/squiggle-left.svg"
 import Eye from "../../../assets/common/svgs/eye.svg"
 import Document from "../../../assets/common/svgs/document.svg"
 import Group from "../../../assets/common/svgs/group.svg"
@@ -27,15 +28,22 @@ const SectionAbout = () => {
   return (
     <Section>
       <Body>
+        <Photo>
+          <PhotoFrame />
+          <PhotoFrameMobile />
+          <PhotoImageWrapper>
+            <PhotoImage src={photo} />
+          </PhotoImageWrapper>
+        </Photo>
         <Content>
           <Text>
             <TextHighlight>
-              Привет! Меня зовут Андрей Павлушин,<br />
-              я арт-директор КБ Павлушина и школы Гранич.{" "}
+              Привет! Меня зовут Андрей Павлушин,
+              я&nbsp;арт-директор КБ&nbsp;Павлушина и школы Гранич.{" "}
             </TextHighlight>
-            На артдирекшене разбираю макеты,<br />
-            делюсь опытом и помогаю делать проекты,<br />
-            которые не стыдно положить в портфолио,<br />
+            На&nbsp;артдирекшене разбираю макеты,
+            делюсь опытом и&nbsp;помогаю делать проекты,
+            которые не стыдно положить в&nbsp;портфолио,
             показать заказчику или на собесе.
           </Text>
           <Links>
@@ -104,12 +112,6 @@ const SectionAbout = () => {
             </Link>
           </Links>
         </Content>
-        <Photo>
-          <PhotoFrame />
-          <PhotoImageWrapper>
-            <PhotoImage src={photo} />
-          </PhotoImageWrapper>
-        </Photo>
         <SquiggleLeft />
         <SquiggleRight />
       </Body>
@@ -120,17 +122,33 @@ const SectionAbout = () => {
 const Body = styled.div`
   position: relative;
   
-  height: 25em;
-`
-
-const Content = styled.div`
-  padding: 2.75em 33em 2.2em 9.9em;
-  
-  height: 100%;
+  margin: 2.5em 1.25em;
   
   display: flex;
   flex-direction: column;
+  gap: 2em;
+
+  @media (min-width: 1090px) {
+    height: 25em;
+    margin: 0;
+  }
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
   justify-content: space-between;
+  
+  width: 93%;
+  
+  padding-top: 13.5em;
+
+  @media (min-width: 1090px) {
+    width: 100%;
+    height: 100%;
+    padding: 2.75em 33em 2.2em 9.9em;
+  }
 `
 
 const Text = styled(TextBase)`
@@ -141,16 +159,26 @@ const Text = styled(TextBase)`
 
 const Links = styled.div`
   display: flex;
-  gap: 2em;
+  gap: 1.75em;
+
+  @media (min-width: 1090px) {
+    gap: 2em;
+  }
 `
 
 const Link = styled(HoverArea)`
   display: flex;
-  gap: 0.75em;
+  flex-direction: column;
+  gap: 0.5em;
   align-items: flex-start;
 
   cursor: pointer;
   text-decoration: none;
+
+  @media (min-width: 1090px) {
+    flex-direction: row;
+    gap: 0.75em;
+  }
 `
 
 const LinkIcon = styled.div`
@@ -161,24 +189,36 @@ const LinkIcon = styled.div`
 const LinkContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.4375em;
+  gap: 0.3125em;
+  
+  @media (min-width: 1090px) {
+    gap: 0.4375em;
+  }
 `
 
 const LinkText = styled.div`
   color: var(--graphite-60);
 
-  font-weight: 600;
-  font-size: 1.125em;
-  line-height: 1em;
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 1.166em;
   letter-spacing: 0.02em;
   text-decoration: underline;
   
   ${Link}:hover & {
     text-decoration: none;
   }
+
+  @media (min-width: 1090px) {
+    font-weight: 600;
+    font-size: 1.125em;
+    line-height: 1em;
+  }
 `
 
 const LinkStat = styled.div`
+  ${textStyles.item.M}
+  
   color: var(--graphite-70);
   
   display: flex;
@@ -189,10 +229,15 @@ const LinkStat = styled.div`
 const LinkStatIcon = styled.div`
   width: 1em;
   height: 1em;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const LinkStatText = styled.div`
-  ${textStyles.item.M}
+
 `
 
 const LinkImage = styled.img`
@@ -200,11 +245,19 @@ const LinkImage = styled.img`
 `
 
 const Photo = styled.div`
-  width: 23.8em;
+  width: 18em;
   
   position: absolute;
-  top: 1em;
-  right: 10em;
+  top: 0;
+  left: 0;
+
+  @media (min-width: 1090px) {
+    width: 23.8em;
+    
+    top: 1em;
+    left: unset;
+    right: 10em;
+  }
 `
 
 const PhotoFrame = styled(Frame)`
@@ -213,43 +266,83 @@ const PhotoFrame = styled(Frame)`
   
   position: relative;
   z-index: 2;
+  
+  display: none;
+
+  @media (min-width: 1090px) {
+    display: block;
+  }
+`
+
+const PhotoFrameMobile = styled(FrameMobile)`
+  width: 100%;
+  height: 100%;
+  
+  position: relative;
+  z-index: 2;
+  
+  display: block;
+
+  @media (min-width: 1090px) {
+    display: none;
+  }
 `
 
 const PhotoImageWrapper = styled.div`
   position: absolute;
-  top: 12.5%;
-  right: 11.3%;
   z-index: 1;
   
-  width: 54%;
-  height: 75%;
+  top: 12.5%;
+  right: 30%;
+  
+  width: 60%;
+  height: 74%;
   
   overflow: hidden;
+
+  @media (min-width: 1090px) {
+    top: 12.5%;
+    right: 11.3%;
+    
+    width: 54%;
+    height: 75%;
+  }
 `
 
 const PhotoImage = styled.img`
   position: absolute;
-  top: -17%;
-  right: -37%;
+  top: -13%;
+  right: -2%;
   
-  width: 176%;
+  width: 105%;
+
+  @media (min-width: 1090px) {
+    top: -17%;
+    right: -37%;
+    
+    width: 176%;
+  }
+`
+
+const Squiggle = styled(_Squiggle)`
+  position: absolute;
+  top: 0;
+  
+  height: 100%;
+  
+  visibility: hidden;
+  
+  @media (min-width: 1090px) {
+    visibility: visible;
+  }
 `
 
 const SquiggleLeft = styled(Squiggle)`
-  position: absolute;
-  top: 0;
   left: 0;
-  
-  height: 100%;
 `
 
 const SquiggleRight = styled(Squiggle)`
-  position: absolute;
-  top: 0;
   right: 0;
-  
-  height: 100%;
-  
   transform: scaleX(-1);
 `
 

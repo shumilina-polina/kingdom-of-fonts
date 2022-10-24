@@ -3,11 +3,6 @@ import styled from "styled-components"
 
 import {
   Footer,
-  LinksFooterColumn,
-  AnnounceFooterColumn,
-  CreditsFooterColumn,
-  ErrataFooterColumn,
-  CopyrightFooterColumn,
   SocialLinks,
   Navigation,
   Announce,
@@ -31,71 +26,61 @@ import _AnnounceStickerIdle from "../../assets/artreview/svgs/announce-idle.svg"
 const ArtdirectionFooter = () => {
   return (
     <Footer>
-      <LinksFooterColumn>
-        <SocialLinks icons={{
-          telegram: (
-            <SingleFrameAtlas
-              idle={<SocialLinkImage src={telegramIdle} />}
-              click={<SocialLinkImage src={telegramClick} />}
-            />
-          ),
-          behance: (
-            <SingleFrameAtlas
-              idle={<SocialLinkImage src={behanceIdle} />}
-              click={<SocialLinkImage src={behanceClick} />}
-            />
-          ),
-          instagram: (
-            <SingleFrameAtlas
-              idle={<SocialLinkImage src={instagramIdle} />}
-              click={<SocialLinkImage src={instagramClick} />}
-            />
-          ),
-          pinterest: (
-            <SingleFrameAtlas
-              idle={<SocialLinkImage src={pinterestIdle} />}
-              click={<SocialLinkImage src={pinterestClick} />}
-            />
-          ),
-        }} />
-        <Navigation />
-      </LinksFooterColumn>
-      <AnnounceFooterColumn>
-        <Announce image={<AnnounceStickerIdle />}>
-          Результаты<br />работ учеников<br />смотри в&nbsp;блоге
-        </Announce>
-      </AnnounceFooterColumn>
-      <CreditsFooterColumn>
-        <Credits
-          authors={[
-            {
-              name: "Андрей Павлушин",
-              role: "Автор и дизайнер",
-              url: "https://t.me/andrepavlushin",
-            },
-            {
-              name: "Павел Лемба",
-              role: "Дизайнер",
-              url: "https://t.me/tupto",
-            },
-            {
-              name: "Михаил Сидоров",
-              role: "Программист",
-              url: "https://t.me/Pevzi",
-            },
-          ]}
-        />
-        <DesignedAt />
-      </CreditsFooterColumn>
-      <ErrataFooterColumn>
-        <Errata
-          url="https://t.me/andrepavlushin"
-          email="fonts@pavlushin.design"
-        />
-      </ErrataFooterColumn>
-      <CopyrightFooterColumn>
-        <Copyright />
-      </CopyrightFooterColumn>
+      <SocialLinks icons={{
+        telegram: (
+          <SingleFrameAtlas
+            idle={<SocialLinkImage src={telegramIdle} />}
+            click={<SocialLinkImage src={telegramClick} />}
+          />
+        ),
+        behance: (
+          <SingleFrameAtlas
+            idle={<SocialLinkImage src={behanceIdle} />}
+            click={<SocialLinkImage src={behanceClick} />}
+          />
+        ),
+        instagram: (
+          <SingleFrameAtlas
+            idle={<SocialLinkImage src={instagramIdle} />}
+            click={<SocialLinkImage src={instagramClick} />}
+          />
+        ),
+        pinterest: (
+          <SingleFrameAtlas
+            idle={<SocialLinkImage src={pinterestIdle} />}
+            click={<SocialLinkImage src={pinterestClick} />}
+          />
+        ),
+      }} />
+      <Navigation />
+      <Announce image={<AnnounceStickerIdle />}>
+        Результаты<br />работ учеников<br />смотри в&nbsp;блоге
+      </Announce>
+      <Credits
+        authors={[
+          {
+            name: "Андрей Павлушин",
+            role: "Автор и дизайнер",
+            url: "https://t.me/andrepavlushin",
+          },
+          {
+            name: "Павел Лемба",
+            role: "Дизайнер",
+            url: "https://t.me/tupto",
+          },
+          {
+            name: "Михаил Сидоров",
+            role: "Программист",
+            url: "https://t.me/Pevzi",
+          },
+        ]}
+      />
+      <DesignedAt />
+      <Errata
+        url="https://t.me/andrepavlushin"
+        email="fonts@pavlushin.design"
+      />
+      <Copyright />
     </Footer>
   )
 }

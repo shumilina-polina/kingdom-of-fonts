@@ -12,7 +12,7 @@ import image3 from "../../../assets/artreview/shapes-item-3.svg"
 
 const SectionShapes = () => {
   return (
-    <Section>
+    <Section clipContent>
       <Wrapper>
         <Shape1>
           <ShapeTag>то, что нужно</ShapeTag>
@@ -52,13 +52,26 @@ const SectionShapes = () => {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+  
+  margin: -2.3em 0;
+  
+  @media (min-width: 1090px) {
+    flex-direction: row;
+  
+    margin: 0;
+  }
 `
 
 const ShapeTag = styled.div`
   ${textStyles.tag.M}
   ${TextHighlightStyle}
   
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
+  
+  @media (min-width: 1090px) {
+    margin-bottom: 1em;
+  }
 `
 
 const ShapeHeader = styled.div`
@@ -81,40 +94,69 @@ const Shape = styled.div`
 
   text-align: center;
   
-  width: 25em;
-  height: 25em;
-  
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
   
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  
+  @media (min-width: 1090px) {
+    padding-bottom: 1.5em;
+  }
 `
 
 const Shape1 = styled(Shape)`
   background-image: url(${image1});
   
-  margin-right: 1em;
+  width: 17.8em;
+  height: 17.8em;
+  
+  transform: translateX(-0.2em) rotate(6.1deg);
+  
+  margin-bottom: -4em;
+  
+  @media (min-width: 1090px) {
+    width: 25em;
+    height: 25em;
+  
+    margin-right: 1em;
+    margin-bottom: 0;
+    
+    transform: none;
+  }
 `
 
 const Shape2 = styled(Shape)`
   background-image: url(${image2});
   
-  width: 26em;
-  height: 26em;
+  width: 19em;
+  height: 19em;
+  
+  transform: rotate(-15.32deg);
+  
+  margin-bottom: -4.5em;
+  
+  @media (min-width: 1090px) {
+    width: 26em;
+    height: 26em;
+    
+    margin-bottom: 0;
+  
+    transform: none;
+  }
 `
 
 const Shape3 = styled(Shape)`
   background-image: url(${image3});
   
-  width: 26em;
-  height: 26em;
+  width: 17.5em;
+  height: 17.5em;
   
   align-items: flex-start;
   text-align: left;
   
   ${ShapeTag} {
-    margin-left: 5.8em;
+    margin-left: 6.2em;
   }
   
   ${ShapeHeader} {
@@ -123,6 +165,19 @@ const Shape3 = styled(Shape)`
   
   ${ShapeText} {
     margin-left: 2em;
+  }
+  
+  transform: rotate(6.83deg);
+  
+  @media (min-width: 1090px) {
+    width: 26em;
+    height: 26em;
+  
+    transform: none;
+  
+    ${ShapeTag} {
+      margin-left: 5.8em;
+    }
   }
 `
 

@@ -15,7 +15,7 @@ import chat2 from "../../../assets/artreview/process-chat-2.png"
 import chat3 from "../../../assets/artreview/process-chat-3.png"
 import chat4 from "../../../assets/artreview/process-chat-4.png"
 import _Calendar from "../../../assets/artreview/svgs/process-calendar.svg"
-import Star from "../../../assets/artreview/svgs/process-star.svg"
+import _Star from "../../../assets/artreview/svgs/process-star.svg"
 import Icon1 from "../../../assets/artreview/svgs/process-icon-1.svg"
 import Icon2 from "../../../assets/artreview/svgs/process-icon-2.svg"
 import Icon3 from "../../../assets/artreview/svgs/process-icon-3.svg"
@@ -39,12 +39,12 @@ const SectionProcess = () => {
             />
           </Image>
           <Content>
-            <ContentHeader>Записываешься на Артдирекшен</ContentHeader>
+            <ContentHeader>Записываешься на&nbsp;Артдирекшен</ContentHeader>
             <ContentText>
               <TextHighlight>
                 Я добавляю тебя в закрытый телеграм-чат{" "}
               </TextHighlight>
-              Артдирекшена, вся движуха, наше общение и&nbsp;видеоразборы проходят там.
+              Артдирекшена, вся&nbsp;движуха, наше общение и&nbsp;видеоразборы проходят там.
             </ContentText>
             <ContentFooter>
               <ContentFooterImage><Icon1 /></ContentFooterImage>
@@ -71,13 +71,13 @@ const SectionProcess = () => {
             />
           </Image>
           <Content>
-            <ContentHeader>Отправляешь работу на разборы</ContentHeader>
+            <ContentHeader>Отправляешь работу&nbsp;на&nbsp;разборы</ContentHeader>
             <ContentText>
               <TextHighlight>
-                Два раза в неделю, во вторник и пятницу,{" "}
+                Два раза в неделю, во вторник и&nbsp;пятницу,{" "}
               </TextHighlight>
               смотрю все работы, которые скинули в чат,
-              записываю и публикую общий видеоразбор.
+              записываю и публикую общий&nbsp;видеоразбор.
             </ContentText>
             <ContentFooter>
               <ContentFooterImage><Icon2 /></ContentFooterImage>
@@ -105,8 +105,8 @@ const SectionProcess = () => {
             <ContentFooter>
               <ContentFooterImage><Icon3 /></ContentFooterImage>
               <ContentFooterText>
-                Формат разбора — видеоролик<br />
-                на Ютубе от 45 до 60 минут, с таймкодами,<br />
+                Формат разбора — ролик на Ютубе<br />
+                от 45 до 60 минут, с таймкодами,<br />
                 по закрытой ссылке только для чата.
               </ContentFooterText>
             </ContentFooter>
@@ -118,36 +118,61 @@ const SectionProcess = () => {
 }
 
 const Blocks = styled.div`
-
+  margin-bottom: 2.75em;
+  
+  @media (min-width: 1090px) {
+    margin-bottom: 0;
+  }
 `
 
 const ContentHeader = styled.div`
   ${textStyles.header.L}
+  
+  width: 80%;
+  
+  @media (min-width: 1090px) {
+    width: 100%;
+  }
 `
 
 const ContentText = styled(TextBase)`
   ${textStyles.text.L}
   
   color: var(--graphite-50);
-  margin: 1em 0 1.2em 0;
-  width: 85%;
+  margin: 1.25em 0;
+  
+  @media (min-width: 1090px) {
+    width: 85%;
+    margin: 1em 0 1.2em 0;
+  }
 `
 
 const ContentFooter = styled.div`
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.75em;
 
-  height: 4.5em;
+  height: 3em;
+  
+  @media (min-width: 1090px) {
+    gap: 1em;
+
+    width: 85%;
+    height: 4.5em;
+  }
 `
 
 const ContentFooterImage = styled.div`
-  width: 4.5em;
+  width: 3em;
   height: 100%;
   
   svg {
     width: 100%;
     height: 100%;
+  }
+  
+  @media (min-width: 1090px) {
+    width: 4.5em;
   }
 `
 
@@ -162,24 +187,67 @@ const Image = styled.div`
   align-items: flex-end;
   
   position: relative;
+  
+  pointer-events: none;
+  
+  @media (min-width: 1090px) {
+    pointer-events: unset;
+  }
 `
 
 const Block = styled.div`
+  background: var(--graphite-100);
+  
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 2em;
+  
+  border: 1px solid var(--graphite-80);
+  border-radius: 2em;
+  
+  position: relative;
+  overflow: hidden;
+  
+  padding: 2.5em 1.2em;
+  
+  &:not(:last-child) {
+    margin-bottom: -1.5em;
+  }
+  
+  @media (min-width: 1090px) {
+    flex-direction: row;
+    gap: 0;
+    
+    border: none;
+    padding: 0;
+    margin-bottom: 0 !important;
+  }
 `
 
 const Block1 = styled(Block)`
   ${Image} {
     width: 29.1em;
     
-    margin-left: 2em;
-    margin-bottom: 0.5em;
+    font-size: 69%;
+    transform: translateX(3.1em);
+    margin-bottom: -3.5em;
+    
+    @media (min-width: 1090px) {
+      font-size: unset;
+      transform: none;
+      margin-left: 2em;
+      margin-bottom: 0.5em;
+    }
   }
   
   ${ContentFooterImage} {
-    width: 5.125em;
+    width: 3.5em;
+    
+    @media (min-width: 1090px) {
+      width: 5.125em;
+    }
   }
 `
 
@@ -187,26 +255,47 @@ const Block2 = styled(Block)`
   ${Image} {
     width: 28.5em;
     
+    font-size: 65%;
+    transform: translateX(1em);
     margin-left: 2em;
+    margin-bottom: -5.2em;
+    
+    @media (min-width: 1090px) {
+      font-size: unset;
+      transform: none;
+      margin-bottom: 0;
+    }
   }
 `
 
 const Block3 = styled(Block)`
   ${Image} {
     width: 34.375em;
+    
+    font-size: 56%;
+    transform: translate(2.4em, -1em);
+    margin-bottom: -5.5em;
+    
+    @media (min-width: 1090px) {
+      font-size: unset;
+      transform: none;
+      margin-bottom: 0;
+    }
   }
 `
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  
-  width: 50%;
-  
-  padding: 7em 0;
-  
-  ${Block}:not(:last-child) & {
-    border-bottom: 0.1em solid var(--graphite-80);
+    
+  @media (min-width: 1090px) {
+    width: 50%;
+    
+    padding: 7em 0;
+    
+    ${Block}:not(:last-child) & {
+      border-bottom: 0.1em solid var(--graphite-80);
+    }
   }
 `
 
@@ -311,8 +400,8 @@ const CalendarImage = styled(_Calendar)`
 
 const CalendarMonth = styled.div`
   position: absolute;
-  top: 2.6em;
-  left: 5.3em;
+  top: 2.8em;
+  left: 5.5em;
   
   font-weight: 600;
   font-size: 1.5em;
@@ -333,6 +422,17 @@ const CalendarYear = styled.div`
   letter-spacing: -0.02em;
   
   pointer-events: none;
+`
+
+const Star = styled(_Star)`
+  width: 100%;
+  height: 100%;
+  
+  transform: scale(1.13);
+    
+  @media (min-width: 1090px) {
+    transform: none;
+  }
 `
 
 const VideoWrapper = styled.div`

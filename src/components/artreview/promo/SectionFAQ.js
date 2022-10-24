@@ -41,20 +41,32 @@ const SectionFAQ = () => {
 }
 
 const FAQWrapper = styled.div`
-  margin-top: 2em;
+  margin: 0 0 2.75em 0;
+  
+  @media (min-width: 1090px) {
+    margin: 2em 0 0 0;
+  }
 `
 
 const Questions = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2em 1em;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  
+  @media (min-width: 1090px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em 1em;
+  }
 `
 
 const Question = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.75em;
+  
+  @media (min-width: 1090px) {
+    gap: 0.75em;
+  }
 `
 
 const QuestionText = styled.div`
@@ -63,11 +75,19 @@ const QuestionText = styled.div`
 `
 
 const AnswerText = styled.div`
+  ${props => !props.big && textStyles.text.S}
+
   ${props => props.big && `
-    font-weight: 200;
-    font-size: 2em;
-    line-height: 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1.083em;
     letter-spacing: -0.02em;
+  
+    @media (min-width: 1090px) {
+      font-weight: 200;
+      font-size: 2em;
+      line-height: 1em;
+    }
   `}
 `
 

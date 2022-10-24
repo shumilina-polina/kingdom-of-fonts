@@ -17,10 +17,10 @@ const Button = ({ children, type = "primary", icon, iconLeft, iconRight, ...othe
 const Body = styled.a`
   ${textStyles.item.L}
   
-  border-radius: 0.6em;
+  border-radius: 1em;
   
   padding: 0 1.5em;
-  height: 3em;
+  height: 3.375em;
   
   display: flex;
   justify-content: center;
@@ -31,6 +31,11 @@ const Body = styled.a`
   text-decoration: none;
 
   border: 0.084em solid transparent;
+
+  @media (min-width: 1090px) {
+    border-radius: 0.6em;
+    height: 3em;
+  }
   
   ${props => {
     switch (props.type) {

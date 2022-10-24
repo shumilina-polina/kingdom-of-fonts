@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Tag from "../../common/Tag"
+import Cards from "../../common/Cards"
 import Stories from "../../common/Stories"
 import { TextBase, TextHighlight } from "../../common/TextHighlight"
 import Section from "./Section"
@@ -49,7 +50,7 @@ const stories = [
               или многостраничные{" "}
             </TextHighlight>
             печатные форматы,
-            учитывая их особенности
+            учитывая&nbsp;их особенности
             и&nbsp;ограничения
           </Text>
         </Content>
@@ -147,20 +148,59 @@ const stories = [
       </Frame6>
     )
   },
-]
+].map((story, index) => ({
+  id: index,
+  ...story,
+}))
 
 const SectionStories = () => {
   return (
     <Section>
-      <Stories
-        stories={stories}
-        renderTags={(tags) => (
-          <Tags>{tags}</Tags>
-        )}
-      />
+      <StoriesWrapperMobile>
+        <Cards
+          cards={stories}
+          renderDots={(dots) => (
+            <Dots>{dots}</Dots>
+          )}
+        />
+      </StoriesWrapperMobile>
+      <StoriesWrapperDesktop>
+        <Stories
+          stories={stories}
+          renderTags={(tags) => (
+            <Tags>{tags}</Tags>
+          )}
+        />
+      </StoriesWrapperDesktop>
     </Section>
   )
 }
+
+const StoriesWrapperMobile = styled.div`
+  margin: 2em 0 2.75em;
+  display: block;
+  
+  @media (min-width: 1090px) {
+    display: none;
+  }
+`
+
+const StoriesWrapperDesktop = styled.div`
+  display: none;
+  
+  @media (min-width: 1090px) {
+    display: block;
+  }
+`
+
+const Dots = styled.div`
+  position: absolute;
+  top: 2em;
+  left: 1.3em;
+  z-index: 2;
+
+  color: var(--graphite-0);
+`
 
 const Tags = styled.div`
   position: absolute;
@@ -174,13 +214,17 @@ const Tags = styled.div`
 `
 
 const Content = styled.div`
-
+  width: 100%;
 `
 
 const Header = styled.h3`
   ${textStyles.header.XL}
 
-  margin: 0 0 1em 0;
+  margin: 0 0 0.9em 0;
+  
+  @media (min-width: 1090px) {
+    margin: 0 0 1em 0;
+  }
 `
 
 const Text = styled(TextBase)`
@@ -191,82 +235,132 @@ const Text = styled(TextBase)`
 
 const Frame = styled.div`
   border: 0.1em solid var(--graphite-80);
-  border-radius: 4.375em;
+  border-radius: 2em;
   
-  padding: 10em 0 0 5em;
-  
-  height: 35em;
+  width: 100%;
+  height: 30em;
+
+  padding: 3.5em 1.25em;
   
   background-repeat: no-repeat;
+  
+  @media (min-width: 1090px) {
+    border-radius: 4.375em;
+  
+    height: 35em;
+  
+    padding: 10em 0 0 5em;
+  }
 `
 
 const Frame0 = styled(Frame)`
   background-image: url(${image0});
-  background-position: top 2.1em right -1.45em;
-  background-size: 45em auto;
   
-  ${Content} {
-    width: 30em;
+  background-position: top 15em right -1em;
+  background-size: 21.5em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 2.1em right -1.45em;
+    background-size: 45em auto;
+    
+    ${Content} {
+      width: 30em;
+    }
   }
 `
 
 const Frame1 = styled(Frame)`
   background-image: url(${image1});
-  background-position: top 1.1em right -1.6em;
-  background-size: 41em auto;
   
-  ${Content} {
-    width: 28em;
+  background-position: top 15em right -1em;
+  background-size: 22.5em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 1.1em right -1.6em;
+    background-size: 41em auto;
+    
+    ${Content} {
+      width: 28em;
+    }
   }
 `
 
 const Frame2 = styled(Frame)`
   background-image: url(${image2});
-  background-position: top 4.5em right -2.1em;
-  background-size: 43.8em auto;
   
-  ${Content} {
-    width: 28em;
+  background-position: top 13em right -5em;
+  background-size: 27em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 4.5em right -2.1em;
+    background-size: 43.8em auto;
+    
+    ${Content} {
+      width: 28em;
+    }
   }
 `
 
 const Frame3 = styled(Frame)`
   background-image: url(${image3});
-  background-position: top 8em right 2em;
-  background-size: 34.5em auto;
   
-  ${Content} {
-    width: 31em;
+  background-position: top 15.8em right -2.5em;
+  background-size: 19.5em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 8em right 2em;
+    background-size: 34.5em auto;
+    
+    ${Content} {
+      width: 31em;
+    }
   }
 `
 
 const Frame4 = styled(Frame)`
   background-image: url(${image4});
-  background-position: top 5.9em right 0.5em;
-  background-size: 36em auto;
   
-  ${Content} {
-    width: 31em;
-  }
+  background-position: top 14em right -1em;
+  background-size: 21.5em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 5.9em right 0.5em;
+    background-size: 36em auto;
+    
+    ${Content} {
+      width: 31em;
+    }
 `
 
 const Frame5 = styled(Frame)`
   background-image: url(${image5});
-  background-position: top 2.4em right -2.6em;
-  background-size: 45em auto;
   
-  ${Content} {
-    width: 31em;
+  background-position: top 16em right -5em;
+  background-size: 25em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 2.4em right -2.6em;
+    background-size: 45em auto;
+    
+    ${Content} {
+      width: 31em;
+    }
   }
 `
 
 const Frame6 = styled(Frame)`
   background-image: url(${image6});
-  background-position: top 6.7em right 2em;
-  background-size: 33em auto;
   
-  ${Content} {
-    width: 32.5em;
+  background-position: top 16em right -4em;
+  background-size: 20.5em auto;
+  
+  @media (min-width: 1090px) {
+    background-position: top 6.7em right 2em;
+    background-size: 33em auto;
+    
+    ${Content} {
+      width: 32.5em;
+    }
   }
 `
 

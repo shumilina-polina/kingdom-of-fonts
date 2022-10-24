@@ -39,13 +39,19 @@ export const AccordionEntry = ({ children, title, isOpenInitial = false }) => {
 export const AccordionEntryBody = styled.div`
   background-color: var(--graphite-100);
 
-  border: 0.1em solid var(--graphite-80);
-  border-radius: 4.375em;
+  border: 0.08em solid var(--graphite-80);
+  border-radius: 2.25em;
   
   margin-bottom: -0.1em;
-  padding: 3.2em 5.4em;
+  padding: calc(1.625em - 0.08em);
   
   overflow: hidden;
+  
+  @media (min-width: 1090px) {
+    border-width: 0.1em;
+    border-radius: 4.375em;
+    padding: 3.2em 5.4em;
+  }
 `
 
 export const AccordionEntryHeader = styled.div`
@@ -81,19 +87,26 @@ export const AccordionEntryHeaderText = styled.div`
 export const AccordionEntryHeaderLine = styled.div`
   border-bottom: 0.1em solid var(--graphite-80);
   flex: 1;
-
-  margin: 0 2.5em 0 4.5em;
+  
+  visibility: hidden;
+  
+  @media (min-width: 1090px) {
+    visibility: visible;
+    margin: 0 2.5em 0 4.5em;
+  }
 `
 
 export const AccordionEntryHeaderArrowWrapper = styled.div`
-  color: var(--graphite-70);
+  color: var(--graphite-60);
   
   display: flex;
   justify-content: center;
   align-items: center;
   
-  width: 1.6em;
-  height: 2.25em;
+  width: 0.9em;
+  height: 1em;
+  
+  margin-right: 0.5em;
   
   svg {
     width: 100%;
@@ -106,15 +119,26 @@ export const AccordionEntryHeaderArrowWrapper = styled.div`
     transform: rotate(-180deg);
   `}
   
-  ${AccordionEntryHeader}:hover & {
-    color: var(--graphite-80);
+  @media (min-width: 1090px) {
+    width: 1.6em;
+    height: 2.25em;
+    
+    margin: 0;
+    
+    color: var(--graphite-70);
+  
+    ${AccordionEntryHeader}:hover & {
+      color: var(--graphite-80);
+    }
   }
 `
 
 export const AccordionEntryContent = styled.div`
-  ${textStyles.text.S}
-  
   color: var(--graphite-50);
 
-  padding-top: 2em;
+  padding-top: 1em;
+  
+  @media (min-width: 1090px) {
+    padding-top: 2em;
+  }
 `

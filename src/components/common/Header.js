@@ -15,13 +15,17 @@ const Header = ({ logoURL = "/" }) => {
 }
 
 const HeaderBody = styled.div`
-  height: 6.25em;
-  
-  padding-bottom: 1em;
+  height: 3.25em;
   
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  
+  @media (min-width: 1090px) {
+    height: 5.25em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
 `
 
 const HeaderButton = styled.button`
@@ -32,8 +36,8 @@ const HeaderButton = styled.button`
   
   color: var(--graphite-70);
 
-  width: 2.25em;
-  height: 2.25em;
+  width: 1.5em;
+  height: 1.5em;
   
   svg {
     width: 100%;
@@ -46,6 +50,11 @@ const HeaderButton = styled.button`
   
   &:active {
     color: var(--graphite-90);
+  }
+  
+  @media (min-width: 1090px) {
+    width: 2.25em;
+    height: 2.25em;
   }
 `
 

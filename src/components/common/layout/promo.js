@@ -36,6 +36,8 @@ const Root = styled.div`
 `
 
 const Container = styled.div`
+  flex: 1;
+
   @media (min-width: 750px) {
     align-self: center;
     width: 45em;

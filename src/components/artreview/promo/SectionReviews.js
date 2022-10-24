@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import ScrollContainer from "react-indiana-drag-scroll"
 import styled from "styled-components"
 
-import { TextBase, TextHighlight } from "../../common/TextHighlight"
+import { TextBase } from "../../common/TextHighlight"
 import ScrollBar from "../../common/ScrollBar"
 import Section from "./Section"
 import SectionHeader from "./SectionHeader"
@@ -31,20 +31,22 @@ const SectionReviews = () => {
     <Section>
       <SectionHeader>Отзывы</SectionHeader>
       <ReviewsWrapper>
-        <ScrollContainer innerRef={scrollingElementRef}>
-          <Reviews>
-            {reviews.map((review) => (
-              <Review
-                key={review.id}
-                review={review}
-              />
-            ))}
-          </Reviews>
-        </ScrollContainer>
-        <ChomperLeft hidden={!showLeftShadow} />
-        <ChomperRight hidden={!showRightShadow} />
+        <ScrollContainerWrapper>
+          <ScrollContainer innerRef={scrollingElementRef}>
+            <Reviews>
+              {reviews.map((review) => (
+                <Review
+                  key={review.id}
+                  review={review}
+                />
+              ))}
+            </Reviews>
+          </ScrollContainer>
+          <ChomperLeft hidden={!showLeftShadow} />
+          <ChomperRight hidden={!showRightShadow} />
+        </ScrollContainerWrapper>
+        <ScrollBar scrollingElementRef={scrollingElementRef}/>
       </ReviewsWrapper>
-      <ScrollBar scrollingElementRef={scrollingElementRef}/>
     </Section>
   )
 }
@@ -62,12 +64,11 @@ const Review = ({ review }) => {
           </ReviewTag>
         </ReviewHeader>
         <ReviewText>
-          {review.text_parts.map((part, i) => {
-            if (part.highlight) {
-              return <TextHighlight key={i}>{part.text}</TextHighlight>
-            }
-            return <span key={i}>{part.text}</span>
-          })}
+          {review.text_parts.map((part, i) => (
+            <ReviewTextPart key={i} highlight={part.highlight}>
+              {part.text}
+            </ReviewTextPart>
+          ))}
           <ReviewMoreButton href={review.url} target="_blank" rel="noopener noreferrer" />
         </ReviewText>
       </ReviewContent>
@@ -130,6 +131,14 @@ const ReviewMoreButton = (props) => {
 }
 
 const ReviewsWrapper = styled.div`
+  margin-bottom: 2.75em;
+  
+  @media (min-width: 1090px) {
+    margin-bottom: 0;
+  }
+`
+
+const ScrollContainerWrapper = styled.div`
   position: relative;
   
   margin: 0 -1em;
@@ -139,14 +148,18 @@ const Reviews = styled.div`
   display: inline-flex;
   gap: 1.5em;
   
-  margin: 3.25em 1em;
+  margin: 0 1em 2em;
+  
+  @media (min-width: 1090px) {
+    margin: 3.25em 1em;
+  }
 `
 
 const ReviewBody = styled.div`
   position: relative;
 
-  width: 18.375em;
-  height: 22.75em;
+  width: 14.6875em;
+  height: 18.375em;
   
   border-radius: 1.25em;
 
@@ -159,10 +172,15 @@ const ReviewBody = styled.div`
   flex-direction: column;
   justify-content: space-between;
   
-  transition: 0.2s transform;
-
-  &:hover {
-    transform: scale(104%);
+  @media (min-width: 1090px) {
+    width: 18.375em;
+    height: 22.75em;
+    
+    transition: 0.2s transform;
+  
+    &:hover {
+      transform: scale(104%);
+    }
   }
 `
 
@@ -171,7 +189,11 @@ const ReviewContent = styled.div`
   flex-direction: column;
   gap: 1em;
   
-  padding: 1.25em 1em 0;
+  padding: 1em;
+  
+  @media (min-width: 1090px) {
+    padding: 1.25em 1em 0;
+  }
 `
 
 const ReviewHeader = styled.div`
@@ -197,17 +219,28 @@ const ReviewText = styled(TextBase)`
   color: var(--graphite-50);
 `
 
+const ReviewTextPart = styled.span`
+  ${props => props.highlight && `
+    color: transparent;
+  `}
+  
+  &:last-of-type {
+    margin-right: 0.3em;
+  }
+`
+
 const ReviewMoreButtonWrapper = styled.div`
   position: relative;
-  display: inline;
+  display: inline-block;
   
-  margin-left: 0.3em;
+  width: 2.4em;
+  height: 1em;
 `
 
 const ReviewMoreButtonBody = styled.a`
   position: absolute;
   left: 0;
-  bottom: 0.05em;
+  bottom: -0.25em;
 
   width: 2.4em;
   height: 1em;
@@ -275,8 +308,8 @@ const ReviewAuthor = styled.div`
 `
 
 const ReviewAuthorPhoto = styled.div`
-  width: 3.5em;
-  height: 3.5em;
+  width: 3em;
+  height: 3em;
   
   border-radius: 9999px;
   
@@ -286,12 +319,21 @@ const ReviewAuthorPhoto = styled.div`
   ${props => props.image && `
     background-image: url(${props.image});
   `}
+  
+  @media (min-width: 1090px) {
+    width: 3.5em;
+    height: 3.5em;
+  }
 `
 
 const ReviewAuthorContent = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 0.2em;
+  
+  @media (min-width: 1090px) {
+    gap: 0.3em;
+  }
 `
 
 const ReviewAuthorName = styled.div`
@@ -320,14 +362,18 @@ const ReviewSocialLinks = styled.div`
   gap: 0.25em;
   
   margin-top: 0.25em;
-  margin-left: 4.5em;
+  margin-left: 4em;
+  
+  @media (min-width: 1090px) {
+    margin-left: 4.5em;
+  }
 `
 
 const ReviewSocialLink = styled.a`
   color: var(--graphite-60);
 
-  width: 1.625em;
-  height: 1.25em;
+  width: 1.375em;
+  height: 1.0625em;
   
   svg {
     width: 100%;
@@ -349,6 +395,11 @@ const ReviewSocialLink = styled.a`
     transform: none;
     transform-origin: 50%;
   }
+  
+  @media (min-width: 1090px) {
+    width: 1.625em;
+    height: 1.25em;
+  }
 `
 
 const Chomper = styled(_Chomper)`
@@ -356,6 +407,12 @@ const Chomper = styled(_Chomper)`
   top: 0;
   
   height: 100%;
+  
+  visibility: hidden;
+  
+  @media (min-width: 1090px) {
+    visibility: visible;
+  }
 `
 
 const ChomperLeft = styled(Chomper)`

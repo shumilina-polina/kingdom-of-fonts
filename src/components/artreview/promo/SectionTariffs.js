@@ -57,20 +57,22 @@ const SectionTariffs = ({ innerRef }) => {
           <Feature>Без вылетов</Feature>
         </Features>
       </Collapse>
-      <Button
-        type="outline"
-        iconRight={<Lightning />}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Записаться
-      </Button>
+      <CardFooter>
+        <Button
+          type="outline"
+          iconRight={<Lightning />}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Записаться
+        </Button>
+      </CardFooter>
     </Card1>
   )
 
   const renderCard2 = ({ isOpen, toggle }) => (
-    <Card2>
+    <Card2 ref={innerRef}>
       <CardHeader>
         <CardHeaderTag>Bидеоразборы</CardHeaderTag>
         <Tag size="S" iconLeft={<Lightning />} highlight>
@@ -101,15 +103,17 @@ const SectionTariffs = ({ innerRef }) => {
           <Feature>Без вылетов</Feature>
         </Features>
       </Collapse>
-      <Button
-        type="primary"
-        iconRight={<Lightning />}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Записаться
-      </Button>
+      <CardFooter>
+        <Button
+          type="primary"
+          iconRight={<Lightning />}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Записаться
+        </Button>
+      </CardFooter>
     </Card2>
   )
 
@@ -130,25 +134,26 @@ const SectionTariffs = ({ innerRef }) => {
         </PriceDescription>
       </Price>
       <Description>
-        {/* TODO: list, links */}
-        Личная консультация (1 час)
-        Артдирекшен (1 мес)
-        Шрифтотека (1 год)
+        <DescriptionLine>Личная консультация (1 час)</DescriptionLine>
+        <DescriptionLine>Артдирекшен (1 мес)</DescriptionLine>
+        <DescriptionLine>Шрифтотека (1 год)</DescriptionLine>
       </Description>
-      <Button
-        type="secondary"
-        iconRight={<Lightning />}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Записаться
-      </Button>
+      <CardFooter>
+        <Button
+          type="secondary"
+          iconRight={<Lightning />}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Записаться
+        </Button>
+      </CardFooter>
     </Card3>
   )
 
   return (
-    <Section ref={innerRef}>
+    <Section>
       <SectionHeader>Тарифы</SectionHeader>
       <TariffsWrapper>
         <Tariffs>
@@ -172,47 +177,64 @@ const Opener = ({ render }) => {
 }
 
 const TariffsWrapper = styled.div`
-  margin-top: 2em;
+  margin: 0 0 2.75em 0;
+
+  @media (min-width: 1090px) {
+    margin: 2em 0 0 0;
+  }
 `
 
 const Tariffs = styled.div`
   display: flex;
-  align-items: flex-start;
-  gap: 1.5em;
+  flex-direction: column;
+  gap: 1.25em;
+
+  @media (min-width: 1090px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5em;
+  }
 `
 
 const Card = styled.div`
   --collapse-easing: cubic-bezier(.22,.61,.36,1);
   --collapse-duration: 0.4s;
-  
+
   flex: 1;
-  
-  padding: 2.125em 1.8em 2.5em;
-  
-  border: 0.15em solid transparent;
-  border-radius: 2.25em;
-  
+
+  padding: 1.625em 1.5em 1.75em;
+
+  border: 1px solid transparent;
+  border-radius: 2em;
+
   color: var(--graphite-50);
-  
+
   transition: 0.2s transform;
-  
+
   transform-origin: 50% 12.75em;
 
-  &:hover {
-    transform: scale(103%);
-  }
+  @media (min-width: 1090px) {
+    padding: 2.125em 1.8em 2.5em;
 
-  // &:active {
-  //   transform: scale(100%);
-  // }
+    border-width: 0.15em;
+    border-radius: 2.25em;
+
+    &:hover {
+      transform: scale(103%);
+    }
+  }
 `
 
 const CardHeader = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5em;
-  
-  margin-bottom: 0.625em;
+
+  margin-bottom: 0.45em;
+
+  @media (min-width: 1090px) {
+    margin-bottom: 0.625em;
+  }
 `
 
 const CardHeaderTag = styled.div`
@@ -225,41 +247,45 @@ const CardHeaderArrowWrapper = styled.a`
   position: relative;
 
   color: var(--graphite-60);
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  width: 1.6em;
-  
+
+  width: 1.2em;
+
   margin-left: auto;
-  
+
   cursor: pointer;
-  
+
   svg {
     width: 100%;
     height: 100%;
   }
-  
+
   transition: var(--collapse-duration) transform;
-  
+
   ${props => props.isOpen && `
     transform: rotate(-180deg);
   `}
-  
+
   &::after {
     content: "";
-    
+
     position: absolute;
-    
+
     top: -120%;
     left: -70%;
     bottom: -120%;
     right: -70%;
   }
-  
+
   &:hover {
     color: var(--graphite-70);
+  }
+
+  @media (min-width: 1090px) {
+    width: 1.6em;
   }
 `
 
@@ -270,16 +296,19 @@ const CardTitle = styled.div`
 const Price = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.7em;
-  
-  margin: 0.5em 0 1em;
+  gap: 0.5em;
+
+  margin: 0.4em 0 0.7em;
+
+  @media (min-width: 1090px) {
+    gap: 0.7em;
+
+    margin: 0.5em 0 1em;
+  }
 `
 
 const PriceValue = styled.div`
-  font-weight: 400;
-  font-size: 3.5em;
-  line-height: 1em;
-  letter-spacing: -0.04em;
+  ${textStyles.factoid.M}
 `
 
 const PriceDescription = styled.div`
@@ -296,8 +325,10 @@ const PriceDescriptionLine2 = styled.div`
 
 const Description = styled.div`
   ${textStyles.text.M}
+`
 
-  margin-bottom: 1.6em;
+const DescriptionLine = styled.div`
+
 `
 
 const Features = styled.div`
@@ -305,70 +336,87 @@ const Features = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  padding-bottom: 2.25em;
+  padding-top: 0.75em;
+  
+  @media (min-width: 1090px) {
+    padding-top: 1.5em;
+  }
 `
 
 const Feature = styled.div`
   ${textStyles.item.M}
-  
+
   ${props => props.disabled && `
     color: var(--graphite-70);
   `}
-  
+
   ${props => props.highlight && TextHighlightStyle}
-  
+
   &::before {
     display: inline-block;
     width: 1em;
-    
+
     ${props => props.disabled
-      ? `
-        content: "— ";
-      `
-      : `
-        content: "✓ ";
-        transform: scale(1.2);
-      `
+      ? `content: "— ";`
+      : `content: "✓ ";`
     }
-    
+
     ${props => props.highlight && `
       color: var(--accent-flat-1);
     `}
+  }
+
+  line-height: 1.33em;
+
+  @media (min-width: 1090px) {
+    line-height: 1.222em;
+  }
+`
+
+const CardFooter = styled.div`
+  margin-top: 1.25em;
+
+  @media (min-width: 1090px) {
+    margin-top: 2em;
   }
 `
 
 const Card1 = styled(Card)`
   border-color: var(--graphite-60);
-  
+
   ${CardTitle}, ${PriceValue}, ${PriceDescriptionLine1} {
     color: var(--graphite-0);
   }
 `
 
 const Card2 = styled(Card)`
-  background: 
+  background:
     linear-gradient(var(--graphite-100), var(--graphite-100)) padding-box,
     var(--accent) border-box;
 
   ${CardHeader}, ${PriceValue} {
     color: var(--accent-flat-1);
   }
-  
+
   ${CardTitle} {
     color: var(--graphite-0);
   }
-  
+
   ${PriceDescriptionLine1} {
     ${TextHighlightStyle}
   }
 `
 
 const Card3 = styled(Card)`
-  background: 
-    url(${fire}) top 10em left -16em / 47em no-repeat border-box,
+  background:
+    url(${fire}) top 500% left 73% / 34.1em no-repeat border-box,
     var(--accent) border-box;
-    
+
   color: var(--graphite-90);
+
+  @media (min-width: 1090px) {
+    background-size: 47em, auto;
+  }
 `
 
 export default SectionTariffs
