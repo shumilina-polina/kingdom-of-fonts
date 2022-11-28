@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FontFormats,
   Format,
@@ -12,11 +12,9 @@ import {
   CardFooter,
   StretchWrapper
 } from "./styles";
-import { INLINES } from "@contentful/rich-text-types"
-import {renderRichText} from "gatsby-source-contentful/rich-text"
+import { pluralize } from "../../../../utils";
 
 const Card = ({ data }) => {
-
   const truncate = (link) => {
     // console.log("length", link.length)
     if (link.length > 30) {
@@ -25,35 +23,28 @@ const Card = ({ data }) => {
     return link
   }
 
-  const options = {
-    renderNode: {
-      [INLINES.HYPERLINK]: node => {
-        return (
-          <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
-            {truncate(node.content[0].value)}
-          </a>
-        )
-      },
-    },
-  }
-
-  // console.log("fontCSS", data.fontCSS)
-
+  // TODO: only add these once (move this somewhere else)
+  useEffect(() => {
+    // TODO: only if `preview_file` isn't null
+    const font = new FontFace(data.name, `url(${data.preview_file})`)
+    document.fonts.add(font)
+  }, [data.name, data.preview_file])
 
   return (
-    <Wrapper color={data.fontBackground}>
+    <Wrapper color={data.card_color} outline={!data.is_active}>
       <FontFormats>
-        {data.fontFormats?.map((format, idx) => {
+        {data.formats.map((format, idx) => {
           return <Format key={idx}>{format}</Format>;
         })}
       </FontFormats>
-      <FontImage fluid={data.fontImage?.fluid} />
+      <FontImage src={data.image} />
       <CardInfo>
-        <InfoItem>{data.fontWeights}</InfoItem>
-        {/* {console.log("fontCurrency", data.fontCurrency)} */}
-        {data.fontCurrency?.length ? (
+        <InfoItem>
+          {data.weights} {pluralize(data.weights, "начертание", "начертания", "начертаний")}
+        </InfoItem>
+        {data.currencies.length ? (
           <InfoItem>
-            {data.fontCurrency?.map((el, idx) => {
+            {data.currencies.map((el, idx) => {
               return (
                 <span key={idx}>{el}</span>
               )
@@ -66,27 +57,28 @@ const Card = ({ data }) => {
         )}
       </CardInfo>
       <StretchWrapper>
-        {/* {console.log("fontName", data.fontName)} */}
         <TestFontField
           // minRows={2}
-          fontName={data.fontName}
-          letterSpacing={data.fontLetterSpacing}
-          lineHeight={data.fontLineHeight}
+          fontName={data.name}
+          letterSpacing={data.preview_letter_spacing}
+          lineHeight={data.preview_line_height}
           // textTransform={data.textTransform}
-          fontSize={data.fontSize}
-          fontCSS={data.fontCSS?.fontCSS}
+          fontSize={data.preview_size}
+          fontUppercase={data.preview_uppercase}
+          fontCSS={data.preview_extra_css}
           placeholder="Здесь можно примерить свой текст, если нужно."
         />
         <CardFooter>
-          <DownloadButton target="_blank" href={data.fontLink}>
+          <DownloadButton target="_blank" href={data.download_url}>
             Скачать
           </DownloadButton>
           <FontAuthors>
-            {renderRichText(data.fontAuthors, options)}
-            {/* <i>{data.authorsTextBeforeUrl}</i>{" "}
-            <a href={data.authorUrl} target="_blank">
-              {truncate(data.authorTextUrl)}
-            </a> */}
+            <p>
+              Free by&nbsp;
+              <a href={data.author_url} target="_blank" rel="noopener noreferrer">
+                {truncate(data.author_name)}
+              </a>
+            </p>
           </FontAuthors>
         </CardFooter>
 

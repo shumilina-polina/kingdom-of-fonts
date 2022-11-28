@@ -36,12 +36,12 @@ const SubcategoriesFilter = ({ currentElementIndexInViewport, category }) => {
 
   return (
     <Wrapper>
-      {category?.subCategories?.map((subCat, idx) => {
+      {category.subcategories.map((subCat, idx) => {
         return (
           <SubCategoryItem
-            key={uuidv4()}
+            key={subCat.id}
             // href={`#${subCat.url}`}
-            onClick={() => scrollTo(`#${subCat.url}`)}
+            onClick={() => scrollTo(`#${subCat.slug}`)}
             // to={`/?category=${selectedCategory.url}#${subCat.url}`}
             // offset={300}
             // duration={1000}

@@ -20,7 +20,7 @@ const IndexPageCategoryFilterView = ({
   //   (el) => el.url === query.get("category")
   // );
 
-  const arrLength = category?.subCategories?.length;
+  const arrLength = category.subcategories.length;
   const sectionRefs = Array(arrLength).fill().map((_, i) => createRef());
 
   // React.useEffect(() => {
@@ -74,9 +74,9 @@ const IndexPageCategoryFilterView = ({
             />
           </StickyWrapper>
           <Container withMargin>
-            {category?.subCategories?.map((subCat, idx) => {
+            {category.subcategories.map((subCat, idx) => {
               // console.log("subCat", subCat)
-              const sortedCards = cards.filter((card) => card.node.fontSubcategory.includes(subCat.name))
+              const sortedCards = cards.filter((card) => card.subcategories.includes(subCat.id))
               return (
                 <SubcategorySection
                   // category={category}

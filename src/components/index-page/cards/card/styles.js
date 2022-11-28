@@ -14,6 +14,11 @@ export const Wrapper = styled.div`
   `
       background: ${props.color};
   `};
+  ${(props) =>
+    props.outline &&
+  `
+      outline: 1px gray dashed;
+  `};
 
   @media (max-width: 575px) {
     padding: 4.5vw;
@@ -122,7 +127,6 @@ export const TestFontField = styled.textarea`
     color: white;
   }
   ${(props) =>
-    props.fontName &&
     `
     font-family: ${props.fontName};
     ::placeholder {
@@ -151,6 +155,9 @@ export const TestFontField = styled.textarea`
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
+  `}
+  ${props => props.fontUppercase && `
+    text-transform: uppercase;
   `}
   ${props => props.fontCSS && `
     ${props.fontCSS}
@@ -236,11 +243,12 @@ export const FontAuthors = styled.div`
 
 `;
 
-export const FontImage = styled(Img)`
+export const FontImage = styled.img`
   width: 100%;
   margin-bottom: 10px;
   border-radius: 5px;
   height: 164px;
+  object-fit: cover;
   @media (max-width: 575px) {
     margin-bottom: 4vw;
     height: 50vw;

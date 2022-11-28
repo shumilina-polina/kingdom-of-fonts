@@ -42,14 +42,14 @@ const SubcategorySection = React.forwardRef(({ subCat, sortedCards, setSubCatInV
         <SubcategoryItems
             ref={ref}
         >
-            <SubcategoryItemsId id={subCat.url}/>
+            <SubcategoryItemsId id={subCat.slug}/>
             <SubcategorySectionItem >
                 <SubcategoryTitle>{subCat.name}</SubcategoryTitle>
             </SubcategorySectionItem>
             <Wrapper >
-                {sortedCards.map((card, idx) => {
+                {sortedCards.map((card) => {
                     return (
-                        <Card key={idx} data={card.node}/>
+                        <Card key={card.id} data={card}/>
                     )
                 })}
             </Wrapper>
