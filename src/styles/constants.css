@@ -1,13 +1,29 @@
 :root {
   /* colors */
 
-  --graphite-100: #151515;
-  --graphite-90: #212121;
-  --graphite-80: #2E2E2E;
-  --graphite-70: #494949;
-  --graphite-60: #7F7F7F;
-  --graphite-50: #C2C2C2;
-  --graphite-0: white;
+  --white: white;
+  --gray-0: #F3F3F3;
+  --gray-10: #E2E2E2;
+  --gray-20: #C2C2C2;
+  --gray-30: #7F7F7F;
+  --gray-40: #494949;
+  --gray-50: #373737;
+  --gray-60: #2E2E2E;
+  --gray-70: #212121;
+  --gray-80: #1C1C1C;
+  --gray-90: #191919;
+  --gray-100: #151515;
+  --black: black;
+
+  /* legacy colors */
+
+  --graphite-100: var(--gray-100);
+  --graphite-90: var(--gray-70);
+  --graphite-80: var(--gray-60);
+  --graphite-70: var(--gray-40);
+  --graphite-60: var(--gray-30);
+  --graphite-50: var(--gray-20);
+  --graphite-0: var(--white);
 
   /* collapse */
 

@@ -169,6 +169,8 @@ export const Footer = styled.div`
   padding: 2em 1.75em;
   border-top: 0.1em solid var(--graphite-90);
   
+  overflow: hidden;
+  
   @media (min-width: 1090px) {
     grid-template: 1fr 1fr / repeat(5, auto);
     gap: 0;

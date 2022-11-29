@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   return (
     <Root>
       <Container>
@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   )
 }
 
-const Root = styled.div`
+export const Root = styled.div`
   font-family: "Manrope", sans-serif;
   font-size: 5vw; /* 320px */
   font-weight: 500;
@@ -19,8 +19,6 @@ const Root = styled.div`
   color: var(--graphite-0);
   background-color: var(--graphite-100);
 
-  overflow-x: hidden;
-  
   min-height: 100vh;
   
   display: flex;
@@ -35,7 +33,7 @@ const Root = styled.div`
   }
 `
 
-const Container = styled.div`
+export const Container = styled.div`
   flex: 1;
 
   @media (min-width: 750px) {
