@@ -18,7 +18,7 @@ export const NavPills = ({ selected, onSelect, children }) => {
   )
 }
 
-export const NavPill = ({ name, icon, children }) => {
+export const NavPill = ({ name, icon, isHidden = false, children }) => {
   const { selected, onSelect } = useContext(NavPillsContext)
   const isActive = name === selected
 
@@ -27,9 +27,13 @@ export const NavPill = ({ name, icon, children }) => {
   }, [name, onSelect])
 
   return (
-    <NavPillBody isActive={isActive} onClick={handleClick}>
+    <NavPillBody
+      isActive={isActive}
+      onClick={handleClick}
+      isHidden={isHidden}
+    >
       {icon
-        ? <Icon>{icon}</Icon>
+        ? <Icon isActive={isActive}>{icon}</Icon>
         : <Label>{children}</Label>
       }
     </NavPillBody>
@@ -43,6 +47,10 @@ const NavPillsBody = styled.div`
 `
 
 const NavPillBody = styled.a`
+  --hide-duration: 0.1s;
+  --show-duration: 0.25s;
+  --show-delay: 0.1s;
+
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -55,20 +63,32 @@ const NavPillBody = styled.a`
   text-decoration: none;
   cursor: pointer;
   
-  color: var(--gray-30);
-  background: var(--gray-70);
+  transition: opacity var(--hide-duration), visibility var(--hide-duration);
+  
+  color: var(--glass-06);
+  background: var(--glass-003);
   
   ${props => props.isActive 
     ? `
-      color: var(--gray-70);
-      background: var(--gray-20);
+      color: var(--gray-90);
+      background: var(--glass-07);
     ` 
     : `
       &:hover {
-        background: var(--gray-60);
+        background: var(--glass-006);
       }
     `
   }
+  
+  ${props => props.isHidden && `
+    opacity: 0;
+    visibility: hidden;
+  `}
+  
+  ${props => !props.isHidden && `
+    transition-duration: var(--show-duration);
+    transition-delay: var(--show-delay);
+  `}
 `
 
 const Icon = styled.div`

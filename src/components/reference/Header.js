@@ -54,101 +54,142 @@ const Header = () => {
   }, [])
 
   return (
-    <HeaderBody onClick={handleClick}>
-      <HeaderButtonLeft as={Link} to="/reference/">
+    <>
+      <HeaderButtonLeft as={Link} to="/glossary/">
         <Logo />
       </HeaderButtonLeft>
-      <HeaderButtonRight as={Link} to="/reference/">
+      <HeaderButtonRight as={Link} to="/glossary/">
         <LoginIcon />
       </HeaderButtonRight>
-      <NavTop>
-        <NavTopItem
-          icon={<NavProjectsIcon />}
-          as="a"
-          href="https://www.behance.net/pavlushin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Проекты
-        </NavTopItem>
-        <NavTopItem
-          icon={<NavCampusIcon />}
-          dropdown={(
-            <NavTopDropdown>
-              <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/workshop/artreview/">
-                Артдирекшен
-              </NavTopDropdownItem>
-              <NavTopDropdownItem icon={<LightningIcon />}>
-                Консультации
-              </NavTopDropdownItem>
-              <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/fonts/library/">
-                Шрифтотёрка
-              </NavTopDropdownItem>
-            </NavTopDropdown>
-          )}
-        >
-          Кампус
-        </NavTopItem>
-        <NavTopItem icon={<NavBasisIcon />}>
-          Основание
-        </NavTopItem>
-        <NavTopItem
-          as="a"
-          href="/blog/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Блог
-        </NavTopItem>
-      </NavTop>
-      <Title>Справочник</Title>
-      <NavPillsWrapper>
-        <NavPills selected={!isSearchOpen ? category : null} onSelect={setCategory}>
-          <NavPill name="all" icon={<LightningIcon />} />
-          <NavPill name="design">Дизайн</NavPill>
-          <NavPill name="text">Текст</NavPill>
-          <NavPill name="dev">Разработка</NavPill>
-          <NavPill name="product">Продукт</NavPill>
-          <NavPill name="brain">Мозг</NavPill>
-          <Search
-            innerRef={searchElementRef}
-            isOpen={isSearchOpen}
-            onToggle={() => { setIsSearchOpen(!isSearchOpen) }}
-          />
-        </NavPills>
-      </NavPillsWrapper>
-      <NavTabsCollapse isOpen={!isSearchOpen && category !== "all"}>
-        <NavTabs selected={subcategory} onSelect={setSubcategory}>
-          <NavTab name="all">Всё</NavTab>
-          <NavTab name="tab1">Вёрстка</NavTab>
-          <NavTab name="tab2">Типографика</NavTab>
-          <NavTab name="tab3">Иллюстрация</NavTab>
-          <NavTab name="tab4">Визуализация</NavTab>
-          <NavTab name="tab5">Колористика</NavTab>
-          <NavTab name="tab6">Интерфейс</NavTab>
-          <NavTab name="tab7">Анимация</NavTab>
-          <NavTab name="tab8">Носители</NavTab>
-        </NavTabs>
-      </NavTabsCollapse>
-    </HeaderBody>
+      <HeaderBody onClick={handleClick}>
+        <HeaderContent>
+          <NavTop>
+            <NavTopItem
+              icon={<NavProjectsIcon />}
+              as="a"
+              href="https://www.behance.net/pavlushin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Проекты
+            </NavTopItem>
+            <NavTopItem
+              icon={<NavCampusIcon />}
+              dropdown={(
+                <NavTopDropdown>
+                  <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/workshop/artreview/">
+                    Артдирекшен
+                  </NavTopDropdownItem>
+                  <NavTopDropdownItem icon={<LightningIcon />}>
+                    Консультации
+                  </NavTopDropdownItem>
+                  <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/fonts/library/">
+                    Шрифтотёрка
+                  </NavTopDropdownItem>
+                </NavTopDropdown>
+              )}
+            >
+              Кампус
+            </NavTopItem>
+            <NavTopItem icon={<NavBasisIcon />}>
+              Основание
+            </NavTopItem>
+            <NavTopItem
+              as="a"
+              href="/blog/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Блог
+            </NavTopItem>
+          </NavTop>
+          <Title>Справочник</Title>
+          <NavPillsWrapper>
+            <NavPills selected={!isSearchOpen ? category : null} onSelect={setCategory}>
+              <NavPill name="all" icon={<LightningIcon />} isHidden={isSearchOpen} />
+              <NavPill name="design" isHidden={isSearchOpen}>Дизайн</NavPill>
+              <NavPill name="text" isHidden={isSearchOpen}>Текст</NavPill>
+              <NavPill name="dev" isHidden={isSearchOpen}>Разработка</NavPill>
+              <NavPill name="product" isHidden={isSearchOpen}>Продукт</NavPill>
+              <NavPill name="brain" isHidden={isSearchOpen}>Мозг</NavPill>
+              <Search
+                innerRef={searchElementRef}
+                isOpen={isSearchOpen}
+                onToggle={() => { setIsSearchOpen(!isSearchOpen) }}
+              />
+            </NavPills>
+          </NavPillsWrapper>
+          <NavTabsCollapse isOpen={!isSearchOpen && category !== "all"}>
+            <NavTabs selected={subcategory} onSelect={setSubcategory}>
+              <NavTab name="all">Всё</NavTab>
+              <NavTab name="tab1">Вёрстка</NavTab>
+              <NavTab name="tab2">Типографика</NavTab>
+              <NavTab name="tab3">Иллюстрация</NavTab>
+              <NavTab name="tab4">Визуализация</NavTab>
+              <NavTab name="tab5">Колористика</NavTab>
+              <NavTab name="tab6">Интерфейс</NavTab>
+              <NavTab name="tab7">Анимация</NavTab>
+              <NavTab name="tab8">Носители</NavTab>
+            </NavTabs>
+          </NavTabsCollapse>
+        </HeaderContent>
+      </HeaderBody>
+    </>
   )
 }
 
 const HeaderBody = styled.div`
-  border-bottom: var(--gray-70) 0.0625em solid;
+  position: sticky;
+  top: -9.25em;
+  width: 100%;
+  max-width: 1440px;
+  z-index: 999;
+  margin: 0 auto 1.5em;
   
+  &::after {
+    content: "";
+    
+    position: absolute;
+    z-index: 1;
+    inset: -1px 0px -2em;
+    
+    pointer-events: none;
+    user-select: none;
+    
+    backdrop-filter: blur(2em);
+    mask-image: linear-gradient(to top, transparent, black 2em);
+  }
+`
+
+const HeaderContent = styled.div`
+  position: relative;
+  z-index: 2;
+  
+  padding: 1em 0 1.25em;
+  
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-image-source: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0) 0.6%, 
+    rgba(255, 255, 255, 0.042) 4.2%, 
+    rgba(255, 255, 255, 0.042) 95.07%, 
+    rgba(255, 255, 255, 0) 98.24%
+  );
+  border-image-slice: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
-  position: sticky;
-  top: -9.25em;
-  
-  padding: 1em 0 1.25em;
 `
 
 const HeaderButton = styled.button`
+  position: fixed;
+  top: 1.125em;
+  z-index: 1000;
+  
   text-decoration: none;
   background: none;
   border: none;
@@ -179,21 +220,17 @@ const HeaderButton = styled.button`
 `
 
 const HeaderButtonLeft = styled(HeaderButton)`
-  position: fixed;
-  top: 1.125em;
   left: 2.55em;
 `
 
 const HeaderButtonRight = styled(HeaderButton)`
-  position: fixed;
-  top: 1.125em;
   right: 2.55em;
 `
 
 const Title = styled.div`
   ${textStyles.title.L}
   
-  color: var(--gray-30);
+  color: var(--glass-06);
   
   margin: 0.57em 0 0.5em;
 `
@@ -260,6 +297,7 @@ const SearchWrapper = styled.div`
   --button-size: 2.25em;
   --field-padding: 0.875em;
   --duration: 0.25s;
+  --delay: 0;
   
   width: var(--button-size);
   height: var(--button-size);
@@ -279,13 +317,15 @@ const SearchBody = styled.div`
   
   overflow: hidden;
   
-  color: var(--gray-30);
-  background: var(--gray-70);
+  color: var(--glass-06);
+  background: var(--glass-003);
   
   transition: width var(--duration);
   
   ${props => props.isOpen && `
     width: 100%;
+    
+    transition-delay: var(--delay);
   `}
 `
 
@@ -301,7 +341,7 @@ const SearchButton = styled.button`
   justify-content: center;
   align-items: center;
   
-  color: var(--gray-30);
+  color: var(--glass-06);
   background: none;
 
   width: var(--button-size);
@@ -311,7 +351,7 @@ const SearchButton = styled.button`
 
   ${props => !props.isOpen && `
     :hover {
-      background: var(--gray-60);
+      background: var(--glass-006);
     }
   `}
 
@@ -344,7 +384,7 @@ const SearchClearButton = styled(SearchButton)`
   position: absolute;
   right: 0;
   
-  transition: opacity var(--duration), visibility var(--duration);
+  transition: opacity var(--duration) var(--delay), visibility var(--duration) var(--delay);
 
   ${props => !props.isOpen && `
     opacity: 0;
@@ -365,7 +405,7 @@ const SearchInput = styled.input`
   border: none;
   outline: none;
 
-  color: var(--gray-30);
+  color: var(--glass-06);
 
   width: calc(100% - var(--button-size) * 2);
   
@@ -374,7 +414,7 @@ const SearchInput = styled.input`
   `}
   
   ${props => !props.isOpen && `
-    transition: visibility var(--duration);
+    transition: visibility var(--duration) var(--delay);
     visibility: hidden;
   `}
 `

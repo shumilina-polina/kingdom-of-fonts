@@ -15,6 +15,18 @@
   --gray-100: #151515;
   --black: black;
 
+  --glass-003: rgba(255, 255, 255, 0.03);
+  --glass-006: rgba(255, 255, 255, 0.06);
+  --glass-03: rgba(255, 255, 255, 0.3);
+  --glass-06: rgba(255, 255, 255, 0.6);
+  --glass-07: rgba(255, 255, 255, 0.7);
+
+  --border-gradient: linear-gradient(
+    180deg,
+    rgba(73, 73, 73, 0.3) 0%,
+    rgba(73, 73, 73, 0) 100%
+  );
+
   /* legacy colors */
 
   --graphite-100: var(--gray-100);

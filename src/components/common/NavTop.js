@@ -110,7 +110,7 @@ const NavTopDropdownBody = styled.div`
   z-index: 10;
   top: calc(100% + var(--distance));
   
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass-003);
   backdrop-filter: blur(1em);
   border-radius: var(--border-radius);
   
@@ -159,7 +159,7 @@ const NavTopDropdownItemBody = styled.div`
   cursor: pointer;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--glass-003);
   }
   
   &:active {

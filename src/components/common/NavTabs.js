@@ -104,25 +104,33 @@ const NavTabBody = styled.a`
   text-decoration: none;
   cursor: pointer;
   
-  color: var(--gray-30);
-  
-  ${props => props.isActive 
-    ? `
-      color: var(--gray-20);
-    ` 
-    : `
-      &:hover {
-        color: var(--gray-20);
-      }
-    `
+  color: var(--glass-03);
+
+  &:hover {
+    color: var(--glass-06);
   }
+  
+  ${props => props.isActive && `
+    color: var(--glass-06);
+  `}
 `
 
 const NavTabUnderline = styled.div`
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   
-  border-bottom: 0.125em solid var(--gray-20);
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-image-source: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 15%,
+    rgba(255, 255, 255, 0.42) 85%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-image-slice: 1 15%;
+  border-image-width: 0 0.7em 2px;
   
   transition: width 0.2s, left 0.2s;
   
