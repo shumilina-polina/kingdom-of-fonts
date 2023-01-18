@@ -12,7 +12,7 @@ const DotsContext = createContext({
   trigger: () => {},
 })
 
-const Cards = ({ cards, renderDots }) => {
+const StoryCards = ({ cards, renderDots }) => {
   const scrollContainerRef = useRef()
   const [subscribed, setSubscribed] = useState([])
 
@@ -161,4 +161,4 @@ const DotContent = styled.div`
   width: calc(var(--dot-max-width) * var(--dot-ratio));
 `
 
-export default Cards
+export default StoryCards

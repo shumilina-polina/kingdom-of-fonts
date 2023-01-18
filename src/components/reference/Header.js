@@ -55,10 +55,10 @@ const Header = () => {
 
   return (
     <>
-      <HeaderButtonLeft as={Link} to="/glossary/">
+      <HeaderButtonLeft as={Link} to="/reference/">
         <Logo />
       </HeaderButtonLeft>
-      <HeaderButtonRight as={Link} to="/glossary/">
+      <HeaderButtonRight as={Link} to="/reference/">
         <LoginIcon />
       </HeaderButtonRight>
       <HeaderBody onClick={handleClick}>
