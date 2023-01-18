@@ -9,7 +9,7 @@ import textStyles from "./text"
 
 import * as styles from "./Card.module.css"
 
-import PlaceholderImage from "../../assets/reference/svgs/card-image.svg"
+import PlaceholderImage from "../../assets/glossary/svgs/card-image.svg"
 import LinkIcon from "../../assets/common/svgs/card-link.svg"
 import ShareLinkIcon from "../../assets/common/svgs/share-link.svg"
 import ShareFacebookIcon from "../../assets/common/svgs/share-facebook.svg"
@@ -18,7 +18,7 @@ import ShareVKIcon from "../../assets/common/svgs/share-vk.svg"
 import ShareTelegramIcon from "../../assets/common/svgs/share-telegram.svg"
 import squircle from "../../assets/common/squircle.svg"
 import squircleFilled from "../../assets/common/squircle-filled.svg"
-import wormAnimationData from "../../assets/reference/worm.json"
+import wormAnimationData from "../../assets/glossary/worm.json"
 
 export const Cards = ({ children }) => {
   return (

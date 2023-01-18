@@ -1,7 +1,7 @@
 import React from "react"
 
 import SEO from "../../seo"
-import Reference from "../../components/reference"
+import Reference from "../../components/glossary"
 
 const ReferencePage = () => {
   return (
