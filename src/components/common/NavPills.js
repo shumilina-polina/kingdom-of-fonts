@@ -74,18 +74,22 @@ const NavPillBody = styled.a`
 const Icon = styled.div`
   display: flex;
 
-  --icon-size: 1em;
+  --icon-size: 1.25em;
 
   width: var(--icon-size);
   height: var(--icon-size);
   
   /* TODO: set pill width explicitly when there's an icon? */
-  margin: 0 -0.25em;
+  margin: 0 -0.375em;
   
   svg {
     width: 100%;
     height: 100%;
   }
+    
+  ${props => props.isActive && `
+    transform: scale(1.1);
+  `}
 `
 
 const Label = styled.div`

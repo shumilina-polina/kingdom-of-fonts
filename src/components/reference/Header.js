@@ -14,7 +14,7 @@ import LoginIcon from "../../assets/common/svgs/login.svg"
 import NavProjectsIcon from "../../assets/common/svgs/nav-projects.svg"
 import NavCampusIcon from "../../assets/common/svgs/nav-campus.svg"
 import NavBasisIcon from "../../assets/common/svgs/nav-basis.svg"
-import LightningIcon from "../../assets/common/svgs/lightning.svg"
+import LightningIcon from "../../assets/common/svgs/lightning-2.svg"
 import SearchIcon from "../../assets/common/svgs/search.svg"
 import CrossIcon from "../../assets/common/svgs/cross.svg"
 
