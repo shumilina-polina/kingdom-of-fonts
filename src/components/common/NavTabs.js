@@ -40,13 +40,11 @@ const Wrapper = styled.div`
 `
 
 const NavTabsBody = styled.div`
-  --vertical-padding: 0.875em;
-  
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding-top: var(--vertical-padding);
+  padding: 0.875em 0;
 `
 
 const NavTabBody = styled.a`
@@ -56,7 +54,7 @@ const NavTabBody = styled.a`
   
   box-sizing: content-box;
   height: 2em;
-  padding: 0 0.75em var(--vertical-padding);
+  padding: 0 0.75em;
 
   text-decoration: none;
   cursor: pointer;

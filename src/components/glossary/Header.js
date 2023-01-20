@@ -433,17 +433,21 @@ const NavTabsInnerWrapper = styled.div`
 `
 
 const NavTabsOuterWrapper = styled.div`
-  --header-padding: 1.25em;
+  --header-padding: 2.5em;
+  --header-padding-open: 1.25em;
   --tab-height: 3.75em;
   --duration: 0.3s;
+  
+  --height-closed: var(--header-padding);
+  --height-open: calc(var(--tab-height) + var(--header-padding-open));
 
   margin-bottom: calc(var(--header-padding) * -1);
 
   transition: height var(--duration);
-  height: var(--tab-height);
+  height: var(--height-open);
 
   ${props => !props.isOpen && `
-    height: var(--header-padding);
+    height: var(--height-closed);
   `}
 
   ${NavTabsInnerWrapper} {
@@ -460,7 +464,7 @@ const NavTabsOuterWrapper = styled.div`
         
       opacity: 0;
       visibility: hidden;
-      transform: translateY(calc(var(--header-padding) - 100%));
+      transform: translateY(calc(var(--height-closed) - var(--height-open)));
     `}
   }
 `
