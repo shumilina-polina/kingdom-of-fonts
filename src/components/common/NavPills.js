@@ -116,8 +116,4 @@ const Label = styled.div`
   ${textStyles.item.S}
   
   user-select: none;
-  
-  @media (min-width: 1090px) {
-    font-weight: 700;
-  }
 `
