@@ -341,7 +341,7 @@ const SearchButton = styled.button`
   justify-content: center;
   align-items: center;
   
-  color: var(--glass-06);
+  color: var(--glass-04);
   background: none;
 
   width: var(--button-size);

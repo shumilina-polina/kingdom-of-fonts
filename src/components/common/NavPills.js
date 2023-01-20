@@ -65,13 +65,13 @@ const NavPillBody = styled.a`
   
   transition: opacity var(--hide-duration), visibility var(--hide-duration);
   
-  color: var(--glass-06);
+  color: var(--glass-04);
   background: var(--glass-003);
   
   ${props => props.isActive 
     ? `
-      color: var(--gray-90);
-      background: var(--glass-07);
+      color: var(--gray-60);
+      background: var(--glass-06);
     ` 
     : `
       &:hover {
@@ -116,4 +116,8 @@ const Label = styled.div`
   ${textStyles.item.S}
   
   user-select: none;
+  
+  @media (min-width: 1090px) {
+    font-weight: 700;
+  }
 `
