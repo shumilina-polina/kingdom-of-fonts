@@ -53,6 +53,47 @@ const Header = () => {
     }
   }, [])
 
+  const headerBodyElementRef = useRef()
+  const floatingHeaderBodyElementRef = useRef()
+
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [isMouseAtTop, setIsMouseAtTop] = useState(false)
+
+  const isFloatingHeaderVisible = !isHeaderVisible && isMouseAtTop
+
+  useEffect(() => {
+    const headerBodyElement = headerBodyElementRef.current
+
+    const callback = (entries) => {
+      setIsHeaderVisible(entries.some((entry) => entry.isIntersecting))
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      threshold: 0.1
+    })
+
+    observer.observe(headerBodyElement)
+
+    return () => {
+      observer.unobserve(headerBodyElement)
+    }
+  }, [])
+
+  useEffect(() => {
+    const floatingHeaderBodyElement = floatingHeaderBodyElementRef.current
+    const floatingHeaderHeight = floatingHeaderBodyElement.offsetHeight
+
+    const onMouseMove = (e) => {
+      setIsMouseAtTop(e.clientY <= floatingHeaderHeight || floatingHeaderBodyElement.contains(e.target))
+    }
+
+    document.addEventListener("mousemove", onMouseMove)
+
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove)
+    }
+  }, [])
+
   return (
     <>
       <HeaderButtonLeft as={Link} to="/glossary/">
@@ -61,48 +102,9 @@ const Header = () => {
       <HeaderButtonRight as={Link} to="/glossary/">
         <LoginIcon />
       </HeaderButtonRight>
-      <HeaderBody onClick={handleClick}>
+      <HeaderBody onClick={handleClick} ref={headerBodyElementRef}>
         <HeaderContent>
-          <NavTop>
-            <NavTopItem
-              icon={<NavProjectsIcon />}
-              as="a"
-              href="https://www.behance.net/pavlushin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Проекты
-            </NavTopItem>
-            <NavTopItem
-              icon={<NavCampusIcon />}
-              dropdown={(
-                <NavTopDropdown>
-                  <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/workshop/artreview/">
-                    Артдирекшен
-                  </NavTopDropdownItem>
-                  <NavTopDropdownItem icon={<LightningIcon />}>
-                    Консультации
-                  </NavTopDropdownItem>
-                  <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/fonts/library/">
-                    Шрифтотёрка
-                  </NavTopDropdownItem>
-                </NavTopDropdown>
-              )}
-            >
-              Кампус
-            </NavTopItem>
-            <NavTopItem icon={<NavBasisIcon />}>
-              Основание
-            </NavTopItem>
-            <NavTopItem
-              as="a"
-              href="/blog/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Блог
-            </NavTopItem>
-          </NavTop>
+          <MainNavigation />
           <Title>Справочник</Title>
           <NavPillsWrapper>
             <NavPills selected={!isSearchOpen ? category : null} onSelect={setCategory}>
@@ -134,17 +136,91 @@ const Header = () => {
           </NavTabsCollapse>
         </HeaderContent>
       </HeaderBody>
+      <FloatingHeaderBody isVisible={isFloatingHeaderVisible} ref={floatingHeaderBodyElementRef}>
+        <FloatingHeaderContent>
+          <MainNavigation />
+        </FloatingHeaderContent>
+      </FloatingHeaderBody>
     </>
   )
 }
 
+const MainNavigation = () => {
+  return (
+    <MainNavigationBody>
+      <NavTop>
+        <NavTopItem
+          icon={<NavProjectsIcon />}
+          as="a"
+          href="https://www.behance.net/pavlushin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Проекты
+        </NavTopItem>
+        <NavTopItem
+          icon={<NavCampusIcon />}
+          dropdown={(
+            <NavTopDropdown>
+              <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/workshop/artreview/">
+                Артдирекшен
+              </NavTopDropdownItem>
+              <NavTopDropdownItem icon={<LightningIcon />}>
+                Консультации
+              </NavTopDropdownItem>
+              <NavTopDropdownItem icon={<LightningIcon />} as={Link} to="/fonts/library/">
+                Шрифтотёрка
+              </NavTopDropdownItem>
+            </NavTopDropdown>
+          )}
+        >
+          Кампус
+        </NavTopItem>
+        <NavTopItem icon={<NavBasisIcon />}>
+          Основание
+        </NavTopItem>
+        <NavTopItem
+          as="a"
+          href="/blog/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Блог
+        </NavTopItem>
+      </NavTop>
+    </MainNavigationBody>
+  )
+}
+
+const MainNavigationBody = styled.div`
+  
+`
+
 const HeaderBody = styled.div`
-  position: sticky;
-  top: -9.25em;
+  
+`
+
+const HeaderContent = styled.div`
+  padding: 1em 0 2.5em;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`
+
+const FloatingHeaderBody = styled(HeaderBody)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   max-width: 1440px;
   z-index: 999;
   margin: 0 auto 1.5em;
+  
+  transition: transform, visibility;
+  transition-duration: 0.3s;
   
   &::after {
     content: "";
@@ -159,13 +235,19 @@ const HeaderBody = styled.div`
     backdrop-filter: blur(2em);
     mask-image: linear-gradient(to top, transparent, black 2em);
   }
+  
+  ${props => !props.isVisible && `
+    transform: translateY(calc(-100% - 2em));
+    visibility: hidden;
+    transition-delay: 0.5s;
+  `}
 `
 
-const HeaderContent = styled.div`
+const FloatingHeaderContent = styled(HeaderContent)`
   position: relative;
   z-index: 2;
   
-  padding: 1em 0 1.25em;
+  padding: 1em 0 0.7em;
   
   border-bottom-width: 2px;
   border-bottom-style: solid;
@@ -178,16 +260,11 @@ const HeaderContent = styled.div`
     rgba(255, 255, 255, 0) 98.24%
   );
   border-image-slice: 1;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 `
 
 const HeaderButton = styled.button`
   position: fixed;
-  top: 1.125em;
+  top: 1em;
   z-index: 1000;
   
   text-decoration: none;

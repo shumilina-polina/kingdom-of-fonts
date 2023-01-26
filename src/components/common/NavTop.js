@@ -78,26 +78,28 @@ const NavTopItemBody = styled.div`
   cursor: pointer;
   
   ${NavTopItemWrapper}:hover & {
-    background: var(--gray-70);
+    background: var(--glass-3);
   }
   
   &:hover:active {
-    background: var(--gray-60);
+    background: var(--glass-10);
   }
-  
-  // TODO: disabled
 `
 
 const NavTopItemIcon = styled(Icon)`
-  color: var(--gray-20);
+  color: var(--glass-60);
   
   --icon-size: 1em;
+  
+  ${NavTopItemWrapper}:hover & {
+    color: var(--glass-80);
+  }
 `
 
 const NavTopItemLabel = styled.div`
   ${textStyles.item.S}
   
-  color: var(--gray-30);
+  color: var(--glass-40);
   
   user-select: none;
 `
@@ -114,18 +116,15 @@ const NavTopDropdownBody = styled.div`
   backdrop-filter: blur(1em);
   border-radius: var(--border-radius);
   
-  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  transition: opacity, visibility, transform;
+  transition-duration: 0.2s;
+  transition-delay: 0.3s;
   
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0.95);
-  
-  ${NavTopItemWrapper}:hover & {
-    transition-delay: 0.3s;
-    
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+  ${NavTopItemWrapper}:not(:hover) & {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.95);
+    transition-delay: 0s;
   }
   
   &::before {
