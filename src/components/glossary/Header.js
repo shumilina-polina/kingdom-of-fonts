@@ -230,7 +230,7 @@ const HeaderButtonRight = styled(HeaderButton)`
 const Title = styled.div`
   ${textStyles.title.L}
   
-  color: var(--glass-06);
+  color: var(--glass-60);
   
   margin: 0.57em 0 0.5em;
 `
@@ -317,8 +317,8 @@ const SearchBody = styled.div`
   
   overflow: hidden;
   
-  color: var(--glass-06);
-  background: var(--glass-003);
+  color: var(--glass-60);
+  background: var(--glass-3);
   
   transition: width var(--duration);
   
@@ -341,7 +341,7 @@ const SearchButton = styled.button`
   justify-content: center;
   align-items: center;
   
-  color: var(--glass-04);
+  color: var(--glass-40);
   background: none;
 
   width: var(--button-size);
@@ -351,7 +351,7 @@ const SearchButton = styled.button`
 
   ${props => !props.isOpen && `
     :hover {
-      background: var(--glass-006);
+      background: var(--glass-6);
     }
   `}
 
@@ -405,7 +405,7 @@ const SearchInput = styled.input`
   border: none;
   outline: none;
 
-  color: var(--glass-06);
+  color: var(--glass-60);
 
   width: calc(100% - var(--button-size) * 2);
   

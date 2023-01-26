@@ -65,17 +65,17 @@ const NavPillBody = styled.a`
   
   transition: opacity var(--hide-duration), visibility var(--hide-duration);
   
-  color: var(--glass-04);
-  background: var(--glass-003);
+  color: var(--glass-40);
+  background: var(--glass-3);
   
   ${props => props.isActive 
     ? `
       color: var(--gray-60);
-      background: var(--glass-06);
+      background: var(--glass-60);
     ` 
     : `
       &:hover {
-        background: var(--glass-006);
+        background: var(--glass-6);
       }
     `
   }

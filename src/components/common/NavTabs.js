@@ -59,14 +59,14 @@ const NavTabBody = styled.a`
   text-decoration: none;
   cursor: pointer;
   
-  color: var(--glass-03);
+  color: var(--glass-30);
 
   &:hover {
-    color: var(--glass-06);
+    color: var(--glass-60);
   }
   
   ${props => props.isActive && `
-    color: var(--glass-06);
+    color: var(--glass-60);
   `}
 `
 
