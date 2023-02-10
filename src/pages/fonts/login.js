@@ -80,7 +80,7 @@ const RestoreAccessPage = ({ location }) => {
   const emailHelpTextSuccess = "Cсылку для входа на сайт отправили, проверьте эту почту и спам :)"
   const emailHelpTextUserNotFound = (<>
     Мы не знаем такого емейла, перепроверьте плиз или&nbsp;
-    <a href="https://t.me/katerinazuryan" target="_blank">напишите нам</a>
+    <a href="https://t.me/zuryaaan" target="_blank">напишите нам</a>
   </>)
 
   const emailErrorMessages = {
@@ -88,7 +88,7 @@ const RestoreAccessPage = ({ location }) => {
   }
   const unknownErrorMessage = (<>
     У нас проблемы на сервере, подождите или&nbsp;
-    <a href="https://t.me/katerinazuryan" target="_blank">напишите нам</a>
+    <a href="https://t.me/zuryaaan" target="_blank">напишите нам</a>
   </>)
 
   const onEmailChange = (e) => {

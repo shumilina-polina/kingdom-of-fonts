@@ -85,7 +85,7 @@ const BuyPage = () => {
   }
   const unknownErrorMessage = (<>
     У нас проблемы на сервере, подождите или&nbsp;
-    <a href="https://t.me/katerinazuryan" target="_blank">напишите нам</a>
+    <a href="https://t.me/zuryaaan" target="_blank">напишите нам</a>
   </>)
 
   const onEmailChange = (e) => {

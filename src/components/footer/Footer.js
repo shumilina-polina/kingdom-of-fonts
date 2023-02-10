@@ -59,7 +59,7 @@ const Credits = ({shorten}) => {
           <span>Автор и дизайнер</span>
         </Author>
         <Author>
-          <a href="https://t.me/katerinazuryan" target="_blank">
+          <a href="https://t.me/zuryaaan" target="_blank">
             {shorten ? "Катя" : "Катерина"} Зырянова
           </a>
           <span>Автор и редактор</span>

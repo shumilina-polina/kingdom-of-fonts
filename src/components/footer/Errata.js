@@ -32,7 +32,7 @@ const Errata = () => {
           <ErrataTextTop>Ребята, у вас Эррата!</ErrataTextTop>
           <ErrataTextBig>Вопросики,<br />предложения,<br />баги и косяки,<br />клёвый шрифт:</ErrataTextBig>
           <ErrataTelegramButton
-            href="https://t.me/katerinazuryan"
+            href="https://t.me/zuryaaan"
             target="_blank"
           >
             Телеграмировать!
