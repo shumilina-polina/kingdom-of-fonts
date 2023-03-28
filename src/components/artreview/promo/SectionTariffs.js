@@ -84,10 +84,10 @@ const SectionTariffs = ({ innerRef }) => {
       </CardHeader>
       <CardTitle>Артдирекшен</CardTitle>
       <Price>
-        <PriceValue>3900</PriceValue>
+        <PriceValue>4500</PriceValue>
         <PriceDescription>
           <PriceDescriptionLine1>₽/первый месяц</PriceDescriptionLine1>
-          <PriceDescriptionLine2>со второго 4900₽</PriceDescriptionLine2>
+          <PriceDescriptionLine2>со второго 5500₽</PriceDescriptionLine2>
         </PriceDescription>
       </Price>
       <Description>
@@ -127,10 +127,10 @@ const SectionTariffs = ({ innerRef }) => {
       </CardHeader>
       <CardTitle>Три внутри</CardTitle>
       <Price>
-        <PriceValue>6900</PriceValue>
+        <PriceValue>7900</PriceValue>
         <PriceDescription>
           <PriceDescriptionLine1>₽ за всё</PriceDescriptionLine1>
-          <PriceDescriptionLine2>вместо <s>7900₽</s></PriceDescriptionLine2>
+          <PriceDescriptionLine2>вместо <s>8900₽</s></PriceDescriptionLine2>
         </PriceDescription>
       </Price>
       <Description>
