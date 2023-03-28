@@ -127,10 +127,10 @@ const SectionTariffs = ({ innerRef }) => {
       </CardHeader>
       <CardTitle>Три внутри</CardTitle>
       <Price>
-        <PriceValue>7900</PriceValue>
+        <PriceValue>7500</PriceValue>
         <PriceDescription>
           <PriceDescriptionLine1>₽ за всё</PriceDescriptionLine1>
-          <PriceDescriptionLine2>вместо <s>8900₽</s></PriceDescriptionLine2>
+          <PriceDescriptionLine2>вместо <s>8500₽</s></PriceDescriptionLine2>
         </PriceDescription>
       </Price>
       <Description>
