@@ -38,7 +38,7 @@ const CategoryPage = ({ params }) => {
     <Layout logoHref="/fonts/library/">
       <SEO /> {/* TODO */}
       <IndexPageCategoryFilterView
-          cards={store.fonts.data.filter((item) => item.categories.includes(category.id))}
+          cards={store.fonts.data.filter((item) => item.category === category.id)}
           category={category}
       />
     </Layout>

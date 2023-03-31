@@ -76,7 +76,7 @@ const IndexPageCategoryFilterView = ({
           <Container withMargin>
             {category.subcategories.map((subCat, idx) => {
               // console.log("subCat", subCat)
-              const sortedCards = cards.filter((card) => card.subcategories.includes(subCat.id))
+              const sortedCards = cards.filter((card) => card.subcategory === subCat.id)
               return (
                 <SubcategorySection
                   // category={category}
