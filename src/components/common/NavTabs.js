@@ -75,3 +75,50 @@ const Label = styled.div`
   
   user-select: none;
 `
+
+export const NavTabsCollapse = ({ isOpen, children }) => {
+  return (
+    <NavTabsOuterWrapper isOpen={isOpen}>
+      <NavTabsInnerWrapper>
+        {children}
+      </NavTabsInnerWrapper>
+    </NavTabsOuterWrapper>
+  )
+}
+
+const NavTabsInnerWrapper = styled.div`
+`
+
+const NavTabsOuterWrapper = styled.div`
+  --header-padding-offset: 1.25em;
+  --tab-height: 3.75em;
+  --duration: 0.3s;
+  
+  --height-closed: 0em;
+  --height-open: calc(var(--tab-height) - var(--header-padding-offset));
+
+  transition: height var(--duration);
+  height: var(--height-open);
+
+  ${props => !props.isOpen && `
+    height: var(--height-closed);
+  `}
+
+  ${NavTabsInnerWrapper} {
+    transition:
+      opacity calc(var(--duration) / 1.2) calc(var(--duration) / 6),
+      transform var(--duration),
+      visibility var(--duration);
+
+    ${props => !props.isOpen && `
+      transition: 
+        opacity calc(var(--duration) / 2),
+        transform var(--duration), 
+        visibility var(--duration);
+        
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(calc(var(--height-closed) - var(--height-open)));
+    `}
+  }
+`
