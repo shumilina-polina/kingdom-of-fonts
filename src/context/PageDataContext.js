@@ -6,7 +6,7 @@ const PageDataContext = React.createContext({
     error: null,
     isFetching: true,
 
-    fetchPageData: null,
+    fetchData: null,
 })
 
 export const PageDataContextProvider = ({ url, children }) => {
