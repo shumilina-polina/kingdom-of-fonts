@@ -4,7 +4,6 @@ import { Root, Container } from "../common/layout/promo"
 import { Card, Cards } from "../common/Card"
 import Header from "./Header"
 import ColorScheme from "./ColorScheme"
-import Footer from "./Footer"
 
 const cards = [
   {
